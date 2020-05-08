@@ -1,0 +1,11 @@
+Instructions to populate data:
+
+1 Using a browser with react dev tools, go to https://polaris.shopify.com/components/structure/<component type>/<name>
+
+2 Search for a component named `PE`
+
+3 Inspect the props, select the `properties` field and copy the value. If there are no `PE` elements (meaning there are no customizable props), simply fill in an empty array for the next step (`[]`).
+
+4 Create a file under `data/<component type>/<name>.json`.
+
+5 Run `node codegen.js`

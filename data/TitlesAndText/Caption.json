@@ -1,0 +1,1 @@
+[{"path":"/components/titles-and-text/caption/children","parentPath":"/components/titles-and-text/caption","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to use as a graph label or timestamp","defaultValue":null,"types":null,"__typename":"Property"}]
