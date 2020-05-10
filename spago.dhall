@@ -8,6 +8,7 @@
   , "node-fs-aff"
   , "parsing"
   , "simple-json"
+  , "string-extra"
   , "psci-support"
   , "st"
   ]

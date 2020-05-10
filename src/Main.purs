@@ -13,8 +13,9 @@ import Effect.Exception (error)
 import Effect.Exception as Exception
 import Foreign (renderForeignError)
 import Node.Encoding (Encoding(..))
-import Node.FS.Aff (readTextFile, readdir)
+import Node.FS.Aff (exists, mkdir, readTextFile, readdir, writeTextFile)
 import Node.Path (FilePath, basenameWithoutExt)
+import Polaris.Codegen.Printer (printModule)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.Types (Module, PropEntry, RawEntry)
 import Simple.JSON (class ReadForeign, readJSON)
@@ -23,7 +24,8 @@ import Text.Parsing.Parser.String (eof)
 
 main :: Effect Unit
 main = runAff_ logResult do
-  listDataFiles >>= traverse readModule
+  unlessM (exists generatedSrcDir) (mkdir generatedSrcDir)
+  listDataFiles >>= traverse readModule >>= traverse writeModule
   where
     logResult (Left e) = warn $ "ERROR: " <> (Exception.message e)
     logResult (Right a) = log "OK"
@@ -39,7 +41,7 @@ listDataFiles =
 
 readModule :: FilePath -> F Module
 readModule path = do
-  log path
+  log $ "Reading " <> path <> "..."
   rs <- readRawEntries path
   props <- traverse readPropEntry rs
 
@@ -58,6 +60,17 @@ readContent path =
       errMessage $ intercalate ", " $ map renderForeignError $ e
     Right a ->
       pure a
+
+writeModule :: Module -> F Unit
+writeModule m@{ name } = do
+  log $ "Writing " <> path <> "..."
+  writeTextFile UTF8 path content
+  where
+    path = generatedSrcDir <> "/Polaris.Components." <> name <> ".purs"
+    content = printModule m
+
+generatedSrcDir :: FilePath
+generatedSrcDir = "../src/generated"
 
 readPropEntry :: RawEntry -> F PropEntry
 readPropEntry r = readTyp' r."type" <#> \typ ->
