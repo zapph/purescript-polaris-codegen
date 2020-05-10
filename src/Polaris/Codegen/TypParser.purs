@@ -9,7 +9,7 @@ import Control.Lazy (fix)
 import Data.Array as Array
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.Char.Unicode (isLower)
+import Data.Char.Unicode (isAlpha, isAlphaNum, isLower)
 import Data.Maybe (Maybe(..))
 import Data.String.CodeUnits as CodeUnits
 import Polaris.Codegen.Types (Typ(..))
@@ -21,7 +21,7 @@ import Text.Parsing.Parser.Token (alphaNum, upper)
 type P a = Parser String a
 
 parseTyp :: P Typ
-parseTyp = fix \p ->
+parseTyp = fix \p -> do
   parseTypUnions p >>= \ts -> case NonEmptyArray.fromFoldable ts of
     Nothing -> fail "no typ found"
     Just ts' -> pure $ case NonEmptyArray.uncons ts' of
@@ -40,7 +40,7 @@ parseTyp = fix \p ->
       <|> (TypBooleanLiteral false <$ string "false")
       <|> (TypStringLiteral <$> parseStringLiteral)
       <|> (TypRecord <$> parseRecordEntries p)
-      <|> (TypRef <$> parseRefName)
+      <|> (TypRef <$> parseRefNames)
       <|> (TypFn <$> parseFnParts p)
 
     parseOneTyp p =
@@ -61,8 +61,12 @@ parseStringLiteral =
   where
     lit = (CodeUnits.fromCharArray <$> Array.many (noneOf ['"']))
 
-parseRefName :: P String
-parseRefName = word
+parseRefNames :: P (Array String)
+parseRefNames = Array.fromFoldable <$> sepBy1 parseRefName (string " & ")
+  where
+    parseRefName =
+      (CodeUnits.singleton <$> (satisfy isAlpha))
+      <> (CodeUnits.fromCharArray <$> Array.many (satisfy (\c -> (isAlphaNum c) || (c == '.')))) -- todo prevent end with '.'
 
 parseFnParts :: P Typ -> P { params :: Array Typ, out :: Typ }
 parseFnParts parseTyp' = ado

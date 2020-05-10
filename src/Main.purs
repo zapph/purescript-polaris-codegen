@@ -19,6 +19,7 @@ import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.Types (Module, PropEntry, RawEntry)
 import Simple.JSON (class ReadForeign, readJSON)
 import Text.Parsing.Parser (runParser)
+import Text.Parsing.Parser.String (eof)
 
 main :: Effect Unit
 main = runAff_ logResult do
@@ -67,7 +68,7 @@ readPropEntry r = readTyp' r."type" <#> \typ ->
   }
 
   where
-    readTyp' s = case runParser s parseTyp of
+    readTyp' s = case runParser s (parseTyp <* eof) of
       Left e -> errMessage $ "Given: " <> s <> ", Error: " <> show e
       Right a -> pure a
 
