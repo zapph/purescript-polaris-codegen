@@ -42,11 +42,13 @@ data Typ
   | TypBoolean
   | TypNumber
   | TypStringLiteral String
+  | TypBooleanLiteral Boolean
   | TypUnion (NonEmptyArray Typ)
   | TypFn { params :: Array Typ, out :: Typ }
   | TypJSX
   | TypRef String
   | TypArray Typ
+  | TypRecord (Array { name :: String, typ :: Typ })
   | TypForeign -- for any type
   | TypUnknown String
 

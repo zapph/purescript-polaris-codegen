@@ -6,6 +6,7 @@
   , "foreign-object"
   , "generics-rep"
   , "node-fs-aff"
+  , "parsing"
   , "simple-json"
   , "psci-support"
   , "st"
