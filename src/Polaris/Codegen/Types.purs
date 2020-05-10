@@ -50,7 +50,6 @@ data Typ
   | TypArray Typ
   | TypRecord (Array { name :: String, typ :: Typ })
   | TypForeign -- for any type
-  | TypUnknown String
 
 derive instance typGeneric :: Generic Typ _
 instance typShow :: Show Typ where
