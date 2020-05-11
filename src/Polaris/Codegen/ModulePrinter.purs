@@ -1,4 +1,4 @@
-module Polaris.Codegen.Printer
+module Polaris.Codegen.ModulePrinter
        ( printModule
        ) where
 
