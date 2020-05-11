@@ -18,6 +18,7 @@ import Foreign (renderForeignError)
 import Node.Encoding (Encoding(..))
 import Node.FS.Aff (exists, mkdir, readTextFile, readdir, writeTextFile)
 import Node.Path (FilePath, basenameWithoutExt)
+import Polaris.Codegen.LocalesModulePrinter (printLocalesJSModule, printLocalesPSModule)
 import Polaris.Codegen.ModulePrinter (printJSModule, printPSModule)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.TypeRefsModulePrinter (printTypeRefsModule)
@@ -29,9 +30,13 @@ import Text.Parsing.Parser.String (eof)
 main :: Effect Unit
 main = runAff_ logResult do
   unlessM (exists generatedSrcDir) (mkdir generatedSrcDir)
+
   modules <- listDataFiles >>= traverse readModule
   traverse_ writeModule modules
   writeTypeRefsModule modules
+
+  listLocales >>= writeLocalesModule
+
   where
     logResult (Left e) = warn $ "ERROR: " <> (Exception.message e)
     logResult (Right a) = log "OK"
@@ -49,6 +54,11 @@ readModule :: FilePath -> F Module
 readModule path = do
   log $ "Reading " <> path
   rs <- readRawEntries path
+
+listLocales :: F (Array FilePath)
+listLocales =
+  map (\p -> basenameWithoutExt p ".json") <$> readdir "../node_modules/@shopify/polaris/locales"
+
   props <- traverse readPropEntry rs
 
   pure { name, props }
@@ -71,18 +81,12 @@ generatedSrcDir :: FilePath
 generatedSrcDir = "../src/generated"
 
 writeModule :: Module -> F Unit
-writeModule m@{ name } = do
-  log $ "Writing " <> psPath
-  writeTextFile UTF8 psPath psContent
-  writeTextFile UTF8 jsPath jsContent
-  where
-    pathBase = generatedSrcDir <> "/Polaris.Components." <> name
-
-    psPath = pathBase <> ".purs"
-    psContent = printPSModule m
-
-    jsPath = pathBase <> ".js"
-    jsContent = printJSModule m
+writeModule m@{ name } =
+  writePSJSSrc
+    { base: generatedSrcDir <> "/Polaris.Components." <> name
+    , psContent: printPSModule m
+    , jsContent: printJSModule m
+    }
 
 writeTypeRefsModule :: Array Module -> F Unit
 writeTypeRefsModule ms = do
@@ -93,6 +97,24 @@ writeTypeRefsModule ms = do
     typesContent = printTypeRefsModule refNames
 
     refNames = collectRefNames ms
+
+writeLocalesModule :: Array String -> F Unit
+writeLocalesModule ls =
+  writePSJSSrc
+    { base: generatedSrcDir <> "/Polaris.Components.Locales"
+    , psContent: printLocalesPSModule ls
+    , jsContent: printLocalesJSModule ls
+    }
+
+writePSJSSrc :: { base :: String, jsContent :: String, psContent :: String } -> F Unit
+writePSJSSrc { base, jsContent, psContent } = do
+  log $ "Writing " <> psPath
+  writeTextFile UTF8 psPath psContent
+  writeTextFile UTF8 jsPath jsContent
+
+  where
+    psPath = base <> ".purs"
+    jsPath = base <> ".js"
 
 readPropEntry :: RawEntry -> F PropEntry
 readPropEntry r = readTyp' r."type" <#> \typ ->
