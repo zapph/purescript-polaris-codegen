@@ -23,11 +23,18 @@ type SubRawEntry =
 
 type ModuleExtras =
   { props :: Maybe (Array RawEntry)
+  , subcomponents :: Maybe (Array { name :: String, props :: Array RawEntry })
   }
 
 --  {"type":"string","kind":"string","mandatory":false,"tags":null,"description":"Space separated list of character encodings","defaultValue":null,"types":null,"__typename":"Property"}
 
 type Module =
+  { name :: String
+  , props :: Array PropEntry
+  , subcomponents :: Array Subcomponent
+  }
+
+type Subcomponent =
   { name :: String
   , props :: Array PropEntry
   }

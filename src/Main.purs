@@ -93,13 +93,21 @@ readModule :: ModuleFilePaths -> F Module
 readModule { propsFilePath, extrasFilePath } = do
   log $ "Reading " <> propsFilePath
   rs' <- readRawEntries propsFilePath
-  rs <- case extrasFilePath of
-    Just e -> readExtra e <#> applyExtras rs'
-    Nothing -> pure rs'
+
+  extra <- traverse readExtra extrasFilePath
+  let rs = case extra >>= _.props of
+        Just e -> applyExtras rs' e
+        Nothing -> rs'
+
+      rawSubcomponents = fold (extra >>= _.subcomponents)
 
   props <- traverse readPropEntry rs
+  subcomponents <- traverse readSubcomponent rawSubcomponents
 
-  pure { name, props }
+  pure { name
+       , props
+       , subcomponents
+       }
 
   where
     readRawEntries :: FilePath -> F (Array RawEntry)
@@ -112,13 +120,15 @@ readModule { propsFilePath, extrasFilePath } = do
       log $ "Reading " <> e
       readContent e
 
-    applyExtras :: Array RawEntry -> ModuleExtras -> Array RawEntry
-    applyExtras rs' { props: rawRs' } =
-      Array.filter noOverwrite rs' <> rawRs
+    applyExtras :: Array RawEntry -> Array RawEntry -> Array RawEntry
+    applyExtras rs' overrides =
+      Array.filter noOverwrite rs' <> overrides
       where
-        rawRs = fold rawRs'
         noOverwrite { name: rName } =
-          isNothing $ Array.find (\r -> r.name == rName) rawRs
+          isNothing $ Array.find (\r -> r.name == rName) overrides
+
+    readSubcomponent { name: name', props: rawProps } =
+      traverse readPropEntry rawProps <#> { name: name', props: _ }
 
 readContent :: forall a. ReadForeign a => FilePath -> F a
 readContent path =
