@@ -1,6 +1,5 @@
 module Polaris.Codegen.LocalesModulePrinter
-       ( printLocalesPSModule
-       , printLocalesJSModule
+       ( printLocalesModule
        ) where
 
 import Prelude
@@ -9,6 +8,13 @@ import Data.Array as Array
 import Data.String (Pattern(..), Replacement(..))
 import Data.String as String
 import Polaris.Codegen.PrinterUtils (lines)
+import Polaris.Codegen.Types (PSJSContent)
+
+printLocalesModule :: Array String -> PSJSContent
+printLocalesModule localeNames =
+  { psContent: printLocalesPSModule localeNames
+  , jsContent: printLocalesJSModule localeNames
+  }
 
 printLocalesPSModule :: Array String -> String
 printLocalesPSModule localeNames = lines

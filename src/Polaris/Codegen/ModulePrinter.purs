@@ -1,6 +1,5 @@
 module Polaris.Codegen.ModulePrinter
-       ( printPSModule
-       , printJSModule
+       ( printModule
        ) where
 
 import Prelude
@@ -9,7 +8,13 @@ import Data.Array as Array
 import Data.Array.NonEmpty as NonEmptyArray
 import Data.String.Extra (camelCase)
 import Polaris.Codegen.PrinterUtils (lines, printRefName)
-import Polaris.Codegen.Types (Module, PropEntry, Typ(..))
+import Polaris.Codegen.Types (Module, PropEntry, Typ(..), PSJSContent)
+
+printModule :: Module -> PSJSContent
+printModule m =
+  { psContent: printPSModule m
+  , jsContent: printJSModule m
+  }
 
 printPSModule :: Module -> String
 printPSModule { name, props } = lines

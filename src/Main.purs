@@ -22,11 +22,11 @@ import Foreign (renderForeignError)
 import Node.Encoding (Encoding(..))
 import Node.FS.Aff (exists, mkdir, readTextFile, readdir, writeTextFile)
 import Node.Path (FilePath, basenameWithoutExt)
-import Polaris.Codegen.LocalesModulePrinter (printLocalesJSModule, printLocalesPSModule)
-import Polaris.Codegen.ModulePrinter (printJSModule, printPSModule)
+import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
+import Polaris.Codegen.ModulePrinter (printModule)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.TypeRefsModulePrinter (printTypeRefsModule)
-import Polaris.Codegen.Types (Module, PropEntry, RawEntry, Typ(..), ModuleExtras)
+import Polaris.Codegen.Types (Module, ModuleExtras, PropEntry, RawEntry, Typ(..), PSJSContent)
 import Simple.JSON (class ReadForeign, readJSON)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
@@ -144,10 +144,8 @@ generatedSrcDir = "../src/generated"
 writeModule :: Module -> F Unit
 writeModule m@{ name } =
   writePSJSSrc
-    { base: generatedSrcDir <> "/Polaris.Components." <> name
-    , psContent: printPSModule m
-    , jsContent: printJSModule m
-    }
+    (generatedSrcDir <> "/Polaris.Components." <> name)
+    (printModule m)
 
 writeTypeRefsModule :: Array Module -> F Unit
 writeTypeRefsModule ms = do
@@ -162,13 +160,11 @@ writeTypeRefsModule ms = do
 writeLocalesModule :: Array String -> F Unit
 writeLocalesModule ls =
   writePSJSSrc
-    { base: generatedSrcDir <> "/Polaris.Components.Locales"
-    , psContent: printLocalesPSModule ls
-    , jsContent: printLocalesJSModule ls
-    }
+    (generatedSrcDir <> "/Polaris.Components.Locales")
+    (printLocalesModule ls)
 
-writePSJSSrc :: { base :: String, jsContent :: String, psContent :: String } -> F Unit
-writePSJSSrc { base, jsContent, psContent } = do
+writePSJSSrc :: String -> PSJSContent -> F Unit
+writePSJSSrc base { jsContent, psContent } = do
   log $ "Writing " <> psPath
   writeTextFile UTF8 psPath psContent
   writeTextFile UTF8 jsPath jsContent
