@@ -1,21 +1,21 @@
 module Polaris.Codegen.ModulePrinter
-       ( printModule
+       ( printPSModule
+       , printJSModule
        ) where
 
 import Prelude
 
 import Data.Array as Array
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.String (Pattern(..), Replacement(..))
-import Data.String as String
 import Data.String.Extra (camelCase)
+import Polaris.Codegen.PrinterUtils (lines, printRefName)
 import Polaris.Codegen.Types (Module, PropEntry, Typ(..))
 
-printModule :: Module -> String
-printModule { name, props } = lines
+printPSModule :: Module -> String
+printPSModule { name, props } = lines
   [ "module Polaris.Components." <> name
-  , "  ( " <> elFnName
-  , "  , " <> rcFnName
+  , "  ( " <> elFnName'
+  , "  , " <> rcFnName'
   , "  )"
   , ""
   , "import Prelude"
@@ -30,19 +30,27 @@ printModule { name, props } = lines
   , "  { " <> propsContent
   , "  }"
   , ""
-  , elFnName <> " :: forall r. Coercible r Props => r -> JSX"
-  , elFnName <> " = element " <> rcFnName <> " <<< coerce"
+  , elFnName' <> " :: forall r. Coercible r Props => r -> JSX"
+  , elFnName' <> " = element " <> rcFnName' <> " <<< coerce"
   , ""
-  , "foreign import " <> rcFnName <> " :: ReactComponent Props"
+  , "foreign import " <> rcFnName' <> " :: ReactComponent Props"
+  , ""
   ]
   where
-    lname = camelCase name
-
     moduleName = name
-    elFnName = lname
-    rcFnName = lname <> "RC"
+    elFnName' = elFnName name
+    rcFnName' = rcFnName name
 
     propsContent = Array.intercalate "\n  , " $ printPropEntry <$> props
+
+printJSModule :: Module -> String
+printJSModule { name } =
+  "exports."
+  <> rcFnName name
+  <> " = require(\"@shopify/polaris\")."
+  <> name
+  <> ";\n"
+
 
 printPropEntry :: PropEntry -> String
 printPropEntry { name, description, required, typ } =
@@ -68,7 +76,7 @@ printTyp (TypUnion ts) =
 printTyp (TypRecord rs) =
   Array.intercalate " , " $ (\ {name, typ} -> "\"" <> name <> "\" :: (" <> printTyp typ <> ")") <$> rs
 printTyp (TypRef ns) =
-  Array.intercalate "__" $ String.replaceAll (Pattern ".") (Replacement "_") <$> ns
+  printRefName ns
 
 printTyp TypForeign = "Foreign"
 printTyp (TypFn { params, out }) = case params of
@@ -83,5 +91,10 @@ printTyp (TypFn { params, out }) = case params of
 printTypWrapped :: Typ -> String
 printTypWrapped t = "(" <> printTyp t <> ")"
 
-lines :: Array String -> String
-lines = Array.intercalate "\n" >>> (_ <> "\n")
+--
+
+elFnName :: String -> String
+elFnName = camelCase
+
+rcFnName :: String -> String
+rcFnName name = (elFnName name) <> "RC"
