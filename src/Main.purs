@@ -5,9 +5,9 @@ import Prelude
 import Control.Monad.Error.Class (throwError)
 import Data.Array as Array
 import Data.Either (Either(..))
-import Data.Foldable (foldr, intercalate)
+import Data.Foldable (fold, foldr, intercalate)
 import Data.List (foldMap)
-import Data.Maybe (Maybe(..), isJust)
+import Data.Maybe (Maybe(..), isJust, isNothing)
 import Data.Set (Set)
 import Data.Set as Set
 import Data.String (Pattern(..), Replacement(..), stripSuffix)
@@ -26,7 +26,7 @@ import Polaris.Codegen.LocalesModulePrinter (printLocalesJSModule, printLocalesP
 import Polaris.Codegen.ModulePrinter (printJSModule, printPSModule)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.TypeRefsModulePrinter (printTypeRefsModule)
-import Polaris.Codegen.Types (Module, PropEntry, RawEntry, Typ(..))
+import Polaris.Codegen.Types (Module, PropEntry, RawEntry, Typ(..), ModuleExtras)
 import Simple.JSON (class ReadForeign, readJSON)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
@@ -90,9 +90,13 @@ listLocales =
   map (\p -> basenameWithoutExt p ".json") <$> readdir "../node_modules/@shopify/polaris/locales"
 
 readModule :: ModuleFilePaths -> F Module
-readModule { propsFilePath } = do
+readModule { propsFilePath, extrasFilePath } = do
   log $ "Reading " <> propsFilePath
-  rs <- readRawEntries propsFilePath
+  rs' <- readRawEntries propsFilePath
+  rs <- case extrasFilePath of
+    Just e -> readExtra e <#> applyExtras rs'
+    Nothing -> pure rs'
+
   props <- traverse readPropEntry rs
 
   pure { name, props }
@@ -102,6 +106,19 @@ readModule { propsFilePath } = do
     readRawEntries = readContent
 
     name = basenameWithoutExt propsFilePath ".json"
+
+    readExtra :: FilePath -> F ModuleExtras
+    readExtra e = do
+      log $ "Reading " <> e
+      readContent e
+
+    applyExtras :: Array RawEntry -> ModuleExtras -> Array RawEntry
+    applyExtras rs' { props: rawRs' } =
+      Array.filter noOverwrite rs' <> rawRs
+      where
+        rawRs = fold rawRs'
+        noOverwrite { name: rName } =
+          isNothing $ Array.find (\r -> r.name == rName) rawRs
 
 readContent :: forall a. ReadForeign a => FilePath -> F a
 readContent path =

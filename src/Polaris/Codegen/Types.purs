@@ -10,7 +10,6 @@ import Data.Maybe (Maybe)
 type RawEntry =
   { name :: String
   , "type" :: String
-  , kind :: String
   , mandatory :: Boolean
   , description :: String
   , "types" :: Maybe (Array SubRawEntry)
@@ -20,6 +19,10 @@ type RawEntry =
 type SubRawEntry =
   { "type" :: String
   , kind :: String
+  }
+
+type ModuleExtras =
+  { props :: Maybe (Array RawEntry)
   }
 
 --  {"type":"string","kind":"string","mandatory":false,"tags":null,"description":"Space separated list of character encodings","defaultValue":null,"types":null,"__typename":"Property"}
