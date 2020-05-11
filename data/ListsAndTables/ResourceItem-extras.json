@@ -1,0 +1,88 @@
+{
+  "props": [
+    {
+      "type": "string",
+      "mandatory": false,
+      "name": "accessibilityLabel",
+      "description": "Visually hidden text for screen readers used for item link"
+    },
+    {
+      "type": "string",
+      "mandatory": false,
+      "name": "name",
+      "description": "Individual item name used by various text labels"
+    },
+    {
+      "type": "string",
+      "mandatory": false,
+      "name": "ariaControls",
+      "description": "Id of the element the item onClick controls"
+    },
+    {
+      "type": "boolean",
+      "mandatory": false,
+      "name": "ariaExpanded",
+      "description": "Tells screen reader the controlled element is expanded"
+    },
+    {
+      "type": "string",
+      "mandatory": true,
+      "name": "id",
+      "description": "Unique identifier for the item"
+    },
+    {
+      "type": "React.ReactElement",
+      "mandatory": false,
+      "name": "media",
+      "description": "Content for the media area at the left of the item, usually an Avatar or Thumbnail"
+    },
+    {
+      "type": "boolean",
+      "mandatory": false,
+      "name": "persistActions",
+      "description": "Makes the shortcut actions always visible"
+    },
+    {
+      "type": "DisableableAction[]",
+      "mandatory": false,
+      "name": "shortcutActions",
+      "description": "1 or 2 shortcut actions; must be available on the page linked to by url"
+    },
+    {
+      "type": "number",
+      "mandatory": false,
+      "name": "sortOrder",
+      "description": "The order the item is rendered"
+    },
+    {
+      "type": "string",
+      "mandatory": false,
+      "name": "url",
+      "description": "URL for the resource’s details page (required unless onClick is provided)"
+    },
+    {
+      "type": "boolean",
+      "mandatory": false,
+      "name": "external",
+      "description": "Allows url to open in a new tab"
+    },
+    {
+      "type": "(id: string) => void",
+      "mandatory": false,
+      "name": "onClick",
+      "description": "Callback when clicked (required if url is omitted)"
+    },
+    {
+      "type": "React.ReactNode",
+      "mandatory": false,
+      "name": "children",
+      "description": "Content for the details area "
+    },
+    {
+      "type": "Alignment",
+      "mandatory": false,
+      "name": "verticalAlignment",
+      "description": "Adjust vertical alignment of elements"
+    }
+  ]
+}
