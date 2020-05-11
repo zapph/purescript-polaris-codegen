@@ -16,28 +16,33 @@ printPSModule { name, props } = lines
   [ "module Polaris.Components." <> name
   , "  ( " <> elFnName'
   , "  , " <> rcFnName'
-  , "  )"
+  , "  , " <> propsName
+  , "  ) where"
   , ""
   , "import Prelude"
   , ""
+  , "import Effect"
+  , "import Effect.Uncurried"
   , "import Foreign"
+  , "import Literals"
   , "import React.Basic.Hooks"
   , "import Polaris.Types"
   , "import Untagged.Coercible"
   , "import Untagged.Union"
   , ""
-  , "type Props ="
+  , "type " <> propsName <> " ="
   , "  { " <> propsContent
   , "  }"
   , ""
-  , elFnName' <> " :: forall r. Coercible r Props => r -> JSX"
+  , elFnName' <> " :: forall r. Coercible r " <> propsName <> " => r -> JSX"
   , elFnName' <> " = element " <> rcFnName' <> " <<< coerce"
   , ""
-  , "foreign import " <> rcFnName' <> " :: ReactComponent Props"
+  , "foreign import " <> rcFnName' <> " :: ReactComponent " <> propsName
   , ""
   ]
   where
     moduleName = name
+    propsName = name <> "Props"
     elFnName' = elFnName name
     rcFnName' = rcFnName name
 
@@ -74,7 +79,11 @@ printTyp (TypArray t) = "Array " <> printTypWrapped t
 printTyp (TypUnion ts) =
   Array.intercalate " |+| " $ printTypWrapped <$> (NonEmptyArray.toArray ts)
 printTyp (TypRecord rs) =
-  Array.intercalate " , " $ (\ {name, typ} -> "\"" <> name <> "\" :: (" <> printTyp typ <> ")") <$> rs
+  "{"
+  <> ( Array.intercalate " , "
+       $ (\ {name, typ} -> "\"" <> name <> "\" :: (" <> printTyp typ <> ")") <$> rs
+     )
+  <> "}"
 printTyp (TypRef ns) =
   printRefName ns
 
