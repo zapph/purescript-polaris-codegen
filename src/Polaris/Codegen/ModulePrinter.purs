@@ -75,7 +75,7 @@ printTyp (TypFn { params, out }) = case params of
   [] -> "Effect " <> outPart
   _ ->
     "EffectFn" <> (show $ Array.length params) <> " "
-    <> ( Array.intercalate " " $ printTypWrapped <$> params)
+    <> ( Array.intercalate " " $ printTypWrapped <$> params) <> " "
     <> outPart
   where
     outPart = printTypWrapped out
