@@ -6,8 +6,12 @@ import Control.Monad.Error.Class (throwError)
 import Data.Array as Array
 import Data.Either (Either(..))
 import Data.Foldable (foldr, intercalate)
+import Data.List (foldMap)
+import Data.Maybe (Maybe(..), isJust)
 import Data.Set (Set)
 import Data.Set as Set
+import Data.String (Pattern(..), Replacement(..), stripSuffix)
+import Data.String as String
 import Data.Traversable (traverse, traverse_)
 import Effect (Effect)
 import Effect.Aff (Aff, runAff_)
@@ -43,22 +47,52 @@ main = runAff_ logResult do
 
 type F = Aff
 
-listDataFiles :: F (Array FilePath)
+type ModuleFilePaths =
+  { propsFilePath :: FilePath
+  , extrasFilePath :: Maybe FilePath
+  }
+
+listDataFiles :: F (Array ModuleFilePaths)
 listDataFiles =
-  readDirRel "./data" >>= traverse readDirRel <#> join
+  readDirRel "./data" >>= traverse readDirRel <#> (join <<< map getModuleFilePaths)
 
   where
     readDirRel path = map (\s -> path <> "/" <> s) <$> readdir path
 
-readModule :: FilePath -> F Module
-readModule path = do
-  log $ "Reading " <> path
-  rs <- readRawEntries path
+    allFilePaths = readDirRel "./data" >>= traverse readDirRel <#> join
+
+getModuleFilePaths :: Array FilePath -> Array ModuleFilePaths
+getModuleFilePaths allFilePaths = foldMap f allFilePaths
+  where
+    isExtrasFilePath =
+      isJust <<< stripSuffix (Pattern "-extras.json")
+
+    f path
+      | isExtrasFilePath path = mempty
+      | otherwise = pure $
+        { propsFilePath: path
+        , extrasFilePath: extrasFilePath path
+        }
+
+    extrasFilePath propsFilePath =
+      if Array.elem p allFilePaths
+      then Just p
+      else Nothing
+
+      where
+        p = String.replace
+            (Pattern ".json")
+            (Replacement "-extras.json")
+            propsFilePath
 
 listLocales :: F (Array FilePath)
 listLocales =
   map (\p -> basenameWithoutExt p ".json") <$> readdir "../node_modules/@shopify/polaris/locales"
 
+readModule :: ModuleFilePaths -> F Module
+readModule { propsFilePath } = do
+  log $ "Reading " <> propsFilePath
+  rs <- readRawEntries propsFilePath
   props <- traverse readPropEntry rs
 
   pure { name, props }
@@ -67,7 +101,7 @@ listLocales =
     readRawEntries :: FilePath -> F (Array RawEntry)
     readRawEntries = readContent
 
-    name = basenameWithoutExt path ".json"
+    name = basenameWithoutExt propsFilePath ".json"
 
 readContent :: forall a. ReadForeign a => FilePath -> F a
 readContent path =
