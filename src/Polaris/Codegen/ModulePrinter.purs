@@ -6,22 +6,41 @@ import Prelude
 
 import Data.Array as Array
 import Data.Array.NonEmpty as NonEmptyArray
+import Data.Foldable (foldMap)
 import Data.String.Extra (camelCase)
 import Polaris.Codegen.PrinterUtils (lines, printRefName)
-import Polaris.Codegen.Types (Module, PropEntry, Typ(..), PSJSContent)
+import Polaris.Codegen.Types (Module, PSJSContent, Typ(..), PropEntry)
 
 printModule :: Module -> PSJSContent
-printModule m =
-  { psContent: printPSModule m
-  , jsContent: printJSModule m
+printModule { name, props, subcomponents } =
+  { psContent: printPSContent { name, exports, psCodes }
+  , jsContent: printJSContent jsCodes
   }
 
-printPSModule :: Module -> String
-printPSModule { name, props } = lines
+  where
+    mainSpec =
+      { namePath: [ name ]
+      , props: props
+      }
+
+    subSpecs = subcomponents <#> \sub ->
+      { namePath: [ name, sub.name ]
+      , props: sub.props
+      }
+
+    specs = Array.cons mainSpec subSpecs
+    codes = mkComponentCode <$> specs
+
+    exports = foldMap _.exports codes
+    psCodes = _.psCode <$> codes
+    jsCodes = _.jsCode <$> codes
+
+printPSContent
+  :: { name :: String, exports :: Array String, psCodes :: Array String }
+     -> String
+printPSContent { name, exports, psCodes } = lines
   [ "module Polaris.Components." <> name
-  , "  ( " <> elFnName'
-  , "  , " <> rcFnName'
-  , "  , " <> propsName
+  , "  ( " <> exportsPart
   , "  ) where"
   , ""
   , "import Prelude"
@@ -35,31 +54,60 @@ printPSModule { name, props } = lines
   , "import Untagged.Coercible"
   , "import Untagged.Union"
   , ""
-  , "type " <> propsName <> " ="
-  , "  { " <> propsContent
-  , "  }"
-  , ""
-  , elFnName' <> " :: forall r. Coercible r " <> propsName <> " => r -> JSX"
-  , elFnName' <> " = element " <> rcFnName' <> " <<< coerce"
-  , ""
-  , "foreign import " <> rcFnName' <> " :: ReactComponent " <> propsName
+  , psCodesPart
   , ""
   ]
   where
-    moduleName = name
+    exportsPart = Array.intercalate "\n  , " exports
+    psCodesPart = lines psCodes
+
+printJSContent :: Array String -> String
+printJSContent jsCodes =
+  lines jsCodes <> "\n"
+
+type ComponentSpec =
+  { namePath :: Array String
+  , props :: Array PropEntry
+  }
+
+type ComponentCode =
+  { exports :: Array String
+  , psCode :: String
+  , jsCode :: String
+  }
+
+mkComponentCode :: ComponentSpec -> ComponentCode
+mkComponentCode { namePath, props } =
+  { exports: [ propsName, elFnName, rcFnName ]
+  , psCode: lines
+    [ "type " <> propsName <> " ="
+    , "  { " <> propsContent
+    , "  }"
+    , ""
+    , elFnName <> " :: forall r. Coercible r " <> propsName <> " => r -> JSX"
+    , elFnName <> " = element " <> rcFnName <> " <<< coerce"
+    , ""
+    , "foreign import " <> rcFnName <> " :: ReactComponent " <> propsName
+    ]
+  , jsCode:
+    "exports."
+    <> rcFnName
+    <> " = require(\"@shopify/polaris\")."
+    <> jsPath
+    <> ";"
+  }
+
+  where
+    name = Array.fold namePath
+
     propsName = name <> "Props"
-    elFnName' = elFnName name
-    rcFnName' = rcFnName name
+    elFnName = camelCase name
+    rcFnName = elFnName <> "RC"
+
+    jsPath = Array.intercalate "." namePath
 
     propsContent = Array.intercalate "\n  , " $ printPropEntry <$> props
 
-printJSModule :: Module -> String
-printJSModule { name } =
-  "exports."
-  <> rcFnName name
-  <> " = require(\"@shopify/polaris\")."
-  <> name
-  <> ";\n"
 
 
 printPropEntry :: PropEntry -> String
@@ -106,9 +154,3 @@ printTypWrapped :: Typ -> String
 printTypWrapped t = "(" <> printTyp t <> ")"
 
 --
-
-elFnName :: String -> String
-elFnName = camelCase
-
-rcFnName :: String -> String
-rcFnName name = (elFnName name) <> "RC"
