@@ -3,11 +3,14 @@ module Main where
 import Prelude
 
 import Control.Monad.Error.Class (throwError)
+import Control.Monad.ST (ST)
 import Data.Array as Array
+import Data.Array.ST (STArray)
+import Data.Array.ST as STArray
 import Data.Either (Either(..))
 import Data.Foldable (fold, intercalate)
 import Data.List (foldMap)
-import Data.Maybe (Maybe(..), isJust, isNothing)
+import Data.Maybe (Maybe(..), isJust)
 import Data.String (Pattern(..), Replacement(..), stripSuffix)
 import Data.String as String
 import Data.Traversable (traverse, traverse_)
@@ -16,7 +19,9 @@ import Effect.Aff (Aff, runAff_)
 import Effect.Class.Console (log, warn)
 import Effect.Exception (error)
 import Effect.Exception as Exception
-import Foreign (renderForeignError)
+import Foreign (Foreign, renderForeignError, unsafeToForeign)
+import Foreign.Object (Object)
+import Foreign.Object as Object
 import Node.Encoding (Encoding(..))
 import Node.FS.Aff (exists, mkdir, readTextFile, readdir, writeTextFile)
 import Node.Path (FilePath, basenameWithoutExt)
@@ -24,7 +29,7 @@ import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
 import Polaris.Codegen.ModulePrinter (printModule)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.Types (Module, ModuleExtras, PSJSContent, PropEntry, RawEntry)
-import Simple.JSON (class ReadForeign, readJSON)
+import Simple.JSON (class ReadForeign, read, readJSON, read_)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
 
@@ -88,16 +93,13 @@ listLocales =
 readModule :: ModuleFilePaths -> F Module
 readModule { propsFilePath, extrasFilePath } = do
   log $ "Reading " <> propsFilePath
-  rs' <- readRawEntries propsFilePath
+  os' <- readPropObjects propsFilePath
 
   extra <- traverse readExtra extrasFilePath
-  let rs = case extra >>= _.props of
-        Just e -> applyExtras rs' e
-        Nothing -> rs'
+  let os = foldMap (applyExtras os') $ extra >>= _.props
+      rawSubcomponents = fold $ extra >>= _.subcomponents
 
-      rawSubcomponents = fold (extra >>= _.subcomponents)
-
-  props <- traverse readPropEntry rs
+  props <- traverse readPropObject os
   subcomponents <- traverse readSubcomponent rawSubcomponents
 
   pure { name
@@ -106,8 +108,8 @@ readModule { propsFilePath, extrasFilePath } = do
        }
 
   where
-    readRawEntries :: FilePath -> F (Array RawEntry)
-    readRawEntries = readContent
+    readPropObjects :: FilePath -> F (Array (Object Foreign))
+    readPropObjects = readContent
 
     name = basenameWithoutExt propsFilePath ".json"
 
@@ -116,15 +118,40 @@ readModule { propsFilePath, extrasFilePath } = do
       log $ "Reading " <> e
       readContent e
 
-    applyExtras :: Array RawEntry -> Array RawEntry -> Array RawEntry
+    applyExtras :: Array (Object Foreign) -> Array (Object Foreign) -> Array (Object Foreign)
     applyExtras rs' overrides =
-      Array.filter noOverwrite rs' <> overrides
+      STArray.run do
+        rsSt <- STArray.thaw rs'
+        traverse_ (applyExtraSt rsSt) overrides
+        pure rsSt
+
+    applyExtraSt
+      :: forall r
+         . STArray r (Object Foreign)
+         -> Object Foreign
+         -> ST r Unit
+    applyExtraSt rsSt o = do
+      os <- STArray.unsafeFreeze rsSt
+      case (Array.findIndex (eq oName <<< getName) os) of
+        Just ndx -> void $ STArray.modify ndx (Object.union o) rsSt
+        Nothing -> void $ STArray.push o rsSt
+
       where
-        noOverwrite { name: rName } =
-          isNothing $ Array.find (\r -> r.name == rName) overrides
+        oName = getName o
+
+    getName :: Object Foreign -> Maybe String
+    getName = Object.lookup "name" >=> read_
+
+    readPropObject o = readRawEntry =<< case read (unsafeToForeign o) of
+      Left e ->
+        errMessage $ intercalate ", " $ map renderForeignError $ e
+      Right a ->
+        pure a
 
     readSubcomponent { name: name', props: rawProps } =
-      traverse readPropEntry rawProps <#> { name: name', props: _ }
+      traverse
+        readRawEntry
+        rawProps <#> { name: name', props: _ }
 
 readContent :: forall a. ReadForeign a => FilePath -> F a
 readContent path =
@@ -159,8 +186,8 @@ writePSJSSrc base { jsContent, psContent } = do
     psPath = base <> ".purs"
     jsPath = base <> ".js"
 
-readPropEntry :: RawEntry -> F PropEntry
-readPropEntry r = readTyp' r."type" <#> \typ ->
+readRawEntry :: RawEntry -> F PropEntry
+readRawEntry r = readTyp' r."type" <#> \typ ->
   { name: r.name
   , typ
   , required: r.mandatory

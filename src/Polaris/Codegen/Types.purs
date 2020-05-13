@@ -6,6 +6,8 @@ import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe)
+import Foreign (Foreign)
+import Foreign.Object (Object)
 
 type RawEntry =
   { name :: String
@@ -22,7 +24,7 @@ type SubRawEntry =
   }
 
 type ModuleExtras =
-  { props :: Maybe (Array RawEntry)
+  { props :: Maybe (Array (Object Foreign))
   , subcomponents :: Maybe (Array { name :: String, props :: Array RawEntry })
   }
 
