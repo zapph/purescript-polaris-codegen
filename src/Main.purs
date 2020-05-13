@@ -28,7 +28,7 @@ import Node.Path (FilePath, basenameWithoutExt)
 import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
 import Polaris.Codegen.ModulePrinter (printModule)
 import Polaris.Codegen.TypParser (parseTyp)
-import Polaris.Codegen.Types (Module, ModuleExtras, PSJSContent, PropEntry, RawEntry)
+import Polaris.Codegen.Types (Module, ModuleExtras, PSJSContent, PropEntry, RawEntry(..))
 import Simple.JSON (class ReadForeign, read, readJSON, read_)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
@@ -187,7 +187,7 @@ writePSJSSrc base { jsContent, psContent } = do
     jsPath = base <> ".js"
 
 readRawEntry :: RawEntry -> F PropEntry
-readRawEntry r = readTyp' r."type" <#> \typ ->
+readRawEntry (RawEntry r) = readTyp' r."type" <#> \typ ->
   { name: r.name
   , typ
   , required: r.mandatory

@@ -8,20 +8,19 @@ import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe)
 import Foreign (Foreign)
 import Foreign.Object (Object)
+import Simple.JSON (class ReadForeign, readImpl)
 
-type RawEntry =
-  { name :: String
-  , "type" :: String
-  , mandatory :: Boolean
-  , description :: String
-  , "types" :: Maybe (Array SubRawEntry)
---  , defaultValue :: Foreign
-  }
+newtype RawEntry =
+  RawEntry { name :: String
+           , "type" :: String
+           , mandatory :: Boolean
+           , description :: String
+           , "types" :: Maybe (Array RawEntry)
+             --  , defaultValue :: Foreign
+           }
 
-type SubRawEntry =
-  { "type" :: String
-  , kind :: String
-  }
+instance rawEntryReadForeign :: ReadForeign RawEntry where
+  readImpl f = RawEntry <$> readImpl f
 
 type ModuleExtras =
   { props :: Maybe (Array (Object Foreign))
