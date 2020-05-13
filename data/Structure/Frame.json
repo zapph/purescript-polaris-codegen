@@ -1,1 +1,126 @@
-[{"path":"/components/structure/frame/children","parentPath":"/components/structure/frame","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display inside the frame.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/frame/globalRibbon","parentPath":"/components/structure/frame","name":"globalRibbon","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a global ribbon component that will be rendered fixed to the bottom of an application frame","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/frame/navigation","parentPath":"/components/structure/frame","name":"navigation","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a navigation component that will be rendered in the left sidebar of an application frame","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/frame/showMobileNavigation","parentPath":"/components/structure/frame","name":"showMobileNavigation","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"false\n","__typename":"Tag"}],"description":"A boolean property indicating whether the mobile navigation is currently visible","defaultValue":"false","types":[{"path":"/components/structure/frame/showMobileNavigation/false","parentPath":"/components/structure/frame/showMobileNavigation","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/frame/showMobileNavigation/true","parentPath":"/components/structure/frame/showMobileNavigation","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/frame/skipToContentTarget","parentPath":"/components/structure/frame","name":"skipToContentTarget","type":"React.RefObject","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a ref to the html anchor element you wish to focus when clicking the skip to content link","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/frame/topBar","parentPath":"/components/structure/frame","name":"topBar","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a top bar component that will be rendered at the top-most portion of an application frame","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/frame/onNavigationDismiss","parentPath":"/components/structure/frame","name":"onNavigationDismiss","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"A callback function to handle clicking the mobile navigation dismiss button","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inside the frame.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/structure/frame",
+    "path": "/components/structure/frame/children"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a global ribbon component that will be rendered fixed to the bottom of an application frame",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "globalRibbon",
+    "parentPath": "/components/structure/frame",
+    "path": "/components/structure/frame/globalRibbon"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a navigation component that will be rendered in the left sidebar of an application frame",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "navigation",
+    "parentPath": "/components/structure/frame",
+    "path": "/components/structure/frame/navigation"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/frame/showMobileNavigation",
+        "path": "/components/structure/frame/showMobileNavigation/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/frame/showMobileNavigation",
+        "path": "/components/structure/frame/showMobileNavigation/true"
+      }
+    ],
+    "defaultValue": "false",
+    "description": "A boolean property indicating whether the mobile navigation is currently visible",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "false\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "showMobileNavigation",
+    "parentPath": "/components/structure/frame",
+    "path": "/components/structure/frame/showMobileNavigation"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a ref to the html anchor element you wish to focus when clicking the skip to content link",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.RefObject",
+    "name": "skipToContentTarget",
+    "parentPath": "/components/structure/frame",
+    "path": "/components/structure/frame/skipToContentTarget"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a top bar component that will be rendered at the top-most portion of an application frame",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "topBar",
+    "parentPath": "/components/structure/frame",
+    "path": "/components/structure/frame/topBar"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "A callback function to handle clicking the mobile navigation dismiss button",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onNavigationDismiss",
+    "parentPath": "/components/structure/frame",
+    "path": "/components/structure/frame/onNavigationDismiss"
+  }
+]

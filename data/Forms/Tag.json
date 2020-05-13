@@ -1,1 +1,81 @@
-[{"path":"/components/forms/tag/children","parentPath":"/components/forms/tag","name":"children","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content to display in the tag","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/tag/disabled","parentPath":"/components/forms/tag","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Disables the tag","defaultValue":null,"types":[{"path":"/components/forms/tag/disabled/false","parentPath":"/components/forms/tag/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/tag/disabled/true","parentPath":"/components/forms/tag/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/tag/onClick","parentPath":"/components/forms/tag","name":"onClick","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when tag is clicked or keypressed","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/tag/onRemove","parentPath":"/components/forms/tag","name":"onRemove","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when remove button is clicked or keypressed","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Content to display in the tag",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "children",
+    "parentPath": "/components/forms/tag",
+    "path": "/components/forms/tag/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/forms/tag/disabled",
+        "path": "/components/forms/tag/disabled/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/forms/tag/disabled",
+        "path": "/components/forms/tag/disabled/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Disables the tag",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "disabled",
+    "parentPath": "/components/forms/tag",
+    "path": "/components/forms/tag/disabled"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when tag is clicked or keypressed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onClick",
+    "parentPath": "/components/forms/tag",
+    "path": "/components/forms/tag/onClick"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when remove button is clicked or keypressed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onRemove",
+    "parentPath": "/components/forms/tag",
+    "path": "/components/forms/tag/onRemove"
+  }
+]

@@ -1,1 +1,153 @@
-[{"path":"/components/images-and-icons/avatar/accessibilityLabel","parentPath":"/components/images-and-icons/avatar","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Accessible label for the avatar image","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/avatar/customer","parentPath":"/components/images-and-icons/avatar","name":"customer","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the avatar is for a customer","defaultValue":null,"types":[{"path":"/components/images-and-icons/avatar/customer/false","parentPath":"/components/images-and-icons/avatar/customer","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/avatar/customer/true","parentPath":"/components/images-and-icons/avatar/customer","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/images-and-icons/avatar/initials","parentPath":"/components/images-and-icons/avatar","name":"initials","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Initials of person to display","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/avatar/name","parentPath":"/components/images-and-icons/avatar","name":"name","type":"string","kind":"string","mandatory":false,"tags":null,"description":"The name of the person","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/avatar/size","parentPath":"/components/images-and-icons/avatar","name":"size","type":"\"small\" | \"medium\" | \"large\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'medium'\n","__typename":"Tag"}],"description":"Size of avatar","defaultValue":"'medium'","types":[{"path":"/components/images-and-icons/avatar/size/small","parentPath":"/components/images-and-icons/avatar/size","name":"small","type":"\"small\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/avatar/size/medium","parentPath":"/components/images-and-icons/avatar/size","name":"medium","type":"\"medium\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/avatar/size/large","parentPath":"/components/images-and-icons/avatar/size","name":"large","type":"\"large\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/images-and-icons/avatar/source","parentPath":"/components/images-and-icons/avatar","name":"source","type":"string","kind":"string","mandatory":false,"tags":null,"description":"URL of the avatar image which falls back to initials if the image fails to load","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accessible label for the avatar image",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "accessibilityLabel",
+    "parentPath": "/components/images-and-icons/avatar",
+    "path": "/components/images-and-icons/avatar/accessibilityLabel"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/images-and-icons/avatar/customer",
+        "path": "/components/images-and-icons/avatar/customer/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/images-and-icons/avatar/customer",
+        "path": "/components/images-and-icons/avatar/customer/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Whether the avatar is for a customer",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "customer",
+    "parentPath": "/components/images-and-icons/avatar",
+    "path": "/components/images-and-icons/avatar/customer"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Initials of person to display",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "initials",
+    "parentPath": "/components/images-and-icons/avatar",
+    "path": "/components/images-and-icons/avatar/initials"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The name of the person",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "name",
+    "parentPath": "/components/images-and-icons/avatar",
+    "path": "/components/images-and-icons/avatar/name"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"small\"",
+        "name": "small",
+        "parentPath": "/components/images-and-icons/avatar/size",
+        "path": "/components/images-and-icons/avatar/size/small"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"medium\"",
+        "name": "medium",
+        "parentPath": "/components/images-and-icons/avatar/size",
+        "path": "/components/images-and-icons/avatar/size/medium"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"large\"",
+        "name": "large",
+        "parentPath": "/components/images-and-icons/avatar/size",
+        "path": "/components/images-and-icons/avatar/size/large"
+      }
+    ],
+    "defaultValue": "'medium'",
+    "description": "Size of avatar",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'medium'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"small\" | \"medium\" | \"large\"",
+    "name": "size",
+    "parentPath": "/components/images-and-icons/avatar",
+    "path": "/components/images-and-icons/avatar/size"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "URL of the avatar image which falls back to initials if the image fails to load",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "source",
+    "parentPath": "/components/images-and-icons/avatar",
+    "path": "/components/images-and-icons/avatar/source"
+  }
+]

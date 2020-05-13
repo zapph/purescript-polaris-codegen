@@ -1,1 +1,486 @@
-[{"path":"/components/lists-and-tables/filters/appliedFilters","parentPath":"/components/lists-and-tables/filters","name":"appliedFilters","type":"AppliedFilterInterface[]","kind":"array","mandatory":false,"tags":null,"description":"Applied filters which are rendered as tags. The remove callback is called with the respective key","defaultValue":null,"types":[{"path":"/components/lists-and-tables/filters/appliedFilters/key","parentPath":"/components/lists-and-tables/filters/appliedFilters","name":"key","type":"string","kind":"string","mandatory":true,"tags":null,"description":"A unique key used to identify the applied filter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/appliedFilters/label","parentPath":"/components/lists-and-tables/filters/appliedFilters","name":"label","type":"string","kind":"string","mandatory":true,"tags":null,"description":"A label for the applied filter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/appliedFilters/onRemove","parentPath":"/components/lists-and-tables/filters/appliedFilters","name":"onRemove","type":"(key: string) => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when the remove button is pressed","returnType":{"path":"/components/lists-and-tables/filters/appliedFilters/onRemove/return/void","parentPath":"/components/lists-and-tables/filters/appliedFilters/onRemove","name":"void","type":"void","kind":"interface","defaultValue":null,"mandatory":false,"tags":null,"description":"","__typename":"Property"},"types":[{"path":"/components/lists-and-tables/filters/appliedFilters/onRemove/parameter/key","parentPath":"/components/lists-and-tables/filters/appliedFilters/onRemove","name":"key","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/children","parentPath":"/components/lists-and-tables/filters","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display inline with the controls","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/disabled","parentPath":"/components/lists-and-tables/filters","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Disable all filters","defaultValue":null,"types":[{"path":"/components/lists-and-tables/filters/disabled/false","parentPath":"/components/lists-and-tables/filters/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/disabled/true","parentPath":"/components/lists-and-tables/filters/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/filters","parentPath":"/components/lists-and-tables/filters","name":"filters","type":"FilterInterface[]","kind":"array","mandatory":true,"tags":null,"description":"Available filters added to the sheet. Shortcut filters are exposed outside of the sheet.","defaultValue":null,"types":[{"path":"/components/lists-and-tables/filters/filters/disabled","parentPath":"/components/lists-and-tables/filters/filters","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the filter is disabled","returnType":null,"types":[{"path":"/components/lists-and-tables/filters/filters/disabled/false","parentPath":"/components/lists-and-tables/filters/filters/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/filters/disabled/true","parentPath":"/components/lists-and-tables/filters/filters/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/filters/filter","parentPath":"/components/lists-and-tables/filters/filters","name":"filter","type":"React.ReactNode","kind":"interface","mandatory":true,"tags":null,"description":"The markup for the given filter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/filters/key","parentPath":"/components/lists-and-tables/filters/filters","name":"key","type":"string","kind":"string","mandatory":true,"tags":null,"description":"A unique key used to identify the filter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/filters/label","parentPath":"/components/lists-and-tables/filters/filters","name":"label","type":"string","kind":"string","mandatory":true,"tags":null,"description":"The label for the filter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/filters/shortcut","parentPath":"/components/lists-and-tables/filters/filters","name":"shortcut","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the filter should have a shortcut popover displayed","returnType":null,"types":[{"path":"/components/lists-and-tables/filters/filters/shortcut/false","parentPath":"/components/lists-and-tables/filters/filters/shortcut","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/filters/shortcut/true","parentPath":"/components/lists-and-tables/filters/filters/shortcut","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/focused","parentPath":"/components/lists-and-tables/filters","name":"focused","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the query field is focused","defaultValue":null,"types":[{"path":"/components/lists-and-tables/filters/focused/false","parentPath":"/components/lists-and-tables/filters/focused","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/focused/true","parentPath":"/components/lists-and-tables/filters/focused","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/helpText","parentPath":"/components/lists-and-tables/filters","name":"helpText","type":"string | React.ReactNode","kind":"union","mandatory":false,"tags":null,"description":"Additional hint text to display below the filters","defaultValue":null,"types":[{"path":"/components/lists-and-tables/filters/helpText/string","parentPath":"/components/lists-and-tables/filters/helpText","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/helpText/React.ReactNode","parentPath":"/components/lists-and-tables/filters/helpText","name":"React.ReactNode","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/hideTags","parentPath":"/components/lists-and-tables/filters","name":"hideTags","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Hide tags for applied filters","defaultValue":null,"types":[{"path":"/components/lists-and-tables/filters/hideTags/false","parentPath":"/components/lists-and-tables/filters/hideTags","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/hideTags/true","parentPath":"/components/lists-and-tables/filters/hideTags","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/queryPlaceholder","parentPath":"/components/lists-and-tables/filters","name":"queryPlaceholder","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Placeholder text for the query field","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/queryValue","parentPath":"/components/lists-and-tables/filters","name":"queryValue","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Currently entered text in the query field","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/onClearAll","parentPath":"/components/lists-and-tables/filters","name":"onClearAll","type":"() => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when the reset all button is pressed","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/onQueryBlur","parentPath":"/components/lists-and-tables/filters","name":"onQueryBlur","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when the query field is blurred","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/onQueryChange","parentPath":"/components/lists-and-tables/filters","name":"onQueryChange","type":"(queryValue: string) => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when the query field is changed","defaultValue":null,"types":[{"path":"/components/lists-and-tables/filters/onQueryChange/parameter/queryValue","parentPath":"/components/lists-and-tables/filters/onQueryChange","name":"queryValue","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/filters/onQueryClear","parentPath":"/components/lists-and-tables/filters","name":"onQueryClear","type":"() => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when the clear button is triggered","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/filters/onQueryFocus","parentPath":"/components/lists-and-tables/filters","name":"onQueryFocus","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when the query field is focused","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique key used to identify the applied filter",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "key",
+        "parentPath": "/components/lists-and-tables/filters/appliedFilters",
+        "path": "/components/lists-and-tables/filters/appliedFilters/key"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A label for the applied filter",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "label",
+        "parentPath": "/components/lists-and-tables/filters/appliedFilters",
+        "path": "/components/lists-and-tables/filters/appliedFilters/label"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": true,
+            "kind": "string",
+            "type": "string",
+            "name": "key",
+            "parentPath": "/components/lists-and-tables/filters/appliedFilters/onRemove",
+            "path": "/components/lists-and-tables/filters/appliedFilters/onRemove/parameter/key"
+          }
+        ],
+        "returnType": {
+          "__typename": "Property",
+          "description": "",
+          "tags": null,
+          "mandatory": false,
+          "defaultValue": null,
+          "kind": "interface",
+          "type": "void",
+          "name": "void",
+          "parentPath": "/components/lists-and-tables/filters/appliedFilters/onRemove",
+          "path": "/components/lists-and-tables/filters/appliedFilters/onRemove/return/void"
+        },
+        "description": "Callback when the remove button is pressed",
+        "tags": null,
+        "mandatory": true,
+        "kind": "method",
+        "type": "(key: string) => void",
+        "name": "onRemove",
+        "parentPath": "/components/lists-and-tables/filters/appliedFilters",
+        "path": "/components/lists-and-tables/filters/appliedFilters/onRemove"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Applied filters which are rendered as tags. The remove callback is called with the respective key",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "AppliedFilterInterface[]",
+    "name": "appliedFilters",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/appliedFilters"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inline with the controls",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/filters/disabled",
+        "path": "/components/lists-and-tables/filters/disabled/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/filters/disabled",
+        "path": "/components/lists-and-tables/filters/disabled/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Disable all filters",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "disabled",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/disabled"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/lists-and-tables/filters/filters/disabled",
+            "path": "/components/lists-and-tables/filters/filters/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/lists-and-tables/filters/filters/disabled",
+            "path": "/components/lists-and-tables/filters/filters/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the filter is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/lists-and-tables/filters/filters",
+        "path": "/components/lists-and-tables/filters/filters/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "The markup for the given filter",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "React.ReactNode",
+        "name": "filter",
+        "parentPath": "/components/lists-and-tables/filters/filters",
+        "path": "/components/lists-and-tables/filters/filters/filter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique key used to identify the filter",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "key",
+        "parentPath": "/components/lists-and-tables/filters/filters",
+        "path": "/components/lists-and-tables/filters/filters/key"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "The label for the filter",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "label",
+        "parentPath": "/components/lists-and-tables/filters/filters",
+        "path": "/components/lists-and-tables/filters/filters/label"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/lists-and-tables/filters/filters/shortcut",
+            "path": "/components/lists-and-tables/filters/filters/shortcut/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/lists-and-tables/filters/filters/shortcut",
+            "path": "/components/lists-and-tables/filters/filters/shortcut/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the filter should have a shortcut popover displayed",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "shortcut",
+        "parentPath": "/components/lists-and-tables/filters/filters",
+        "path": "/components/lists-and-tables/filters/filters/shortcut"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Available filters added to the sheet. Shortcut filters are exposed outside of the sheet.",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "FilterInterface[]",
+    "name": "filters",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/filters"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/filters/focused",
+        "path": "/components/lists-and-tables/filters/focused/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/filters/focused",
+        "path": "/components/lists-and-tables/filters/focused/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Whether the query field is focused",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "focused",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/focused"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "string",
+        "parentPath": "/components/lists-and-tables/filters/helpText",
+        "path": "/components/lists-and-tables/filters/helpText/string"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "React.ReactNode",
+        "name": "React.ReactNode",
+        "parentPath": "/components/lists-and-tables/filters/helpText",
+        "path": "/components/lists-and-tables/filters/helpText/React.ReactNode"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Additional hint text to display below the filters",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "string | React.ReactNode",
+    "name": "helpText",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/helpText"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/filters/hideTags",
+        "path": "/components/lists-and-tables/filters/hideTags/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/filters/hideTags",
+        "path": "/components/lists-and-tables/filters/hideTags/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Hide tags for applied filters",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "hideTags",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/hideTags"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Placeholder text for the query field",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "queryPlaceholder",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/queryPlaceholder"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Currently entered text in the query field",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "queryValue",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/queryValue"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when the reset all button is pressed",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onClearAll",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/onClearAll"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when the query field is blurred",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onQueryBlur",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/onQueryBlur"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "queryValue",
+        "parentPath": "/components/lists-and-tables/filters/onQueryChange",
+        "path": "/components/lists-and-tables/filters/onQueryChange/parameter/queryValue"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when the query field is changed",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "(queryValue: string) => void",
+    "name": "onQueryChange",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/onQueryChange"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when the clear button is triggered",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onQueryClear",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/onQueryClear"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when the query field is focused",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onQueryFocus",
+    "parentPath": "/components/lists-and-tables/filters",
+    "path": "/components/lists-and-tables/filters/onQueryFocus"
+  }
+]

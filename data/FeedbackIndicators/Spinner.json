@@ -1,1 +1,184 @@
-[{"path":"/components/feedback-indicators/spinner/accessibilityLabel","parentPath":"/components/feedback-indicators/spinner","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Accessible label for the spinner","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/color","parentPath":"/components/feedback-indicators/spinner","name":"color","type":"\"white\" | \"teal\" | \"inkLightest\" | NewDesignLanguageColor","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'teal'\n","__typename":"Tag"}],"description":"Color of spinner","defaultValue":"'teal'","types":[{"path":"/components/feedback-indicators/spinner/color/Color","parentPath":"/components/feedback-indicators/spinner/color","name":"Color","type":"\"white\" | \"teal\" | \"inkLightest\"","kind":"union","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/feedback-indicators/spinner/color/Color/white","parentPath":"/components/feedback-indicators/spinner/color/Color","name":"white","type":"\"white\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/color/Color/teal","parentPath":"/components/feedback-indicators/spinner/color/Color","name":"teal","type":"\"teal\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/color/Color/inkLightest","parentPath":"/components/feedback-indicators/spinner/color/Color","name":"inkLightest","type":"\"inkLightest\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/color/NewDesignLanguageColor","parentPath":"/components/feedback-indicators/spinner/color","name":"NewDesignLanguageColor","type":"\"highlight\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/hasFocusableParent","parentPath":"/components/feedback-indicators/spinner","name":"hasFocusableParent","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allows the component to apply the correct accessibility roles based on focus","defaultValue":null,"types":[{"path":"/components/feedback-indicators/spinner/hasFocusableParent/false","parentPath":"/components/feedback-indicators/spinner/hasFocusableParent","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/hasFocusableParent/true","parentPath":"/components/feedback-indicators/spinner/hasFocusableParent","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/size","parentPath":"/components/feedback-indicators/spinner","name":"size","type":"\"small\" | \"large\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'large'\n","__typename":"Tag"}],"description":"Size of spinner","defaultValue":"'large'","types":[{"path":"/components/feedback-indicators/spinner/size/small","parentPath":"/components/feedback-indicators/spinner/size","name":"small","type":"\"small\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/spinner/size/large","parentPath":"/components/feedback-indicators/spinner/size","name":"large","type":"\"large\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accessible label for the spinner",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "accessibilityLabel",
+    "parentPath": "/components/feedback-indicators/spinner",
+    "path": "/components/feedback-indicators/spinner/accessibilityLabel"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"white\"",
+            "name": "white",
+            "parentPath": "/components/feedback-indicators/spinner/color/Color",
+            "path": "/components/feedback-indicators/spinner/color/Color/white"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"teal\"",
+            "name": "teal",
+            "parentPath": "/components/feedback-indicators/spinner/color/Color",
+            "path": "/components/feedback-indicators/spinner/color/Color/teal"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"inkLightest\"",
+            "name": "inkLightest",
+            "parentPath": "/components/feedback-indicators/spinner/color/Color",
+            "path": "/components/feedback-indicators/spinner/color/Color/inkLightest"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"white\" | \"teal\" | \"inkLightest\"",
+        "name": "Color",
+        "parentPath": "/components/feedback-indicators/spinner/color",
+        "path": "/components/feedback-indicators/spinner/color/Color"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"highlight\"",
+        "name": "NewDesignLanguageColor",
+        "parentPath": "/components/feedback-indicators/spinner/color",
+        "path": "/components/feedback-indicators/spinner/color/NewDesignLanguageColor"
+      }
+    ],
+    "defaultValue": "'teal'",
+    "description": "Color of spinner",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'teal'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"white\" | \"teal\" | \"inkLightest\" | NewDesignLanguageColor",
+    "name": "color",
+    "parentPath": "/components/feedback-indicators/spinner",
+    "path": "/components/feedback-indicators/spinner/color"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/feedback-indicators/spinner/hasFocusableParent",
+        "path": "/components/feedback-indicators/spinner/hasFocusableParent/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/feedback-indicators/spinner/hasFocusableParent",
+        "path": "/components/feedback-indicators/spinner/hasFocusableParent/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Allows the component to apply the correct accessibility roles based on focus",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "hasFocusableParent",
+    "parentPath": "/components/feedback-indicators/spinner",
+    "path": "/components/feedback-indicators/spinner/hasFocusableParent"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"small\"",
+        "name": "small",
+        "parentPath": "/components/feedback-indicators/spinner/size",
+        "path": "/components/feedback-indicators/spinner/size/small"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"large\"",
+        "name": "large",
+        "parentPath": "/components/feedback-indicators/spinner/size",
+        "path": "/components/feedback-indicators/spinner/size/large"
+      }
+    ],
+    "defaultValue": "'large'",
+    "description": "Size of spinner",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'large'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"small\" | \"large\"",
+    "name": "size",
+    "parentPath": "/components/feedback-indicators/spinner",
+    "path": "/components/feedback-indicators/spinner/size"
+  }
+]

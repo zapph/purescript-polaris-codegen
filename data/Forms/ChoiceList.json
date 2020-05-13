@@ -1,1 +1,445 @@
-[{"path":"/components/forms/choice-list/allowMultiple","parentPath":"/components/forms/choice-list","name":"allowMultiple","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allow merchants to select multiple options at once","defaultValue":null,"types":[{"path":"/components/forms/choice-list/allowMultiple/false","parentPath":"/components/forms/choice-list/allowMultiple","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/allowMultiple/true","parentPath":"/components/forms/choice-list/allowMultiple","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/choice-list/choices","parentPath":"/components/forms/choice-list","name":"choices","type":"Choice[]","kind":"array","mandatory":true,"tags":null,"description":"Collection of choices","defaultValue":null,"types":[{"path":"/components/forms/choice-list/choices/describedByError","parentPath":"/components/forms/choice-list/choices","name":"describedByError","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Indicates that the choice is aria-describedBy the error message","returnType":null,"types":[{"path":"/components/forms/choice-list/choices/describedByError/false","parentPath":"/components/forms/choice-list/choices/describedByError","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/choices/describedByError/true","parentPath":"/components/forms/choice-list/choices/describedByError","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/choice-list/choices/disabled","parentPath":"/components/forms/choice-list/choices","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Disable choice","returnType":null,"types":[{"path":"/components/forms/choice-list/choices/disabled/false","parentPath":"/components/forms/choice-list/choices/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/choices/disabled/true","parentPath":"/components/forms/choice-list/choices/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/choice-list/choices/helpText","parentPath":"/components/forms/choice-list/choices","name":"helpText","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Additional text to aide in use","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/choices/label","parentPath":"/components/forms/choice-list/choices","name":"label","type":"React.ReactNode","kind":"interface","mandatory":true,"tags":null,"description":"Label for the choice","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/choices/value","parentPath":"/components/forms/choice-list/choices","name":"value","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Value of the choice","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/choices/renderChildren","parentPath":"/components/forms/choice-list/choices","name":"renderChildren","type":"(isSelected: boolean) => undefined","kind":"method","mandatory":false,"tags":null,"description":"Method to render children with a choice","returnType":{"path":"/components/forms/choice-list/choices/renderChildren/return/","parentPath":"/components/forms/choice-list/choices/renderChildren","name":null,"type":"React.ReactNode | false","kind":"union","defaultValue":null,"mandatory":false,"tags":null,"description":"","__typename":"Property"},"types":[{"path":"/components/forms/choice-list/choices/renderChildren/parameter/isSelected","parentPath":"/components/forms/choice-list/choices/renderChildren","name":"isSelected","type":"boolean","kind":"boolean","mandatory":true,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/choice-list/disabled","parentPath":"/components/forms/choice-list","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Disable all choices","defaultValue":null,"types":[{"path":"/components/forms/choice-list/disabled/false","parentPath":"/components/forms/choice-list/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/disabled/true","parentPath":"/components/forms/choice-list/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/choice-list/error","parentPath":"/components/forms/choice-list","name":"error","type":"string | ReactElement | (string | ReactElement)[]","kind":"array","mandatory":false,"tags":null,"description":"Display an error message","defaultValue":null,"types":[{"path":"/components/forms/choice-list/error/string","parentPath":"/components/forms/choice-list/error","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/error/ReactElement","parentPath":"/components/forms/choice-list/error","name":"ReactElement","type":"ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/error/","parentPath":"/components/forms/choice-list/error","name":"","type":"(string | ReactElement)[]","kind":"array","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/forms/choice-list/error//string","parentPath":"/components/forms/choice-list/error/","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/error//ReactElement","parentPath":"/components/forms/choice-list/error/","name":"ReactElement","type":"ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/choice-list/name","parentPath":"/components/forms/choice-list","name":"name","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Name for form input","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/selected","parentPath":"/components/forms/choice-list","name":"selected","type":"string[]","kind":"array","mandatory":true,"tags":null,"description":"Collection of selected choices","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/title","parentPath":"/components/forms/choice-list","name":"title","type":"React.ReactNode","kind":"interface","mandatory":true,"tags":null,"description":"Label for list of choices","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/titleHidden","parentPath":"/components/forms/choice-list","name":"titleHidden","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Toggles display of the title","defaultValue":null,"types":[{"path":"/components/forms/choice-list/titleHidden/false","parentPath":"/components/forms/choice-list/titleHidden","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/titleHidden/true","parentPath":"/components/forms/choice-list/titleHidden","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/choice-list/onChange","parentPath":"/components/forms/choice-list","name":"onChange","type":"(selected: string[], name: string) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when the selected choices change","defaultValue":null,"types":[{"path":"/components/forms/choice-list/onChange/parameter/selected","parentPath":"/components/forms/choice-list/onChange","name":"selected","type":"string[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/choice-list/onChange/parameter/name","parentPath":"/components/forms/choice-list/onChange","name":"name","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "path": "/components/forms/choice-list/allowMultiple",
+    "parentPath": "/components/forms/choice-list",
+    "name": "allowMultiple",
+    "type": "boolean",
+    "kind": "boolean",
+    "mandatory": false,
+    "tags": null,
+    "description": "Allow merchants to select multiple options at once",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/choice-list/allowMultiple/false",
+        "parentPath": "/components/forms/choice-list/allowMultiple",
+        "name": "false",
+        "type": "false",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/allowMultiple/true",
+        "parentPath": "/components/forms/choice-list/allowMultiple",
+        "name": "true",
+        "type": "true",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/choices",
+    "parentPath": "/components/forms/choice-list",
+    "name": "choices",
+    "type": "Choice[]",
+    "kind": "array",
+    "mandatory": true,
+    "tags": null,
+    "description": "Collection of choices",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/choice-list/choices/describedByError",
+        "parentPath": "/components/forms/choice-list/choices",
+        "name": "describedByError",
+        "type": "boolean",
+        "kind": "boolean",
+        "mandatory": false,
+        "tags": null,
+        "description": "Indicates that the choice is aria-describedBy the error message",
+        "returnType": null,
+        "types": [
+          {
+            "path": "/components/forms/choice-list/choices/describedByError/false",
+            "parentPath": "/components/forms/choice-list/choices/describedByError",
+            "name": "false",
+            "type": "false",
+            "kind": "interface",
+            "mandatory": false,
+            "tags": null,
+            "description": "",
+            "types": null,
+            "__typename": "Property"
+          },
+          {
+            "path": "/components/forms/choice-list/choices/describedByError/true",
+            "parentPath": "/components/forms/choice-list/choices/describedByError",
+            "name": "true",
+            "type": "true",
+            "kind": "interface",
+            "mandatory": false,
+            "tags": null,
+            "description": "",
+            "types": null,
+            "__typename": "Property"
+          }
+        ],
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/choices/disabled",
+        "parentPath": "/components/forms/choice-list/choices",
+        "name": "disabled",
+        "type": "boolean",
+        "kind": "boolean",
+        "mandatory": false,
+        "tags": null,
+        "description": "Disable choice",
+        "returnType": null,
+        "types": [
+          {
+            "path": "/components/forms/choice-list/choices/disabled/false",
+            "parentPath": "/components/forms/choice-list/choices/disabled",
+            "name": "false",
+            "type": "false",
+            "kind": "interface",
+            "mandatory": false,
+            "tags": null,
+            "description": "",
+            "types": null,
+            "__typename": "Property"
+          },
+          {
+            "path": "/components/forms/choice-list/choices/disabled/true",
+            "parentPath": "/components/forms/choice-list/choices/disabled",
+            "name": "true",
+            "type": "true",
+            "kind": "interface",
+            "mandatory": false,
+            "tags": null,
+            "description": "",
+            "types": null,
+            "__typename": "Property"
+          }
+        ],
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/choices/helpText",
+        "parentPath": "/components/forms/choice-list/choices",
+        "name": "helpText",
+        "type": "React.ReactNode",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "Additional text to aide in use",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/choices/label",
+        "parentPath": "/components/forms/choice-list/choices",
+        "name": "label",
+        "type": "React.ReactNode",
+        "kind": "interface",
+        "mandatory": true,
+        "tags": null,
+        "description": "Label for the choice",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/choices/value",
+        "parentPath": "/components/forms/choice-list/choices",
+        "name": "value",
+        "type": "string",
+        "kind": "string",
+        "mandatory": true,
+        "tags": null,
+        "description": "Value of the choice",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/choices/renderChildren",
+        "parentPath": "/components/forms/choice-list/choices",
+        "name": "renderChildren",
+        "type": "(isSelected: boolean) => undefined",
+        "kind": "method",
+        "mandatory": false,
+        "tags": null,
+        "description": "Method to render children with a choice",
+        "returnType": {
+          "path": "/components/forms/choice-list/choices/renderChildren/return/",
+          "parentPath": "/components/forms/choice-list/choices/renderChildren",
+          "name": null,
+          "type": "React.ReactNode | false",
+          "kind": "union",
+          "defaultValue": null,
+          "mandatory": false,
+          "tags": null,
+          "description": "",
+          "__typename": "Property"
+        },
+        "types": [
+          {
+            "path": "/components/forms/choice-list/choices/renderChildren/parameter/isSelected",
+            "parentPath": "/components/forms/choice-list/choices/renderChildren",
+            "name": "isSelected",
+            "type": "boolean",
+            "kind": "boolean",
+            "mandatory": true,
+            "tags": null,
+            "description": "",
+            "types": null,
+            "__typename": "Property"
+          }
+        ],
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/disabled",
+    "parentPath": "/components/forms/choice-list",
+    "name": "disabled",
+    "type": "boolean",
+    "kind": "boolean",
+    "mandatory": false,
+    "tags": null,
+    "description": "Disable all choices",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/choice-list/disabled/false",
+        "parentPath": "/components/forms/choice-list/disabled",
+        "name": "false",
+        "type": "false",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/disabled/true",
+        "parentPath": "/components/forms/choice-list/disabled",
+        "name": "true",
+        "type": "true",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/error",
+    "parentPath": "/components/forms/choice-list",
+    "name": "error",
+    "type": "string | ReactElement | (string | ReactElement)[]",
+    "kind": "array",
+    "mandatory": false,
+    "tags": null,
+    "description": "Display an error message",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/choice-list/error/string",
+        "parentPath": "/components/forms/choice-list/error",
+        "name": "string",
+        "type": "string",
+        "kind": "string",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/error/ReactElement",
+        "parentPath": "/components/forms/choice-list/error",
+        "name": "ReactElement",
+        "type": "ReactElement",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/error/",
+        "parentPath": "/components/forms/choice-list/error",
+        "name": "",
+        "type": "(string | ReactElement)[]",
+        "kind": "array",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": [
+          {
+            "path": "/components/forms/choice-list/error//string",
+            "parentPath": "/components/forms/choice-list/error/",
+            "name": "string",
+            "type": "string",
+            "kind": "string",
+            "mandatory": false,
+            "tags": null,
+            "description": "",
+            "types": null,
+            "__typename": "Property"
+          },
+          {
+            "path": "/components/forms/choice-list/error//ReactElement",
+            "parentPath": "/components/forms/choice-list/error/",
+            "name": "ReactElement",
+            "type": "ReactElement",
+            "kind": "interface",
+            "mandatory": false,
+            "tags": null,
+            "description": "",
+            "types": null,
+            "__typename": "Property"
+          }
+        ],
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/name",
+    "parentPath": "/components/forms/choice-list",
+    "name": "name",
+    "type": "string",
+    "kind": "string",
+    "mandatory": false,
+    "tags": null,
+    "description": "Name for form input",
+    "defaultValue": null,
+    "types": null,
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/selected",
+    "parentPath": "/components/forms/choice-list",
+    "name": "selected",
+    "type": "string[]",
+    "kind": "array",
+    "mandatory": true,
+    "tags": null,
+    "description": "Collection of selected choices",
+    "defaultValue": null,
+    "types": null,
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/title",
+    "parentPath": "/components/forms/choice-list",
+    "name": "title",
+    "type": "React.ReactNode",
+    "kind": "interface",
+    "mandatory": true,
+    "tags": null,
+    "description": "Label for list of choices",
+    "defaultValue": null,
+    "types": null,
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/titleHidden",
+    "parentPath": "/components/forms/choice-list",
+    "name": "titleHidden",
+    "type": "boolean",
+    "kind": "boolean",
+    "mandatory": false,
+    "tags": null,
+    "description": "Toggles display of the title",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/choice-list/titleHidden/false",
+        "parentPath": "/components/forms/choice-list/titleHidden",
+        "name": "false",
+        "type": "false",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/titleHidden/true",
+        "parentPath": "/components/forms/choice-list/titleHidden",
+        "name": "true",
+        "type": "true",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/choice-list/onChange",
+    "parentPath": "/components/forms/choice-list",
+    "name": "onChange",
+    "type": "(selected: string[], name: string) => void",
+    "kind": "method",
+    "mandatory": false,
+    "tags": null,
+    "description": "Callback when the selected choices change",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/choice-list/onChange/parameter/selected",
+        "parentPath": "/components/forms/choice-list/onChange",
+        "name": "selected",
+        "type": "string[]",
+        "kind": "array",
+        "mandatory": true,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/choice-list/onChange/parameter/name",
+        "parentPath": "/components/forms/choice-list/onChange",
+        "name": "name",
+        "type": "string",
+        "kind": "string",
+        "mandatory": true,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  }
+]

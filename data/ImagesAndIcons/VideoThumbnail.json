@@ -1,1 +1,73 @@
-[{"path":"/components/images-and-icons/video-thumbnail/accessibilityLabel","parentPath":"/components/images-and-icons/video-thumbnail","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":[{"tag":"default","text":"'Play video of length {human readable duration}'\n","__typename":"Tag"}],"description":"Custom ARIA label for play button.","defaultValue":"'Play video of length {human readable duration}'","types":null,"__typename":"Property"},{"path":"/components/images-and-icons/video-thumbnail/thumbnailUrl","parentPath":"/components/images-and-icons/video-thumbnail","name":"thumbnailUrl","type":"string","kind":"string","mandatory":true,"tags":null,"description":"URL source for thumbnail image.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/video-thumbnail/videoLength","parentPath":"/components/images-and-icons/video-thumbnail","name":"videoLength","type":"number","kind":"number","mandatory":false,"tags":null,"description":"Length of video in seconds.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/video-thumbnail/onBeforeStartPlaying","parentPath":"/components/images-and-icons/video-thumbnail","name":"onBeforeStartPlaying","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback on mouse enter, focus, or touch start of thumbnail. Use to trigger video preload.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/images-and-icons/video-thumbnail/onClick","parentPath":"/components/images-and-icons/video-thumbnail","name":"onClick","type":"() => void","kind":"method","mandatory":true,"tags":null,"description":"Callback on click or keypress of thumbnail. Use to trigger render of the video player in your chosen format, for example within a modal or fullscreen container.","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": "'Play video of length {human readable duration}'",
+    "description": "Custom ARIA label for play button.",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'Play video of length {human readable duration}'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "accessibilityLabel",
+    "parentPath": "/components/images-and-icons/video-thumbnail",
+    "path": "/components/images-and-icons/video-thumbnail/accessibilityLabel"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "URL source for thumbnail image.",
+    "tags": null,
+    "mandatory": true,
+    "kind": "string",
+    "type": "string",
+    "name": "thumbnailUrl",
+    "parentPath": "/components/images-and-icons/video-thumbnail",
+    "path": "/components/images-and-icons/video-thumbnail/thumbnailUrl"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Length of video in seconds.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "number",
+    "type": "number",
+    "name": "videoLength",
+    "parentPath": "/components/images-and-icons/video-thumbnail",
+    "path": "/components/images-and-icons/video-thumbnail/videoLength"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback on mouse enter, focus, or touch start of thumbnail. Use to trigger video preload.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onBeforeStartPlaying",
+    "parentPath": "/components/images-and-icons/video-thumbnail",
+    "path": "/components/images-and-icons/video-thumbnail/onBeforeStartPlaying"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback on click or keypress of thumbnail. Use to trigger render of the video player in your chosen format, for example within a modal or fullscreen container.",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onClick",
+    "parentPath": "/components/images-and-icons/video-thumbnail",
+    "path": "/components/images-and-icons/video-thumbnail/onClick"
+  }
+]

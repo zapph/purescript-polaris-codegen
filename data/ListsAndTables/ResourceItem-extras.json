@@ -1,88 +1,88 @@
 {
   "props": [
     {
-      "type": "string",
-      "mandatory": false,
+      "description": "Visually hidden text for screen readers used for item link",
       "name": "accessibilityLabel",
-      "description": "Visually hidden text for screen readers used for item link"
+      "mandatory": false,
+      "type": "string"
     },
     {
-      "type": "string",
-      "mandatory": false,
+      "description": "Individual item name used by various text labels",
       "name": "name",
-      "description": "Individual item name used by various text labels"
+      "mandatory": false,
+      "type": "string"
     },
     {
-      "type": "string",
-      "mandatory": false,
+      "description": "Id of the element the item onClick controls",
       "name": "ariaControls",
-      "description": "Id of the element the item onClick controls"
+      "mandatory": false,
+      "type": "string"
     },
     {
-      "type": "boolean",
-      "mandatory": false,
+      "description": "Tells screen reader the controlled element is expanded",
       "name": "ariaExpanded",
-      "description": "Tells screen reader the controlled element is expanded"
+      "mandatory": false,
+      "type": "boolean"
     },
     {
-      "type": "string",
-      "mandatory": true,
+      "description": "Unique identifier for the item",
       "name": "id",
-      "description": "Unique identifier for the item"
+      "mandatory": true,
+      "type": "string"
     },
     {
-      "type": "React.ReactElement",
-      "mandatory": false,
+      "description": "Content for the media area at the left of the item, usually an Avatar or Thumbnail",
       "name": "media",
-      "description": "Content for the media area at the left of the item, usually an Avatar or Thumbnail"
+      "mandatory": false,
+      "type": "React.ReactElement"
     },
     {
-      "type": "boolean",
-      "mandatory": false,
+      "description": "Makes the shortcut actions always visible",
       "name": "persistActions",
-      "description": "Makes the shortcut actions always visible"
+      "mandatory": false,
+      "type": "boolean"
     },
     {
-      "type": "DisableableAction[]",
-      "mandatory": false,
+      "description": "1 or 2 shortcut actions; must be available on the page linked to by url",
       "name": "shortcutActions",
-      "description": "1 or 2 shortcut actions; must be available on the page linked to by url"
+      "mandatory": false,
+      "type": "DisableableAction[]"
     },
     {
-      "type": "number",
-      "mandatory": false,
+      "description": "The order the item is rendered",
       "name": "sortOrder",
-      "description": "The order the item is rendered"
+      "mandatory": false,
+      "type": "number"
     },
     {
-      "type": "string",
-      "mandatory": false,
+      "description": "URL for the resource’s details page (required unless onClick is provided)",
       "name": "url",
-      "description": "URL for the resource’s details page (required unless onClick is provided)"
+      "mandatory": false,
+      "type": "string"
     },
     {
-      "type": "boolean",
-      "mandatory": false,
+      "description": "Allows url to open in a new tab",
       "name": "external",
-      "description": "Allows url to open in a new tab"
+      "mandatory": false,
+      "type": "boolean"
     },
     {
-      "type": "(id: string) => void",
-      "mandatory": false,
+      "description": "Callback when clicked (required if url is omitted)",
       "name": "onClick",
-      "description": "Callback when clicked (required if url is omitted)"
+      "mandatory": false,
+      "type": "(id: string) => void"
     },
     {
-      "type": "React.ReactNode",
-      "mandatory": false,
+      "description": "Content for the details area ",
       "name": "children",
-      "description": "Content for the details area "
+      "mandatory": false,
+      "type": "React.ReactNode"
     },
     {
-      "type": "Alignment",
-      "mandatory": false,
+      "description": "Adjust vertical alignment of elements",
       "name": "verticalAlignment",
-      "description": "Adjust vertical alignment of elements"
+      "mandatory": false,
+      "type": "Alignment"
     }
   ]
 }

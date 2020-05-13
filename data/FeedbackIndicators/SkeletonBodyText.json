@@ -1,1 +1,21 @@
-[{"path":"/components/feedback-indicators/skeleton-body-text/lines","parentPath":"/components/feedback-indicators/skeleton-body-text","name":"lines","type":"number","kind":"number","mandatory":false,"tags":[{"tag":"default","text":"3\n","__typename":"Tag"}],"description":"Number of lines to display","defaultValue":"3","types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": "3",
+    "description": "Number of lines to display",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "3\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "number",
+    "type": "number",
+    "name": "lines",
+    "parentPath": "/components/feedback-indicators/skeleton-body-text",
+    "path": "/components/feedback-indicators/skeleton-body-text/lines"
+  }
+]

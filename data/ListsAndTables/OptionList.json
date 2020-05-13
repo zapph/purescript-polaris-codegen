@@ -1,1 +1,439 @@
-[{"path":"/components/lists-and-tables/option-list/allowMultiple","parentPath":"/components/lists-and-tables/option-list","name":"allowMultiple","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allow more than one option to be selected","defaultValue":null,"types":[{"path":"/components/lists-and-tables/option-list/allowMultiple/false","parentPath":"/components/lists-and-tables/option-list/allowMultiple","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/allowMultiple/true","parentPath":"/components/lists-and-tables/option-list/allowMultiple","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/id","parentPath":"/components/lists-and-tables/option-list","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the option list","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/optionRole","parentPath":"/components/lists-and-tables/option-list","name":"optionRole","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a specific role attribute for each option in the list","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options","parentPath":"/components/lists-and-tables/option-list","name":"options","type":"OptionDescriptor[]","kind":"array","mandatory":false,"tags":null,"description":"Collection of options to be listed","defaultValue":null,"types":[{"path":"/components/lists-and-tables/option-list/options/active","parentPath":"/components/lists-and-tables/option-list/options","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the option is active or not","returnType":null,"types":[{"path":"/components/lists-and-tables/option-list/options/active/false","parentPath":"/components/lists-and-tables/option-list/options/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options/active/true","parentPath":"/components/lists-and-tables/option-list/options/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options/disabled","parentPath":"/components/lists-and-tables/option-list/options","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the option is disabled or not","returnType":null,"types":[{"path":"/components/lists-and-tables/option-list/options/disabled/false","parentPath":"/components/lists-and-tables/option-list/options/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options/disabled/true","parentPath":"/components/lists-and-tables/option-list/options/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options/id","parentPath":"/components/lists-and-tables/option-list/options","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Unique identifier for the option","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options/label","parentPath":"/components/lists-and-tables/option-list/options","name":"label","type":"React.ReactNode","kind":"interface","mandatory":true,"tags":null,"description":"Display label for the option","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options/media","parentPath":"/components/lists-and-tables/option-list/options","name":"media","type":"React.ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"Media to display to the left of the option content","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/options/value","parentPath":"/components/lists-and-tables/option-list/options","name":"value","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Value of the option","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/role","parentPath":"/components/lists-and-tables/option-list","name":"role","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a specific role attribute for the list itself","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections","parentPath":"/components/lists-and-tables/option-list","name":"sections","type":"SectionDescriptor[]","kind":"array","mandatory":false,"tags":null,"description":"Sections containing a header and related options","defaultValue":null,"types":[{"path":"/components/lists-and-tables/option-list/sections/options","parentPath":"/components/lists-and-tables/option-list/sections","name":"options","type":"OptionDescriptor[]","kind":"array","mandatory":true,"tags":null,"description":"Collection of options within the section","returnType":null,"types":[{"path":"/components/lists-and-tables/option-list/sections/options/active","parentPath":"/components/lists-and-tables/option-list/sections/options","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the option is active or not","types":[{"path":"/components/lists-and-tables/option-list/sections/options/active/false","parentPath":"/components/lists-and-tables/option-list/sections/options/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/options/active/true","parentPath":"/components/lists-and-tables/option-list/sections/options/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/options/disabled","parentPath":"/components/lists-and-tables/option-list/sections/options","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the option is disabled or not","types":[{"path":"/components/lists-and-tables/option-list/sections/options/disabled/false","parentPath":"/components/lists-and-tables/option-list/sections/options/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/options/disabled/true","parentPath":"/components/lists-and-tables/option-list/sections/options/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/options/id","parentPath":"/components/lists-and-tables/option-list/sections/options","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Unique identifier for the option","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/options/label","parentPath":"/components/lists-and-tables/option-list/sections/options","name":"label","type":"React.ReactNode","kind":"interface","mandatory":true,"tags":null,"description":"Display label for the option","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/options/media","parentPath":"/components/lists-and-tables/option-list/sections/options","name":"media","type":"React.ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"Media to display to the left of the option content","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/options/value","parentPath":"/components/lists-and-tables/option-list/sections/options","name":"value","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Value of the option","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/sections/title","parentPath":"/components/lists-and-tables/option-list/sections","name":"title","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Section title","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/selected","parentPath":"/components/lists-and-tables/option-list","name":"selected","type":"string[]","kind":"array","mandatory":true,"tags":null,"description":"The selected options","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/title","parentPath":"/components/lists-and-tables/option-list","name":"title","type":"string","kind":"string","mandatory":false,"tags":null,"description":"List title","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/option-list/onChange","parentPath":"/components/lists-and-tables/option-list","name":"onChange","type":"(selected: string[]) => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when selection is changed","defaultValue":null,"types":[{"path":"/components/lists-and-tables/option-list/onChange/parameter/selected","parentPath":"/components/lists-and-tables/option-list/onChange","name":"selected","type":"string[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/option-list/allowMultiple",
+        "path": "/components/lists-and-tables/option-list/allowMultiple/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/option-list/allowMultiple",
+        "path": "/components/lists-and-tables/option-list/allowMultiple/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Allow more than one option to be selected",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "allowMultiple",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/allowMultiple"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "A unique identifier for the option list",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "id",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/id"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Defines a specific role attribute for each option in the list",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "optionRole",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/optionRole"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/lists-and-tables/option-list/options/active",
+            "path": "/components/lists-and-tables/option-list/options/active/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/lists-and-tables/option-list/options/active",
+            "path": "/components/lists-and-tables/option-list/options/active/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether the option is active or not",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "active",
+        "parentPath": "/components/lists-and-tables/option-list/options",
+        "path": "/components/lists-and-tables/option-list/options/active"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/lists-and-tables/option-list/options/disabled",
+            "path": "/components/lists-and-tables/option-list/options/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/lists-and-tables/option-list/options/disabled",
+            "path": "/components/lists-and-tables/option-list/options/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether the option is disabled or not",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/lists-and-tables/option-list/options",
+        "path": "/components/lists-and-tables/option-list/options/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Unique identifier for the option",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/lists-and-tables/option-list/options",
+        "path": "/components/lists-and-tables/option-list/options/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Display label for the option",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "React.ReactNode",
+        "name": "label",
+        "parentPath": "/components/lists-and-tables/option-list/options",
+        "path": "/components/lists-and-tables/option-list/options/label"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Media to display to the left of the option content",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "React.ReactElement",
+        "name": "media",
+        "parentPath": "/components/lists-and-tables/option-list/options",
+        "path": "/components/lists-and-tables/option-list/options/media"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Value of the option",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "value",
+        "parentPath": "/components/lists-and-tables/option-list/options",
+        "path": "/components/lists-and-tables/option-list/options/value"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Collection of options to be listed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "OptionDescriptor[]",
+    "name": "options",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/options"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Defines a specific role attribute for the list itself",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "role",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/role"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/lists-and-tables/option-list/sections/options/active",
+                "path": "/components/lists-and-tables/option-list/sections/options/active/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/lists-and-tables/option-list/sections/options/active",
+                "path": "/components/lists-and-tables/option-list/sections/options/active/true"
+              }
+            ],
+            "description": "Whether the option is active or not",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "active",
+            "parentPath": "/components/lists-and-tables/option-list/sections/options",
+            "path": "/components/lists-and-tables/option-list/sections/options/active"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/lists-and-tables/option-list/sections/options/disabled",
+                "path": "/components/lists-and-tables/option-list/sections/options/disabled/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/lists-and-tables/option-list/sections/options/disabled",
+                "path": "/components/lists-and-tables/option-list/sections/options/disabled/true"
+              }
+            ],
+            "description": "Whether the option is disabled or not",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "disabled",
+            "parentPath": "/components/lists-and-tables/option-list/sections/options",
+            "path": "/components/lists-and-tables/option-list/sections/options/disabled"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Unique identifier for the option",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "id",
+            "parentPath": "/components/lists-and-tables/option-list/sections/options",
+            "path": "/components/lists-and-tables/option-list/sections/options/id"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Display label for the option",
+            "tags": null,
+            "mandatory": true,
+            "kind": "interface",
+            "type": "React.ReactNode",
+            "name": "label",
+            "parentPath": "/components/lists-and-tables/option-list/sections/options",
+            "path": "/components/lists-and-tables/option-list/sections/options/label"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Media to display to the left of the option content",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "React.ReactElement",
+            "name": "media",
+            "parentPath": "/components/lists-and-tables/option-list/sections/options",
+            "path": "/components/lists-and-tables/option-list/sections/options/media"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Value of the option",
+            "tags": null,
+            "mandatory": true,
+            "kind": "string",
+            "type": "string",
+            "name": "value",
+            "parentPath": "/components/lists-and-tables/option-list/sections/options",
+            "path": "/components/lists-and-tables/option-list/sections/options/value"
+          }
+        ],
+        "returnType": null,
+        "description": "Collection of options within the section",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "OptionDescriptor[]",
+        "name": "options",
+        "parentPath": "/components/lists-and-tables/option-list/sections",
+        "path": "/components/lists-and-tables/option-list/sections/options"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Section title",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "title",
+        "parentPath": "/components/lists-and-tables/option-list/sections",
+        "path": "/components/lists-and-tables/option-list/sections/title"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Sections containing a header and related options",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "SectionDescriptor[]",
+    "name": "sections",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/sections"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The selected options",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "string[]",
+    "name": "selected",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/selected"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "List title",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "title",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/title"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "string[]",
+        "name": "selected",
+        "parentPath": "/components/lists-and-tables/option-list/onChange",
+        "path": "/components/lists-and-tables/option-list/onChange/parameter/selected"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when selection is changed",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "(selected: string[]) => void",
+    "name": "onChange",
+    "parentPath": "/components/lists-and-tables/option-list",
+    "path": "/components/lists-and-tables/option-list/onChange"
+  }
+]

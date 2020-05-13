@@ -1,1 +1,55 @@
-[{"path":"/components/titles-and-text/text-container/children","parentPath":"/components/titles-and-text/text-container","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to render in the text container.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/text-container/spacing","parentPath":"/components/titles-and-text/text-container","name":"spacing","type":"\"tight\" | \"loose\"","kind":"union","mandatory":false,"tags":null,"description":"The amount of vertical spacing children will get between them","defaultValue":null,"types":[{"path":"/components/titles-and-text/text-container/spacing/tight","parentPath":"/components/titles-and-text/text-container/spacing","name":"tight","type":"\"tight\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/text-container/spacing/loose","parentPath":"/components/titles-and-text/text-container/spacing","name":"loose","type":"\"loose\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to render in the text container.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/titles-and-text/text-container",
+    "path": "/components/titles-and-text/text-container/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"tight\"",
+        "name": "tight",
+        "parentPath": "/components/titles-and-text/text-container/spacing",
+        "path": "/components/titles-and-text/text-container/spacing/tight"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"loose\"",
+        "name": "loose",
+        "parentPath": "/components/titles-and-text/text-container/spacing",
+        "path": "/components/titles-and-text/text-container/spacing/loose"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The amount of vertical spacing children will get between them",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"tight\" | \"loose\"",
+    "name": "spacing",
+    "parentPath": "/components/titles-and-text/text-container",
+    "path": "/components/titles-and-text/text-container/spacing"
+  }
+]

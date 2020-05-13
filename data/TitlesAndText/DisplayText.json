@@ -1,1 +1,198 @@
-[{"path":"/components/titles-and-text/display-text/children","parentPath":"/components/titles-and-text/display-text","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Content to display","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/element","parentPath":"/components/titles-and-text/display-text","name":"element","type":"\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'p'\n","__typename":"Tag"}],"description":"Name of element to use for text","defaultValue":"'p'","types":[{"path":"/components/titles-and-text/display-text/element/h1","parentPath":"/components/titles-and-text/display-text/element","name":"h1","type":"\"h1\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/element/h2","parentPath":"/components/titles-and-text/display-text/element","name":"h2","type":"\"h2\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/element/h3","parentPath":"/components/titles-and-text/display-text/element","name":"h3","type":"\"h3\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/element/h4","parentPath":"/components/titles-and-text/display-text/element","name":"h4","type":"\"h4\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/element/h5","parentPath":"/components/titles-and-text/display-text/element","name":"h5","type":"\"h5\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/element/h6","parentPath":"/components/titles-and-text/display-text/element","name":"h6","type":"\"h6\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/element/p","parentPath":"/components/titles-and-text/display-text/element","name":"p","type":"\"p\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/titles-and-text/display-text/size","parentPath":"/components/titles-and-text/display-text","name":"size","type":"\"small\" | \"medium\" | \"large\" | \"extraLarge\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'medium'\n","__typename":"Tag"}],"description":"Size of the text","defaultValue":"'medium'","types":[{"path":"/components/titles-and-text/display-text/size/small","parentPath":"/components/titles-and-text/display-text/size","name":"small","type":"\"small\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/size/medium","parentPath":"/components/titles-and-text/display-text/size","name":"medium","type":"\"medium\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/size/large","parentPath":"/components/titles-and-text/display-text/size","name":"large","type":"\"large\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/display-text/size/extraLarge","parentPath":"/components/titles-and-text/display-text/size","name":"extraLarge","type":"\"extraLarge\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Content to display",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/titles-and-text/display-text",
+    "path": "/components/titles-and-text/display-text/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h1\"",
+        "name": "h1",
+        "parentPath": "/components/titles-and-text/display-text/element",
+        "path": "/components/titles-and-text/display-text/element/h1"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h2\"",
+        "name": "h2",
+        "parentPath": "/components/titles-and-text/display-text/element",
+        "path": "/components/titles-and-text/display-text/element/h2"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h3\"",
+        "name": "h3",
+        "parentPath": "/components/titles-and-text/display-text/element",
+        "path": "/components/titles-and-text/display-text/element/h3"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h4\"",
+        "name": "h4",
+        "parentPath": "/components/titles-and-text/display-text/element",
+        "path": "/components/titles-and-text/display-text/element/h4"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h5\"",
+        "name": "h5",
+        "parentPath": "/components/titles-and-text/display-text/element",
+        "path": "/components/titles-and-text/display-text/element/h5"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h6\"",
+        "name": "h6",
+        "parentPath": "/components/titles-and-text/display-text/element",
+        "path": "/components/titles-and-text/display-text/element/h6"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"p\"",
+        "name": "p",
+        "parentPath": "/components/titles-and-text/display-text/element",
+        "path": "/components/titles-and-text/display-text/element/p"
+      }
+    ],
+    "defaultValue": "'p'",
+    "description": "Name of element to use for text",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'p'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\"",
+    "name": "element",
+    "parentPath": "/components/titles-and-text/display-text",
+    "path": "/components/titles-and-text/display-text/element"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"small\"",
+        "name": "small",
+        "parentPath": "/components/titles-and-text/display-text/size",
+        "path": "/components/titles-and-text/display-text/size/small"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"medium\"",
+        "name": "medium",
+        "parentPath": "/components/titles-and-text/display-text/size",
+        "path": "/components/titles-and-text/display-text/size/medium"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"large\"",
+        "name": "large",
+        "parentPath": "/components/titles-and-text/display-text/size",
+        "path": "/components/titles-and-text/display-text/size/large"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"extraLarge\"",
+        "name": "extraLarge",
+        "parentPath": "/components/titles-and-text/display-text/size",
+        "path": "/components/titles-and-text/display-text/size/extraLarge"
+      }
+    ],
+    "defaultValue": "'medium'",
+    "description": "Size of the text",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'medium'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"small\" | \"medium\" | \"large\" | \"extraLarge\"",
+    "name": "size",
+    "parentPath": "/components/titles-and-text/display-text",
+    "path": "/components/titles-and-text/display-text/size"
+  }
+]

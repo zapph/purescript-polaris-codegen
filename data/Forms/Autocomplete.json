@@ -1,1 +1,739 @@
-[{"path":"/components/forms/autocomplete/actionBefore","parentPath":"/components/forms/autocomplete","name":"actionBefore","type":"ActionListItemDescriptor","kind":"interface","mandatory":false,"tags":null,"description":"An action to render above the list of options","defaultValue":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/accessibilityLabel","parentPath":"/components/forms/autocomplete/actionBefore","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/active","parentPath":"/components/forms/autocomplete/actionBefore","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the action is active or not","returnType":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/active/false","parentPath":"/components/forms/autocomplete/actionBefore/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/active/true","parentPath":"/components/forms/autocomplete/actionBefore/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/badge","parentPath":"/components/forms/autocomplete/actionBefore","name":"badge","type":"{content: string, status: \"new\"}","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/content","parentPath":"/components/forms/autocomplete/actionBefore","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/destructive","parentPath":"/components/forms/autocomplete/actionBefore","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","returnType":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/destructive/false","parentPath":"/components/forms/autocomplete/actionBefore/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/destructive/true","parentPath":"/components/forms/autocomplete/actionBefore/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/disabled","parentPath":"/components/forms/autocomplete/actionBefore","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/disabled/false","parentPath":"/components/forms/autocomplete/actionBefore/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/disabled/true","parentPath":"/components/forms/autocomplete/actionBefore/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/ellipsis","parentPath":"/components/forms/autocomplete/actionBefore","name":"ellipsis","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Add an ellipsis suffix to action content","returnType":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/ellipsis/false","parentPath":"/components/forms/autocomplete/actionBefore/ellipsis","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/ellipsis/true","parentPath":"/components/forms/autocomplete/actionBefore/ellipsis","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/external","parentPath":"/components/forms/autocomplete/actionBefore","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/external/false","parentPath":"/components/forms/autocomplete/actionBefore/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/external/true","parentPath":"/components/forms/autocomplete/actionBefore/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/helpText","parentPath":"/components/forms/autocomplete/actionBefore","name":"helpText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Additional hint text to display with item","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/icon","parentPath":"/components/forms/autocomplete/actionBefore","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","returnType":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/icon/string","parentPath":"/components/forms/autocomplete/actionBefore/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/icon/FunctionComponent","parentPath":"/components/forms/autocomplete/actionBefore/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/id","parentPath":"/components/forms/autocomplete/actionBefore","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/image","parentPath":"/components/forms/autocomplete/actionBefore","name":"image","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Image source","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/role","parentPath":"/components/forms/autocomplete/actionBefore","name":"role","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a role for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/target","parentPath":"/components/forms/autocomplete/actionBefore","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","returnType":null,"types":[{"path":"/components/forms/autocomplete/actionBefore/target/ADMIN_PATH","parentPath":"/components/forms/autocomplete/actionBefore/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/target/REMOTE","parentPath":"/components/forms/autocomplete/actionBefore/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/target/APP","parentPath":"/components/forms/autocomplete/actionBefore/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/url","parentPath":"/components/forms/autocomplete/actionBefore","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/onAction","parentPath":"/components/forms/autocomplete/actionBefore","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/onMouseEnter","parentPath":"/components/forms/autocomplete/actionBefore","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/actionBefore/onTouchStart","parentPath":"/components/forms/autocomplete/actionBefore","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/allowMultiple","parentPath":"/components/forms/autocomplete","name":"allowMultiple","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allow more than one option to be selected","defaultValue":null,"types":[{"path":"/components/forms/autocomplete/allowMultiple/false","parentPath":"/components/forms/autocomplete/allowMultiple","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/allowMultiple/true","parentPath":"/components/forms/autocomplete/allowMultiple","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/emptyState","parentPath":"/components/forms/autocomplete","name":"emptyState","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Is rendered when there are no options","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/id","parentPath":"/components/forms/autocomplete","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the Autocomplete","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/listTitle","parentPath":"/components/forms/autocomplete","name":"listTitle","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Title of the list of options","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/loading","parentPath":"/components/forms/autocomplete","name":"loading","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Display loading state","defaultValue":null,"types":[{"path":"/components/forms/autocomplete/loading/false","parentPath":"/components/forms/autocomplete/loading","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/loading/true","parentPath":"/components/forms/autocomplete/loading","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/options","parentPath":"/components/forms/autocomplete","name":"options","type":"Array","kind":"interface","mandatory":true,"tags":null,"description":"Collection of options to be listed","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/preferredPosition","parentPath":"/components/forms/autocomplete","name":"preferredPosition","type":"\"above\" | \"below\" | \"mostSpace\"","kind":"union","mandatory":false,"tags":null,"description":"The preferred direction to open the popover","defaultValue":null,"types":[{"path":"/components/forms/autocomplete/preferredPosition/above","parentPath":"/components/forms/autocomplete/preferredPosition","name":"above","type":"\"above\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/preferredPosition/below","parentPath":"/components/forms/autocomplete/preferredPosition","name":"below","type":"\"below\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/preferredPosition/mostSpace","parentPath":"/components/forms/autocomplete/preferredPosition","name":"mostSpace","type":"\"mostSpace\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/selected","parentPath":"/components/forms/autocomplete","name":"selected","type":"string[]","kind":"array","mandatory":true,"tags":null,"description":"The selected options","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/textField","parentPath":"/components/forms/autocomplete","name":"textField","type":"ReactElement","kind":"interface","mandatory":true,"tags":null,"description":"The text field component attached to the list of options","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/willLoadMoreResults","parentPath":"/components/forms/autocomplete","name":"willLoadMoreResults","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Indicates if more results will load dynamically","defaultValue":null,"types":[{"path":"/components/forms/autocomplete/willLoadMoreResults/false","parentPath":"/components/forms/autocomplete/willLoadMoreResults","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/willLoadMoreResults/true","parentPath":"/components/forms/autocomplete/willLoadMoreResults","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/autocomplete/onLoadMoreResults","parentPath":"/components/forms/autocomplete","name":"onLoadMoreResults","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when the end of the list is reached","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/autocomplete/onSelect","parentPath":"/components/forms/autocomplete","name":"onSelect","type":"(selected: string[]) => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when the selection of options is changed","defaultValue":null,"types":[{"path":"/components/forms/autocomplete/onSelect/parameter/selected","parentPath":"/components/forms/autocomplete/onSelect","name":"selected","type":"string[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/forms/autocomplete/actionBefore/active",
+            "path": "/components/forms/autocomplete/actionBefore/active/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/forms/autocomplete/actionBefore/active",
+            "path": "/components/forms/autocomplete/actionBefore/active/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether the action is active or not",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "active",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/active"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "{content: string, status: \"new\"}",
+        "name": "badge",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/badge"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/forms/autocomplete/actionBefore/destructive",
+            "path": "/components/forms/autocomplete/actionBefore/destructive/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/forms/autocomplete/actionBefore/destructive",
+            "path": "/components/forms/autocomplete/actionBefore/destructive/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Destructive action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "destructive",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/destructive"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/forms/autocomplete/actionBefore/disabled",
+            "path": "/components/forms/autocomplete/actionBefore/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/forms/autocomplete/actionBefore/disabled",
+            "path": "/components/forms/autocomplete/actionBefore/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/forms/autocomplete/actionBefore/ellipsis",
+            "path": "/components/forms/autocomplete/actionBefore/ellipsis/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/forms/autocomplete/actionBefore/ellipsis",
+            "path": "/components/forms/autocomplete/actionBefore/ellipsis/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Add an ellipsis suffix to action content",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "ellipsis",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/ellipsis"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/forms/autocomplete/actionBefore/external",
+            "path": "/components/forms/autocomplete/actionBefore/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/forms/autocomplete/actionBefore/external",
+            "path": "/components/forms/autocomplete/actionBefore/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Additional hint text to display with item",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "helpText",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/helpText"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/forms/autocomplete/actionBefore/icon",
+            "path": "/components/forms/autocomplete/actionBefore/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/forms/autocomplete/actionBefore/icon",
+            "path": "/components/forms/autocomplete/actionBefore/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Source of the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Image source",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "image",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/image"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Defines a role for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "role",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/role"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ADMIN_PATH\"",
+            "name": "ADMIN_PATH",
+            "parentPath": "/components/forms/autocomplete/actionBefore/target",
+            "path": "/components/forms/autocomplete/actionBefore/target/ADMIN_PATH"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"REMOTE\"",
+            "name": "REMOTE",
+            "parentPath": "/components/forms/autocomplete/actionBefore/target",
+            "path": "/components/forms/autocomplete/actionBefore/target/REMOTE"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"APP\"",
+            "name": "APP",
+            "parentPath": "/components/forms/autocomplete/actionBefore/target",
+            "path": "/components/forms/autocomplete/actionBefore/target/APP"
+          }
+        ],
+        "returnType": null,
+        "description": "Where to display the target link",
+        "tags": [
+          {
+            "__typename": "Tag",
+            "text": "'APP'\n",
+            "tag": "default"
+          },
+          {
+            "__typename": "Tag",
+            "text": "\n",
+            "tag": "embeddedapponly"
+          }
+        ],
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+        "name": "target",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/target"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/forms/autocomplete/actionBefore",
+        "path": "/components/forms/autocomplete/actionBefore/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "An action to render above the list of options",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "ActionListItemDescriptor",
+    "name": "actionBefore",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/actionBefore"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/forms/autocomplete/allowMultiple",
+        "path": "/components/forms/autocomplete/allowMultiple/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/forms/autocomplete/allowMultiple",
+        "path": "/components/forms/autocomplete/allowMultiple/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Allow more than one option to be selected",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "allowMultiple",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/allowMultiple"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Is rendered when there are no options",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "emptyState",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/emptyState"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "A unique identifier for the Autocomplete",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "id",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/id"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Title of the list of options",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "listTitle",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/listTitle"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/forms/autocomplete/loading",
+        "path": "/components/forms/autocomplete/loading/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/forms/autocomplete/loading",
+        "path": "/components/forms/autocomplete/loading/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Display loading state",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "loading",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/loading"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Collection of options to be listed",
+    "tags": null,
+    "mandatory": true,
+    "kind": "interface",
+    "type": "Array",
+    "name": "options",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/options"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"above\"",
+        "name": "above",
+        "parentPath": "/components/forms/autocomplete/preferredPosition",
+        "path": "/components/forms/autocomplete/preferredPosition/above"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"below\"",
+        "name": "below",
+        "parentPath": "/components/forms/autocomplete/preferredPosition",
+        "path": "/components/forms/autocomplete/preferredPosition/below"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"mostSpace\"",
+        "name": "mostSpace",
+        "parentPath": "/components/forms/autocomplete/preferredPosition",
+        "path": "/components/forms/autocomplete/preferredPosition/mostSpace"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The preferred direction to open the popover",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"above\" | \"below\" | \"mostSpace\"",
+    "name": "preferredPosition",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/preferredPosition"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The selected options",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "string[]",
+    "name": "selected",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/selected"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The text field component attached to the list of options",
+    "tags": null,
+    "mandatory": true,
+    "kind": "interface",
+    "type": "ReactElement",
+    "name": "textField",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/textField"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/forms/autocomplete/willLoadMoreResults",
+        "path": "/components/forms/autocomplete/willLoadMoreResults/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/forms/autocomplete/willLoadMoreResults",
+        "path": "/components/forms/autocomplete/willLoadMoreResults/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Indicates if more results will load dynamically",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "willLoadMoreResults",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/willLoadMoreResults"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when the end of the list is reached",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onLoadMoreResults",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/onLoadMoreResults"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "string[]",
+        "name": "selected",
+        "parentPath": "/components/forms/autocomplete/onSelect",
+        "path": "/components/forms/autocomplete/onSelect/parameter/selected"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when the selection of options is changed",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "(selected: string[]) => void",
+    "name": "onSelect",
+    "parentPath": "/components/forms/autocomplete",
+    "path": "/components/forms/autocomplete/onSelect"
+  }
+]

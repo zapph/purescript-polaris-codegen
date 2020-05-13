@@ -1,1 +1,15 @@
-[{"path":"/components/images-and-icons/keyboard-key/children","parentPath":"/components/images-and-icons/keyboard-key","name":"children","type":"string","kind":"string","mandatory":false,"tags":null,"description":"The content to display inside the key","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inside the key",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "children",
+    "parentPath": "/components/images-and-icons/keyboard-key",
+    "path": "/components/images-and-icons/keyboard-key/children"
+  }
+]

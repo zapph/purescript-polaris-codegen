@@ -1,1 +1,218 @@
-[{"path":"/components/lists-and-tables/exception-list/items","parentPath":"/components/lists-and-tables/exception-list","name":"items","type":"Item[]","kind":"array","mandatory":true,"tags":null,"description":"Collection of items for list","defaultValue":null,"types":[{"path":"/components/lists-and-tables/exception-list/items/description","parentPath":"/components/lists-and-tables/exception-list/items","name":"description","type":"string | ReactElement | (string | ReactElement)[]","kind":"array","mandatory":false,"tags":null,"description":"Text displayed for the item","returnType":null,"types":[{"path":"/components/lists-and-tables/exception-list/items/description/string","parentPath":"/components/lists-and-tables/exception-list/items/description","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/description/ReactElement","parentPath":"/components/lists-and-tables/exception-list/items/description","name":"ReactElement","type":"ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/description/","parentPath":"/components/lists-and-tables/exception-list/items/description","name":"","type":"(string | ReactElement)[]","kind":"array","mandatory":false,"tags":null,"description":"","types":[{"path":"/components/lists-and-tables/exception-list/items/description//string","parentPath":"/components/lists-and-tables/exception-list/items/description/","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/description//ReactElement","parentPath":"/components/lists-and-tables/exception-list/items/description/","name":"ReactElement","type":"ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/icon","parentPath":"/components/lists-and-tables/exception-list/items","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Icon displayed by the list item","returnType":null,"types":[{"path":"/components/lists-and-tables/exception-list/items/icon/string","parentPath":"/components/lists-and-tables/exception-list/items/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/icon/FunctionComponent","parentPath":"/components/lists-and-tables/exception-list/items/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/status","parentPath":"/components/lists-and-tables/exception-list/items","name":"status","type":"\"critical\" | \"warning\"","kind":"union","mandatory":false,"tags":null,"description":"Set the color of the icon and title for the given item.","returnType":null,"types":[{"path":"/components/lists-and-tables/exception-list/items/status/critical","parentPath":"/components/lists-and-tables/exception-list/items/status","name":"critical","type":"\"critical\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/status/warning","parentPath":"/components/lists-and-tables/exception-list/items/status","name":"warning","type":"\"warning\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/title","parentPath":"/components/lists-and-tables/exception-list/items","name":"title","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Text displayed beside the icon","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/truncate","parentPath":"/components/lists-and-tables/exception-list/items","name":"truncate","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Should the description be truncated at end of line","returnType":null,"types":[{"path":"/components/lists-and-tables/exception-list/items/truncate/false","parentPath":"/components/lists-and-tables/exception-list/items/truncate","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/exception-list/items/truncate/true","parentPath":"/components/lists-and-tables/exception-list/items/truncate","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/lists-and-tables/exception-list/items/description",
+            "path": "/components/lists-and-tables/exception-list/items/description/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "ReactElement",
+            "name": "ReactElement",
+            "parentPath": "/components/lists-and-tables/exception-list/items/description",
+            "path": "/components/lists-and-tables/exception-list/items/description/ReactElement"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "string",
+                "parentPath": "/components/lists-and-tables/exception-list/items/description/",
+                "path": "/components/lists-and-tables/exception-list/items/description//string"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "ReactElement",
+                "name": "ReactElement",
+                "parentPath": "/components/lists-and-tables/exception-list/items/description/",
+                "path": "/components/lists-and-tables/exception-list/items/description//ReactElement"
+              }
+            ],
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "array",
+            "type": "(string | ReactElement)[]",
+            "name": "",
+            "parentPath": "/components/lists-and-tables/exception-list/items/description",
+            "path": "/components/lists-and-tables/exception-list/items/description/"
+          }
+        ],
+        "returnType": null,
+        "description": "Text displayed for the item",
+        "tags": null,
+        "mandatory": false,
+        "kind": "array",
+        "type": "string | ReactElement | (string | ReactElement)[]",
+        "name": "description",
+        "parentPath": "/components/lists-and-tables/exception-list/items",
+        "path": "/components/lists-and-tables/exception-list/items/description"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/lists-and-tables/exception-list/items/icon",
+            "path": "/components/lists-and-tables/exception-list/items/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/lists-and-tables/exception-list/items/icon",
+            "path": "/components/lists-and-tables/exception-list/items/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Icon displayed by the list item",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/lists-and-tables/exception-list/items",
+        "path": "/components/lists-and-tables/exception-list/items/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"critical\"",
+            "name": "critical",
+            "parentPath": "/components/lists-and-tables/exception-list/items/status",
+            "path": "/components/lists-and-tables/exception-list/items/status/critical"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"warning\"",
+            "name": "warning",
+            "parentPath": "/components/lists-and-tables/exception-list/items/status",
+            "path": "/components/lists-and-tables/exception-list/items/status/warning"
+          }
+        ],
+        "returnType": null,
+        "description": "Set the color of the icon and title for the given item.",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"critical\" | \"warning\"",
+        "name": "status",
+        "parentPath": "/components/lists-and-tables/exception-list/items",
+        "path": "/components/lists-and-tables/exception-list/items/status"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Text displayed beside the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "title",
+        "parentPath": "/components/lists-and-tables/exception-list/items",
+        "path": "/components/lists-and-tables/exception-list/items/title"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/lists-and-tables/exception-list/items/truncate",
+            "path": "/components/lists-and-tables/exception-list/items/truncate/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/lists-and-tables/exception-list/items/truncate",
+            "path": "/components/lists-and-tables/exception-list/items/truncate/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Should the description be truncated at end of line",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "truncate",
+        "parentPath": "/components/lists-and-tables/exception-list/items",
+        "path": "/components/lists-and-tables/exception-list/items/truncate"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Collection of items for list",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "Item[]",
+    "name": "items",
+    "parentPath": "/components/lists-and-tables/exception-list",
+    "path": "/components/lists-and-tables/exception-list/items"
+  }
+]

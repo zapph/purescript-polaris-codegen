@@ -1,1 +1,577 @@
-[{"path":"/components/structure/page-actions/primaryAction","parentPath":"/components/structure/page-actions","name":"primaryAction","type":"DisableableAction & LoadableAction","kind":"interface","mandatory":false,"tags":null,"description":"The primary action for the page","defaultValue":null,"types":[{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/structure/page-actions/primaryAction/disabled/false","parentPath":"/components/structure/page-actions/primaryAction/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/disabled/true","parentPath":"/components/structure/page-actions/primaryAction/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/page-actions/primaryAction/external/false","parentPath":"/components/structure/page-actions/primaryAction/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/external/true","parentPath":"/components/structure/page-actions/primaryAction/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/[object Promise]","parentPath":"/components/structure/page-actions/primaryAction","name":"loading","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Should a spinner be displayed","returnType":null,"types":[{"path":"/components/structure/page-actions/primaryAction/loading/false","parentPath":"/components/structure/page-actions/primaryAction/loading","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/primaryAction/loading/true","parentPath":"/components/structure/page-actions/primaryAction/loading","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions","parentPath":"/components/structure/page-actions","name":"secondaryActions","type":"ComplexAction[]","kind":"array","mandatory":false,"tags":null,"description":"The secondary actions for the page","defaultValue":null,"types":[{"path":"/components/structure/page-actions/secondaryActions/accessibilityLabel","parentPath":"/components/structure/page-actions/secondaryActions","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/content","parentPath":"/components/structure/page-actions/secondaryActions","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/destructive","parentPath":"/components/structure/page-actions/secondaryActions","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","returnType":null,"types":[{"path":"/components/structure/page-actions/secondaryActions/destructive/false","parentPath":"/components/structure/page-actions/secondaryActions/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/destructive/true","parentPath":"/components/structure/page-actions/secondaryActions/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/disabled","parentPath":"/components/structure/page-actions/secondaryActions","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/structure/page-actions/secondaryActions/disabled/false","parentPath":"/components/structure/page-actions/secondaryActions/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/disabled/true","parentPath":"/components/structure/page-actions/secondaryActions/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/external","parentPath":"/components/structure/page-actions/secondaryActions","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/page-actions/secondaryActions/external/false","parentPath":"/components/structure/page-actions/secondaryActions/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/external/true","parentPath":"/components/structure/page-actions/secondaryActions/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/icon","parentPath":"/components/structure/page-actions/secondaryActions","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","returnType":null,"types":[{"path":"/components/structure/page-actions/secondaryActions/icon/string","parentPath":"/components/structure/page-actions/secondaryActions/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/icon/FunctionComponent","parentPath":"/components/structure/page-actions/secondaryActions/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/id","parentPath":"/components/structure/page-actions/secondaryActions","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/loading","parentPath":"/components/structure/page-actions/secondaryActions","name":"loading","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Should a spinner be displayed","returnType":null,"types":[{"path":"/components/structure/page-actions/secondaryActions/loading/false","parentPath":"/components/structure/page-actions/secondaryActions/loading","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/loading/true","parentPath":"/components/structure/page-actions/secondaryActions/loading","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/target","parentPath":"/components/structure/page-actions/secondaryActions","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","returnType":null,"types":[{"path":"/components/structure/page-actions/secondaryActions/target/ADMIN_PATH","parentPath":"/components/structure/page-actions/secondaryActions/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/target/REMOTE","parentPath":"/components/structure/page-actions/secondaryActions/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/target/APP","parentPath":"/components/structure/page-actions/secondaryActions/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/url","parentPath":"/components/structure/page-actions/secondaryActions","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/onAction","parentPath":"/components/structure/page-actions/secondaryActions","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/onMouseEnter","parentPath":"/components/structure/page-actions/secondaryActions","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/page-actions/secondaryActions/onTouchStart","parentPath":"/components/structure/page-actions/secondaryActions","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/page-actions/primaryAction/disabled",
+            "path": "/components/structure/page-actions/primaryAction/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/page-actions/primaryAction/disabled",
+            "path": "/components/structure/page-actions/primaryAction/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/page-actions/primaryAction/external",
+            "path": "/components/structure/page-actions/primaryAction/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/page-actions/primaryAction/external",
+            "path": "/components/structure/page-actions/primaryAction/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/page-actions/primaryAction/loading",
+            "path": "/components/structure/page-actions/primaryAction/loading/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/page-actions/primaryAction/loading",
+            "path": "/components/structure/page-actions/primaryAction/loading/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Should a spinner be displayed",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "loading",
+        "parentPath": "/components/structure/page-actions/primaryAction",
+        "path": "/components/structure/page-actions/primaryAction/[object Promise]"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The primary action for the page",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "DisableableAction & LoadableAction",
+    "name": "primaryAction",
+    "parentPath": "/components/structure/page-actions",
+    "path": "/components/structure/page-actions/primaryAction"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/page-actions/secondaryActions/destructive",
+            "path": "/components/structure/page-actions/secondaryActions/destructive/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/page-actions/secondaryActions/destructive",
+            "path": "/components/structure/page-actions/secondaryActions/destructive/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Destructive action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "destructive",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/destructive"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/page-actions/secondaryActions/disabled",
+            "path": "/components/structure/page-actions/secondaryActions/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/page-actions/secondaryActions/disabled",
+            "path": "/components/structure/page-actions/secondaryActions/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/page-actions/secondaryActions/external",
+            "path": "/components/structure/page-actions/secondaryActions/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/page-actions/secondaryActions/external",
+            "path": "/components/structure/page-actions/secondaryActions/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/external"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/structure/page-actions/secondaryActions/icon",
+            "path": "/components/structure/page-actions/secondaryActions/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/structure/page-actions/secondaryActions/icon",
+            "path": "/components/structure/page-actions/secondaryActions/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Source of the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/id"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/page-actions/secondaryActions/loading",
+            "path": "/components/structure/page-actions/secondaryActions/loading/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/page-actions/secondaryActions/loading",
+            "path": "/components/structure/page-actions/secondaryActions/loading/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Should a spinner be displayed",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "loading",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/loading"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ADMIN_PATH\"",
+            "name": "ADMIN_PATH",
+            "parentPath": "/components/structure/page-actions/secondaryActions/target",
+            "path": "/components/structure/page-actions/secondaryActions/target/ADMIN_PATH"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"REMOTE\"",
+            "name": "REMOTE",
+            "parentPath": "/components/structure/page-actions/secondaryActions/target",
+            "path": "/components/structure/page-actions/secondaryActions/target/REMOTE"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"APP\"",
+            "name": "APP",
+            "parentPath": "/components/structure/page-actions/secondaryActions/target",
+            "path": "/components/structure/page-actions/secondaryActions/target/APP"
+          }
+        ],
+        "returnType": null,
+        "description": "Where to display the target link",
+        "tags": [
+          {
+            "__typename": "Tag",
+            "text": "'APP'",
+            "tag": "default"
+          },
+          {
+            "__typename": "Tag",
+            "text": "\n",
+            "tag": "embeddedapponly"
+          }
+        ],
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+        "name": "target",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/target"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/page-actions/secondaryActions",
+        "path": "/components/structure/page-actions/secondaryActions/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The secondary actions for the page",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "ComplexAction[]",
+    "name": "secondaryActions",
+    "parentPath": "/components/structure/page-actions",
+    "path": "/components/structure/page-actions/secondaryActions"
+  }
+]

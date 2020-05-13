@@ -1,1 +1,559 @@
-[{"path":"/components/lists-and-tables/data-table/columnContentTypes","parentPath":"/components/lists-and-tables/data-table","name":"columnContentTypes","type":"(\"text\" | \"numeric\")[]","kind":"array","mandatory":true,"tags":null,"description":"List of data types, which determines content alignment for each column. Data types are \"text,\" which aligns left, or \"numeric,\" which aligns right.","defaultValue":null,"types":[{"path":"/components/lists-and-tables/data-table/columnContentTypes/text","parentPath":"/components/lists-and-tables/data-table/columnContentTypes","name":"text","type":"\"text\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/columnContentTypes/numeric","parentPath":"/components/lists-and-tables/data-table/columnContentTypes","name":"numeric","type":"\"numeric\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/defaultSortDirection","parentPath":"/components/lists-and-tables/data-table","name":"defaultSortDirection","type":"\"ascending\" | \"descending\" | \"none\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'ascending'\n","__typename":"Tag"}],"description":"The direction to sort the table rows on first click or keypress of a sortable column heading. Defaults to ascending.","defaultValue":"'ascending'","types":[{"path":"/components/lists-and-tables/data-table/defaultSortDirection/ascending","parentPath":"/components/lists-and-tables/data-table/defaultSortDirection","name":"ascending","type":"\"ascending\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/defaultSortDirection/descending","parentPath":"/components/lists-and-tables/data-table/defaultSortDirection","name":"descending","type":"\"descending\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/defaultSortDirection/none","parentPath":"/components/lists-and-tables/data-table/defaultSortDirection","name":"none","type":"\"none\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/footerContent","parentPath":"/components/lists-and-tables/data-table","name":"footerContent","type":"string | number | React.ReactNode","kind":"union","mandatory":false,"tags":null,"description":"Content centered in the full width cell of the table footer row.","defaultValue":null,"types":[{"path":"/components/lists-and-tables/data-table/footerContent/string","parentPath":"/components/lists-and-tables/data-table/footerContent","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/footerContent/number","parentPath":"/components/lists-and-tables/data-table/footerContent","name":"number","type":"number","kind":"number","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/footerContent/React.ReactNode","parentPath":"/components/lists-and-tables/data-table/footerContent","name":"React.ReactNode","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/headings","parentPath":"/components/lists-and-tables/data-table","name":"headings","type":"React.ReactNode[]","kind":"array","mandatory":true,"tags":null,"description":"List of column headings.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/hideScrollIndicator","parentPath":"/components/lists-and-tables/data-table","name":"hideScrollIndicator","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"false\n","__typename":"Tag"}],"description":"Hide column visibility and navigation buttons above the header when the table horizontally collapses to be scrollable.","defaultValue":"false","types":[{"path":"/components/lists-and-tables/data-table/hideScrollIndicator/false","parentPath":"/components/lists-and-tables/data-table/hideScrollIndicator","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/hideScrollIndicator/true","parentPath":"/components/lists-and-tables/data-table/hideScrollIndicator","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/initialSortColumnIndex","parentPath":"/components/lists-and-tables/data-table","name":"initialSortColumnIndex","type":"number","kind":"number","mandatory":false,"tags":[{"tag":"default","text":"0\n","__typename":"Tag"}],"description":"The index of the heading that the table rows are initially sorted by. Defaults to the first column.","defaultValue":"0","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/rows","parentPath":"/components/lists-and-tables/data-table","name":"rows","type":"((string | number | React.ReactNode)[])[]","kind":"array","mandatory":true,"tags":null,"description":"Lists of data points which map to table body rows.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/showTotalsInFooter","parentPath":"/components/lists-and-tables/data-table","name":"showTotalsInFooter","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Placement of totals row within table","defaultValue":null,"types":[{"path":"/components/lists-and-tables/data-table/showTotalsInFooter/false","parentPath":"/components/lists-and-tables/data-table/showTotalsInFooter","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/showTotalsInFooter/true","parentPath":"/components/lists-and-tables/data-table/showTotalsInFooter","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/sortable","parentPath":"/components/lists-and-tables/data-table","name":"sortable","type":"boolean[]","kind":"array","mandatory":false,"tags":null,"description":"List of booleans, which maps to whether sorting is enabled or not for each column. Defaults to false for all columns.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/totals","parentPath":"/components/lists-and-tables/data-table","name":"totals","type":"(string | number | React.ReactNode)[]","kind":"array","mandatory":false,"tags":null,"description":"List of numeric column totals, highlighted in the table’s header below column headings. Use empty strings as placeholders for columns with no total.","defaultValue":null,"types":[{"path":"/components/lists-and-tables/data-table/totals/string","parentPath":"/components/lists-and-tables/data-table/totals","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/totals/number","parentPath":"/components/lists-and-tables/data-table/totals","name":"number","type":"number","kind":"number","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/totals/React.ReactNode","parentPath":"/components/lists-and-tables/data-table/totals","name":"React.ReactNode","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/totalsName","parentPath":"/components/lists-and-tables/data-table","name":"totalsName","type":"{plural: string, singular: string}","kind":"interface","mandatory":false,"tags":null,"description":"Custom totals row heading","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/truncate","parentPath":"/components/lists-and-tables/data-table","name":"truncate","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Truncate content in first column instead of wrapping.","defaultValue":"true","types":[{"path":"/components/lists-and-tables/data-table/truncate/false","parentPath":"/components/lists-and-tables/data-table/truncate","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/truncate/true","parentPath":"/components/lists-and-tables/data-table/truncate","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/verticalAlign","parentPath":"/components/lists-and-tables/data-table","name":"verticalAlign","type":"\"top\" | \"bottom\" | \"middle\" | \"baseline\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'top'\n","__typename":"Tag"}],"description":"Vertical alignment of content in the cells.","defaultValue":"'top'","types":[{"path":"/components/lists-and-tables/data-table/verticalAlign/top","parentPath":"/components/lists-and-tables/data-table/verticalAlign","name":"top","type":"\"top\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/verticalAlign/bottom","parentPath":"/components/lists-and-tables/data-table/verticalAlign","name":"bottom","type":"\"bottom\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/verticalAlign/middle","parentPath":"/components/lists-and-tables/data-table/verticalAlign","name":"middle","type":"\"middle\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/verticalAlign/baseline","parentPath":"/components/lists-and-tables/data-table/verticalAlign","name":"baseline","type":"\"baseline\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/onSort","parentPath":"/components/lists-and-tables/data-table","name":"onSort","type":"(headingIndex: number, direction: \"ascending\" | \"descending\" | \"none\") => void","kind":"method","mandatory":false,"tags":null,"description":"Callback fired on click or keypress of a sortable column heading.","defaultValue":null,"types":[{"path":"/components/lists-and-tables/data-table/onSort/parameter/headingIndex","parentPath":"/components/lists-and-tables/data-table/onSort","name":"headingIndex","type":"number","kind":"number","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/onSort/parameter/direction","parentPath":"/components/lists-and-tables/data-table/onSort","name":"direction","type":"\"ascending\" | \"descending\" | \"none\"","kind":"union","mandatory":true,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/lists-and-tables/data-table/onSort/parameter/direction/ascending","parentPath":"/components/lists-and-tables/data-table/onSort/parameter/direction","name":"ascending","type":"\"ascending\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/onSort/parameter/direction/descending","parentPath":"/components/lists-and-tables/data-table/onSort/parameter/direction","name":"descending","type":"\"descending\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/data-table/onSort/parameter/direction/none","parentPath":"/components/lists-and-tables/data-table/onSort/parameter/direction","name":"none","type":"\"none\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"text\"",
+        "name": "text",
+        "parentPath": "/components/lists-and-tables/data-table/columnContentTypes",
+        "path": "/components/lists-and-tables/data-table/columnContentTypes/text"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"numeric\"",
+        "name": "numeric",
+        "parentPath": "/components/lists-and-tables/data-table/columnContentTypes",
+        "path": "/components/lists-and-tables/data-table/columnContentTypes/numeric"
+      }
+    ],
+    "defaultValue": null,
+    "description": "List of data types, which determines content alignment for each column. Data types are \"text,\" which aligns left, or \"numeric,\" which aligns right.",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "(\"text\" | \"numeric\")[]",
+    "name": "columnContentTypes",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/columnContentTypes"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"ascending\"",
+        "name": "ascending",
+        "parentPath": "/components/lists-and-tables/data-table/defaultSortDirection",
+        "path": "/components/lists-and-tables/data-table/defaultSortDirection/ascending"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"descending\"",
+        "name": "descending",
+        "parentPath": "/components/lists-and-tables/data-table/defaultSortDirection",
+        "path": "/components/lists-and-tables/data-table/defaultSortDirection/descending"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"none\"",
+        "name": "none",
+        "parentPath": "/components/lists-and-tables/data-table/defaultSortDirection",
+        "path": "/components/lists-and-tables/data-table/defaultSortDirection/none"
+      }
+    ],
+    "defaultValue": "'ascending'",
+    "description": "The direction to sort the table rows on first click or keypress of a sortable column heading. Defaults to ascending.",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'ascending'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"ascending\" | \"descending\" | \"none\"",
+    "name": "defaultSortDirection",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/defaultSortDirection"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "string",
+        "parentPath": "/components/lists-and-tables/data-table/footerContent",
+        "path": "/components/lists-and-tables/data-table/footerContent/string"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "number",
+        "type": "number",
+        "name": "number",
+        "parentPath": "/components/lists-and-tables/data-table/footerContent",
+        "path": "/components/lists-and-tables/data-table/footerContent/number"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "React.ReactNode",
+        "name": "React.ReactNode",
+        "parentPath": "/components/lists-and-tables/data-table/footerContent",
+        "path": "/components/lists-and-tables/data-table/footerContent/React.ReactNode"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Content centered in the full width cell of the table footer row.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "string | number | React.ReactNode",
+    "name": "footerContent",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/footerContent"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "List of column headings.",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "React.ReactNode[]",
+    "name": "headings",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/headings"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/data-table/hideScrollIndicator",
+        "path": "/components/lists-and-tables/data-table/hideScrollIndicator/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/data-table/hideScrollIndicator",
+        "path": "/components/lists-and-tables/data-table/hideScrollIndicator/true"
+      }
+    ],
+    "defaultValue": "false",
+    "description": "Hide column visibility and navigation buttons above the header when the table horizontally collapses to be scrollable.",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "false\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "hideScrollIndicator",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/hideScrollIndicator"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": "0",
+    "description": "The index of the heading that the table rows are initially sorted by. Defaults to the first column.",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "0\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "number",
+    "type": "number",
+    "name": "initialSortColumnIndex",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/initialSortColumnIndex"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Lists of data points which map to table body rows.",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "((string | number | React.ReactNode)[])[]",
+    "name": "rows",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/rows"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/data-table/showTotalsInFooter",
+        "path": "/components/lists-and-tables/data-table/showTotalsInFooter/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/data-table/showTotalsInFooter",
+        "path": "/components/lists-and-tables/data-table/showTotalsInFooter/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Placement of totals row within table",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "showTotalsInFooter",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/showTotalsInFooter"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "List of booleans, which maps to whether sorting is enabled or not for each column. Defaults to false for all columns.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "boolean[]",
+    "name": "sortable",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/sortable"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "string",
+        "parentPath": "/components/lists-and-tables/data-table/totals",
+        "path": "/components/lists-and-tables/data-table/totals/string"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "number",
+        "type": "number",
+        "name": "number",
+        "parentPath": "/components/lists-and-tables/data-table/totals",
+        "path": "/components/lists-and-tables/data-table/totals/number"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "React.ReactNode",
+        "name": "React.ReactNode",
+        "parentPath": "/components/lists-and-tables/data-table/totals",
+        "path": "/components/lists-and-tables/data-table/totals/React.ReactNode"
+      }
+    ],
+    "defaultValue": null,
+    "description": "List of numeric column totals, highlighted in the table’s header below column headings. Use empty strings as placeholders for columns with no total.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "(string | number | React.ReactNode)[]",
+    "name": "totals",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/totals"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Custom totals row heading",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "{plural: string, singular: string}",
+    "name": "totalsName",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/totalsName"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/data-table/truncate",
+        "path": "/components/lists-and-tables/data-table/truncate/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/data-table/truncate",
+        "path": "/components/lists-and-tables/data-table/truncate/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Truncate content in first column instead of wrapping.",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "truncate",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/truncate"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"top\"",
+        "name": "top",
+        "parentPath": "/components/lists-and-tables/data-table/verticalAlign",
+        "path": "/components/lists-and-tables/data-table/verticalAlign/top"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"bottom\"",
+        "name": "bottom",
+        "parentPath": "/components/lists-and-tables/data-table/verticalAlign",
+        "path": "/components/lists-and-tables/data-table/verticalAlign/bottom"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"middle\"",
+        "name": "middle",
+        "parentPath": "/components/lists-and-tables/data-table/verticalAlign",
+        "path": "/components/lists-and-tables/data-table/verticalAlign/middle"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"baseline\"",
+        "name": "baseline",
+        "parentPath": "/components/lists-and-tables/data-table/verticalAlign",
+        "path": "/components/lists-and-tables/data-table/verticalAlign/baseline"
+      }
+    ],
+    "defaultValue": "'top'",
+    "description": "Vertical alignment of content in the cells.",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'top'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"top\" | \"bottom\" | \"middle\" | \"baseline\"",
+    "name": "verticalAlign",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/verticalAlign"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "number",
+        "type": "number",
+        "name": "headingIndex",
+        "parentPath": "/components/lists-and-tables/data-table/onSort",
+        "path": "/components/lists-and-tables/data-table/onSort/parameter/headingIndex"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ascending\"",
+            "name": "ascending",
+            "parentPath": "/components/lists-and-tables/data-table/onSort/parameter/direction",
+            "path": "/components/lists-and-tables/data-table/onSort/parameter/direction/ascending"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"descending\"",
+            "name": "descending",
+            "parentPath": "/components/lists-and-tables/data-table/onSort/parameter/direction",
+            "path": "/components/lists-and-tables/data-table/onSort/parameter/direction/descending"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"none\"",
+            "name": "none",
+            "parentPath": "/components/lists-and-tables/data-table/onSort/parameter/direction",
+            "path": "/components/lists-and-tables/data-table/onSort/parameter/direction/none"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "union",
+        "type": "\"ascending\" | \"descending\" | \"none\"",
+        "name": "direction",
+        "parentPath": "/components/lists-and-tables/data-table/onSort",
+        "path": "/components/lists-and-tables/data-table/onSort/parameter/direction"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback fired on click or keypress of a sortable column heading.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(headingIndex: number, direction: \"ascending\" | \"descending\" | \"none\") => void",
+    "name": "onSort",
+    "parentPath": "/components/lists-and-tables/data-table",
+    "path": "/components/lists-and-tables/data-table/onSort"
+  }
+]

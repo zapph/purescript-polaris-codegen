@@ -1,1 +1,1399 @@
-[{"path":"/components/lists-and-tables/resource-list/alternateTool","parentPath":"/components/lists-and-tables/resource-list","name":"alternateTool","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"ReactNode to display instead of the sort control","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions","parentPath":"/components/lists-and-tables/resource-list","name":"bulkActions","type":"(DisableableAction | ActionListSection)[]","kind":"array","mandatory":false,"tags":null,"description":"Actions available on the currently selected items","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","parentPath":"/components/lists-and-tables/resource-list/bulkActions","name":"DisableableAction","type":"DisableableAction","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/accessibilityLabel","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/content","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled/false","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled/true","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external/false","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external/true","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/id","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/url","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/onAction","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/onMouseEnter","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction/onTouchStart","parentPath":"/components/lists-and-tables/resource-list/bulkActions/DisableableAction","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection","parentPath":"/components/lists-and-tables/resource-list/bulkActions","name":"ActionListSection","type":"ActionListSection","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection","name":"items","type":"ActionListItemDescriptor[]","kind":"array","mandatory":true,"tags":null,"description":"Collection of action items for the list","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/accessibilityLabel","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the action is active or not","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active/false","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active/true","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/badge","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"badge","type":"{content: string, status: \"new\"}","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/content","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive/false","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive/true","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled/false","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled/true","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"ellipsis","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Add an ellipsis suffix to action content","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis/false","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis/true","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external/false","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external/true","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/helpText","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"helpText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Additional hint text to display with item","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon/string","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon/FunctionComponent","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/id","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/image","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"image","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Image source","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/role","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"role","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a role for the action","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","types":[{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target/ADMIN_PATH","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target/REMOTE","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target/APP","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/url","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/onAction","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/onMouseEnter","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/onTouchStart","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection/title","parentPath":"/components/lists-and-tables/resource-list/bulkActions/ActionListSection","name":"title","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Section title","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/filterControl","parentPath":"/components/lists-and-tables/resource-list","name":"filterControl","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/hasMoreItems","parentPath":"/components/lists-and-tables/resource-list","name":"hasMoreItems","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"If there are more items than currently in the list","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/hasMoreItems/false","parentPath":"/components/lists-and-tables/resource-list/hasMoreItems","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/hasMoreItems/true","parentPath":"/components/lists-and-tables/resource-list/hasMoreItems","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/items","parentPath":"/components/lists-and-tables/resource-list","name":"items","type":"any[]","kind":"array","mandatory":true,"tags":null,"description":"Item data; each item is passed to renderItem","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/loading","parentPath":"/components/lists-and-tables/resource-list","name":"loading","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Overlays item list with a spinner while a background action is being performed","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/loading/false","parentPath":"/components/lists-and-tables/resource-list/loading","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/loading/true","parentPath":"/components/lists-and-tables/resource-list/loading","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions","parentPath":"/components/lists-and-tables/resource-list","name":"promotedBulkActions","type":"DisableableAction[]","kind":"array","mandatory":false,"tags":null,"description":"Up to 2 bulk actions that will be given more prominence","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/accessibilityLabel","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/content","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/disabled","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/disabled/false","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/disabled/true","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/external","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/external/false","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/external/true","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/id","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/url","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/onAction","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/onMouseEnter","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/promotedBulkActions/onTouchStart","parentPath":"/components/lists-and-tables/resource-list/promotedBulkActions","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/resourceName","parentPath":"/components/lists-and-tables/resource-list","name":"resourceName","type":"{plural: string, singular: string}","kind":"interface","mandatory":false,"tags":null,"description":"Name of the resource, such as customers or products","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/selectable","parentPath":"/components/lists-and-tables/resource-list","name":"selectable","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Renders a Select All button at the top of the list and checkboxes in front of each list item. For use when bulkActions aren't provided.","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/selectable/false","parentPath":"/components/lists-and-tables/resource-list/selectable","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/selectable/true","parentPath":"/components/lists-and-tables/resource-list/selectable","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/selectedItems","parentPath":"/components/lists-and-tables/resource-list","name":"selectedItems","type":"string[] | \"All\"","kind":"array","mandatory":false,"tags":null,"description":"Collection of IDs for the currently selected items","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/selectedItems/string","parentPath":"/components/lists-and-tables/resource-list/selectedItems","name":"string","type":"string[]","kind":"array","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/selectedItems/All","parentPath":"/components/lists-and-tables/resource-list/selectedItems","name":"All","type":"\"All\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/showHeader","parentPath":"/components/lists-and-tables/resource-list","name":"showHeader","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Boolean to show or hide the header","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/showHeader/false","parentPath":"/components/lists-and-tables/resource-list/showHeader","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/showHeader/true","parentPath":"/components/lists-and-tables/resource-list/showHeader","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/sortOptions","parentPath":"/components/lists-and-tables/resource-list","name":"sortOptions","type":"(string | StrictOption)[]","kind":"array","mandatory":false,"tags":null,"description":"Collection of sort options to choose from","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/sortOptions/string","parentPath":"/components/lists-and-tables/resource-list/sortOptions","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/sortOptions/StrictOption","parentPath":"/components/lists-and-tables/resource-list/sortOptions","name":"StrictOption","type":"StrictOption","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled","parentPath":"/components/lists-and-tables/resource-list/sortOptions/StrictOption","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Option will be visible, but not selectable","types":[{"path":"/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled/false","parentPath":"/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled/true","parentPath":"/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/sortOptions/StrictOption/label","parentPath":"/components/lists-and-tables/resource-list/sortOptions/StrictOption","name":"label","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Human-readable text for the option","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/sortOptions/StrictOption/value","parentPath":"/components/lists-and-tables/resource-list/sortOptions/StrictOption","name":"value","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Machine value of the option; this is the value passed to `onChange`","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/sortValue","parentPath":"/components/lists-and-tables/resource-list","name":"sortValue","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Current value of the sort control","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/totalItemsCount","parentPath":"/components/lists-and-tables/resource-list","name":"totalItemsCount","type":"number","kind":"number","mandatory":false,"tags":null,"description":"Total number of resources","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/idForItem","parentPath":"/components/lists-and-tables/resource-list","name":"idForItem","type":"(item: any, index: number) => string","kind":"method","mandatory":false,"tags":null,"description":"Function to customize the unique ID for each item","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/idForItem/parameter/item","parentPath":"/components/lists-and-tables/resource-list/idForItem","name":"item","type":"any","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/idForItem/parameter/index","parentPath":"/components/lists-and-tables/resource-list/idForItem","name":"index","type":"number","kind":"number","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/onSelectionChange","parentPath":"/components/lists-and-tables/resource-list","name":"onSelectionChange","type":"(selectedItems: string[] | \"All\") => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when selection is changed","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems","parentPath":"/components/lists-and-tables/resource-list/onSelectionChange","name":"selectedItems","type":"string[] | \"All\"","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems/string","parentPath":"/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems","name":"string","type":"string[]","kind":"array","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems/All","parentPath":"/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems","name":"All","type":"\"All\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/onSortChange","parentPath":"/components/lists-and-tables/resource-list","name":"onSortChange","type":"(selected: string, id: string) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when sort option is changed","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/onSortChange/parameter/selected","parentPath":"/components/lists-and-tables/resource-list/onSortChange","name":"selected","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/onSortChange/parameter/id","parentPath":"/components/lists-and-tables/resource-list/onSortChange","name":"id","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/renderItem","parentPath":"/components/lists-and-tables/resource-list","name":"renderItem","type":"(item: any, id: string, index: number) => React.ReactNode","kind":"method","mandatory":true,"tags":null,"description":"Function to render each list item","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/renderItem/parameter/item","parentPath":"/components/lists-and-tables/resource-list/renderItem","name":"item","type":"any","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/renderItem/parameter/id","parentPath":"/components/lists-and-tables/resource-list/renderItem","name":"id","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/renderItem/parameter/index","parentPath":"/components/lists-and-tables/resource-list/renderItem","name":"index","type":"number","kind":"number","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/lists-and-tables/resource-list/resolveItemId","parentPath":"/components/lists-and-tables/resource-list","name":"resolveItemId","type":"(item: any) => string","kind":"method","mandatory":false,"tags":null,"description":"Function to resolve an id from a item","defaultValue":null,"types":[{"path":"/components/lists-and-tables/resource-list/resolveItemId/parameter/item","parentPath":"/components/lists-and-tables/resource-list/resolveItemId","name":"item","type":"any","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "ReactNode to display instead of the sort control",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "alternateTool",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/alternateTool"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Visually hidden text for screen readers",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "accessibilityLabel",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/accessibilityLabel"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Content the action displays",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "content",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/content"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled/true"
+              }
+            ],
+            "description": "Whether or not the action is disabled",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "disabled",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/disabled"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external/true"
+              }
+            ],
+            "description": "Forces url to open in a new tab",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "external",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/external"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "A unique identifier for the action",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "id",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/id"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "A destination to link to, rendered in the action",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "url",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/url"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Callback when an action takes place",
+            "tags": null,
+            "mandatory": false,
+            "kind": "method",
+            "type": "() => void",
+            "name": "onAction",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/onAction"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Callback when mouse enter",
+            "tags": null,
+            "mandatory": false,
+            "kind": "method",
+            "type": "() => void",
+            "name": "onMouseEnter",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/onMouseEnter"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Callback when element is touched",
+            "tags": null,
+            "mandatory": false,
+            "kind": "method",
+            "type": "() => void",
+            "name": "onTouchStart",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction/onTouchStart"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "DisableableAction",
+        "name": "DisableableAction",
+        "parentPath": "/components/lists-and-tables/resource-list/bulkActions",
+        "path": "/components/lists-and-tables/resource-list/bulkActions/DisableableAction"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Visually hidden text for screen readers",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "accessibilityLabel",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/accessibilityLabel"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "false",
+                    "name": "false",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active/false"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "true",
+                    "name": "true",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active/true"
+                  }
+                ],
+                "description": "Whether the action is active or not",
+                "tags": null,
+                "mandatory": false,
+                "kind": "boolean",
+                "type": "boolean",
+                "name": "active",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/active"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "{content: string, status: \"new\"}",
+                "name": "badge",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/badge"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Content the action displays",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "content",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/content"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "false",
+                    "name": "false",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive/false"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "true",
+                    "name": "true",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive/true"
+                  }
+                ],
+                "description": "Destructive action",
+                "tags": null,
+                "mandatory": false,
+                "kind": "boolean",
+                "type": "boolean",
+                "name": "destructive",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/destructive"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "false",
+                    "name": "false",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled/false"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "true",
+                    "name": "true",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled/true"
+                  }
+                ],
+                "description": "Whether or not the action is disabled",
+                "tags": null,
+                "mandatory": false,
+                "kind": "boolean",
+                "type": "boolean",
+                "name": "disabled",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/disabled"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "false",
+                    "name": "false",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis/false"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "true",
+                    "name": "true",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis/true"
+                  }
+                ],
+                "description": "Add an ellipsis suffix to action content",
+                "tags": null,
+                "mandatory": false,
+                "kind": "boolean",
+                "type": "boolean",
+                "name": "ellipsis",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/ellipsis"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "false",
+                    "name": "false",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external/false"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "true",
+                    "name": "true",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external/true"
+                  }
+                ],
+                "description": "Forces url to open in a new tab",
+                "tags": null,
+                "mandatory": false,
+                "kind": "boolean",
+                "type": "boolean",
+                "name": "external",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/external"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Additional hint text to display with item",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "helpText",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/helpText"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "string",
+                    "type": "string",
+                    "name": "string",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon/string"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "FunctionComponent",
+                    "name": "FunctionComponent",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon/FunctionComponent"
+                  }
+                ],
+                "description": "Source of the icon",
+                "tags": null,
+                "mandatory": false,
+                "kind": "union",
+                "type": "string | FunctionComponent",
+                "name": "icon",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/icon"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "A unique identifier for the action",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "id",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/id"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Image source",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "image",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/image"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Defines a role for the action",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "role",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/role"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "\"ADMIN_PATH\"",
+                    "name": "ADMIN_PATH",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target/ADMIN_PATH"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "\"REMOTE\"",
+                    "name": "REMOTE",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target/REMOTE"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "interface",
+                    "type": "\"APP\"",
+                    "name": "APP",
+                    "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target",
+                    "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target/APP"
+                  }
+                ],
+                "description": "Where to display the target link",
+                "tags": [
+                  {
+                    "__typename": "Tag",
+                    "text": "'APP'",
+                    "tag": "default"
+                  },
+                  {
+                    "__typename": "Tag",
+                    "text": "\n",
+                    "tag": "embeddedapponly"
+                  }
+                ],
+                "mandatory": false,
+                "kind": "union",
+                "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+                "name": "target",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/target"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "A destination to link to, rendered in the action",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "url",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/url"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Callback when an action takes place",
+                "tags": null,
+                "mandatory": false,
+                "kind": "method",
+                "type": "() => void",
+                "name": "onAction",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/onAction"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Callback when mouse enter",
+                "tags": null,
+                "mandatory": false,
+                "kind": "method",
+                "type": "() => void",
+                "name": "onMouseEnter",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/onMouseEnter"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "Callback when element is touched",
+                "tags": null,
+                "mandatory": false,
+                "kind": "method",
+                "type": "() => void",
+                "name": "onTouchStart",
+                "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items",
+                "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items/onTouchStart"
+              }
+            ],
+            "description": "Collection of action items for the list",
+            "tags": null,
+            "mandatory": true,
+            "kind": "array",
+            "type": "ActionListItemDescriptor[]",
+            "name": "items",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/items"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Section title",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "title",
+            "parentPath": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection",
+            "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection/title"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "ActionListSection",
+        "name": "ActionListSection",
+        "parentPath": "/components/lists-and-tables/resource-list/bulkActions",
+        "path": "/components/lists-and-tables/resource-list/bulkActions/ActionListSection"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Actions available on the currently selected items",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "(DisableableAction | ActionListSection)[]",
+    "name": "bulkActions",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/bulkActions"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "filterControl",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/filterControl"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/resource-list/hasMoreItems",
+        "path": "/components/lists-and-tables/resource-list/hasMoreItems/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/resource-list/hasMoreItems",
+        "path": "/components/lists-and-tables/resource-list/hasMoreItems/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "If there are more items than currently in the list",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "hasMoreItems",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/hasMoreItems"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Item data; each item is passed to renderItem",
+    "tags": null,
+    "mandatory": true,
+    "kind": "array",
+    "type": "any[]",
+    "name": "items",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/items"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/resource-list/loading",
+        "path": "/components/lists-and-tables/resource-list/loading/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/resource-list/loading",
+        "path": "/components/lists-and-tables/resource-list/loading/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Overlays item list with a spinner while a background action is being performed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "loading",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/loading"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions/disabled",
+            "path": "/components/lists-and-tables/resource-list/promotedBulkActions/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions/disabled",
+            "path": "/components/lists-and-tables/resource-list/promotedBulkActions/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions/external",
+            "path": "/components/lists-and-tables/resource-list/promotedBulkActions/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions/external",
+            "path": "/components/lists-and-tables/resource-list/promotedBulkActions/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/lists-and-tables/resource-list/promotedBulkActions",
+        "path": "/components/lists-and-tables/resource-list/promotedBulkActions/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Up to 2 bulk actions that will be given more prominence",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "DisableableAction[]",
+    "name": "promotedBulkActions",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/promotedBulkActions"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Name of the resource, such as customers or products",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "{plural: string, singular: string}",
+    "name": "resourceName",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/resourceName"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/resource-list/selectable",
+        "path": "/components/lists-and-tables/resource-list/selectable/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/resource-list/selectable",
+        "path": "/components/lists-and-tables/resource-list/selectable/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Renders a Select All button at the top of the list and checkboxes in front of each list item. For use when bulkActions aren't provided.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "selectable",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/selectable"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "array",
+        "type": "string[]",
+        "name": "string",
+        "parentPath": "/components/lists-and-tables/resource-list/selectedItems",
+        "path": "/components/lists-and-tables/resource-list/selectedItems/string"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"All\"",
+        "name": "All",
+        "parentPath": "/components/lists-and-tables/resource-list/selectedItems",
+        "path": "/components/lists-and-tables/resource-list/selectedItems/All"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Collection of IDs for the currently selected items",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "string[] | \"All\"",
+    "name": "selectedItems",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/selectedItems"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/lists-and-tables/resource-list/showHeader",
+        "path": "/components/lists-and-tables/resource-list/showHeader/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/lists-and-tables/resource-list/showHeader",
+        "path": "/components/lists-and-tables/resource-list/showHeader/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Boolean to show or hide the header",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "showHeader",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/showHeader"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "string",
+        "parentPath": "/components/lists-and-tables/resource-list/sortOptions",
+        "path": "/components/lists-and-tables/resource-list/sortOptions/string"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled",
+                "path": "/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled",
+                "path": "/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled/true"
+              }
+            ],
+            "description": "Option will be visible, but not selectable",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "disabled",
+            "parentPath": "/components/lists-and-tables/resource-list/sortOptions/StrictOption",
+            "path": "/components/lists-and-tables/resource-list/sortOptions/StrictOption/disabled"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Human-readable text for the option",
+            "tags": null,
+            "mandatory": true,
+            "kind": "string",
+            "type": "string",
+            "name": "label",
+            "parentPath": "/components/lists-and-tables/resource-list/sortOptions/StrictOption",
+            "path": "/components/lists-and-tables/resource-list/sortOptions/StrictOption/label"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Machine value of the option; this is the value passed to `onChange`",
+            "tags": null,
+            "mandatory": true,
+            "kind": "string",
+            "type": "string",
+            "name": "value",
+            "parentPath": "/components/lists-and-tables/resource-list/sortOptions/StrictOption",
+            "path": "/components/lists-and-tables/resource-list/sortOptions/StrictOption/value"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "StrictOption",
+        "name": "StrictOption",
+        "parentPath": "/components/lists-and-tables/resource-list/sortOptions",
+        "path": "/components/lists-and-tables/resource-list/sortOptions/StrictOption"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Collection of sort options to choose from",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "(string | StrictOption)[]",
+    "name": "sortOptions",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/sortOptions"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Current value of the sort control",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "sortValue",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/sortValue"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Total number of resources",
+    "tags": null,
+    "mandatory": false,
+    "kind": "number",
+    "type": "number",
+    "name": "totalItemsCount",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/totalItemsCount"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "any",
+        "name": "item",
+        "parentPath": "/components/lists-and-tables/resource-list/idForItem",
+        "path": "/components/lists-and-tables/resource-list/idForItem/parameter/item"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "number",
+        "type": "number",
+        "name": "index",
+        "parentPath": "/components/lists-and-tables/resource-list/idForItem",
+        "path": "/components/lists-and-tables/resource-list/idForItem/parameter/index"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Function to customize the unique ID for each item",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(item: any, index: number) => string",
+    "name": "idForItem",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/idForItem"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "array",
+            "type": "string[]",
+            "name": "string",
+            "parentPath": "/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems",
+            "path": "/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"All\"",
+            "name": "All",
+            "parentPath": "/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems",
+            "path": "/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems/All"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "string[] | \"All\"",
+        "name": "selectedItems",
+        "parentPath": "/components/lists-and-tables/resource-list/onSelectionChange",
+        "path": "/components/lists-and-tables/resource-list/onSelectionChange/parameter/selectedItems"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when selection is changed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(selectedItems: string[] | \"All\") => void",
+    "name": "onSelectionChange",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/onSelectionChange"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "selected",
+        "parentPath": "/components/lists-and-tables/resource-list/onSortChange",
+        "path": "/components/lists-and-tables/resource-list/onSortChange/parameter/selected"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/lists-and-tables/resource-list/onSortChange",
+        "path": "/components/lists-and-tables/resource-list/onSortChange/parameter/id"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when sort option is changed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(selected: string, id: string) => void",
+    "name": "onSortChange",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/onSortChange"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "any",
+        "name": "item",
+        "parentPath": "/components/lists-and-tables/resource-list/renderItem",
+        "path": "/components/lists-and-tables/resource-list/renderItem/parameter/item"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/lists-and-tables/resource-list/renderItem",
+        "path": "/components/lists-and-tables/resource-list/renderItem/parameter/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "number",
+        "type": "number",
+        "name": "index",
+        "parentPath": "/components/lists-and-tables/resource-list/renderItem",
+        "path": "/components/lists-and-tables/resource-list/renderItem/parameter/index"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Function to render each list item",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "(item: any, id: string, index: number) => React.ReactNode",
+    "name": "renderItem",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/renderItem"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "any",
+        "name": "item",
+        "parentPath": "/components/lists-and-tables/resource-list/resolveItemId",
+        "path": "/components/lists-and-tables/resource-list/resolveItemId/parameter/item"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Function to resolve an id from a item",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(item: any) => string",
+    "name": "resolveItemId",
+    "parentPath": "/components/lists-and-tables/resource-list",
+    "path": "/components/lists-and-tables/resource-list/resolveItemId"
+  }
+]

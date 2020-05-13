@@ -1,1 +1,1054 @@
-[{"path":"/components/structure/card/actions","parentPath":"/components/structure/card","name":"actions","type":"DisableableAction[]","kind":"array","mandatory":false,"tags":null,"description":"Card header actions","defaultValue":null,"types":[{"path":"/components/structure/card/actions/accessibilityLabel","parentPath":"/components/structure/card/actions","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/content","parentPath":"/components/structure/card/actions","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/disabled","parentPath":"/components/structure/card/actions","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/structure/card/actions/disabled/false","parentPath":"/components/structure/card/actions/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/disabled/true","parentPath":"/components/structure/card/actions/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/actions/external","parentPath":"/components/structure/card/actions","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/card/actions/external/false","parentPath":"/components/structure/card/actions/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/external/true","parentPath":"/components/structure/card/actions/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/actions/id","parentPath":"/components/structure/card/actions","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/url","parentPath":"/components/structure/card/actions","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/onAction","parentPath":"/components/structure/card/actions","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/onMouseEnter","parentPath":"/components/structure/card/actions","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/actions/onTouchStart","parentPath":"/components/structure/card/actions","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/children","parentPath":"/components/structure/card","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Inner content of the card","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/footerActionAlignment","parentPath":"/components/structure/card","name":"footerActionAlignment","type":"\"right\" | \"left\"","kind":"union","mandatory":false,"tags":null,"description":"Alignment of the footer actions on the card, defaults to right","defaultValue":null,"types":[{"path":"/components/structure/card/footerActionAlignment/right","parentPath":"/components/structure/card/footerActionAlignment","name":"right","type":"\"right\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/footerActionAlignment/left","parentPath":"/components/structure/card/footerActionAlignment","name":"left","type":"\"left\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction","parentPath":"/components/structure/card","name":"primaryFooterAction","type":"ComplexAction","kind":"interface","mandatory":false,"tags":null,"description":"Primary action in the card footer","defaultValue":null,"types":[{"path":"/components/structure/card/primaryFooterAction/accessibilityLabel","parentPath":"/components/structure/card/primaryFooterAction","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/content","parentPath":"/components/structure/card/primaryFooterAction","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/destructive","parentPath":"/components/structure/card/primaryFooterAction","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","returnType":null,"types":[{"path":"/components/structure/card/primaryFooterAction/destructive/false","parentPath":"/components/structure/card/primaryFooterAction/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/destructive/true","parentPath":"/components/structure/card/primaryFooterAction/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/disabled","parentPath":"/components/structure/card/primaryFooterAction","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/structure/card/primaryFooterAction/disabled/false","parentPath":"/components/structure/card/primaryFooterAction/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/disabled/true","parentPath":"/components/structure/card/primaryFooterAction/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/external","parentPath":"/components/structure/card/primaryFooterAction","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/card/primaryFooterAction/external/false","parentPath":"/components/structure/card/primaryFooterAction/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/external/true","parentPath":"/components/structure/card/primaryFooterAction/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/icon","parentPath":"/components/structure/card/primaryFooterAction","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","returnType":null,"types":[{"path":"/components/structure/card/primaryFooterAction/icon/string","parentPath":"/components/structure/card/primaryFooterAction/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/icon/FunctionComponent","parentPath":"/components/structure/card/primaryFooterAction/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/id","parentPath":"/components/structure/card/primaryFooterAction","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/loading","parentPath":"/components/structure/card/primaryFooterAction","name":"loading","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Should a spinner be displayed","returnType":null,"types":[{"path":"/components/structure/card/primaryFooterAction/loading/false","parentPath":"/components/structure/card/primaryFooterAction/loading","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/loading/true","parentPath":"/components/structure/card/primaryFooterAction/loading","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/target","parentPath":"/components/structure/card/primaryFooterAction","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","returnType":null,"types":[{"path":"/components/structure/card/primaryFooterAction/target/ADMIN_PATH","parentPath":"/components/structure/card/primaryFooterAction/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/target/REMOTE","parentPath":"/components/structure/card/primaryFooterAction/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/target/APP","parentPath":"/components/structure/card/primaryFooterAction/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/url","parentPath":"/components/structure/card/primaryFooterAction","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/onAction","parentPath":"/components/structure/card/primaryFooterAction","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/onMouseEnter","parentPath":"/components/structure/card/primaryFooterAction","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/primaryFooterAction/onTouchStart","parentPath":"/components/structure/card/primaryFooterAction","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions","parentPath":"/components/structure/card","name":"secondaryFooterActions","type":"ComplexAction[]","kind":"array","mandatory":false,"tags":null,"description":"Secondary actions in the card footer","defaultValue":null,"types":[{"path":"/components/structure/card/secondaryFooterActions/accessibilityLabel","parentPath":"/components/structure/card/secondaryFooterActions","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/content","parentPath":"/components/structure/card/secondaryFooterActions","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/destructive","parentPath":"/components/structure/card/secondaryFooterActions","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","returnType":null,"types":[{"path":"/components/structure/card/secondaryFooterActions/destructive/false","parentPath":"/components/structure/card/secondaryFooterActions/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/destructive/true","parentPath":"/components/structure/card/secondaryFooterActions/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/disabled","parentPath":"/components/structure/card/secondaryFooterActions","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/structure/card/secondaryFooterActions/disabled/false","parentPath":"/components/structure/card/secondaryFooterActions/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/disabled/true","parentPath":"/components/structure/card/secondaryFooterActions/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/external","parentPath":"/components/structure/card/secondaryFooterActions","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/card/secondaryFooterActions/external/false","parentPath":"/components/structure/card/secondaryFooterActions/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/external/true","parentPath":"/components/structure/card/secondaryFooterActions/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/icon","parentPath":"/components/structure/card/secondaryFooterActions","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","returnType":null,"types":[{"path":"/components/structure/card/secondaryFooterActions/icon/string","parentPath":"/components/structure/card/secondaryFooterActions/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/icon/FunctionComponent","parentPath":"/components/structure/card/secondaryFooterActions/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/id","parentPath":"/components/structure/card/secondaryFooterActions","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/loading","parentPath":"/components/structure/card/secondaryFooterActions","name":"loading","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Should a spinner be displayed","returnType":null,"types":[{"path":"/components/structure/card/secondaryFooterActions/loading/false","parentPath":"/components/structure/card/secondaryFooterActions/loading","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/loading/true","parentPath":"/components/structure/card/secondaryFooterActions/loading","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/target","parentPath":"/components/structure/card/secondaryFooterActions","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","returnType":null,"types":[{"path":"/components/structure/card/secondaryFooterActions/target/ADMIN_PATH","parentPath":"/components/structure/card/secondaryFooterActions/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/target/REMOTE","parentPath":"/components/structure/card/secondaryFooterActions/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/target/APP","parentPath":"/components/structure/card/secondaryFooterActions/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/url","parentPath":"/components/structure/card/secondaryFooterActions","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/onAction","parentPath":"/components/structure/card/secondaryFooterActions","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/onMouseEnter","parentPath":"/components/structure/card/secondaryFooterActions","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActions/onTouchStart","parentPath":"/components/structure/card/secondaryFooterActions","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/secondaryFooterActionsDisclosureText","parentPath":"/components/structure/card","name":"secondaryFooterActionsDisclosureText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"The content of the disclosure button rendered when there is more than one secondary footer action","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/sectioned","parentPath":"/components/structure/card","name":"sectioned","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Auto wrap content in section","defaultValue":null,"types":[{"path":"/components/structure/card/sectioned/false","parentPath":"/components/structure/card/sectioned","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/sectioned/true","parentPath":"/components/structure/card/sectioned","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/subdued","parentPath":"/components/structure/card","name":"subdued","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"A less prominent card","defaultValue":null,"types":[{"path":"/components/structure/card/subdued/false","parentPath":"/components/structure/card/subdued","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/card/subdued/true","parentPath":"/components/structure/card/subdued","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/card/title","parentPath":"/components/structure/card","name":"title","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Title content for the card","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/actions/disabled",
+            "path": "/components/structure/card/actions/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/actions/disabled",
+            "path": "/components/structure/card/actions/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/actions/external",
+            "path": "/components/structure/card/actions/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/actions/external",
+            "path": "/components/structure/card/actions/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/card/actions",
+        "path": "/components/structure/card/actions/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Card header actions",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "DisableableAction[]",
+    "name": "actions",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/actions"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Inner content of the card",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"right\"",
+        "name": "right",
+        "parentPath": "/components/structure/card/footerActionAlignment",
+        "path": "/components/structure/card/footerActionAlignment/right"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"left\"",
+        "name": "left",
+        "parentPath": "/components/structure/card/footerActionAlignment",
+        "path": "/components/structure/card/footerActionAlignment/left"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Alignment of the footer actions on the card, defaults to right",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"right\" | \"left\"",
+    "name": "footerActionAlignment",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/footerActionAlignment"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/primaryFooterAction/destructive",
+            "path": "/components/structure/card/primaryFooterAction/destructive/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/primaryFooterAction/destructive",
+            "path": "/components/structure/card/primaryFooterAction/destructive/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Destructive action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "destructive",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/destructive"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/primaryFooterAction/disabled",
+            "path": "/components/structure/card/primaryFooterAction/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/primaryFooterAction/disabled",
+            "path": "/components/structure/card/primaryFooterAction/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/primaryFooterAction/external",
+            "path": "/components/structure/card/primaryFooterAction/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/primaryFooterAction/external",
+            "path": "/components/structure/card/primaryFooterAction/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/external"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/structure/card/primaryFooterAction/icon",
+            "path": "/components/structure/card/primaryFooterAction/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/structure/card/primaryFooterAction/icon",
+            "path": "/components/structure/card/primaryFooterAction/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Source of the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/id"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/primaryFooterAction/loading",
+            "path": "/components/structure/card/primaryFooterAction/loading/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/primaryFooterAction/loading",
+            "path": "/components/structure/card/primaryFooterAction/loading/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Should a spinner be displayed",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "loading",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/loading"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ADMIN_PATH\"",
+            "name": "ADMIN_PATH",
+            "parentPath": "/components/structure/card/primaryFooterAction/target",
+            "path": "/components/structure/card/primaryFooterAction/target/ADMIN_PATH"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"REMOTE\"",
+            "name": "REMOTE",
+            "parentPath": "/components/structure/card/primaryFooterAction/target",
+            "path": "/components/structure/card/primaryFooterAction/target/REMOTE"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"APP\"",
+            "name": "APP",
+            "parentPath": "/components/structure/card/primaryFooterAction/target",
+            "path": "/components/structure/card/primaryFooterAction/target/APP"
+          }
+        ],
+        "returnType": null,
+        "description": "Where to display the target link",
+        "tags": [
+          {
+            "__typename": "Tag",
+            "text": "'APP'",
+            "tag": "default"
+          },
+          {
+            "__typename": "Tag",
+            "text": "\n",
+            "tag": "embeddedapponly"
+          }
+        ],
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+        "name": "target",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/target"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/card/primaryFooterAction",
+        "path": "/components/structure/card/primaryFooterAction/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Primary action in the card footer",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "ComplexAction",
+    "name": "primaryFooterAction",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/primaryFooterAction"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/secondaryFooterActions/destructive",
+            "path": "/components/structure/card/secondaryFooterActions/destructive/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/secondaryFooterActions/destructive",
+            "path": "/components/structure/card/secondaryFooterActions/destructive/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Destructive action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "destructive",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/destructive"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/secondaryFooterActions/disabled",
+            "path": "/components/structure/card/secondaryFooterActions/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/secondaryFooterActions/disabled",
+            "path": "/components/structure/card/secondaryFooterActions/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/secondaryFooterActions/external",
+            "path": "/components/structure/card/secondaryFooterActions/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/secondaryFooterActions/external",
+            "path": "/components/structure/card/secondaryFooterActions/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/external"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/structure/card/secondaryFooterActions/icon",
+            "path": "/components/structure/card/secondaryFooterActions/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/structure/card/secondaryFooterActions/icon",
+            "path": "/components/structure/card/secondaryFooterActions/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Source of the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/id"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/card/secondaryFooterActions/loading",
+            "path": "/components/structure/card/secondaryFooterActions/loading/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/card/secondaryFooterActions/loading",
+            "path": "/components/structure/card/secondaryFooterActions/loading/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Should a spinner be displayed",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "loading",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/loading"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ADMIN_PATH\"",
+            "name": "ADMIN_PATH",
+            "parentPath": "/components/structure/card/secondaryFooterActions/target",
+            "path": "/components/structure/card/secondaryFooterActions/target/ADMIN_PATH"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"REMOTE\"",
+            "name": "REMOTE",
+            "parentPath": "/components/structure/card/secondaryFooterActions/target",
+            "path": "/components/structure/card/secondaryFooterActions/target/REMOTE"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"APP\"",
+            "name": "APP",
+            "parentPath": "/components/structure/card/secondaryFooterActions/target",
+            "path": "/components/structure/card/secondaryFooterActions/target/APP"
+          }
+        ],
+        "returnType": null,
+        "description": "Where to display the target link",
+        "tags": [
+          {
+            "__typename": "Tag",
+            "text": "'APP'",
+            "tag": "default"
+          },
+          {
+            "__typename": "Tag",
+            "text": "\n",
+            "tag": "embeddedapponly"
+          }
+        ],
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+        "name": "target",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/target"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/card/secondaryFooterActions",
+        "path": "/components/structure/card/secondaryFooterActions/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Secondary actions in the card footer",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "ComplexAction[]",
+    "name": "secondaryFooterActions",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/secondaryFooterActions"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content of the disclosure button rendered when there is more than one secondary footer action",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "secondaryFooterActionsDisclosureText",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/secondaryFooterActionsDisclosureText"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/card/sectioned",
+        "path": "/components/structure/card/sectioned/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/card/sectioned",
+        "path": "/components/structure/card/sectioned/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Auto wrap content in section",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "sectioned",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/sectioned"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/card/subdued",
+        "path": "/components/structure/card/subdued/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/card/subdued",
+        "path": "/components/structure/card/subdued/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "A less prominent card",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "subdued",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/subdued"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Title content for the card",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "title",
+    "parentPath": "/components/structure/card",
+    "path": "/components/structure/card/title"
+  }
+]

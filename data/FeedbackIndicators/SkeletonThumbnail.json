@@ -1,1 +1,61 @@
-[{"path":"/components/feedback-indicators/skeleton-thumbnail/size","parentPath":"/components/feedback-indicators/skeleton-thumbnail","name":"size","type":"\"small\" | \"medium\" | \"large\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'medium'\n","__typename":"Tag"}],"description":"Size of the thumbnail","defaultValue":"'medium'","types":[{"path":"/components/feedback-indicators/skeleton-thumbnail/size/small","parentPath":"/components/feedback-indicators/skeleton-thumbnail/size","name":"small","type":"\"small\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-thumbnail/size/medium","parentPath":"/components/feedback-indicators/skeleton-thumbnail/size","name":"medium","type":"\"medium\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-thumbnail/size/large","parentPath":"/components/feedback-indicators/skeleton-thumbnail/size","name":"large","type":"\"large\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"small\"",
+        "name": "small",
+        "parentPath": "/components/feedback-indicators/skeleton-thumbnail/size",
+        "path": "/components/feedback-indicators/skeleton-thumbnail/size/small"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"medium\"",
+        "name": "medium",
+        "parentPath": "/components/feedback-indicators/skeleton-thumbnail/size",
+        "path": "/components/feedback-indicators/skeleton-thumbnail/size/medium"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"large\"",
+        "name": "large",
+        "parentPath": "/components/feedback-indicators/skeleton-thumbnail/size",
+        "path": "/components/feedback-indicators/skeleton-thumbnail/size/large"
+      }
+    ],
+    "defaultValue": "'medium'",
+    "description": "Size of the thumbnail",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'medium'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"small\" | \"medium\" | \"large\"",
+    "name": "size",
+    "parentPath": "/components/feedback-indicators/skeleton-thumbnail",
+    "path": "/components/feedback-indicators/skeleton-thumbnail/size"
+  }
+]

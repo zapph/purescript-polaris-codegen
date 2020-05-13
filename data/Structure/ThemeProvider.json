@@ -1,1 +1,67 @@
-[{"path":"/components/structure/theme-provider/children","parentPath":"/components/structure/theme-provider","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/theme-provider/theme","parentPath":"/components/structure/theme-provider","name":"theme","type":"ThemeProviderThemeConfig","kind":"interface","mandatory":true,"tags":null,"description":"Custom logos and colors provided to select components","defaultValue":null,"types":[{"path":"/components/structure/theme-provider/theme/colorScheme","parentPath":"/components/structure/theme-provider/theme","name":"colorScheme","type":"OriginalColorScheme | Inverse","kind":"union","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/structure/theme-provider/theme/colorScheme/OriginalColorScheme","parentPath":"/components/structure/theme-provider/theme/colorScheme","name":"OriginalColorScheme","type":"Required","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/theme-provider/theme/colorScheme/Inverse","parentPath":"/components/structure/theme-provider/theme/colorScheme","name":"Inverse","type":"\"inverse\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/structure/theme-provider",
+    "path": "/components/structure/theme-provider/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "Required",
+            "name": "OriginalColorScheme",
+            "parentPath": "/components/structure/theme-provider/theme/colorScheme",
+            "path": "/components/structure/theme-provider/theme/colorScheme/OriginalColorScheme"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"inverse\"",
+            "name": "Inverse",
+            "parentPath": "/components/structure/theme-provider/theme/colorScheme",
+            "path": "/components/structure/theme-provider/theme/colorScheme/Inverse"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "OriginalColorScheme | Inverse",
+        "name": "colorScheme",
+        "parentPath": "/components/structure/theme-provider/theme",
+        "path": "/components/structure/theme-provider/theme/colorScheme"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Custom logos and colors provided to select components",
+    "tags": null,
+    "mandatory": true,
+    "kind": "interface",
+    "type": "ThemeProviderThemeConfig",
+    "name": "theme",
+    "parentPath": "/components/structure/theme-provider",
+    "path": "/components/structure/theme-provider/theme"
+  }
+]

@@ -1,1 +1,55 @@
-[{"path":"/components/structure/layout/children","parentPath":"/components/structure/layout","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display inside the layout.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/layout/sectioned","parentPath":"/components/structure/layout","name":"sectioned","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Automatically adds sections to layout.","defaultValue":null,"types":[{"path":"/components/structure/layout/sectioned/false","parentPath":"/components/structure/layout/sectioned","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/layout/sectioned/true","parentPath":"/components/structure/layout/sectioned","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inside the layout.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/structure/layout",
+    "path": "/components/structure/layout/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/layout/sectioned",
+        "path": "/components/structure/layout/sectioned/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/layout/sectioned",
+        "path": "/components/structure/layout/sectioned/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Automatically adds sections to layout.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "sectioned",
+    "parentPath": "/components/structure/layout",
+    "path": "/components/structure/layout/sectioned"
+  }
+]

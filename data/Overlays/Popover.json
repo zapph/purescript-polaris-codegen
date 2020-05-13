@@ -1,1 +1,659 @@
-[{"path":"/components/overlays/popover/activator","parentPath":"/components/overlays/popover","name":"activator","type":"ReactElement","kind":"interface","mandatory":true,"tags":null,"description":"The element to activate the Popover","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/activatorWrapper","parentPath":"/components/overlays/popover","name":"activatorWrapper","type":"string","kind":"string","mandatory":false,"tags":[{"tag":"default","text":"'div'\n","__typename":"Tag"}],"description":"The element type to wrap the activator with","defaultValue":"'div'","types":null,"__typename":"Property"},{"path":"/components/overlays/popover/active","parentPath":"/components/overlays/popover","name":"active","type":"boolean","kind":"boolean","mandatory":true,"tags":null,"description":"Show or hide the Popover","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup","parentPath":"/components/overlays/popover","name":"ariaHaspopup","type":"false | true | \"true\" | \"false\" | \"menu\" | \"listbox\" | \"tree\" | \"grid\" | \"dialog\"","kind":"union","mandatory":false,"tags":null,"description":"Used to illustrate the type of popover element","defaultValue":null,"types":[{"path":"/components/overlays/popover/ariaHaspopup/false","parentPath":"/components/overlays/popover/ariaHaspopup","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/true","parentPath":"/components/overlays/popover/ariaHaspopup","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/true","parentPath":"/components/overlays/popover/ariaHaspopup","name":"true","type":"\"true\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/false","parentPath":"/components/overlays/popover/ariaHaspopup","name":"false","type":"\"false\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/menu","parentPath":"/components/overlays/popover/ariaHaspopup","name":"menu","type":"\"menu\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/listbox","parentPath":"/components/overlays/popover/ariaHaspopup","name":"listbox","type":"\"listbox\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/tree","parentPath":"/components/overlays/popover/ariaHaspopup","name":"tree","type":"\"tree\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/grid","parentPath":"/components/overlays/popover/ariaHaspopup","name":"grid","type":"\"grid\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/ariaHaspopup/dialog","parentPath":"/components/overlays/popover/ariaHaspopup","name":"dialog","type":"\"dialog\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/children","parentPath":"/components/overlays/popover","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display inside the popover","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/fixed","parentPath":"/components/overlays/popover","name":"fixed","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Remains in a fixed position","defaultValue":null,"types":[{"path":"/components/overlays/popover/fixed/false","parentPath":"/components/overlays/popover/fixed","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/fixed/true","parentPath":"/components/overlays/popover/fixed","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/fluidContent","parentPath":"/components/overlays/popover","name":"fluidContent","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allow popover content to determine the overlay width and height","defaultValue":null,"types":[{"path":"/components/overlays/popover/fluidContent/false","parentPath":"/components/overlays/popover/fluidContent","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/fluidContent/true","parentPath":"/components/overlays/popover/fluidContent","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/fullHeight","parentPath":"/components/overlays/popover","name":"fullHeight","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allow popover to stretch to fit content vertically","defaultValue":null,"types":[{"path":"/components/overlays/popover/fullHeight/false","parentPath":"/components/overlays/popover/fullHeight","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/fullHeight/true","parentPath":"/components/overlays/popover/fullHeight","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/fullWidth","parentPath":"/components/overlays/popover","name":"fullWidth","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allow popover to stretch to the full width of its activator","defaultValue":null,"types":[{"path":"/components/overlays/popover/fullWidth/false","parentPath":"/components/overlays/popover/fullWidth","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/fullWidth/true","parentPath":"/components/overlays/popover/fullWidth","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/preferInputActivator","parentPath":"/components/overlays/popover","name":"preferInputActivator","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Use the activator's input element to calculate the Popover position","defaultValue":"true","types":[{"path":"/components/overlays/popover/preferInputActivator/false","parentPath":"/components/overlays/popover/preferInputActivator","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/preferInputActivator/true","parentPath":"/components/overlays/popover/preferInputActivator","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/preferredAlignment","parentPath":"/components/overlays/popover","name":"preferredAlignment","type":"\"left\" | \"center\" | \"right\"","kind":"union","mandatory":false,"tags":null,"description":"The preferred alignment of the popover relative to its activator","defaultValue":null,"types":[{"path":"/components/overlays/popover/preferredAlignment/left","parentPath":"/components/overlays/popover/preferredAlignment","name":"left","type":"\"left\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/preferredAlignment/center","parentPath":"/components/overlays/popover/preferredAlignment","name":"center","type":"\"center\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/preferredAlignment/right","parentPath":"/components/overlays/popover/preferredAlignment","name":"right","type":"\"right\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/preferredPosition","parentPath":"/components/overlays/popover","name":"preferredPosition","type":"\"above\" | \"below\" | \"mostSpace\"","kind":"union","mandatory":false,"tags":null,"description":"The preferred direction to open the popover","defaultValue":null,"types":[{"path":"/components/overlays/popover/preferredPosition/above","parentPath":"/components/overlays/popover/preferredPosition","name":"above","type":"\"above\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/preferredPosition/below","parentPath":"/components/overlays/popover/preferredPosition","name":"below","type":"\"below\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/preferredPosition/mostSpace","parentPath":"/components/overlays/popover/preferredPosition","name":"mostSpace","type":"\"mostSpace\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/preventAutofocus","parentPath":"/components/overlays/popover","name":"preventAutofocus","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Prevent automatic focus of the first field on activation","defaultValue":null,"types":[{"path":"/components/overlays/popover/preventAutofocus/false","parentPath":"/components/overlays/popover/preventAutofocus","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/preventAutofocus/true","parentPath":"/components/overlays/popover/preventAutofocus","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/sectioned","parentPath":"/components/overlays/popover","name":"sectioned","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Automatically add wrap content in a section","defaultValue":null,"types":[{"path":"/components/overlays/popover/sectioned/false","parentPath":"/components/overlays/popover/sectioned","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/popover/sectioned/true","parentPath":"/components/overlays/popover/sectioned","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/popover/onClose","parentPath":"/components/overlays/popover","name":"onClose","type":"(source: PopoverCloseSource) => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when popover is closed","defaultValue":null,"types":[{"path":"/components/overlays/popover/onClose/parameter/source","parentPath":"/components/overlays/popover/onClose","name":"source","type":"PopoverCloseSource","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/overlays/popover/onClose/parameter/source/Click","parentPath":"/components/overlays/popover/onClose/parameter/source","name":"Click","type":"Click","kind":"interface","mandatory":true,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/overlays/popover/onClose/parameter/source/EscapeKeypress","parentPath":"/components/overlays/popover/onClose/parameter/source","name":"EscapeKeypress","type":"EscapeKeypress","kind":"interface","mandatory":true,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/overlays/popover/onClose/parameter/source/FocusOut","parentPath":"/components/overlays/popover/onClose/parameter/source","name":"FocusOut","type":"FocusOut","kind":"interface","mandatory":true,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/overlays/popover/onClose/parameter/source/ScrollOut","parentPath":"/components/overlays/popover/onClose/parameter/source","name":"ScrollOut","type":"ScrollOut","kind":"interface","mandatory":true,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The element to activate the Popover",
+    "tags": null,
+    "mandatory": true,
+    "kind": "interface",
+    "type": "ReactElement",
+    "name": "activator",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/activator"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": "'div'",
+    "description": "The element type to wrap the activator with",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'div'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "activatorWrapper",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/activatorWrapper"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Show or hide the Popover",
+    "tags": null,
+    "mandatory": true,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "active",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/active"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/true"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"true\"",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/true"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"false\"",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"menu\"",
+        "name": "menu",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/menu"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"listbox\"",
+        "name": "listbox",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/listbox"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"tree\"",
+        "name": "tree",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/tree"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"grid\"",
+        "name": "grid",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/grid"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"dialog\"",
+        "name": "dialog",
+        "parentPath": "/components/overlays/popover/ariaHaspopup",
+        "path": "/components/overlays/popover/ariaHaspopup/dialog"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Used to illustrate the type of popover element",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "false | true | \"true\" | \"false\" | \"menu\" | \"listbox\" | \"tree\" | \"grid\" | \"dialog\"",
+    "name": "ariaHaspopup",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/ariaHaspopup"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inside the popover",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/fixed",
+        "path": "/components/overlays/popover/fixed/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/fixed",
+        "path": "/components/overlays/popover/fixed/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Remains in a fixed position",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "fixed",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/fixed"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/fluidContent",
+        "path": "/components/overlays/popover/fluidContent/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/fluidContent",
+        "path": "/components/overlays/popover/fluidContent/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Allow popover content to determine the overlay width and height",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "fluidContent",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/fluidContent"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/fullHeight",
+        "path": "/components/overlays/popover/fullHeight/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/fullHeight",
+        "path": "/components/overlays/popover/fullHeight/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Allow popover to stretch to fit content vertically",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "fullHeight",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/fullHeight"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/fullWidth",
+        "path": "/components/overlays/popover/fullWidth/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/fullWidth",
+        "path": "/components/overlays/popover/fullWidth/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Allow popover to stretch to the full width of its activator",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "fullWidth",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/fullWidth"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/preferInputActivator",
+        "path": "/components/overlays/popover/preferInputActivator/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/preferInputActivator",
+        "path": "/components/overlays/popover/preferInputActivator/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Use the activator's input element to calculate the Popover position",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "preferInputActivator",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/preferInputActivator"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"left\"",
+        "name": "left",
+        "parentPath": "/components/overlays/popover/preferredAlignment",
+        "path": "/components/overlays/popover/preferredAlignment/left"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"center\"",
+        "name": "center",
+        "parentPath": "/components/overlays/popover/preferredAlignment",
+        "path": "/components/overlays/popover/preferredAlignment/center"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"right\"",
+        "name": "right",
+        "parentPath": "/components/overlays/popover/preferredAlignment",
+        "path": "/components/overlays/popover/preferredAlignment/right"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The preferred alignment of the popover relative to its activator",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"left\" | \"center\" | \"right\"",
+    "name": "preferredAlignment",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/preferredAlignment"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"above\"",
+        "name": "above",
+        "parentPath": "/components/overlays/popover/preferredPosition",
+        "path": "/components/overlays/popover/preferredPosition/above"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"below\"",
+        "name": "below",
+        "parentPath": "/components/overlays/popover/preferredPosition",
+        "path": "/components/overlays/popover/preferredPosition/below"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"mostSpace\"",
+        "name": "mostSpace",
+        "parentPath": "/components/overlays/popover/preferredPosition",
+        "path": "/components/overlays/popover/preferredPosition/mostSpace"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The preferred direction to open the popover",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"above\" | \"below\" | \"mostSpace\"",
+    "name": "preferredPosition",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/preferredPosition"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/preventAutofocus",
+        "path": "/components/overlays/popover/preventAutofocus/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/preventAutofocus",
+        "path": "/components/overlays/popover/preventAutofocus/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Prevent automatic focus of the first field on activation",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "preventAutofocus",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/preventAutofocus"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/popover/sectioned",
+        "path": "/components/overlays/popover/sectioned/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/popover/sectioned",
+        "path": "/components/overlays/popover/sectioned/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Automatically add wrap content in a section",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "sectioned",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/sectioned"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": true,
+            "kind": "interface",
+            "type": "Click",
+            "name": "Click",
+            "parentPath": "/components/overlays/popover/onClose/parameter/source",
+            "path": "/components/overlays/popover/onClose/parameter/source/Click"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": true,
+            "kind": "interface",
+            "type": "EscapeKeypress",
+            "name": "EscapeKeypress",
+            "parentPath": "/components/overlays/popover/onClose/parameter/source",
+            "path": "/components/overlays/popover/onClose/parameter/source/EscapeKeypress"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": true,
+            "kind": "interface",
+            "type": "FocusOut",
+            "name": "FocusOut",
+            "parentPath": "/components/overlays/popover/onClose/parameter/source",
+            "path": "/components/overlays/popover/onClose/parameter/source/FocusOut"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": true,
+            "kind": "interface",
+            "type": "ScrollOut",
+            "name": "ScrollOut",
+            "parentPath": "/components/overlays/popover/onClose/parameter/source",
+            "path": "/components/overlays/popover/onClose/parameter/source/ScrollOut"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "PopoverCloseSource",
+        "name": "source",
+        "parentPath": "/components/overlays/popover/onClose",
+        "path": "/components/overlays/popover/onClose/parameter/source"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when popover is closed",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "(source: PopoverCloseSource) => void",
+    "name": "onClose",
+    "parentPath": "/components/overlays/popover",
+    "path": "/components/overlays/popover/onClose"
+  }
+]

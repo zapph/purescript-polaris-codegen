@@ -1,1 +1,126 @@
-[{"path":"/components/titles-and-text/heading/children","parentPath":"/components/titles-and-text/heading","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display inside the heading","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/heading/element","parentPath":"/components/titles-and-text/heading","name":"element","type":"\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'h2'\n","__typename":"Tag"}],"description":"The element name to use for the heading","defaultValue":"'h2'","types":[{"path":"/components/titles-and-text/heading/element/h1","parentPath":"/components/titles-and-text/heading/element","name":"h1","type":"\"h1\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/heading/element/h2","parentPath":"/components/titles-and-text/heading/element","name":"h2","type":"\"h2\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/heading/element/h3","parentPath":"/components/titles-and-text/heading/element","name":"h3","type":"\"h3\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/heading/element/h4","parentPath":"/components/titles-and-text/heading/element","name":"h4","type":"\"h4\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/heading/element/h5","parentPath":"/components/titles-and-text/heading/element","name":"h5","type":"\"h5\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/heading/element/h6","parentPath":"/components/titles-and-text/heading/element","name":"h6","type":"\"h6\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/heading/element/p","parentPath":"/components/titles-and-text/heading/element","name":"p","type":"\"p\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inside the heading",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/titles-and-text/heading",
+    "path": "/components/titles-and-text/heading/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h1\"",
+        "name": "h1",
+        "parentPath": "/components/titles-and-text/heading/element",
+        "path": "/components/titles-and-text/heading/element/h1"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h2\"",
+        "name": "h2",
+        "parentPath": "/components/titles-and-text/heading/element",
+        "path": "/components/titles-and-text/heading/element/h2"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h3\"",
+        "name": "h3",
+        "parentPath": "/components/titles-and-text/heading/element",
+        "path": "/components/titles-and-text/heading/element/h3"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h4\"",
+        "name": "h4",
+        "parentPath": "/components/titles-and-text/heading/element",
+        "path": "/components/titles-and-text/heading/element/h4"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h5\"",
+        "name": "h5",
+        "parentPath": "/components/titles-and-text/heading/element",
+        "path": "/components/titles-and-text/heading/element/h5"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h6\"",
+        "name": "h6",
+        "parentPath": "/components/titles-and-text/heading/element",
+        "path": "/components/titles-and-text/heading/element/h6"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"p\"",
+        "name": "p",
+        "parentPath": "/components/titles-and-text/heading/element",
+        "path": "/components/titles-and-text/heading/element/p"
+      }
+    ],
+    "defaultValue": "'h2'",
+    "description": "The element name to use for the heading",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'h2'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\"",
+    "name": "element",
+    "parentPath": "/components/titles-and-text/heading",
+    "path": "/components/titles-and-text/heading/element"
+  }
+]

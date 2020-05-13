@@ -1,1 +1,186 @@
-[{"path":"/components/overlays/tooltip/activatorWrapper","parentPath":"/components/overlays/tooltip","name":"activatorWrapper","type":"string","kind":"string","mandatory":false,"tags":[{"tag":"default","text":"'span'\n","__typename":"Tag"}],"description":"The element type to wrap the activator in","defaultValue":"'span'","types":null,"__typename":"Property"},{"path":"/components/overlays/tooltip/active","parentPath":"/components/overlays/tooltip","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Toggle whether the tooltip is visible","defaultValue":null,"types":[{"path":"/components/overlays/tooltip/active/false","parentPath":"/components/overlays/tooltip/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/tooltip/active/true","parentPath":"/components/overlays/tooltip/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/tooltip/children","parentPath":"/components/overlays/tooltip","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The element that will activate to tooltip","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/tooltip/content","parentPath":"/components/overlays/tooltip","name":"content","type":"string","kind":"string","mandatory":true,"tags":null,"description":"The content to display within the tooltip","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/tooltip/light","parentPath":"/components/overlays/tooltip","name":"light","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Display tooltip with a light background","defaultValue":null,"types":[{"path":"/components/overlays/tooltip/light/false","parentPath":"/components/overlays/tooltip/light","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/tooltip/light/true","parentPath":"/components/overlays/tooltip/light","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/tooltip/preferredPosition","parentPath":"/components/overlays/tooltip","name":"preferredPosition","type":"\"above\" | \"below\" | \"mostSpace\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'below'\n","__typename":"Tag"}],"description":"The direction the tooltip tries to display","defaultValue":"'below'","types":[{"path":"/components/overlays/tooltip/preferredPosition/above","parentPath":"/components/overlays/tooltip/preferredPosition","name":"above","type":"\"above\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/tooltip/preferredPosition/below","parentPath":"/components/overlays/tooltip/preferredPosition","name":"below","type":"\"below\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/tooltip/preferredPosition/mostSpace","parentPath":"/components/overlays/tooltip/preferredPosition","name":"mostSpace","type":"\"mostSpace\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": "'span'",
+    "description": "The element type to wrap the activator in",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'span'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "activatorWrapper",
+    "parentPath": "/components/overlays/tooltip",
+    "path": "/components/overlays/tooltip/activatorWrapper"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/tooltip/active",
+        "path": "/components/overlays/tooltip/active/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/tooltip/active",
+        "path": "/components/overlays/tooltip/active/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Toggle whether the tooltip is visible",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "active",
+    "parentPath": "/components/overlays/tooltip",
+    "path": "/components/overlays/tooltip/active"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The element that will activate to tooltip",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/overlays/tooltip",
+    "path": "/components/overlays/tooltip/children"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display within the tooltip",
+    "tags": null,
+    "mandatory": true,
+    "kind": "string",
+    "type": "string",
+    "name": "content",
+    "parentPath": "/components/overlays/tooltip",
+    "path": "/components/overlays/tooltip/content"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/tooltip/light",
+        "path": "/components/overlays/tooltip/light/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/tooltip/light",
+        "path": "/components/overlays/tooltip/light/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Display tooltip with a light background",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "light",
+    "parentPath": "/components/overlays/tooltip",
+    "path": "/components/overlays/tooltip/light"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"above\"",
+        "name": "above",
+        "parentPath": "/components/overlays/tooltip/preferredPosition",
+        "path": "/components/overlays/tooltip/preferredPosition/above"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"below\"",
+        "name": "below",
+        "parentPath": "/components/overlays/tooltip/preferredPosition",
+        "path": "/components/overlays/tooltip/preferredPosition/below"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"mostSpace\"",
+        "name": "mostSpace",
+        "parentPath": "/components/overlays/tooltip/preferredPosition",
+        "path": "/components/overlays/tooltip/preferredPosition/mostSpace"
+      }
+    ],
+    "defaultValue": "'below'",
+    "description": "The direction the tooltip tries to display",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'below'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"above\" | \"below\" | \"mostSpace\"",
+    "name": "preferredPosition",
+    "parentPath": "/components/overlays/tooltip",
+    "path": "/components/overlays/tooltip/preferredPosition"
+  }
+]

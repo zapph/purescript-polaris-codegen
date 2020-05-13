@@ -1,1 +1,134 @@
-[{"path":"/components/navigation/link/children","parentPath":"/components/navigation/link","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display inside the link","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/navigation/link/external","parentPath":"/components/navigation/link","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Makes the link open in a new tab","defaultValue":null,"types":[{"path":"/components/navigation/link/external/false","parentPath":"/components/navigation/link/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/navigation/link/external/true","parentPath":"/components/navigation/link/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/navigation/link/id","parentPath":"/components/navigation/link","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"ID for the link","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/navigation/link/monochrome","parentPath":"/components/navigation/link","name":"monochrome","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Makes the link color the same as the current text color and adds an underline","defaultValue":null,"types":[{"path":"/components/navigation/link/monochrome/false","parentPath":"/components/navigation/link/monochrome","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/navigation/link/monochrome/true","parentPath":"/components/navigation/link/monochrome","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/navigation/link/url","parentPath":"/components/navigation/link","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"The url to link to","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/navigation/link/onClick","parentPath":"/components/navigation/link","name":"onClick","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when a link is clicked","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inside the link",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/navigation/link",
+    "path": "/components/navigation/link/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/navigation/link/external",
+        "path": "/components/navigation/link/external/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/navigation/link/external",
+        "path": "/components/navigation/link/external/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Makes the link open in a new tab",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "external",
+    "parentPath": "/components/navigation/link",
+    "path": "/components/navigation/link/external"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "ID for the link",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "id",
+    "parentPath": "/components/navigation/link",
+    "path": "/components/navigation/link/id"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/navigation/link/monochrome",
+        "path": "/components/navigation/link/monochrome/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/navigation/link/monochrome",
+        "path": "/components/navigation/link/monochrome/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Makes the link color the same as the current text color and adds an underline",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "monochrome",
+    "parentPath": "/components/navigation/link",
+    "path": "/components/navigation/link/monochrome"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The url to link to",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "url",
+    "parentPath": "/components/navigation/link",
+    "path": "/components/navigation/link/url"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when a link is clicked",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onClick",
+    "parentPath": "/components/navigation/link",
+    "path": "/components/navigation/link/onClick"
+  }
+]

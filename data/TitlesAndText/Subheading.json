@@ -1,1 +1,126 @@
-[{"path":"/components/titles-and-text/subheading/children","parentPath":"/components/titles-and-text/subheading","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Text to display in subheading","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/subheading/element","parentPath":"/components/titles-and-text/subheading","name":"element","type":"\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'h3'\n","__typename":"Tag"}],"description":"The element name to use for the subheading","defaultValue":"'h3'","types":[{"path":"/components/titles-and-text/subheading/element/h1","parentPath":"/components/titles-and-text/subheading/element","name":"h1","type":"\"h1\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/subheading/element/h2","parentPath":"/components/titles-and-text/subheading/element","name":"h2","type":"\"h2\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/subheading/element/h3","parentPath":"/components/titles-and-text/subheading/element","name":"h3","type":"\"h3\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/subheading/element/h4","parentPath":"/components/titles-and-text/subheading/element","name":"h4","type":"\"h4\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/subheading/element/h5","parentPath":"/components/titles-and-text/subheading/element","name":"h5","type":"\"h5\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/subheading/element/h6","parentPath":"/components/titles-and-text/subheading/element","name":"h6","type":"\"h6\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/subheading/element/p","parentPath":"/components/titles-and-text/subheading/element","name":"p","type":"\"p\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Text to display in subheading",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/titles-and-text/subheading",
+    "path": "/components/titles-and-text/subheading/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h1\"",
+        "name": "h1",
+        "parentPath": "/components/titles-and-text/subheading/element",
+        "path": "/components/titles-and-text/subheading/element/h1"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h2\"",
+        "name": "h2",
+        "parentPath": "/components/titles-and-text/subheading/element",
+        "path": "/components/titles-and-text/subheading/element/h2"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h3\"",
+        "name": "h3",
+        "parentPath": "/components/titles-and-text/subheading/element",
+        "path": "/components/titles-and-text/subheading/element/h3"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h4\"",
+        "name": "h4",
+        "parentPath": "/components/titles-and-text/subheading/element",
+        "path": "/components/titles-and-text/subheading/element/h4"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h5\"",
+        "name": "h5",
+        "parentPath": "/components/titles-and-text/subheading/element",
+        "path": "/components/titles-and-text/subheading/element/h5"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"h6\"",
+        "name": "h6",
+        "parentPath": "/components/titles-and-text/subheading/element",
+        "path": "/components/titles-and-text/subheading/element/h6"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"p\"",
+        "name": "p",
+        "parentPath": "/components/titles-and-text/subheading/element",
+        "path": "/components/titles-and-text/subheading/element/p"
+      }
+    ],
+    "defaultValue": "'h3'",
+    "description": "The element name to use for the subheading",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'h3'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"p\"",
+    "name": "element",
+    "parentPath": "/components/titles-and-text/subheading",
+    "path": "/components/titles-and-text/subheading/element"
+  }
+]

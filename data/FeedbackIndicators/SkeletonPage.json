@@ -1,1 +1,247 @@
-[{"path":"/components/feedback-indicators/skeleton-page/breadcrumbs","parentPath":"/components/feedback-indicators/skeleton-page","name":"breadcrumbs","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Shows a skeleton over the breadcrumb","defaultValue":null,"types":[{"path":"/components/feedback-indicators/skeleton-page/breadcrumbs/false","parentPath":"/components/feedback-indicators/skeleton-page/breadcrumbs","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/breadcrumbs/true","parentPath":"/components/feedback-indicators/skeleton-page/breadcrumbs","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/children","parentPath":"/components/feedback-indicators/skeleton-page","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The child elements to render in the skeleton page.","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/fullWidth","parentPath":"/components/feedback-indicators/skeleton-page","name":"fullWidth","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Remove the normal max-width on the page","defaultValue":null,"types":[{"path":"/components/feedback-indicators/skeleton-page/fullWidth/false","parentPath":"/components/feedback-indicators/skeleton-page/fullWidth","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/fullWidth/true","parentPath":"/components/feedback-indicators/skeleton-page/fullWidth","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/narrowWidth","parentPath":"/components/feedback-indicators/skeleton-page","name":"narrowWidth","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Decreases the maximum layout width. Intended for single-column layouts","defaultValue":null,"types":[{"path":"/components/feedback-indicators/skeleton-page/narrowWidth/false","parentPath":"/components/feedback-indicators/skeleton-page/narrowWidth","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/narrowWidth/true","parentPath":"/components/feedback-indicators/skeleton-page/narrowWidth","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/primaryAction","parentPath":"/components/feedback-indicators/skeleton-page","name":"primaryAction","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Shows a skeleton over the primary action","defaultValue":null,"types":[{"path":"/components/feedback-indicators/skeleton-page/primaryAction/false","parentPath":"/components/feedback-indicators/skeleton-page/primaryAction","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/primaryAction/true","parentPath":"/components/feedback-indicators/skeleton-page/primaryAction","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/secondaryActions","parentPath":"/components/feedback-indicators/skeleton-page","name":"secondaryActions","type":"number","kind":"number","mandatory":false,"tags":null,"description":"Number of secondary page-level actions to display","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/singleColumn","parentPath":"/components/feedback-indicators/skeleton-page","name":"singleColumn","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"deprecated","text":"As of release 4.0, replaced by {@link https://polaris.shopify.com/components/feedback-indicators/skeleton-page#props-narrow-width}\n","__typename":"Tag"}],"description":"Decreases the maximum layout width. Intended for single-column layouts","defaultValue":null,"types":[{"path":"/components/feedback-indicators/skeleton-page/singleColumn/false","parentPath":"/components/feedback-indicators/skeleton-page/singleColumn","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/singleColumn/true","parentPath":"/components/feedback-indicators/skeleton-page/singleColumn","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/skeleton-page/title","parentPath":"/components/feedback-indicators/skeleton-page","name":"title","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Page title, in large type","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/feedback-indicators/skeleton-page/breadcrumbs",
+        "path": "/components/feedback-indicators/skeleton-page/breadcrumbs/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/feedback-indicators/skeleton-page/breadcrumbs",
+        "path": "/components/feedback-indicators/skeleton-page/breadcrumbs/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Shows a skeleton over the breadcrumb",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "breadcrumbs",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/breadcrumbs"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The child elements to render in the skeleton page.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/feedback-indicators/skeleton-page/fullWidth",
+        "path": "/components/feedback-indicators/skeleton-page/fullWidth/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/feedback-indicators/skeleton-page/fullWidth",
+        "path": "/components/feedback-indicators/skeleton-page/fullWidth/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Remove the normal max-width on the page",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "fullWidth",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/fullWidth"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/feedback-indicators/skeleton-page/narrowWidth",
+        "path": "/components/feedback-indicators/skeleton-page/narrowWidth/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/feedback-indicators/skeleton-page/narrowWidth",
+        "path": "/components/feedback-indicators/skeleton-page/narrowWidth/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Decreases the maximum layout width. Intended for single-column layouts",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "narrowWidth",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/narrowWidth"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/feedback-indicators/skeleton-page/primaryAction",
+        "path": "/components/feedback-indicators/skeleton-page/primaryAction/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/feedback-indicators/skeleton-page/primaryAction",
+        "path": "/components/feedback-indicators/skeleton-page/primaryAction/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Shows a skeleton over the primary action",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "primaryAction",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/primaryAction"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Number of secondary page-level actions to display",
+    "tags": null,
+    "mandatory": false,
+    "kind": "number",
+    "type": "number",
+    "name": "secondaryActions",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/secondaryActions"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/feedback-indicators/skeleton-page/singleColumn",
+        "path": "/components/feedback-indicators/skeleton-page/singleColumn/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/feedback-indicators/skeleton-page/singleColumn",
+        "path": "/components/feedback-indicators/skeleton-page/singleColumn/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Decreases the maximum layout width. Intended for single-column layouts",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "As of release 4.0, replaced by {@link https://polaris.shopify.com/components/feedback-indicators/skeleton-page#props-narrow-width}\n",
+        "tag": "deprecated"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "singleColumn",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/singleColumn"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Page title, in large type",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "title",
+    "parentPath": "/components/feedback-indicators/skeleton-page",
+    "path": "/components/feedback-indicators/skeleton-page/title"
+  }
+]

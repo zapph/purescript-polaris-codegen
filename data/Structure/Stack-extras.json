@@ -1,17 +1,22 @@
 {
-  "subcomponents": [{
-    "name": "Item",
-    "props": [{
-      "name": "fill",
-      "type": "boolean",
-      "mandatory": false,
-      "description": "Fill the available horizontal space in the stack with the item",
-      "default": false
-    }, {
-      "name": "children",
-      "type": "React.ReactNode",
-      "mandatory": false,
-      "description": "Elements to display inside stack item"
-    }]
-  }]
+  "subcomponents": [
+    {
+      "props": [
+        {
+          "default": false,
+          "description": "Fill the available horizontal space in the stack with the item",
+          "mandatory": false,
+          "type": "boolean",
+          "name": "fill"
+        },
+        {
+          "description": "Elements to display inside stack item",
+          "mandatory": false,
+          "type": "React.ReactNode",
+          "name": "children"
+        }
+      ],
+      "name": "Item"
+    }
+  ]
 }

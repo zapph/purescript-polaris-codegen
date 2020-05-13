@@ -1,1 +1,213 @@
-[{"path":"/components/structure/top-bar/contextControl","parentPath":"/components/structure/top-bar","name":"contextControl","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a component that is ideally used to help users switch between different contexts","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/onSearchResultsDismiss","parentPath":"/components/structure/top-bar","name":"onSearchResultsDismiss","type":"onDismiss","kind":"interface","mandatory":false,"tags":null,"description":"A callback function that handles the dismissal of search results","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/searchField","parentPath":"/components/structure/top-bar","name":"searchField","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a search field component that is made available as a `TextField` static member of the top bar component","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/searchResults","parentPath":"/components/structure/top-bar","name":"searchResults","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a search results component that is ideally composed of a card component containing a list of actionable search results","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/searchResultsOverlayVisible","parentPath":"/components/structure/top-bar","name":"searchResultsOverlayVisible","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the search results overlay has a visible backdrop","defaultValue":null,"types":[{"path":"/components/structure/top-bar/searchResultsOverlayVisible/false","parentPath":"/components/structure/top-bar/searchResultsOverlayVisible","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/searchResultsOverlayVisible/true","parentPath":"/components/structure/top-bar/searchResultsOverlayVisible","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/top-bar/searchResultsVisible","parentPath":"/components/structure/top-bar","name":"searchResultsVisible","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"A boolean property indicating whether search results are currently visible.","defaultValue":null,"types":[{"path":"/components/structure/top-bar/searchResultsVisible/false","parentPath":"/components/structure/top-bar/searchResultsVisible","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/searchResultsVisible/true","parentPath":"/components/structure/top-bar/searchResultsVisible","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/top-bar/secondaryMenu","parentPath":"/components/structure/top-bar","name":"secondaryMenu","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a menu component that is made available as a static member of the top bar component","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/showNavigationToggle","parentPath":"/components/structure/top-bar","name":"showNavigationToggle","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Toggles whether or not a navigation component has been provided. Controls the presence of the mobile nav toggle button","defaultValue":null,"types":[{"path":"/components/structure/top-bar/showNavigationToggle/false","parentPath":"/components/structure/top-bar/showNavigationToggle","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/showNavigationToggle/true","parentPath":"/components/structure/top-bar/showNavigationToggle","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/top-bar/userMenu","parentPath":"/components/structure/top-bar","name":"userMenu","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Accepts a user component that is made available as a static member of the top bar component and renders as the primary menu","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/top-bar/onNavigationToggle","parentPath":"/components/structure/top-bar","name":"onNavigationToggle","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"A callback function that handles hiding and showing mobile navigation","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a component that is ideally used to help users switch between different contexts",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "contextControl",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/contextControl"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "A callback function that handles the dismissal of search results",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "onDismiss",
+    "name": "onSearchResultsDismiss",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/onSearchResultsDismiss"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a search field component that is made available as a `TextField` static member of the top bar component",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "searchField",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/searchField"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a search results component that is ideally composed of a card component containing a list of actionable search results",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "searchResults",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/searchResults"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/top-bar/searchResultsOverlayVisible",
+        "path": "/components/structure/top-bar/searchResultsOverlayVisible/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/top-bar/searchResultsOverlayVisible",
+        "path": "/components/structure/top-bar/searchResultsOverlayVisible/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Whether or not the search results overlay has a visible backdrop",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "searchResultsOverlayVisible",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/searchResultsOverlayVisible"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/top-bar/searchResultsVisible",
+        "path": "/components/structure/top-bar/searchResultsVisible/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/top-bar/searchResultsVisible",
+        "path": "/components/structure/top-bar/searchResultsVisible/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "A boolean property indicating whether search results are currently visible.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "searchResultsVisible",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/searchResultsVisible"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a menu component that is made available as a static member of the top bar component",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "secondaryMenu",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/secondaryMenu"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/top-bar/showNavigationToggle",
+        "path": "/components/structure/top-bar/showNavigationToggle/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/top-bar/showNavigationToggle",
+        "path": "/components/structure/top-bar/showNavigationToggle/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Toggles whether or not a navigation component has been provided. Controls the presence of the mobile nav toggle button",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "showNavigationToggle",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/showNavigationToggle"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Accepts a user component that is made available as a static member of the top bar component and renders as the primary menu",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "userMenu",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/userMenu"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "A callback function that handles hiding and showing mobile navigation",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onNavigationToggle",
+    "parentPath": "/components/structure/top-bar",
+    "path": "/components/structure/top-bar/onNavigationToggle"
+  }
+]

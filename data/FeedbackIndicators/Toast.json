@@ -1,1 +1,230 @@
-[{"path":"/components/feedback-indicators/toast/action","parentPath":"/components/feedback-indicators/toast","name":"action","type":"Action","kind":"interface","mandatory":false,"tags":null,"description":"Adds an action next to the message (stand-alone app use only)","defaultValue":null,"types":[{"path":"/components/feedback-indicators/toast/action/accessibilityLabel","parentPath":"/components/feedback-indicators/toast/action","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/content","parentPath":"/components/feedback-indicators/toast/action","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/external","parentPath":"/components/feedback-indicators/toast/action","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/feedback-indicators/toast/action/external/false","parentPath":"/components/feedback-indicators/toast/action/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/external/true","parentPath":"/components/feedback-indicators/toast/action/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/id","parentPath":"/components/feedback-indicators/toast/action","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/url","parentPath":"/components/feedback-indicators/toast/action","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/onAction","parentPath":"/components/feedback-indicators/toast/action","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/onMouseEnter","parentPath":"/components/feedback-indicators/toast/action","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/action/onTouchStart","parentPath":"/components/feedback-indicators/toast/action","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/toast/content","parentPath":"/components/feedback-indicators/toast","name":"content","type":"string","kind":"string","mandatory":true,"tags":null,"description":"The content that should appear in the toast message","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/duration","parentPath":"/components/feedback-indicators/toast","name":"duration","type":"number","kind":"number","mandatory":false,"tags":[{"tag":"default","text":"5000\n","__typename":"Tag"}],"description":"The length of time in milliseconds the toast message should persist","defaultValue":"5000","types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/error","parentPath":"/components/feedback-indicators/toast","name":"error","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Display an error toast.","defaultValue":null,"types":[{"path":"/components/feedback-indicators/toast/error/false","parentPath":"/components/feedback-indicators/toast/error","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/feedback-indicators/toast/error/true","parentPath":"/components/feedback-indicators/toast/error","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/feedback-indicators/toast/onDismiss","parentPath":"/components/feedback-indicators/toast","name":"onDismiss","type":"() => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when the dismiss icon is clicked","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/feedback-indicators/toast/action/external",
+            "path": "/components/feedback-indicators/toast/action/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/feedback-indicators/toast/action/external",
+            "path": "/components/feedback-indicators/toast/action/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/feedback-indicators/toast/action",
+        "path": "/components/feedback-indicators/toast/action/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Adds an action next to the message (stand-alone app use only)",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "Action",
+    "name": "action",
+    "parentPath": "/components/feedback-indicators/toast",
+    "path": "/components/feedback-indicators/toast/action"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content that should appear in the toast message",
+    "tags": null,
+    "mandatory": true,
+    "kind": "string",
+    "type": "string",
+    "name": "content",
+    "parentPath": "/components/feedback-indicators/toast",
+    "path": "/components/feedback-indicators/toast/content"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": "5000",
+    "description": "The length of time in milliseconds the toast message should persist",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "5000\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "number",
+    "type": "number",
+    "name": "duration",
+    "parentPath": "/components/feedback-indicators/toast",
+    "path": "/components/feedback-indicators/toast/duration"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/feedback-indicators/toast/error",
+        "path": "/components/feedback-indicators/toast/error/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/feedback-indicators/toast/error",
+        "path": "/components/feedback-indicators/toast/error/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Display an error toast.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "error",
+    "parentPath": "/components/feedback-indicators/toast",
+    "path": "/components/feedback-indicators/toast/error"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when the dismiss icon is clicked",
+    "tags": null,
+    "mandatory": true,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onDismiss",
+    "parentPath": "/components/feedback-indicators/toast",
+    "path": "/components/feedback-indicators/toast/onDismiss"
+  }
+]

@@ -1,1 +1,188 @@
-[{"path":"/components/behavior/scrollable/children","parentPath":"/components/behavior/scrollable","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Content to display in scrollable area","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/behavior/scrollable/hint","parentPath":"/components/behavior/scrollable","name":"hint","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Slightly hints content upon mounting when scrollable","defaultValue":null,"types":[{"path":"/components/behavior/scrollable/hint/false","parentPath":"/components/behavior/scrollable/hint","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/behavior/scrollable/hint/true","parentPath":"/components/behavior/scrollable/hint","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/behavior/scrollable/horizontal","parentPath":"/components/behavior/scrollable","name":"horizontal","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Scroll content horizontally","defaultValue":null,"types":[{"path":"/components/behavior/scrollable/horizontal/false","parentPath":"/components/behavior/scrollable/horizontal","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/behavior/scrollable/horizontal/true","parentPath":"/components/behavior/scrollable/horizontal","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/behavior/scrollable/shadow","parentPath":"/components/behavior/scrollable","name":"shadow","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Add a shadow when content is scrollable","defaultValue":null,"types":[{"path":"/components/behavior/scrollable/shadow/false","parentPath":"/components/behavior/scrollable/shadow","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/behavior/scrollable/shadow/true","parentPath":"/components/behavior/scrollable/shadow","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/behavior/scrollable/vertical","parentPath":"/components/behavior/scrollable","name":"vertical","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Scroll content vertically","defaultValue":null,"types":[{"path":"/components/behavior/scrollable/vertical/false","parentPath":"/components/behavior/scrollable/vertical","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/behavior/scrollable/vertical/true","parentPath":"/components/behavior/scrollable/vertical","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/behavior/scrollable/onScrolledToBottom","parentPath":"/components/behavior/scrollable","name":"onScrolledToBottom","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Called when scrolled to the bottom of the scroll area","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Content to display in scrollable area",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/behavior/scrollable",
+    "path": "/components/behavior/scrollable/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/behavior/scrollable/hint",
+        "path": "/components/behavior/scrollable/hint/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/behavior/scrollable/hint",
+        "path": "/components/behavior/scrollable/hint/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Slightly hints content upon mounting when scrollable",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "hint",
+    "parentPath": "/components/behavior/scrollable",
+    "path": "/components/behavior/scrollable/hint"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/behavior/scrollable/horizontal",
+        "path": "/components/behavior/scrollable/horizontal/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/behavior/scrollable/horizontal",
+        "path": "/components/behavior/scrollable/horizontal/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Scroll content horizontally",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "horizontal",
+    "parentPath": "/components/behavior/scrollable",
+    "path": "/components/behavior/scrollable/horizontal"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/behavior/scrollable/shadow",
+        "path": "/components/behavior/scrollable/shadow/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/behavior/scrollable/shadow",
+        "path": "/components/behavior/scrollable/shadow/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Add a shadow when content is scrollable",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "shadow",
+    "parentPath": "/components/behavior/scrollable",
+    "path": "/components/behavior/scrollable/shadow"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/behavior/scrollable/vertical",
+        "path": "/components/behavior/scrollable/vertical/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/behavior/scrollable/vertical",
+        "path": "/components/behavior/scrollable/vertical/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Scroll content vertically",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "vertical",
+    "parentPath": "/components/behavior/scrollable",
+    "path": "/components/behavior/scrollable/vertical"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Called when scrolled to the bottom of the scroll area",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onScrolledToBottom",
+    "parentPath": "/components/behavior/scrollable",
+    "path": "/components/behavior/scrollable/onScrolledToBottom"
+  }
+]

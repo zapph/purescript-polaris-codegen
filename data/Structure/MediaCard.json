@@ -1,1 +1,819 @@
-[{"path":"/components/structure/media-card/children","parentPath":"/components/structure/media-card","name":"children","type":"React.ReactNode","kind":"interface","mandatory":true,"tags":null,"description":"The visual media to display in the card","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/description","parentPath":"/components/structure/media-card","name":"description","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Body content","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions","parentPath":"/components/structure/media-card","name":"popoverActions","type":"ActionListItemDescriptor[]","kind":"array","mandatory":false,"tags":null,"description":"Action list items to render in ellipsis popover","defaultValue":null,"types":[{"path":"/components/structure/media-card/popoverActions/accessibilityLabel","parentPath":"/components/structure/media-card/popoverActions","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/active","parentPath":"/components/structure/media-card/popoverActions","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the action is active or not","returnType":null,"types":[{"path":"/components/structure/media-card/popoverActions/active/false","parentPath":"/components/structure/media-card/popoverActions/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/active/true","parentPath":"/components/structure/media-card/popoverActions/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/badge","parentPath":"/components/structure/media-card/popoverActions","name":"badge","type":"{content: string, status: \"new\"}","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/content","parentPath":"/components/structure/media-card/popoverActions","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/destructive","parentPath":"/components/structure/media-card/popoverActions","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","returnType":null,"types":[{"path":"/components/structure/media-card/popoverActions/destructive/false","parentPath":"/components/structure/media-card/popoverActions/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/destructive/true","parentPath":"/components/structure/media-card/popoverActions/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/disabled","parentPath":"/components/structure/media-card/popoverActions","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/structure/media-card/popoverActions/disabled/false","parentPath":"/components/structure/media-card/popoverActions/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/disabled/true","parentPath":"/components/structure/media-card/popoverActions/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/ellipsis","parentPath":"/components/structure/media-card/popoverActions","name":"ellipsis","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Add an ellipsis suffix to action content","returnType":null,"types":[{"path":"/components/structure/media-card/popoverActions/ellipsis/false","parentPath":"/components/structure/media-card/popoverActions/ellipsis","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/ellipsis/true","parentPath":"/components/structure/media-card/popoverActions/ellipsis","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/external","parentPath":"/components/structure/media-card/popoverActions","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/media-card/popoverActions/external/false","parentPath":"/components/structure/media-card/popoverActions/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/external/true","parentPath":"/components/structure/media-card/popoverActions/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/helpText","parentPath":"/components/structure/media-card/popoverActions","name":"helpText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Additional hint text to display with item","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/icon","parentPath":"/components/structure/media-card/popoverActions","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","returnType":null,"types":[{"path":"/components/structure/media-card/popoverActions/icon/string","parentPath":"/components/structure/media-card/popoverActions/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/icon/FunctionComponent","parentPath":"/components/structure/media-card/popoverActions/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/id","parentPath":"/components/structure/media-card/popoverActions","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/image","parentPath":"/components/structure/media-card/popoverActions","name":"image","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Image source","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/role","parentPath":"/components/structure/media-card/popoverActions","name":"role","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a role for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/target","parentPath":"/components/structure/media-card/popoverActions","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","returnType":null,"types":[{"path":"/components/structure/media-card/popoverActions/target/ADMIN_PATH","parentPath":"/components/structure/media-card/popoverActions/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/target/REMOTE","parentPath":"/components/structure/media-card/popoverActions/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/target/APP","parentPath":"/components/structure/media-card/popoverActions/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/url","parentPath":"/components/structure/media-card/popoverActions","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/onAction","parentPath":"/components/structure/media-card/popoverActions","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/onMouseEnter","parentPath":"/components/structure/media-card/popoverActions","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/popoverActions/onTouchStart","parentPath":"/components/structure/media-card/popoverActions","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/portrait","parentPath":"/components/structure/media-card","name":"portrait","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"false\n","__typename":"Tag"}],"description":"Whether or not card content should be laid out vertically","defaultValue":"false","types":[{"path":"/components/structure/media-card/portrait/false","parentPath":"/components/structure/media-card/portrait","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/portrait/true","parentPath":"/components/structure/media-card/portrait","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction","parentPath":"/components/structure/media-card","name":"primaryAction","type":"Action","kind":"interface","mandatory":true,"tags":null,"description":"Main call to action, rendered as a basic button","defaultValue":null,"types":[{"path":"/components/structure/media-card/primaryAction/accessibilityLabel","parentPath":"/components/structure/media-card/primaryAction","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/content","parentPath":"/components/structure/media-card/primaryAction","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/external","parentPath":"/components/structure/media-card/primaryAction","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/media-card/primaryAction/external/false","parentPath":"/components/structure/media-card/primaryAction/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/external/true","parentPath":"/components/structure/media-card/primaryAction/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/id","parentPath":"/components/structure/media-card/primaryAction","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/url","parentPath":"/components/structure/media-card/primaryAction","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/onAction","parentPath":"/components/structure/media-card/primaryAction","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/onMouseEnter","parentPath":"/components/structure/media-card/primaryAction","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/primaryAction/onTouchStart","parentPath":"/components/structure/media-card/primaryAction","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction","parentPath":"/components/structure/media-card","name":"secondaryAction","type":"Action","kind":"interface","mandatory":false,"tags":null,"description":"Secondary call to action, rendered as a plain button","defaultValue":null,"types":[{"path":"/components/structure/media-card/secondaryAction/accessibilityLabel","parentPath":"/components/structure/media-card/secondaryAction","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/content","parentPath":"/components/structure/media-card/secondaryAction","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/external","parentPath":"/components/structure/media-card/secondaryAction","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/structure/media-card/secondaryAction/external/false","parentPath":"/components/structure/media-card/secondaryAction/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/external/true","parentPath":"/components/structure/media-card/secondaryAction/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/id","parentPath":"/components/structure/media-card/secondaryAction","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/url","parentPath":"/components/structure/media-card/secondaryAction","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/onAction","parentPath":"/components/structure/media-card/secondaryAction","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/onMouseEnter","parentPath":"/components/structure/media-card/secondaryAction","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/structure/media-card/secondaryAction/onTouchStart","parentPath":"/components/structure/media-card/secondaryAction","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/structure/media-card/title","parentPath":"/components/structure/media-card","name":"title","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Heading content","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The visual media to display in the card",
+    "tags": null,
+    "mandatory": true,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/structure/media-card",
+    "path": "/components/structure/media-card/children"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Body content",
+    "tags": null,
+    "mandatory": true,
+    "kind": "string",
+    "type": "string",
+    "name": "description",
+    "parentPath": "/components/structure/media-card",
+    "path": "/components/structure/media-card/description"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/media-card/popoverActions/active",
+            "path": "/components/structure/media-card/popoverActions/active/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/media-card/popoverActions/active",
+            "path": "/components/structure/media-card/popoverActions/active/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether the action is active or not",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "active",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/active"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "{content: string, status: \"new\"}",
+        "name": "badge",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/badge"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/media-card/popoverActions/destructive",
+            "path": "/components/structure/media-card/popoverActions/destructive/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/media-card/popoverActions/destructive",
+            "path": "/components/structure/media-card/popoverActions/destructive/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Destructive action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "destructive",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/destructive"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/media-card/popoverActions/disabled",
+            "path": "/components/structure/media-card/popoverActions/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/media-card/popoverActions/disabled",
+            "path": "/components/structure/media-card/popoverActions/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/media-card/popoverActions/ellipsis",
+            "path": "/components/structure/media-card/popoverActions/ellipsis/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/media-card/popoverActions/ellipsis",
+            "path": "/components/structure/media-card/popoverActions/ellipsis/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Add an ellipsis suffix to action content",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "ellipsis",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/ellipsis"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/media-card/popoverActions/external",
+            "path": "/components/structure/media-card/popoverActions/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/media-card/popoverActions/external",
+            "path": "/components/structure/media-card/popoverActions/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Additional hint text to display with item",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "helpText",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/helpText"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/structure/media-card/popoverActions/icon",
+            "path": "/components/structure/media-card/popoverActions/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/structure/media-card/popoverActions/icon",
+            "path": "/components/structure/media-card/popoverActions/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Source of the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Image source",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "image",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/image"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Defines a role for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "role",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/role"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ADMIN_PATH\"",
+            "name": "ADMIN_PATH",
+            "parentPath": "/components/structure/media-card/popoverActions/target",
+            "path": "/components/structure/media-card/popoverActions/target/ADMIN_PATH"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"REMOTE\"",
+            "name": "REMOTE",
+            "parentPath": "/components/structure/media-card/popoverActions/target",
+            "path": "/components/structure/media-card/popoverActions/target/REMOTE"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"APP\"",
+            "name": "APP",
+            "parentPath": "/components/structure/media-card/popoverActions/target",
+            "path": "/components/structure/media-card/popoverActions/target/APP"
+          }
+        ],
+        "returnType": null,
+        "description": "Where to display the target link",
+        "tags": [
+          {
+            "__typename": "Tag",
+            "text": "'APP'",
+            "tag": "default"
+          },
+          {
+            "__typename": "Tag",
+            "text": "\n",
+            "tag": "embeddedapponly"
+          }
+        ],
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+        "name": "target",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/target"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/media-card/popoverActions",
+        "path": "/components/structure/media-card/popoverActions/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Action list items to render in ellipsis popover",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "ActionListItemDescriptor[]",
+    "name": "popoverActions",
+    "parentPath": "/components/structure/media-card",
+    "path": "/components/structure/media-card/popoverActions"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/structure/media-card/portrait",
+        "path": "/components/structure/media-card/portrait/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/structure/media-card/portrait",
+        "path": "/components/structure/media-card/portrait/true"
+      }
+    ],
+    "defaultValue": "false",
+    "description": "Whether or not card content should be laid out vertically",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "false\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "portrait",
+    "parentPath": "/components/structure/media-card",
+    "path": "/components/structure/media-card/portrait"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/media-card/primaryAction/external",
+            "path": "/components/structure/media-card/primaryAction/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/media-card/primaryAction/external",
+            "path": "/components/structure/media-card/primaryAction/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/media-card/primaryAction",
+        "path": "/components/structure/media-card/primaryAction/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Main call to action, rendered as a basic button",
+    "tags": null,
+    "mandatory": true,
+    "kind": "interface",
+    "type": "Action",
+    "name": "primaryAction",
+    "parentPath": "/components/structure/media-card",
+    "path": "/components/structure/media-card/primaryAction"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/structure/media-card/secondaryAction/external",
+            "path": "/components/structure/media-card/secondaryAction/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/structure/media-card/secondaryAction/external",
+            "path": "/components/structure/media-card/secondaryAction/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/structure/media-card/secondaryAction",
+        "path": "/components/structure/media-card/secondaryAction/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Secondary call to action, rendered as a plain button",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "Action",
+    "name": "secondaryAction",
+    "parentPath": "/components/structure/media-card",
+    "path": "/components/structure/media-card/secondaryAction"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Heading content",
+    "tags": null,
+    "mandatory": true,
+    "kind": "string",
+    "type": "string",
+    "name": "title",
+    "parentPath": "/components/structure/media-card",
+    "path": "/components/structure/media-card/title"
+  }
+]

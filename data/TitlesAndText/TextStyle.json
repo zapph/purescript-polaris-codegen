@@ -1,1 +1,94 @@
-[{"path":"/components/titles-and-text/text-style/children","parentPath":"/components/titles-and-text/text-style","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content that should get the intended styling","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/text-style/variation","parentPath":"/components/titles-and-text/text-style","name":"variation","type":"\"positive\" | \"negative\" | \"strong\" | \"subdued\" | \"code\"","kind":"union","mandatory":false,"tags":null,"description":"Give text additional visual meaning","defaultValue":null,"types":[{"path":"/components/titles-and-text/text-style/variation/positive","parentPath":"/components/titles-and-text/text-style/variation","name":"positive","type":"\"positive\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/text-style/variation/negative","parentPath":"/components/titles-and-text/text-style/variation","name":"negative","type":"\"negative\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/text-style/variation/strong","parentPath":"/components/titles-and-text/text-style/variation","name":"strong","type":"\"strong\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/text-style/variation/subdued","parentPath":"/components/titles-and-text/text-style/variation","name":"subdued","type":"\"subdued\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/titles-and-text/text-style/variation/code","parentPath":"/components/titles-and-text/text-style/variation","name":"code","type":"\"code\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content that should get the intended styling",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/titles-and-text/text-style",
+    "path": "/components/titles-and-text/text-style/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"positive\"",
+        "name": "positive",
+        "parentPath": "/components/titles-and-text/text-style/variation",
+        "path": "/components/titles-and-text/text-style/variation/positive"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"negative\"",
+        "name": "negative",
+        "parentPath": "/components/titles-and-text/text-style/variation",
+        "path": "/components/titles-and-text/text-style/variation/negative"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"strong\"",
+        "name": "strong",
+        "parentPath": "/components/titles-and-text/text-style/variation",
+        "path": "/components/titles-and-text/text-style/variation/strong"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"subdued\"",
+        "name": "subdued",
+        "parentPath": "/components/titles-and-text/text-style/variation",
+        "path": "/components/titles-and-text/text-style/variation/subdued"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"code\"",
+        "name": "code",
+        "parentPath": "/components/titles-and-text/text-style/variation",
+        "path": "/components/titles-and-text/text-style/variation/code"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Give text additional visual meaning",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"positive\" | \"negative\" | \"strong\" | \"subdued\" | \"code\"",
+    "name": "variation",
+    "parentPath": "/components/titles-and-text/text-style",
+    "path": "/components/titles-and-text/text-style/variation"
+  }
+]

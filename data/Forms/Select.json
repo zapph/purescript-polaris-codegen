@@ -1,1 +1,580 @@
-[{"path":"/components/forms/select/disabled","parentPath":"/components/forms/select","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Disable input","defaultValue":null,"types":[{"path":"/components/forms/select/disabled/false","parentPath":"/components/forms/select/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/disabled/true","parentPath":"/components/forms/select/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/error","parentPath":"/components/forms/select","name":"error","type":"string | ReactElement | (string | ReactElement)[] | boolean","kind":"array","mandatory":false,"tags":null,"description":"Display an error state","defaultValue":null,"types":[{"path":"/components/forms/select/error/Error","parentPath":"/components/forms/select/error","name":"Error","type":"string | ReactElement | (string | ReactElement)[]","kind":"array","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/forms/select/error/Error/string","parentPath":"/components/forms/select/error/Error","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/select/error/Error/ReactElement","parentPath":"/components/forms/select/error/Error","name":"ReactElement","type":"ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/select/error/Error/","parentPath":"/components/forms/select/error/Error","name":"","type":"(string | ReactElement)[]","kind":"array","mandatory":false,"tags":null,"description":"","types":[{"path":"/components/forms/select/error/Error//string","parentPath":"/components/forms/select/error/Error/","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/select/error/Error//ReactElement","parentPath":"/components/forms/select/error/Error/","name":"ReactElement","type":"ReactElement","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/error/boolean","parentPath":"/components/forms/select/error","name":"boolean","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/helpText","parentPath":"/components/forms/select","name":"helpText","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Additional text to aide in use","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/id","parentPath":"/components/forms/select","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"ID for form input","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/label","parentPath":"/components/forms/select","name":"label","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Label for the select","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/labelAction","parentPath":"/components/forms/select","name":"labelAction","type":"Action","kind":"interface","mandatory":false,"tags":null,"description":"Adds an action to the label","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/labelHidden","parentPath":"/components/forms/select","name":"labelHidden","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Visually hide the label","defaultValue":null,"types":[{"path":"/components/forms/select/labelHidden/false","parentPath":"/components/forms/select/labelHidden","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/labelHidden/true","parentPath":"/components/forms/select/labelHidden","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/labelInline","parentPath":"/components/forms/select","name":"labelInline","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Show the label to the left of the value, inside the control","defaultValue":null,"types":[{"path":"/components/forms/select/labelInline/false","parentPath":"/components/forms/select/labelInline","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/labelInline/true","parentPath":"/components/forms/select/labelInline","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/name","parentPath":"/components/forms/select","name":"name","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Name for form input","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/options","parentPath":"/components/forms/select","name":"options","type":"(string | StrictOption | SelectGroup)[]","kind":"array","mandatory":false,"tags":null,"description":"List of options or option groups to choose from","defaultValue":null,"types":[{"path":"/components/forms/select/options/string","parentPath":"/components/forms/select/options","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/options/StrictOption","parentPath":"/components/forms/select/options","name":"StrictOption","type":"StrictOption","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/forms/select/options/StrictOption/disabled","parentPath":"/components/forms/select/options/StrictOption","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Option will be visible, but not selectable","types":[{"path":"/components/forms/select/options/StrictOption/disabled/false","parentPath":"/components/forms/select/options/StrictOption/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/select/options/StrictOption/disabled/true","parentPath":"/components/forms/select/options/StrictOption/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/options/StrictOption/label","parentPath":"/components/forms/select/options/StrictOption","name":"label","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Human-readable text for the option","types":null,"__typename":"Property"},{"path":"/components/forms/select/options/StrictOption/value","parentPath":"/components/forms/select/options/StrictOption","name":"value","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Machine value of the option; this is the value passed to `onChange`","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/options/SelectGroup","parentPath":"/components/forms/select/options","name":"SelectGroup","type":"SelectGroup","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/forms/select/options/SelectGroup/options","parentPath":"/components/forms/select/options/SelectGroup","name":"options","type":"(string | StrictOption)[]","kind":"array","mandatory":true,"tags":null,"description":"","types":[{"path":"/components/forms/select/options/SelectGroup/options/string","parentPath":"/components/forms/select/options/SelectGroup/options","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/forms/select/options/SelectGroup/options/StrictOption","parentPath":"/components/forms/select/options/SelectGroup/options","name":"StrictOption","type":"StrictOption","kind":"interface","mandatory":false,"tags":null,"description":"","types":[{"path":"/components/forms/select/options/SelectGroup/options/StrictOption/disabled","parentPath":"/components/forms/select/options/SelectGroup/options/StrictOption","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Option will be visible, but not selectable","__typename":"Property"},{"path":"/components/forms/select/options/SelectGroup/options/StrictOption/label","parentPath":"/components/forms/select/options/SelectGroup/options/StrictOption","name":"label","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Human-readable text for the option","__typename":"Property"},{"path":"/components/forms/select/options/SelectGroup/options/StrictOption/value","parentPath":"/components/forms/select/options/SelectGroup/options/StrictOption","name":"value","type":"string","kind":"string","mandatory":true,"tags":null,"description":"Machine value of the option; this is the value passed to `onChange`","__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/options/SelectGroup/title","parentPath":"/components/forms/select/options/SelectGroup","name":"title","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/placeholder","parentPath":"/components/forms/select","name":"placeholder","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Example text to display as placeholder","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/value","parentPath":"/components/forms/select","name":"value","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Value for form input","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/onBlur","parentPath":"/components/forms/select","name":"onBlur","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when focus is removed","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/onChange","parentPath":"/components/forms/select","name":"onChange","type":"(selected: string, id: string) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when selection is changed","defaultValue":null,"types":[{"path":"/components/forms/select/onChange/parameter/selected","parentPath":"/components/forms/select/onChange","name":"selected","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/select/onChange/parameter/id","parentPath":"/components/forms/select/onChange","name":"id","type":"string","kind":"string","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/select/onFocus","parentPath":"/components/forms/select","name":"onFocus","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when select is focussed","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/forms/select/disabled",
+        "path": "/components/forms/select/disabled/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/forms/select/disabled",
+        "path": "/components/forms/select/disabled/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Disable input",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "disabled",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/disabled"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/forms/select/error/Error",
+            "path": "/components/forms/select/error/Error/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "ReactElement",
+            "name": "ReactElement",
+            "parentPath": "/components/forms/select/error/Error",
+            "path": "/components/forms/select/error/Error/ReactElement"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "string",
+                "parentPath": "/components/forms/select/error/Error/",
+                "path": "/components/forms/select/error/Error//string"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "ReactElement",
+                "name": "ReactElement",
+                "parentPath": "/components/forms/select/error/Error/",
+                "path": "/components/forms/select/error/Error//ReactElement"
+              }
+            ],
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "array",
+            "type": "(string | ReactElement)[]",
+            "name": "",
+            "parentPath": "/components/forms/select/error/Error",
+            "path": "/components/forms/select/error/Error/"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "array",
+        "type": "string | ReactElement | (string | ReactElement)[]",
+        "name": "Error",
+        "parentPath": "/components/forms/select/error",
+        "path": "/components/forms/select/error/Error"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "boolean",
+        "parentPath": "/components/forms/select/error",
+        "path": "/components/forms/select/error/boolean"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Display an error state",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "string | ReactElement | (string | ReactElement)[] | boolean",
+    "name": "error",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/error"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Additional text to aide in use",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "helpText",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/helpText"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "ID for form input",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "id",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/id"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Label for the select",
+    "tags": null,
+    "mandatory": true,
+    "kind": "string",
+    "type": "string",
+    "name": "label",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/label"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Adds an action to the label",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "Action",
+    "name": "labelAction",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/labelAction"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/forms/select/labelHidden",
+        "path": "/components/forms/select/labelHidden/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/forms/select/labelHidden",
+        "path": "/components/forms/select/labelHidden/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Visually hide the label",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "labelHidden",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/labelHidden"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/forms/select/labelInline",
+        "path": "/components/forms/select/labelInline/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/forms/select/labelInline",
+        "path": "/components/forms/select/labelInline/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Show the label to the left of the value, inside the control",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "labelInline",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/labelInline"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Name for form input",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "name",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/name"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "string",
+        "parentPath": "/components/forms/select/options",
+        "path": "/components/forms/select/options/string"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/forms/select/options/StrictOption/disabled",
+                "path": "/components/forms/select/options/StrictOption/disabled/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/forms/select/options/StrictOption/disabled",
+                "path": "/components/forms/select/options/StrictOption/disabled/true"
+              }
+            ],
+            "description": "Option will be visible, but not selectable",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "disabled",
+            "parentPath": "/components/forms/select/options/StrictOption",
+            "path": "/components/forms/select/options/StrictOption/disabled"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Human-readable text for the option",
+            "tags": null,
+            "mandatory": true,
+            "kind": "string",
+            "type": "string",
+            "name": "label",
+            "parentPath": "/components/forms/select/options/StrictOption",
+            "path": "/components/forms/select/options/StrictOption/label"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Machine value of the option; this is the value passed to `onChange`",
+            "tags": null,
+            "mandatory": true,
+            "kind": "string",
+            "type": "string",
+            "name": "value",
+            "parentPath": "/components/forms/select/options/StrictOption",
+            "path": "/components/forms/select/options/StrictOption/value"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "StrictOption",
+        "name": "StrictOption",
+        "parentPath": "/components/forms/select/options",
+        "path": "/components/forms/select/options/StrictOption"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "string",
+                "parentPath": "/components/forms/select/options/SelectGroup/options",
+                "path": "/components/forms/select/options/SelectGroup/options/string"
+              },
+              {
+                "__typename": "Property",
+                "types": [
+                  {
+                    "__typename": "Property",
+                    "description": "Option will be visible, but not selectable",
+                    "tags": null,
+                    "mandatory": false,
+                    "kind": "boolean",
+                    "type": "boolean",
+                    "name": "disabled",
+                    "parentPath": "/components/forms/select/options/SelectGroup/options/StrictOption",
+                    "path": "/components/forms/select/options/SelectGroup/options/StrictOption/disabled"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "Human-readable text for the option",
+                    "tags": null,
+                    "mandatory": true,
+                    "kind": "string",
+                    "type": "string",
+                    "name": "label",
+                    "parentPath": "/components/forms/select/options/SelectGroup/options/StrictOption",
+                    "path": "/components/forms/select/options/SelectGroup/options/StrictOption/label"
+                  },
+                  {
+                    "__typename": "Property",
+                    "description": "Machine value of the option; this is the value passed to `onChange`",
+                    "tags": null,
+                    "mandatory": true,
+                    "kind": "string",
+                    "type": "string",
+                    "name": "value",
+                    "parentPath": "/components/forms/select/options/SelectGroup/options/StrictOption",
+                    "path": "/components/forms/select/options/SelectGroup/options/StrictOption/value"
+                  }
+                ],
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "StrictOption",
+                "name": "StrictOption",
+                "parentPath": "/components/forms/select/options/SelectGroup/options",
+                "path": "/components/forms/select/options/SelectGroup/options/StrictOption"
+              }
+            ],
+            "description": "",
+            "tags": null,
+            "mandatory": true,
+            "kind": "array",
+            "type": "(string | StrictOption)[]",
+            "name": "options",
+            "parentPath": "/components/forms/select/options/SelectGroup",
+            "path": "/components/forms/select/options/SelectGroup/options"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": true,
+            "kind": "string",
+            "type": "string",
+            "name": "title",
+            "parentPath": "/components/forms/select/options/SelectGroup",
+            "path": "/components/forms/select/options/SelectGroup/title"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "SelectGroup",
+        "name": "SelectGroup",
+        "parentPath": "/components/forms/select/options",
+        "path": "/components/forms/select/options/SelectGroup"
+      }
+    ],
+    "defaultValue": null,
+    "description": "List of options or option groups to choose from",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "(string | StrictOption | SelectGroup)[]",
+    "name": "options",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/options"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Example text to display as placeholder",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "placeholder",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/placeholder"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Value for form input",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "value",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/value"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when focus is removed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onBlur",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/onBlur"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "selected",
+        "parentPath": "/components/forms/select/onChange",
+        "path": "/components/forms/select/onChange/parameter/selected"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/forms/select/onChange",
+        "path": "/components/forms/select/onChange/parameter/id"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when selection is changed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(selected: string, id: string) => void",
+    "name": "onChange",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/onChange"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when select is focussed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onFocus",
+    "parentPath": "/components/forms/select",
+    "path": "/components/forms/select/onFocus"
+  }
+]

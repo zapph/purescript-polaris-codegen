@@ -1,1 +1,15 @@
-[{"path":"/components/forms/form-layout/children","parentPath":"/components/forms/form-layout","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"The content to display inside the layout.","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "The content to display inside the layout.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/forms/form-layout",
+    "path": "/components/forms/form-layout/children"
+  }
+]

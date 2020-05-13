@@ -1,1 +1,197 @@
-[{"path":"/components/forms/color-picker/allowAlpha","parentPath":"/components/forms/color-picker","name":"allowAlpha","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allow user to select an alpha value","defaultValue":null,"types":[{"path":"/components/forms/color-picker/allowAlpha/false","parentPath":"/components/forms/color-picker/allowAlpha","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/allowAlpha/true","parentPath":"/components/forms/color-picker/allowAlpha","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/color-picker/color","parentPath":"/components/forms/color-picker","name":"color","type":"Color","kind":"interface","mandatory":true,"tags":null,"description":"The currently selected color","defaultValue":null,"types":[{"path":"/components/forms/color-picker/color/alpha","parentPath":"/components/forms/color-picker/color","name":"alpha","type":"number","kind":"number","mandatory":false,"tags":null,"description":"Level of transparency","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/color/brightness","parentPath":"/components/forms/color-picker/color","name":"brightness","type":"number","kind":"number","mandatory":true,"tags":null,"description":"Brightness of the color","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/color/hue","parentPath":"/components/forms/color-picker/color","name":"hue","type":"number","kind":"number","mandatory":true,"tags":null,"description":"The color","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/color/saturation","parentPath":"/components/forms/color-picker/color","name":"saturation","type":"number","kind":"number","mandatory":true,"tags":null,"description":"Saturation of the color","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/forms/color-picker/id","parentPath":"/components/forms/color-picker","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"ID for the element","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/onChange","parentPath":"/components/forms/color-picker","name":"onChange","type":"(color: HSBAColor) => void","kind":"method","mandatory":true,"tags":null,"description":"Callback when color is selected","defaultValue":null,"types":[{"path":"/components/forms/color-picker/onChange/parameter/color","parentPath":"/components/forms/color-picker/onChange","name":"color","type":"HSBAColor","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/forms/color-picker/onChange/parameter/color/alpha","parentPath":"/components/forms/color-picker/onChange/parameter/color","name":"alpha","type":"number","kind":"number","mandatory":true,"tags":null,"description":"Level of transparency","types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/onChange/parameter/color/brightness","parentPath":"/components/forms/color-picker/onChange/parameter/color","name":"brightness","type":"number","kind":"number","mandatory":true,"tags":null,"description":"Brightness of the color","types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/onChange/parameter/color/hue","parentPath":"/components/forms/color-picker/onChange/parameter/color","name":"hue","type":"number","kind":"number","mandatory":true,"tags":null,"description":"The color","types":null,"__typename":"Property"},{"path":"/components/forms/color-picker/onChange/parameter/color/saturation","parentPath":"/components/forms/color-picker/onChange/parameter/color","name":"saturation","type":"number","kind":"number","mandatory":true,"tags":null,"description":"Saturation of the color","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "path": "/components/forms/color-picker/allowAlpha",
+    "parentPath": "/components/forms/color-picker",
+    "name": "allowAlpha",
+    "type": "boolean",
+    "kind": "boolean",
+    "mandatory": false,
+    "tags": null,
+    "description": "Allow user to select an alpha value",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/color-picker/allowAlpha/false",
+        "parentPath": "/components/forms/color-picker/allowAlpha",
+        "name": "false",
+        "type": "false",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/color-picker/allowAlpha/true",
+        "parentPath": "/components/forms/color-picker/allowAlpha",
+        "name": "true",
+        "type": "true",
+        "kind": "interface",
+        "mandatory": false,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/color-picker/color",
+    "parentPath": "/components/forms/color-picker",
+    "name": "color",
+    "type": "Color",
+    "kind": "interface",
+    "mandatory": true,
+    "tags": null,
+    "description": "The currently selected color",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/color-picker/color/alpha",
+        "parentPath": "/components/forms/color-picker/color",
+        "name": "alpha",
+        "type": "number",
+        "kind": "number",
+        "mandatory": false,
+        "tags": null,
+        "description": "Level of transparency",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/color-picker/color/brightness",
+        "parentPath": "/components/forms/color-picker/color",
+        "name": "brightness",
+        "type": "number",
+        "kind": "number",
+        "mandatory": true,
+        "tags": null,
+        "description": "Brightness of the color",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/color-picker/color/hue",
+        "parentPath": "/components/forms/color-picker/color",
+        "name": "hue",
+        "type": "number",
+        "kind": "number",
+        "mandatory": true,
+        "tags": null,
+        "description": "The color",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      },
+      {
+        "path": "/components/forms/color-picker/color/saturation",
+        "parentPath": "/components/forms/color-picker/color",
+        "name": "saturation",
+        "type": "number",
+        "kind": "number",
+        "mandatory": true,
+        "tags": null,
+        "description": "Saturation of the color",
+        "returnType": null,
+        "types": null,
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/color-picker/id",
+    "parentPath": "/components/forms/color-picker",
+    "name": "id",
+    "type": "string",
+    "kind": "string",
+    "mandatory": false,
+    "tags": null,
+    "description": "ID for the element",
+    "defaultValue": null,
+    "types": null,
+    "__typename": "Property"
+  },
+  {
+    "path": "/components/forms/color-picker/onChange",
+    "parentPath": "/components/forms/color-picker",
+    "name": "onChange",
+    "type": "(color: HSBAColor) => void",
+    "kind": "method",
+    "mandatory": true,
+    "tags": null,
+    "description": "Callback when color is selected",
+    "defaultValue": null,
+    "types": [
+      {
+        "path": "/components/forms/color-picker/onChange/parameter/color",
+        "parentPath": "/components/forms/color-picker/onChange",
+        "name": "color",
+        "type": "HSBAColor",
+        "kind": "interface",
+        "mandatory": true,
+        "tags": null,
+        "description": "",
+        "returnType": null,
+        "types": [
+          {
+            "path": "/components/forms/color-picker/onChange/parameter/color/alpha",
+            "parentPath": "/components/forms/color-picker/onChange/parameter/color",
+            "name": "alpha",
+            "type": "number",
+            "kind": "number",
+            "mandatory": true,
+            "tags": null,
+            "description": "Level of transparency",
+            "types": null,
+            "__typename": "Property"
+          },
+          {
+            "path": "/components/forms/color-picker/onChange/parameter/color/brightness",
+            "parentPath": "/components/forms/color-picker/onChange/parameter/color",
+            "name": "brightness",
+            "type": "number",
+            "kind": "number",
+            "mandatory": true,
+            "tags": null,
+            "description": "Brightness of the color",
+            "types": null,
+            "__typename": "Property"
+          },
+          {
+            "path": "/components/forms/color-picker/onChange/parameter/color/hue",
+            "parentPath": "/components/forms/color-picker/onChange/parameter/color",
+            "name": "hue",
+            "type": "number",
+            "kind": "number",
+            "mandatory": true,
+            "tags": null,
+            "description": "The color",
+            "types": null,
+            "__typename": "Property"
+          },
+          {
+            "path": "/components/forms/color-picker/onChange/parameter/color/saturation",
+            "parentPath": "/components/forms/color-picker/onChange/parameter/color",
+            "name": "saturation",
+            "type": "number",
+            "kind": "number",
+            "mandatory": true,
+            "tags": null,
+            "description": "Saturation of the color",
+            "types": null,
+            "__typename": "Property"
+          }
+        ],
+        "__typename": "Property"
+      }
+    ],
+    "__typename": "Property"
+  }
+]

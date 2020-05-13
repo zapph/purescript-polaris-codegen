@@ -1,1 +1,284 @@
-[{"path":"/components/overlays/resource-picker/allowMultiple","parentPath":"/components/overlays/resource-picker","name":"allowMultiple","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Whether to allow selection of multiple items","defaultValue":"true","types":[{"path":"/components/overlays/resource-picker/allowMultiple/false","parentPath":"/components/overlays/resource-picker/allowMultiple","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/allowMultiple/true","parentPath":"/components/overlays/resource-picker/allowMultiple","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/resource-picker/initialQuery","parentPath":"/components/overlays/resource-picker","name":"initialQuery","type":"string","kind":"string","mandatory":false,"tags":[{"tag":"see","text":"{@link https://help.shopify.com/en/api/getting-started/search-syntax|search syntax} for more information\n","__typename":"Tag"}],"description":"GraphQL initial search query for filtering resources available in the picker","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/open","parentPath":"/components/overlays/resource-picker","name":"open","type":"boolean","kind":"boolean","mandatory":true,"tags":null,"description":"Whether the picker is open or not","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/resourceType","parentPath":"/components/overlays/resource-picker","name":"resourceType","type":"\"Product\" | \"ProductVariant\" | \"Collection\"","kind":"union","mandatory":true,"tags":null,"description":"The type of resource you want to pick","defaultValue":null,"types":[{"path":"/components/overlays/resource-picker/resourceType/Product","parentPath":"/components/overlays/resource-picker/resourceType","name":"Product","type":"\"Product\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/resourceType/ProductVariant","parentPath":"/components/overlays/resource-picker/resourceType","name":"ProductVariant","type":"\"ProductVariant\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/resourceType/Collection","parentPath":"/components/overlays/resource-picker/resourceType","name":"Collection","type":"\"Collection\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/resource-picker/showHidden","parentPath":"/components/overlays/resource-picker","name":"showHidden","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Whether to show hidden products or not","defaultValue":"true","types":[{"path":"/components/overlays/resource-picker/showHidden/false","parentPath":"/components/overlays/resource-picker/showHidden","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/showHidden/true","parentPath":"/components/overlays/resource-picker/showHidden","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/resource-picker/showVariants","parentPath":"/components/overlays/resource-picker","name":"showVariants","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Whether to show product variants or not. Only applies to the product resource type picker","defaultValue":"true","types":[{"path":"/components/overlays/resource-picker/showVariants/false","parentPath":"/components/overlays/resource-picker/showVariants","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/showVariants/true","parentPath":"/components/overlays/resource-picker/showVariants","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/overlays/resource-picker/onCancel","parentPath":"/components/overlays/resource-picker","name":"onCancel","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when the picker is closed without selection","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/overlays/resource-picker/onSelection","parentPath":"/components/overlays/resource-picker","name":"onSelection","type":"(selectPayload: SelectPayload) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when a selection has been made","defaultValue":null,"types":[{"path":"/components/overlays/resource-picker/onSelection/parameter/selectPayload","parentPath":"/components/overlays/resource-picker/onSelection","name":"selectPayload","type":"SelectPayload","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":[{"path":"/components/overlays/resource-picker/onSelection/parameter/selectPayload/selection","parentPath":"/components/overlays/resource-picker/onSelection/parameter/selectPayload","name":"selection","type":"AppBridgeResourcePicker.ResourceSelection[]","kind":"array","mandatory":true,"tags":[{"tag":"see","text":"{@link https://help.shopify.com/en/api/embedded-apps/app-bridge/actions/resourcepicker|resource picker documentation} for more information\n","__typename":"Tag"}],"description":"The selected resources","types":null,"__typename":"Property"}],"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/resource-picker/allowMultiple",
+        "path": "/components/overlays/resource-picker/allowMultiple/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/resource-picker/allowMultiple",
+        "path": "/components/overlays/resource-picker/allowMultiple/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Whether to allow selection of multiple items",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "allowMultiple",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/allowMultiple"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "GraphQL initial search query for filtering resources available in the picker",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "{@link https://help.shopify.com/en/api/getting-started/search-syntax|search syntax} for more information\n",
+        "tag": "see"
+      }
+    ],
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "initialQuery",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/initialQuery"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Whether the picker is open or not",
+    "tags": null,
+    "mandatory": true,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "open",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/open"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"Product\"",
+        "name": "Product",
+        "parentPath": "/components/overlays/resource-picker/resourceType",
+        "path": "/components/overlays/resource-picker/resourceType/Product"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"ProductVariant\"",
+        "name": "ProductVariant",
+        "parentPath": "/components/overlays/resource-picker/resourceType",
+        "path": "/components/overlays/resource-picker/resourceType/ProductVariant"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"Collection\"",
+        "name": "Collection",
+        "parentPath": "/components/overlays/resource-picker/resourceType",
+        "path": "/components/overlays/resource-picker/resourceType/Collection"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The type of resource you want to pick",
+    "tags": null,
+    "mandatory": true,
+    "kind": "union",
+    "type": "\"Product\" | \"ProductVariant\" | \"Collection\"",
+    "name": "resourceType",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/resourceType"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/resource-picker/showHidden",
+        "path": "/components/overlays/resource-picker/showHidden/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/resource-picker/showHidden",
+        "path": "/components/overlays/resource-picker/showHidden/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Whether to show hidden products or not",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "showHidden",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/showHidden"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/overlays/resource-picker/showVariants",
+        "path": "/components/overlays/resource-picker/showVariants/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/overlays/resource-picker/showVariants",
+        "path": "/components/overlays/resource-picker/showVariants/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Whether to show product variants or not. Only applies to the product resource type picker",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "showVariants",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/showVariants"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when the picker is closed without selection",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onCancel",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/onCancel"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "The selected resources",
+            "tags": [
+              {
+                "__typename": "Tag",
+                "text": "{@link https://help.shopify.com/en/api/embedded-apps/app-bridge/actions/resourcepicker|resource picker documentation} for more information\n",
+                "tag": "see"
+              }
+            ],
+            "mandatory": true,
+            "kind": "array",
+            "type": "AppBridgeResourcePicker.ResourceSelection[]",
+            "name": "selection",
+            "parentPath": "/components/overlays/resource-picker/onSelection/parameter/selectPayload",
+            "path": "/components/overlays/resource-picker/onSelection/parameter/selectPayload/selection"
+          }
+        ],
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "SelectPayload",
+        "name": "selectPayload",
+        "parentPath": "/components/overlays/resource-picker/onSelection",
+        "path": "/components/overlays/resource-picker/onSelection/parameter/selectPayload"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback when a selection has been made",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(selectPayload: SelectPayload) => void",
+    "name": "onSelection",
+    "parentPath": "/components/overlays/resource-picker",
+    "path": "/components/overlays/resource-picker/onSelection"
+  }
+]
