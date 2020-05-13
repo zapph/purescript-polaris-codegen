@@ -5,11 +5,9 @@ import Prelude
 import Control.Monad.Error.Class (throwError)
 import Data.Array as Array
 import Data.Either (Either(..))
-import Data.Foldable (fold, foldr, intercalate)
+import Data.Foldable (fold, intercalate)
 import Data.List (foldMap)
 import Data.Maybe (Maybe(..), isJust, isNothing)
-import Data.Set (Set)
-import Data.Set as Set
 import Data.String (Pattern(..), Replacement(..), stripSuffix)
 import Data.String as String
 import Data.Traversable (traverse, traverse_)
@@ -25,8 +23,7 @@ import Node.Path (FilePath, basenameWithoutExt)
 import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
 import Polaris.Codegen.ModulePrinter (printModule)
 import Polaris.Codegen.TypParser (parseTyp)
-import Polaris.Codegen.TypeRefsModulePrinter (printTypeRefsModule)
-import Polaris.Codegen.Types (Module, ModuleExtras, PropEntry, RawEntry, Typ(..), PSJSContent)
+import Polaris.Codegen.Types (Module, ModuleExtras, PSJSContent, PropEntry, RawEntry)
 import Simple.JSON (class ReadForeign, readJSON)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
@@ -37,7 +34,6 @@ main = runAff_ logResult do
 
   modules <- listDataFiles >>= traverse readModule
   traverse_ writeModule modules
-  writeTypeRefsModule modules
 
   listLocales >>= writeLocalesModule
 
@@ -147,16 +143,6 @@ writeModule m@{ name } =
     (generatedSrcDir <> "/Polaris.Components." <> name)
     (printModule m)
 
-writeTypeRefsModule :: Array Module -> F Unit
-writeTypeRefsModule ms = do
-  log $ "Writing " <> typesPath
-  writeTextFile UTF8 typesPath typesContent
-  where
-    typesPath = generatedSrcDir <> "/Polaris.Types.purs"
-    typesContent = printTypeRefsModule refNames
-
-    refNames = collectRefNames ms
-
 writeLocalesModule :: Array String -> F Unit
 writeLocalesModule ls =
   writePSJSSrc
@@ -188,17 +174,3 @@ readPropEntry r = readTyp' r."type" <#> \typ ->
 
 errMessage :: forall a. String -> F a
 errMessage = throwError <<< error
-
-collectRefNames :: Array Module -> Array (Array String)
-collectRefNames ms = Set.toUnfoldable set
-  where
-    set = foldr collectFromModule Set.empty ms
-    collectFromModule {props} s = foldr (\p s' -> collectFromTyp p.typ s') s props
-
-    collectFromTyp :: Typ -> Set (Array String) -> Set (Array String)
-    collectFromTyp (TypRef name) s = Set.insert name s
-    collectFromTyp (TypUnion ts) s = foldr collectFromTyp s ts
-    collectFromTyp (TypFn { params, out }) s = foldr collectFromTyp s (Array.cons out params)
-    collectFromTyp (TypArray t) s = collectFromTyp t s
-    collectFromTyp (TypRecord es) s = foldr (collectFromTyp <<< _.typ) s es
-    collectFromTyp _ s = s
