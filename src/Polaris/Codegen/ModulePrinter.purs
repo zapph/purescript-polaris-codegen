@@ -21,7 +21,7 @@ printModule { name, typeDefs, specs } =
   where
     codes = mkComponentCode <$> specs
 
-    refNames = _.name <$> typeDefs
+    refNames = printRefName <<< _.name <$> typeDefs
     typeDefsCode = printTypeDef <$> typeDefs
 
     exports = refNames <> foldMap _.exports codes
@@ -119,8 +119,8 @@ printTyp (TypUnion ts) =
   Array.intercalate " |+| " $ printTypWrapped <$> (NonEmptyArray.toArray ts)
 printTyp (TypRecord rs) =
   "{"
-  <> ( Array.intercalate " , "
-       $ (\ {name, typ} -> "\"" <> name <> "\" :: (" <> printTyp typ <> ")") <$> rs
+  <> ( Array.intercalate ", "
+       $ (\ {name, typ} -> "\"" <> name <> "\" :: " <> printTyp typ <> "") <$> rs
      )
   <> "}"
 printTyp (TypRef ns) =
@@ -141,5 +141,5 @@ printTypWrapped t = "(" <> printTyp t <> ")"
 
 printTypeDef :: TypeDef -> String
 printTypeDef { name, typ } = case typ of
-  Just t -> "type " <> name <> " = " <> printTyp t <> "\n"
-  Nothing -> "foreign import data " <> name <> " :: Type\n"
+  Just t -> "type " <> printRefName name <> " = " <> printTyp t <> "\n"
+  Nothing -> "foreign import data " <> printRefName name <> " :: Type\n"
