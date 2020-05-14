@@ -26,6 +26,7 @@ import Node.Encoding (Encoding(..))
 import Node.FS.Aff (exists, mkdir, readTextFile, readdir, writeTextFile)
 import Node.Path (FilePath, basenameWithoutExt)
 import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
+import Polaris.Codegen.ModulePlanner (planModule)
 import Polaris.Codegen.ModulePrinter (printModule)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.Types (Module, ModuleExtras, PSJSContent, PropEntry, RawEntry(..))
@@ -170,7 +171,7 @@ writeModule :: Module -> F Unit
 writeModule m@{ name } =
   writePSJSSrc
     (generatedSrcDir <> "/Polaris.Components." <> name)
-    (printModule m)
+    (printModule <<< planModule $ m)
 
 writeLocalesModule :: Array String -> F Unit
 writeLocalesModule ls =
