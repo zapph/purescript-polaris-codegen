@@ -92,24 +92,27 @@ fillInTypDef rp (TypArray tr) = do -- todo limit this only to @(TypRef _)?
   tr' <- fillInTypDef rp tr
   pure $ TypArray tr'
 fillInTypDef rp (TypUnion typs) =
-  TypUnion <$> traverse fillInSubTypDef typs
-  where
-
-    -- we don't yuse fillInTypDef here since
-    -- the typ is not always a record.
-    -- Ex: Spinner - NewDesignLanguageColor
-    fillInSubTypDef typ@(TypRef name) = do
-      typ' <- traverse (readRawProp) (findSubRp name) <#> map _.typ
-      if typ' /= Just typ
-        then TypRef <$> recordTypDef { name, typ: typ' }
-        else pure typ
-    fillInSubTypDef t = fillInTypDef Nothing t
-
-    findSubRp name = rp
-      >>= Array.find (\(RawProp p) -> p.name == name)
-
+  TypUnion <$> traverse (fillInSubTypDef rp) typs
+fillInTypDef rp (TypFn { params, out } ) = do
+  params' <- traverse (fillInSubTypDef rp) params
+  out' <- fillInSubTypDef rp out
+  pure $ TypFn { params, out }
 fillInTypDef _ typ =
   pure typ
+
+fillInSubTypDef :: Maybe (Array RawProp) -> Typ -> F Typ
+fillInSubTypDef rp typ@(TypRef name) = do
+  typ' <- traverse (readRawProp) subRp <#> map _.typ
+  if typ' /= Just typ
+    then TypRef <$> recordTypDef { name, typ: typ' }
+    else pure typ
+
+  where
+    subRp = rp >>= Array.find (\(RawProp p) -> p.name == name)
+
+fillInSubTypDef _ t =
+  fillInTypDef Nothing t
+
 
 recordTypDef :: TypeDef -> F String
 recordTypDef { name, typ } = do
