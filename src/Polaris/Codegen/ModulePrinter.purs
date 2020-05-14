@@ -6,38 +6,26 @@ import Prelude
 
 import Data.Array as Array
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.Foldable (foldMap, foldr)
-import Data.Set (Set)
-import Data.Set as Set
+import Data.Foldable (foldMap)
+import Data.Maybe (Maybe(..))
 import Data.String.Extra (camelCase)
 import Polaris.Codegen.PrinterUtils (lines, printRefName)
-import Polaris.Codegen.Types (Module, PSJSContent, Typ(..), PropEntry)
+import Polaris.Codegen.Types (ComponentSpec, ModulePlan, PSJSContent, Prop, Typ(..), TypeDef)
 
-printModule :: Module -> PSJSContent
-printModule { name, props, subcomponents } =
+printModule :: ModulePlan -> PSJSContent
+printModule { name, typeDefs, specs } =
   { psContent: printPSContent { name, exports, psCodes }
   , jsContent: printJSContent jsCodes
   }
 
   where
-    mainSpec =
-      { namePath: [ name ]
-      , props: props
-      }
-
-    subSpecs = subcomponents <#> \sub ->
-      { namePath: [ name, sub.name ]
-      , props: sub.props
-      }
-
-    specs = Array.cons mainSpec subSpecs
     codes = mkComponentCode <$> specs
 
-    refNames = collectRefNames specs
-    dataDefs = printForeignDataDef <$> refNames
+    refNames = _.name <$> typeDefs
+    typeDefsCode = printTypeDef <$> typeDefs
 
     exports = refNames <> foldMap _.exports codes
-    psCodes = dataDefs <> (_.psCode <$> codes)
+    psCodes = typeDefsCode <> (_.psCode <$> codes)
     jsCodes = _.jsCode <$> codes
 
 printPSContent
@@ -67,11 +55,6 @@ printPSContent { name, exports, psCodes } = lines
 printJSContent :: Array String -> String
 printJSContent jsCodes =
   lines jsCodes <> "\n"
-
-type ComponentSpec =
-  { namePath :: Array String
-  , props :: Array PropEntry
-  }
 
 type ComponentCode =
   { exports :: Array String
@@ -110,11 +93,11 @@ mkComponentCode { namePath, props } =
 
     jsPath = Array.intercalate "." namePath
 
-    propsContent = Array.intercalate "\n  , " $ printPropEntry <$> props
+    propsContent =
+      Array.intercalate "\n  , " $ printProp <$> props
 
-
-printPropEntry :: PropEntry -> String
-printPropEntry { name, description, required, typ } =
+printProp :: Prop -> String
+printProp { name, description, required, typ } =
   "\"" <> name <> "\" :: " <> t
   where
     t' = printTyp typ
@@ -156,22 +139,7 @@ printTyp (TypFn { params, out }) = case params of
 printTypWrapped :: Typ -> String
 printTypWrapped t = "(" <> printTyp t <> ")"
 
-collectRefNames :: Array ComponentSpec -> Array String
-collectRefNames ms = printRefName <$> Set.toUnfoldable set
-  where
-    set = foldr collectFromModule Set.empty ms
-    collectFromModule {props} s = foldr (\p s' -> collectFromTyp p.typ s') s props
-
-    collectFromTyp :: Typ -> Set (Array String) -> Set (Array String)
-    collectFromTyp (TypRef name) s = Set.insert name s
-    collectFromTyp (TypUnion ts) s = foldr collectFromTyp s ts
-    collectFromTyp (TypFn { params, out }) s = foldr collectFromTyp s (Array.cons out params)
-    collectFromTyp (TypArray t) s = collectFromTyp t s
-    collectFromTyp (TypRecord es) s = foldr (collectFromTyp <<< _.typ) s es
-    collectFromTyp _ s = s
-
-printForeignDataDef :: String -> String
-printForeignDataDef name = lines
-  [ "foreign import data " <> name <> " :: Type"
-  , ""
-  ]
+printTypeDef :: TypeDef -> String
+printTypeDef { name, typ } = case typ of
+  Just t -> "type " <> name <> " = " <> printTyp t <> "\n"
+  Nothing -> "foreign import data " <> name <> " :: Type\n"

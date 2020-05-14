@@ -10,37 +10,50 @@ import Foreign (Foreign)
 import Foreign.Object (Object)
 import Simple.JSON (class ReadForeign, readImpl)
 
-newtype RawEntry =
-  RawEntry { name :: String
+newtype RawProp =
+  RawProp { name :: String
            , "type" :: String
            , mandatory :: Boolean
            , description :: String
-           , "types" :: Maybe (Array RawEntry)
+           , "types" :: Maybe (Array RawProp)
              --  , defaultValue :: Foreign
            }
 
-instance rawEntryReadForeign :: ReadForeign RawEntry where
-  readImpl f = RawEntry <$> readImpl f
+instance rawPropReadForeign :: ReadForeign RawProp where
+  readImpl f = RawProp <$> readImpl f
+
+type RawComponent =
+  { name :: String
+  , rawProps :: Array RawProp
+  }
+
+type RawModule =
+  { name :: String
+  , rawProps :: Array RawProp
+  , rawSubComponents :: Array RawComponent
+  }
 
 type ModuleExtras =
   { props :: Maybe (Array (Object Foreign))
-  , subcomponents :: Maybe (Array { name :: String, props :: Array RawEntry })
+  , rawSubComponents :: Maybe (Array RawComponent)
   }
 
 --  {"type":"string","kind":"string","mandatory":false,"tags":null,"description":"Space separated list of character encodings","defaultValue":null,"types":null,"__typename":"Property"}
 
-type Module =
+type ModulePlan =
   { name :: String
-  , props :: Array PropEntry
-  , subcomponents :: Array Subcomponent
+  , typeDefs :: Array TypeDef
+  , specs :: Array ComponentSpec
   }
 
-type Subcomponent =
-  { name :: String
-  , props :: Array PropEntry
+type TypeDef = { name :: String, typ :: Maybe Typ }
+
+type ComponentSpec =
+  { namePath :: Array String
+  , props :: Array Prop
   }
 
-type PropEntry =
+type Prop =
   { name :: String
   , typ :: Typ
   , required :: Boolean

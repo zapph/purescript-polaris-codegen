@@ -1,5 +1,5 @@
 {
-  "props": [
+  "rawProps": [
     {
       "description": "Visually hidden text for screen readers used for item link",
       "name": "accessibilityLabel",

@@ -5,30 +5,64 @@ module Polaris.Codegen.ModulePlanner
 import Prelude
 
 import Data.Array as Array
+import Data.Bifunctor (lmap)
+import Data.Either (Either)
 import Data.Foldable (foldr)
 import Data.Maybe (Maybe(..))
 import Data.Set (Set)
 import Data.Set as Set
+import Data.Traversable (traverse)
 import Polaris.Codegen.PrinterUtils (printRefName)
-import Polaris.Codegen.Types (ComponentSpec, Module, ModulePlan, Typ(..), TypeDef)
+import Polaris.Codegen.TypParser (parseTyp)
+import Polaris.Codegen.Types (ComponentSpec, ModulePlan, Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
+import Text.Parsing.Parser (runParser)
+import Text.Parsing.Parser.String (eof)
 
-planModule :: Module -> ModulePlan
-planModule { name, props, subcomponents } =
-  { name, typeDefs, specs }
+planModule
+  :: { name :: String
+     , rawProps :: Array RawProp
+     , rawSubComponents :: Array RawComponent
+     }
+     -> Either String ModulePlan
+planModule { name, rawProps, rawSubComponents } = do
+  mainSpec <- readRawComponent' mainToNamePath { name, rawProps }
+  subSpec <- traverse (readRawComponent' subToNamePath) rawSubComponents
+  let specs = Array.cons mainSpec subSpec
+      typeDefs = collectTypeDefs specs
+
+  pure { name, typeDefs, specs }
+
   where
-    mainSpec =
-      { namePath: [ name ]
-      , props: props
+    readRawComponent :: RawComponent -> Either String { name :: String, props :: Array Prop }
+    readRawComponent { name: name', rawProps: rawProps' } =
+      traverse
+        readRawProp
+        rawProps' <#> { name: name', props: _ }
+
+    mkComponentSpec
+      :: (String -> Array String)
+         -> { name :: String, props :: Array Prop }
+         -> ComponentSpec
+    mkComponentSpec toNamePath { name: n, props } =
+      { namePath: toNamePath n
+      , props
       }
 
-    subSpecs = subcomponents <#> \sub ->
-      { namePath: [ name, sub.name ]
-      , props: sub.props
-      }
+    readRawComponent' toNamePath r = mkComponentSpec toNamePath <$> readRawComponent r
+    mainToNamePath = Array.singleton
+    subToNamePath n = [ name, n ]
 
-    specs = Array.cons mainSpec subSpecs
+readRawProp :: RawProp -> Either String Prop
+readRawProp (RawProp r) = readTyp' r."type" <#> \typ ->
+  { name: r.name
+  , typ
+  , required: r.mandatory
+  , description: r.description
+  }
 
-    typeDefs = collectTypeDefs specs
+  where
+    readTyp' s = lmap (showParseError s) (runParser s (parseTyp <* eof))
+    showParseError s e = "Given: " <> s <> ", Error: " <> show e
 
 collectTypeDefs :: Array ComponentSpec -> Array TypeDef
 collectTypeDefs ms = toTypeDef <$> Set.toUnfoldable set

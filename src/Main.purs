@@ -28,17 +28,14 @@ import Node.Path (FilePath, basenameWithoutExt)
 import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
 import Polaris.Codegen.ModulePlanner (planModule)
 import Polaris.Codegen.ModulePrinter (printModule)
-import Polaris.Codegen.TypParser (parseTyp)
-import Polaris.Codegen.Types (Module, ModuleExtras, PSJSContent, PropEntry, RawEntry(..))
+import Polaris.Codegen.Types (ModuleExtras, ModulePlan, PSJSContent, RawProp)
 import Simple.JSON (class ReadForeign, read, readJSON, read_)
-import Text.Parsing.Parser (runParser)
-import Text.Parsing.Parser.String (eof)
 
 main :: Effect Unit
 main = runAff_ logResult do
   unlessM (exists generatedSrcDir) (mkdir generatedSrcDir)
 
-  modules <- listDataFiles >>= traverse readModule
+  modules <- listDataFiles >>= traverse readModuleFilePaths
   traverse_ writeModule modules
 
   listLocales >>= writeLocalesModule
@@ -91,24 +88,20 @@ listLocales :: F (Array FilePath)
 listLocales =
   map (\p -> basenameWithoutExt p ".json") <$> readdir "../node_modules/@shopify/polaris/locales"
 
-readModule :: ModuleFilePaths -> F Module
-readModule { propsFilePath, extrasFilePath } = do
+readModuleFilePaths :: ModuleFilePaths -> F ModulePlan
+readModuleFilePaths { propsFilePath, extrasFilePath } = do
   log $ "Reading " <> propsFilePath
   os' <- readPropObjects propsFilePath
 
   extra <- traverse readExtra extrasFilePath
   let extraPropsF = foldMap applyExtras $ extra >>= _.props
-      rawSubcomponents = fold $ extra >>= _.subcomponents
+      rawSubComponents = fold $ extra >>= _.rawSubComponents
 
       os = extraPropsF os'
 
-  props <- traverse readPropObject os'
-  subcomponents <- traverse readSubcomponent rawSubcomponents
+  rawProps <- traverse readPropObject os'
 
-  pure { name
-       , props
-       , subcomponents
-       }
+  rightToF $ planModule {name, rawProps, rawSubComponents}
 
   where
     readPropObjects :: FilePath -> F (Array (Object Foreign))
@@ -145,16 +138,12 @@ readModule { propsFilePath, extrasFilePath } = do
     getName :: Object Foreign -> Maybe String
     getName = Object.lookup "name" >=> read_
 
-    readPropObject o = readRawEntry =<< case read (unsafeToForeign o) of
+    readPropObject :: Object Foreign -> F RawProp
+    readPropObject o = case read (unsafeToForeign o) of
       Left e ->
         errMessage $ intercalate ", " $ map renderForeignError $ e
       Right a ->
         pure a
-
-    readSubcomponent { name: name', props: rawProps } =
-      traverse
-        readRawEntry
-        rawProps <#> { name: name', props: _ }
 
 readContent :: forall a. ReadForeign a => FilePath -> F a
 readContent path =
@@ -167,11 +156,11 @@ readContent path =
 generatedSrcDir :: FilePath
 generatedSrcDir = "../src/generated"
 
-writeModule :: Module -> F Unit
+writeModule :: ModulePlan -> F Unit
 writeModule m@{ name } =
   writePSJSSrc
     (generatedSrcDir <> "/Polaris.Components." <> name)
-    (printModule <<< planModule $ m)
+    (printModule m)
 
 writeLocalesModule :: Array String -> F Unit
 writeLocalesModule ls =
@@ -189,18 +178,9 @@ writePSJSSrc base { jsContent, psContent } = do
     psPath = base <> ".purs"
     jsPath = base <> ".js"
 
-readRawEntry :: RawEntry -> F PropEntry
-readRawEntry (RawEntry r) = readTyp' r."type" <#> \typ ->
-  { name: r.name
-  , typ
-  , required: r.mandatory
-  , description: r.description
-  }
-
-  where
-    readTyp' s = case runParser s (parseTyp <* eof) of
-      Left e -> errMessage $ "Given: " <> s <> ", Error: " <> show e
-      Right a -> pure a
-
 errMessage :: forall a. String -> F a
 errMessage = throwError <<< error
+
+rightToF :: forall a. Either String a -> F a
+rightToF (Left e) = errMessage e
+rightToF (Right a) = pure a

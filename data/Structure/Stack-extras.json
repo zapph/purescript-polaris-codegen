@@ -1,7 +1,7 @@
 {
-  "subcomponents": [
+  "rawSubComponents": [
     {
-      "props": [
+      "rawProps": [
         {
           "default": false,
           "description": "Fill the available horizontal space in the stack with the item",
