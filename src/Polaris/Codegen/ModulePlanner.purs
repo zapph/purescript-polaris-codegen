@@ -12,7 +12,6 @@ import Data.Maybe (Maybe(..))
 import Data.Set (Set)
 import Data.Set as Set
 import Data.Traversable (traverse)
-import Polaris.Codegen.PrinterUtils (printRefName)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.Types (ComponentSpec, Module, Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
 import Text.Parsing.Parser (runParser)
@@ -70,7 +69,7 @@ collectTypeDefs ms = toTypeDef <$> Set.toUnfoldable set
     set = foldr collectFromModule Set.empty ms
     collectFromModule {props} s = foldr (\p s' -> collectFromTyp p.typ s') s props
 
-    collectFromTyp :: Typ -> Set (Array String) -> Set (Array String)
+    collectFromTyp :: Typ -> Set String -> Set String
     collectFromTyp (TypRef name) s = Set.insert name s
     collectFromTyp (TypUnion ts) s = foldr collectFromTyp s ts
     collectFromTyp (TypFn { params, out }) s = foldr collectFromTyp s (Array.cons out params)
@@ -78,4 +77,4 @@ collectTypeDefs ms = toTypeDef <$> Set.toUnfoldable set
     collectFromTyp (TypRecord es) s = foldr (collectFromTyp <<< _.typ) s es
     collectFromTyp _ s = s
 
-    toTypeDef rn = { name: printRefName rn, typ: Nothing }
+    toTypeDef name = { name, typ: Nothing }

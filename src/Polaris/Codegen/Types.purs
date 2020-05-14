@@ -70,7 +70,7 @@ data Typ
   | TypUnion (NonEmptyArray Typ)
   | TypFn { params :: Array Typ, out :: Typ }
   | TypJSX
-  | TypRef (Array String)
+  | TypRef String
   | TypArray Typ
   | TypRecord (Array { name :: String, typ :: Typ })
   | TypForeign -- for any type

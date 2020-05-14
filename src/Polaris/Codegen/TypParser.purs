@@ -10,6 +10,7 @@ import Data.Array as Array
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Array.NonEmpty as NonEmptyArray
 import Data.Char.Unicode (isAlpha, isAlphaNum, isLower)
+import Data.List as List
 import Data.Maybe (Maybe(..))
 import Data.String.CodeUnits as CodeUnits
 import Polaris.Codegen.Types (Typ(..))
@@ -61,8 +62,8 @@ parseStringLiteral =
   where
     lit = (CodeUnits.fromCharArray <$> Array.many (noneOf ['"']))
 
-parseRefNames :: P (Array String)
-parseRefNames = Array.fromFoldable <$> sepBy1 parseRefName (string " & ")
+parseRefNames :: P String
+parseRefNames = List.intercalate " & " <$> sepBy1 parseRefName (string " & ")
   where
     parseRefName =
       (CodeUnits.singleton <$> (satisfy isAlpha))

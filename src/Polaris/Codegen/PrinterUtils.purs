@@ -13,12 +13,13 @@ import Data.String.Extra (pascalCase)
 import Foreign.Object (Object)
 import Foreign.Object as Object
 
-printRefName :: Array String -> String
-printRefName ns = fromMaybe name (Object.lookup name replacements)
+printRefName :: String -> String
+printRefName rawName = fromMaybe name (Object.lookup rawName replacements)
   where
-    name =
-      Array.intercalate "__"
-      $ String.replaceAll (Pattern ".") (Replacement "_") <<< pascalCase <$> ns
+    name = String.replaceAll (Pattern ".") (Replacement "_")
+           <<< pascalCase
+           <<< String.replaceAll (Pattern " & ") (Replacement "__")
+           $ rawName
 
 lines :: Array String -> String
 lines = Array.intercalate "\n"
