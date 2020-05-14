@@ -101,12 +101,10 @@ fillInTypDef rp (TypUnion typs) =
       if typ' /= Just typ
         then TypRef <$> recordTypDef { name, typ: typ' }
         else pure typ
-
-    fillInSubTypDef t = pure t
+    fillInSubTypDef t = fillInTypDef Nothing t
 
     findSubRp name = rp
       >>= Array.find (\(RawProp p) -> p.name == name)
-
 fillInTypDef _ typ =
   pure typ
 
