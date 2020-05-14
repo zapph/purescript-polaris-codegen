@@ -40,7 +40,7 @@ type ModuleExtras =
 
 --  {"type":"string","kind":"string","mandatory":false,"tags":null,"description":"Space separated list of character encodings","defaultValue":null,"types":null,"__typename":"Property"}
 
-type ModulePlan =
+type Module =
   { name :: String
   , typeDefs :: Array TypeDef
   , specs :: Array ComponentSpec

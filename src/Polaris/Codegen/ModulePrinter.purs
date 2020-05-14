@@ -10,9 +10,9 @@ import Data.Foldable (foldMap)
 import Data.Maybe (Maybe(..))
 import Data.String.Extra (camelCase)
 import Polaris.Codegen.PrinterUtils (lines, printRefName)
-import Polaris.Codegen.Types (ComponentSpec, ModulePlan, PSJSContent, Prop, Typ(..), TypeDef)
+import Polaris.Codegen.Types (ComponentSpec, Module, PSJSContent, Prop, Typ(..), TypeDef)
 
-printModule :: ModulePlan -> PSJSContent
+printModule :: Module -> PSJSContent
 printModule { name, typeDefs, specs } =
   { psContent: printPSContent { name, exports, psCodes }
   , jsContent: printJSContent jsCodes

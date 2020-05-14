@@ -14,7 +14,7 @@ import Data.Set as Set
 import Data.Traversable (traverse)
 import Polaris.Codegen.PrinterUtils (printRefName)
 import Polaris.Codegen.TypParser (parseTyp)
-import Polaris.Codegen.Types (ComponentSpec, ModulePlan, Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
+import Polaris.Codegen.Types (ComponentSpec, Module, Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
 
@@ -23,7 +23,7 @@ planModule
      , rawProps :: Array RawProp
      , rawSubComponents :: Array RawComponent
      }
-     -> Either String ModulePlan
+     -> Either String Module
 planModule { name, rawProps, rawSubComponents } = do
   mainSpec <- readRawComponent' mainToNamePath { name, rawProps }
   subSpec <- traverse (readRawComponent' subToNamePath) rawSubComponents

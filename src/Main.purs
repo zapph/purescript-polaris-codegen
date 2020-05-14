@@ -28,7 +28,7 @@ import Node.Path (FilePath, basenameWithoutExt)
 import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
 import Polaris.Codegen.ModulePlanner (planModule)
 import Polaris.Codegen.ModulePrinter (printModule)
-import Polaris.Codegen.Types (ModuleExtras, ModulePlan, PSJSContent, RawProp)
+import Polaris.Codegen.Types (ModuleExtras, Module, PSJSContent, RawProp)
 import Simple.JSON (class ReadForeign, read, readJSON, read_)
 
 main :: Effect Unit
@@ -88,7 +88,7 @@ listLocales :: F (Array FilePath)
 listLocales =
   map (\p -> basenameWithoutExt p ".json") <$> readdir "../node_modules/@shopify/polaris/locales"
 
-readModuleFilePaths :: ModuleFilePaths -> F ModulePlan
+readModuleFilePaths :: ModuleFilePaths -> F Module
 readModuleFilePaths { propsFilePath, extrasFilePath } = do
   log $ "Reading " <> propsFilePath
   os' <- readPropObjects propsFilePath
@@ -156,7 +156,7 @@ readContent path =
 generatedSrcDir :: FilePath
 generatedSrcDir = "../src/generated"
 
-writeModule :: ModulePlan -> F Unit
+writeModule :: Module -> F Unit
 writeModule m@{ name } =
   writePSJSSrc
     (generatedSrcDir <> "/Polaris.Components." <> name)
