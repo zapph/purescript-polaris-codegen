@@ -4,14 +4,19 @@ module Polaris.Codegen.ModulePlanner
 
 import Prelude
 
+import Control.Monad.Except (lift)
+import Control.Monad.State (StateT, runStateT)
 import Data.Array as Array
 import Data.Bifunctor (lmap)
 import Data.Either (Either)
 import Data.Foldable (foldr)
+import Data.Map (Map)
+import Data.Map as Map
 import Data.Maybe (Maybe(..))
 import Data.Set (Set)
 import Data.Set as Set
 import Data.Traversable (traverse)
+import Data.Tuple (uncurry)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.Types (ComponentSpec, Module, Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
 import Text.Parsing.Parser (runParser)
@@ -23,20 +28,13 @@ planModule
      , rawSubComponents :: Array RawComponent
      }
      -> Either String Module
-planModule { name, rawProps, rawSubComponents } = do
-  mainSpec <- readRawComponent' mainToNamePath { name, rawProps }
-  subSpec <- traverse (readRawComponent' subToNamePath) rawSubComponents
-  let specs = Array.cons mainSpec subSpec
-      typeDefs = collectTypeDefs specs
-
-  pure { name, typeDefs, specs }
-
+planModule { name, rawProps, rawSubComponents } = uncurry mkModule <$> runStateT plan Map.empty
   where
-    readRawComponent :: RawComponent -> Either String { name :: String, props :: Array Prop }
-    readRawComponent { name: name', rawProps: rawProps' } =
-      traverse
-        readRawProp
-        rawProps' <#> { name: name', props: _ }
+    plan = do
+      mainSpec <- readRawComponent' mainToNamePath { name, rawProps }
+      subSpec <- traverse (readRawComponent' subToNamePath) rawSubComponents
+      let specs = Array.cons mainSpec subSpec
+      pure { name, specs }
 
     mkComponentSpec
       :: (String -> Array String)
@@ -51,8 +49,22 @@ planModule { name, rawProps, rawSubComponents } = do
     mainToNamePath = Array.singleton
     subToNamePath n = [ name, n ]
 
-readRawProp :: RawProp -> Either String Prop
-readRawProp (RawProp r) = readTyp' r."type" <#> \typ ->
+    mkModule { name: n, specs } typeDefMap =
+      { name: n
+      , specs
+      , typeDefs: Array.fromFoldable $ Map.values typeDefMap
+      }
+
+type St = Map String TypeDef
+type F a = StateT St (Either String) a
+
+readRawComponent :: RawComponent -> F { name :: String, props :: Array Prop }
+readRawComponent { name, rawProps } =
+  traverse readRawProp rawProps
+  <#> { name, props: _ }
+
+readRawProp :: RawProp -> F Prop
+readRawProp (RawProp r) = lift $ readTyp' r."type" <#> \typ ->
   { name: r.name
   , typ
   , required: r.mandatory
