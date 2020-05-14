@@ -96,10 +96,12 @@ readModule { propsFilePath, extrasFilePath } = do
   os' <- readPropObjects propsFilePath
 
   extra <- traverse readExtra extrasFilePath
-  let os = foldMap (applyExtras os') $ extra >>= _.props
+  let extraPropsF = foldMap applyExtras $ extra >>= _.props
       rawSubcomponents = fold $ extra >>= _.subcomponents
 
-  props <- traverse readPropObject os
+      os = extraPropsF os'
+
+  props <- traverse readPropObject os'
   subcomponents <- traverse readSubcomponent rawSubcomponents
 
   pure { name
@@ -119,9 +121,9 @@ readModule { propsFilePath, extrasFilePath } = do
       readContent e
 
     applyExtras :: Array (Object Foreign) -> Array (Object Foreign) -> Array (Object Foreign)
-    applyExtras rs' overrides =
+    applyExtras overrides os =
       STArray.run do
-        rsSt <- STArray.thaw rs'
+        rsSt <- STArray.thaw os
         traverse_ (applyExtraSt rsSt) overrides
         pure rsSt
 
