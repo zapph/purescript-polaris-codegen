@@ -9,7 +9,8 @@ import Data.Array.NonEmpty as NonEmptyArray
 import Data.Foldable (foldMap)
 import Data.Maybe (Maybe(..))
 import Data.String.Extra (camelCase)
-import Polaris.Codegen.PrinterUtils (lines, printRefName)
+import Data.Tuple (Tuple(..))
+import Polaris.Codegen.PrinterUtils (lines, printRefName, printRefNameConstructor)
 import Polaris.Codegen.Types (ComponentSpec, Module, PSJSContent, Prop, Typ(..), TypeDef)
 
 printModule :: Module -> PSJSContent
@@ -21,11 +22,11 @@ printModule { name, typeDefs, specs } =
   where
     codes = mkComponentCode <$> specs
 
-    refNames = printRefName <<< _.name <$> typeDefs
-    typeDefsCode = printTypeDef <$> typeDefs
+    printTypeDef' = (\d -> Tuple d.exports d.code) <<< printTypeDef
+    (Tuple typeDefExports typeDefsCode) = foldMap printTypeDef' typeDefs
 
-    exports = refNames <> foldMap _.exports codes
-    psCodes = typeDefsCode <> (_.psCode <$> codes)
+    exports = typeDefExports <> foldMap _.exports codes
+    psCodes = Array.cons typeDefsCode (_.psCode <$> codes)
     jsCodes = _.jsCode <$> codes
 
 printPSContent
@@ -138,7 +139,46 @@ printTyp (TypFn { params, out }) = case params of
 printTypWrapped :: Typ -> String
 printTypWrapped t = "(" <> printTyp t <> ")"
 
-printTypeDef :: TypeDef -> String
-printTypeDef { name, typ } = case typ of
-  Just t -> "type " <> printRefName name <> " = " <> printTyp t <> "\n"
-  Nothing -> "foreign import data " <> printRefName name <> " :: Type\n"
+printTypeDef
+  :: TypeDef
+     -> { code :: String
+        , exports :: Array String
+        }
+printTypeDef { name, typ } = { code, exports }
+  where
+    refName = printRefName name
+    consName = printRefNameConstructor name
+
+    code = case typ of
+      Just (TypRecord props) ->
+        printTypeDefRecord { refName, consName } props
+      Just t ->
+        "type " <> printRefName name <> " = " <> printTyp t <> "\n"
+      Nothing ->
+        "foreign import data " <> printRefName name <> " :: Type\n"
+
+    exports = case typ of
+      Just (TypRecord props) ->
+        [ refName, consName ]
+      _ ->
+        [ refName ]
+
+printTypeDefRecord
+  :: { refName :: String
+     , consName :: String
+     }
+  -> Array Prop
+  -> String
+printTypeDefRecord { refName, consName } props =
+  lines
+  [ "type " <> refName <> " ="
+  , "  { " <> propsContent
+  , "  }"
+  , ""
+  , consName <> " :: forall r. Coercible r " <> refName <> " => r -> " <> refName
+  , consName <> " = coerce"
+  , ""
+  ]
+  where
+    propsContent =
+      Array.intercalate "\n  , " $ printProp <$> props
