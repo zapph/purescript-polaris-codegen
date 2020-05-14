@@ -89,10 +89,24 @@ fillInTypDef (Just rawProps) (TypRef name) =
 fillInTypDef Nothing (TypRef name) = do
   name' <- recordTypDef { name, typ: Nothing }
   pure $ TypRef name'
-fillInTypDef rp (TypArray tr@(TypRef _)) = do
+fillInTypDef rp (TypArray tr) = do -- todo limit this only to @(TypRef _)?
   -- for array types, the rawprops on the current node
   tr' <- fillInTypDef rp tr
   pure $ TypArray tr'
+fillInTypDef rp (TypUnion typs) =
+  TypUnion <$> traverse fillInSubTypDef typs
+  where
+    fillInSubTypDef typ@(TypRef name) = do
+      typ' <- traverse (readRawProp) (findSubRp name) <#> map _.typ
+      if typ' /= Just typ
+        then TypRef <$> recordTypDef { name, typ: typ' }
+        else pure typ
+
+    fillInSubTypDef t = pure t
+
+    findSubRp name = rp
+      >>= Array.find (\(RawProp p) -> p.name == name)
+
 fillInTypDef _ typ =
   pure typ
 

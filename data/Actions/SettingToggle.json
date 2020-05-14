@@ -1,1 +1,411 @@
-[{"path":"/components/actions/setting-toggle/action","parentPath":"/components/actions/setting-toggle","name":"action","type":"ComplexAction","kind":"interface","mandatory":false,"tags":null,"description":"Card header actions","defaultValue":null,"types":[{"path":"/components/actions/setting-toggle/action/accessibilityLabel","parentPath":"/components/actions/setting-toggle/action","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/content","parentPath":"/components/actions/setting-toggle/action","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/destructive","parentPath":"/components/actions/setting-toggle/action","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","returnType":null,"types":[{"path":"/components/actions/setting-toggle/action/destructive/false","parentPath":"/components/actions/setting-toggle/action/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/destructive/true","parentPath":"/components/actions/setting-toggle/action/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/disabled","parentPath":"/components/actions/setting-toggle/action","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/actions/setting-toggle/action/disabled/false","parentPath":"/components/actions/setting-toggle/action/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/disabled/true","parentPath":"/components/actions/setting-toggle/action/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/external","parentPath":"/components/actions/setting-toggle/action","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/actions/setting-toggle/action/external/false","parentPath":"/components/actions/setting-toggle/action/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/external/true","parentPath":"/components/actions/setting-toggle/action/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/icon","parentPath":"/components/actions/setting-toggle/action","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","returnType":null,"types":[{"path":"/components/actions/setting-toggle/action/icon/string","parentPath":"/components/actions/setting-toggle/action/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/icon/FunctionComponent","parentPath":"/components/actions/setting-toggle/action/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/id","parentPath":"/components/actions/setting-toggle/action","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/loading","parentPath":"/components/actions/setting-toggle/action","name":"loading","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Should a spinner be displayed","returnType":null,"types":[{"path":"/components/actions/setting-toggle/action/loading/false","parentPath":"/components/actions/setting-toggle/action/loading","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/loading/true","parentPath":"/components/actions/setting-toggle/action/loading","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/target","parentPath":"/components/actions/setting-toggle/action","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","returnType":null,"types":[{"path":"/components/actions/setting-toggle/action/target/ADMIN_PATH","parentPath":"/components/actions/setting-toggle/action/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/target/REMOTE","parentPath":"/components/actions/setting-toggle/action/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/target/APP","parentPath":"/components/actions/setting-toggle/action/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/url","parentPath":"/components/actions/setting-toggle/action","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/onAction","parentPath":"/components/actions/setting-toggle/action","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/onMouseEnter","parentPath":"/components/actions/setting-toggle/action","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/action/onTouchStart","parentPath":"/components/actions/setting-toggle/action","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/setting-toggle/children","parentPath":"/components/actions/setting-toggle","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Inner content of the card","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/enabled","parentPath":"/components/actions/setting-toggle","name":"enabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Sets toggle state to enabled or disabled","defaultValue":null,"types":[{"path":"/components/actions/setting-toggle/enabled/false","parentPath":"/components/actions/setting-toggle/enabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/setting-toggle/enabled/true","parentPath":"/components/actions/setting-toggle/enabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/setting-toggle/action/destructive",
+            "path": "/components/actions/setting-toggle/action/destructive/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/setting-toggle/action/destructive",
+            "path": "/components/actions/setting-toggle/action/destructive/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Destructive action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "destructive",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/destructive"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/setting-toggle/action/disabled",
+            "path": "/components/actions/setting-toggle/action/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/setting-toggle/action/disabled",
+            "path": "/components/actions/setting-toggle/action/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/setting-toggle/action/external",
+            "path": "/components/actions/setting-toggle/action/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/setting-toggle/action/external",
+            "path": "/components/actions/setting-toggle/action/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/external"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/actions/setting-toggle/action/icon",
+            "path": "/components/actions/setting-toggle/action/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/actions/setting-toggle/action/icon",
+            "path": "/components/actions/setting-toggle/action/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Source of the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/id"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/setting-toggle/action/loading",
+            "path": "/components/actions/setting-toggle/action/loading/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/setting-toggle/action/loading",
+            "path": "/components/actions/setting-toggle/action/loading/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Should a spinner be displayed",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "loading",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/loading"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ADMIN_PATH\"",
+            "name": "ADMIN_PATH",
+            "parentPath": "/components/actions/setting-toggle/action/target",
+            "path": "/components/actions/setting-toggle/action/target/ADMIN_PATH"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"REMOTE\"",
+            "name": "REMOTE",
+            "parentPath": "/components/actions/setting-toggle/action/target",
+            "path": "/components/actions/setting-toggle/action/target/REMOTE"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"APP\"",
+            "name": "APP",
+            "parentPath": "/components/actions/setting-toggle/action/target",
+            "path": "/components/actions/setting-toggle/action/target/APP"
+          }
+        ],
+        "returnType": null,
+        "description": "Where to display the target link",
+        "tags": [
+          {
+            "__typename": "Tag",
+            "text": "'APP'",
+            "tag": "default"
+          },
+          {
+            "__typename": "Tag",
+            "text": "\n",
+            "tag": "embeddedapponly"
+          }
+        ],
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+        "name": "target",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/target"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/actions/setting-toggle/action",
+        "path": "/components/actions/setting-toggle/action/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Card header actions",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "ComplexAction",
+    "name": "action",
+    "parentPath": "/components/actions/setting-toggle",
+    "path": "/components/actions/setting-toggle/action"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Inner content of the card",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/actions/setting-toggle",
+    "path": "/components/actions/setting-toggle/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/setting-toggle/enabled",
+        "path": "/components/actions/setting-toggle/enabled/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/setting-toggle/enabled",
+        "path": "/components/actions/setting-toggle/enabled/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Sets toggle state to enabled or disabled",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "enabled",
+    "parentPath": "/components/actions/setting-toggle",
+    "path": "/components/actions/setting-toggle/enabled"
+  }
+]

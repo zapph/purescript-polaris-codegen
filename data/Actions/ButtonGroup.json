@@ -1,1 +1,135 @@
-[{"path":"/components/actions/button-group/children","parentPath":"/components/actions/button-group","name":"children","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"Button components","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/button-group/connectedTop","parentPath":"/components/actions/button-group","name":"connectedTop","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Remove top left and right border radius","defaultValue":null,"types":[{"path":"/components/actions/button-group/connectedTop/false","parentPath":"/components/actions/button-group/connectedTop","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/button-group/connectedTop/true","parentPath":"/components/actions/button-group/connectedTop","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/button-group/fullWidth","parentPath":"/components/actions/button-group","name":"fullWidth","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Buttons will stretch/shrink to occupy the full width","defaultValue":null,"types":[{"path":"/components/actions/button-group/fullWidth/false","parentPath":"/components/actions/button-group/fullWidth","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/button-group/fullWidth/true","parentPath":"/components/actions/button-group/fullWidth","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/button-group/segmented","parentPath":"/components/actions/button-group","name":"segmented","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Join buttons as segmented group","defaultValue":null,"types":[{"path":"/components/actions/button-group/segmented/false","parentPath":"/components/actions/button-group/segmented","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/button-group/segmented/true","parentPath":"/components/actions/button-group/segmented","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Button components",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/actions/button-group",
+    "path": "/components/actions/button-group/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/button-group/connectedTop",
+        "path": "/components/actions/button-group/connectedTop/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/button-group/connectedTop",
+        "path": "/components/actions/button-group/connectedTop/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Remove top left and right border radius",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "connectedTop",
+    "parentPath": "/components/actions/button-group",
+    "path": "/components/actions/button-group/connectedTop"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/button-group/fullWidth",
+        "path": "/components/actions/button-group/fullWidth/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/button-group/fullWidth",
+        "path": "/components/actions/button-group/fullWidth/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Buttons will stretch/shrink to occupy the full width",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "fullWidth",
+    "parentPath": "/components/actions/button-group",
+    "path": "/components/actions/button-group/fullWidth"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/button-group/segmented",
+        "path": "/components/actions/button-group/segmented/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/button-group/segmented",
+        "path": "/components/actions/button-group/segmented/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Join buttons as segmented group",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "segmented",
+    "parentPath": "/components/actions/button-group",
+    "path": "/components/actions/button-group/segmented"
+  }
+]

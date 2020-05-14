@@ -1,1 +1,757 @@
-[{"path":"/components/actions/drop-zone/accept","parentPath":"/components/actions/drop-zone","name":"accept","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Allowed file types","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/active","parentPath":"/components/actions/drop-zone","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Sets an active state","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/active/false","parentPath":"/components/actions/drop-zone/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/active/true","parentPath":"/components/actions/drop-zone/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/allowMultiple","parentPath":"/components/actions/drop-zone","name":"allowMultiple","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Allows multiple files to be uploaded at once","defaultValue":"true","types":[{"path":"/components/actions/drop-zone/allowMultiple/false","parentPath":"/components/actions/drop-zone/allowMultiple","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/allowMultiple/true","parentPath":"/components/actions/drop-zone/allowMultiple","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/children","parentPath":"/components/actions/drop-zone","name":"children","type":"string | React.ReactNode","kind":"union","mandatory":false,"tags":null,"description":"The child elements to render in the dropzone.","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/children/string","parentPath":"/components/actions/drop-zone/children","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/children/React.ReactNode","parentPath":"/components/actions/drop-zone/children","name":"React.ReactNode","type":"React.ReactNode","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/disabled","parentPath":"/components/actions/drop-zone","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Sets a disabled state","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/disabled/false","parentPath":"/components/actions/drop-zone/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/disabled/true","parentPath":"/components/actions/drop-zone/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/dropOnPage","parentPath":"/components/actions/drop-zone","name":"dropOnPage","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Allows a file to be dropped anywhere on the page","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/dropOnPage/false","parentPath":"/components/actions/drop-zone/dropOnPage","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/dropOnPage/true","parentPath":"/components/actions/drop-zone/dropOnPage","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/error","parentPath":"/components/actions/drop-zone","name":"error","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Sets an error state","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/error/false","parentPath":"/components/actions/drop-zone/error","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/error/true","parentPath":"/components/actions/drop-zone/error","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/errorOverlayText","parentPath":"/components/actions/drop-zone","name":"errorOverlayText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Text that appears in the overlay when set in error state","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/id","parentPath":"/components/actions/drop-zone","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"ID for file input","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/label","parentPath":"/components/actions/drop-zone","name":"label","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Label for the file input","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/labelAction","parentPath":"/components/actions/drop-zone","name":"labelAction","type":"Action","kind":"interface","mandatory":false,"tags":null,"description":"Adds an action to the label","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/labelHidden","parentPath":"/components/actions/drop-zone","name":"labelHidden","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Visually hide the label","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/labelHidden/false","parentPath":"/components/actions/drop-zone/labelHidden","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/labelHidden/true","parentPath":"/components/actions/drop-zone/labelHidden","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/openFileDialog","parentPath":"/components/actions/drop-zone","name":"openFileDialog","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Sets the default file dialog state","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/openFileDialog/false","parentPath":"/components/actions/drop-zone/openFileDialog","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/openFileDialog/true","parentPath":"/components/actions/drop-zone/openFileDialog","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/outline","parentPath":"/components/actions/drop-zone","name":"outline","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Displays an outline border","defaultValue":"true","types":[{"path":"/components/actions/drop-zone/outline/false","parentPath":"/components/actions/drop-zone/outline","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/outline/true","parentPath":"/components/actions/drop-zone/outline","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/overlay","parentPath":"/components/actions/drop-zone","name":"overlay","type":"boolean","kind":"boolean","mandatory":false,"tags":[{"tag":"default","text":"true\n","__typename":"Tag"}],"description":"Displays an overlay on hover","defaultValue":"true","types":[{"path":"/components/actions/drop-zone/overlay/false","parentPath":"/components/actions/drop-zone/overlay","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/overlay/true","parentPath":"/components/actions/drop-zone/overlay","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/overlayText","parentPath":"/components/actions/drop-zone","name":"overlayText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Text that appears in the overlay","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/type","parentPath":"/components/actions/drop-zone","name":"type","type":"\"file\" | \"image\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'file'\n","__typename":"Tag"}],"description":"Whether is a file or an image","defaultValue":"'file'","types":[{"path":"/components/actions/drop-zone/type/file","parentPath":"/components/actions/drop-zone/type","name":"file","type":"\"file\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/type/image","parentPath":"/components/actions/drop-zone/type","name":"image","type":"\"image\"","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/customValidator","parentPath":"/components/actions/drop-zone","name":"customValidator","type":"(file: File) => boolean","kind":"method","mandatory":false,"tags":null,"description":"Adds custom validations","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/customValidator/parameter/file","parentPath":"/components/actions/drop-zone/customValidator","name":"file","type":"File","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/onClick","parentPath":"/components/actions/drop-zone","name":"onClick","type":"(event: MouseEvent) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered on click","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/onClick/parameter/event","parentPath":"/components/actions/drop-zone/onClick","name":"event","type":"MouseEvent","kind":"interface","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/onDragEnter","parentPath":"/components/actions/drop-zone","name":"onDragEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered when one or more files entered the drag area","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/onDragLeave","parentPath":"/components/actions/drop-zone","name":"onDragLeave","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered when one or more files left the drag area","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/onDragOver","parentPath":"/components/actions/drop-zone","name":"onDragOver","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered when one or more files are dragging over the drag area","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/onDrop","parentPath":"/components/actions/drop-zone","name":"onDrop","type":"(files: File[], acceptedFiles: File[], rejectedFiles: File[]) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered on any file drop","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/onDrop/parameter/files","parentPath":"/components/actions/drop-zone/onDrop","name":"files","type":"File[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/onDrop/parameter/acceptedFiles","parentPath":"/components/actions/drop-zone/onDrop","name":"acceptedFiles","type":"File[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/drop-zone/onDrop/parameter/rejectedFiles","parentPath":"/components/actions/drop-zone/onDrop","name":"rejectedFiles","type":"File[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/onDropAccepted","parentPath":"/components/actions/drop-zone","name":"onDropAccepted","type":"(acceptedFiles: File[]) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered when at least one of the files dropped was accepted","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/onDropAccepted/parameter/acceptedFiles","parentPath":"/components/actions/drop-zone/onDropAccepted","name":"acceptedFiles","type":"File[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/onDropRejected","parentPath":"/components/actions/drop-zone","name":"onDropRejected","type":"(rejectedFiles: File[]) => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered when at least one of the files dropped was rejected","defaultValue":null,"types":[{"path":"/components/actions/drop-zone/onDropRejected/parameter/rejectedFiles","parentPath":"/components/actions/drop-zone/onDropRejected","name":"rejectedFiles","type":"File[]","kind":"array","mandatory":true,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/drop-zone/onFileDialogClose","parentPath":"/components/actions/drop-zone","name":"onFileDialogClose","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback triggered when the file dialog is canceled","defaultValue":null,"types":null,"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Allowed file types",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "accept",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/accept"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/active",
+        "path": "/components/actions/drop-zone/active/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/active",
+        "path": "/components/actions/drop-zone/active/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Sets an active state",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "active",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/active"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/allowMultiple",
+        "path": "/components/actions/drop-zone/allowMultiple/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/allowMultiple",
+        "path": "/components/actions/drop-zone/allowMultiple/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Allows multiple files to be uploaded at once",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "allowMultiple",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/allowMultiple"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "string",
+        "parentPath": "/components/actions/drop-zone/children",
+        "path": "/components/actions/drop-zone/children/string"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "React.ReactNode",
+        "name": "React.ReactNode",
+        "parentPath": "/components/actions/drop-zone/children",
+        "path": "/components/actions/drop-zone/children/React.ReactNode"
+      }
+    ],
+    "defaultValue": null,
+    "description": "The child elements to render in the dropzone.",
+    "tags": null,
+    "mandatory": false,
+    "kind": "union",
+    "type": "string | React.ReactNode",
+    "name": "children",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/children"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/disabled",
+        "path": "/components/actions/drop-zone/disabled/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/disabled",
+        "path": "/components/actions/drop-zone/disabled/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Sets a disabled state",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "disabled",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/disabled"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/dropOnPage",
+        "path": "/components/actions/drop-zone/dropOnPage/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/dropOnPage",
+        "path": "/components/actions/drop-zone/dropOnPage/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Allows a file to be dropped anywhere on the page",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "dropOnPage",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/dropOnPage"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/error",
+        "path": "/components/actions/drop-zone/error/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/error",
+        "path": "/components/actions/drop-zone/error/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Sets an error state",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "error",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/error"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Text that appears in the overlay when set in error state",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "errorOverlayText",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/errorOverlayText"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "ID for file input",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "id",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/id"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Label for the file input",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "label",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/label"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Adds an action to the label",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "Action",
+    "name": "labelAction",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/labelAction"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/labelHidden",
+        "path": "/components/actions/drop-zone/labelHidden/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/labelHidden",
+        "path": "/components/actions/drop-zone/labelHidden/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Visually hide the label",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "labelHidden",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/labelHidden"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/openFileDialog",
+        "path": "/components/actions/drop-zone/openFileDialog/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/openFileDialog",
+        "path": "/components/actions/drop-zone/openFileDialog/true"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Sets the default file dialog state",
+    "tags": null,
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "openFileDialog",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/openFileDialog"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/outline",
+        "path": "/components/actions/drop-zone/outline/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/outline",
+        "path": "/components/actions/drop-zone/outline/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Displays an outline border",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "outline",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/outline"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "false",
+        "name": "false",
+        "parentPath": "/components/actions/drop-zone/overlay",
+        "path": "/components/actions/drop-zone/overlay/false"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "true",
+        "name": "true",
+        "parentPath": "/components/actions/drop-zone/overlay",
+        "path": "/components/actions/drop-zone/overlay/true"
+      }
+    ],
+    "defaultValue": "true",
+    "description": "Displays an overlay on hover",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "true\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "boolean",
+    "type": "boolean",
+    "name": "overlay",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/overlay"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Text that appears in the overlay",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "overlayText",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/overlayText"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"file\"",
+        "name": "file",
+        "parentPath": "/components/actions/drop-zone/type",
+        "path": "/components/actions/drop-zone/type/file"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "\"image\"",
+        "name": "image",
+        "parentPath": "/components/actions/drop-zone/type",
+        "path": "/components/actions/drop-zone/type/image"
+      }
+    ],
+    "defaultValue": "'file'",
+    "description": "Whether is a file or an image",
+    "tags": [
+      {
+        "__typename": "Tag",
+        "text": "'file'\n",
+        "tag": "default"
+      }
+    ],
+    "mandatory": false,
+    "kind": "union",
+    "type": "\"file\" | \"image\"",
+    "name": "type",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/type"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "File",
+        "name": "file",
+        "parentPath": "/components/actions/drop-zone/customValidator",
+        "path": "/components/actions/drop-zone/customValidator/parameter/file"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Adds custom validations",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(file: File) => boolean",
+    "name": "customValidator",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/customValidator"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "interface",
+        "type": "MouseEvent",
+        "name": "event",
+        "parentPath": "/components/actions/drop-zone/onClick",
+        "path": "/components/actions/drop-zone/onClick/parameter/event"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback triggered on click",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(event: MouseEvent) => void",
+    "name": "onClick",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onClick"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback triggered when one or more files entered the drag area",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onDragEnter",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onDragEnter"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback triggered when one or more files left the drag area",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onDragLeave",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onDragLeave"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback triggered when one or more files are dragging over the drag area",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onDragOver",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onDragOver"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "File[]",
+        "name": "files",
+        "parentPath": "/components/actions/drop-zone/onDrop",
+        "path": "/components/actions/drop-zone/onDrop/parameter/files"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "File[]",
+        "name": "acceptedFiles",
+        "parentPath": "/components/actions/drop-zone/onDrop",
+        "path": "/components/actions/drop-zone/onDrop/parameter/acceptedFiles"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "File[]",
+        "name": "rejectedFiles",
+        "parentPath": "/components/actions/drop-zone/onDrop",
+        "path": "/components/actions/drop-zone/onDrop/parameter/rejectedFiles"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback triggered on any file drop",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(files: File[], acceptedFiles: File[], rejectedFiles: File[]) => void",
+    "name": "onDrop",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onDrop"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "File[]",
+        "name": "acceptedFiles",
+        "parentPath": "/components/actions/drop-zone/onDropAccepted",
+        "path": "/components/actions/drop-zone/onDropAccepted/parameter/acceptedFiles"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback triggered when at least one of the files dropped was accepted",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(acceptedFiles: File[]) => void",
+    "name": "onDropAccepted",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onDropAccepted"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "File[]",
+        "name": "rejectedFiles",
+        "parentPath": "/components/actions/drop-zone/onDropRejected",
+        "path": "/components/actions/drop-zone/onDropRejected/parameter/rejectedFiles"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Callback triggered when at least one of the files dropped was rejected",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "(rejectedFiles: File[]) => void",
+    "name": "onDropRejected",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onDropRejected"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback triggered when the file dialog is canceled",
+    "tags": null,
+    "mandatory": false,
+    "kind": "method",
+    "type": "() => void",
+    "name": "onFileDialogClose",
+    "parentPath": "/components/actions/drop-zone",
+    "path": "/components/actions/drop-zone/onFileDialogClose"
+  }
+]

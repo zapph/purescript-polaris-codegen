@@ -1,1 +1,929 @@
-[{"path":"/components/actions/action-list/actionRole","parentPath":"/components/actions/action-list","name":"actionRole","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a specific role attribute for each action in the list","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items","parentPath":"/components/actions/action-list","name":"items","type":"ActionListItemDescriptor[]","kind":"array","mandatory":false,"tags":null,"description":"Collection of actions for list","defaultValue":null,"types":[{"path":"/components/actions/action-list/items/accessibilityLabel","parentPath":"/components/actions/action-list/items","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/active","parentPath":"/components/actions/action-list/items","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the action is active or not","returnType":null,"types":[{"path":"/components/actions/action-list/items/active/false","parentPath":"/components/actions/action-list/items/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/active/true","parentPath":"/components/actions/action-list/items/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/items/badge","parentPath":"/components/actions/action-list/items","name":"badge","type":"{content: string, status: \"new\"}","kind":"interface","mandatory":false,"tags":null,"description":"","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/content","parentPath":"/components/actions/action-list/items","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/destructive","parentPath":"/components/actions/action-list/items","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","returnType":null,"types":[{"path":"/components/actions/action-list/items/destructive/false","parentPath":"/components/actions/action-list/items/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/destructive/true","parentPath":"/components/actions/action-list/items/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/items/disabled","parentPath":"/components/actions/action-list/items","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","returnType":null,"types":[{"path":"/components/actions/action-list/items/disabled/false","parentPath":"/components/actions/action-list/items/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/disabled/true","parentPath":"/components/actions/action-list/items/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/items/ellipsis","parentPath":"/components/actions/action-list/items","name":"ellipsis","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Add an ellipsis suffix to action content","returnType":null,"types":[{"path":"/components/actions/action-list/items/ellipsis/false","parentPath":"/components/actions/action-list/items/ellipsis","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/ellipsis/true","parentPath":"/components/actions/action-list/items/ellipsis","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/items/external","parentPath":"/components/actions/action-list/items","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","returnType":null,"types":[{"path":"/components/actions/action-list/items/external/false","parentPath":"/components/actions/action-list/items/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/external/true","parentPath":"/components/actions/action-list/items/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/items/helpText","parentPath":"/components/actions/action-list/items","name":"helpText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Additional hint text to display with item","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/icon","parentPath":"/components/actions/action-list/items","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","returnType":null,"types":[{"path":"/components/actions/action-list/items/icon/string","parentPath":"/components/actions/action-list/items/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/icon/FunctionComponent","parentPath":"/components/actions/action-list/items/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/items/id","parentPath":"/components/actions/action-list/items","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/image","parentPath":"/components/actions/action-list/items","name":"image","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Image source","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/role","parentPath":"/components/actions/action-list/items","name":"role","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a role for the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/target","parentPath":"/components/actions/action-list/items","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","returnType":null,"types":[{"path":"/components/actions/action-list/items/target/ADMIN_PATH","parentPath":"/components/actions/action-list/items/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/target/REMOTE","parentPath":"/components/actions/action-list/items/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/target/APP","parentPath":"/components/actions/action-list/items/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/items/url","parentPath":"/components/actions/action-list/items","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/onAction","parentPath":"/components/actions/action-list/items","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/onMouseEnter","parentPath":"/components/actions/action-list/items","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","returnType":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/items/onTouchStart","parentPath":"/components/actions/action-list/items","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/onActionAnyItem","parentPath":"/components/actions/action-list","name":"onActionAnyItem","type":"onAction","kind":"interface","mandatory":false,"tags":null,"description":"Callback when any item is clicked or keypressed","defaultValue":null,"types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections","parentPath":"/components/actions/action-list","name":"sections","type":"ActionListSection[]","kind":"array","mandatory":false,"tags":null,"description":"Collection of sectioned action items","defaultValue":null,"types":[{"path":"/components/actions/action-list/sections/items","parentPath":"/components/actions/action-list/sections","name":"items","type":"ActionListItemDescriptor[]","kind":"array","mandatory":true,"tags":null,"description":"Collection of action items for the list","returnType":null,"types":[{"path":"/components/actions/action-list/sections/items/accessibilityLabel","parentPath":"/components/actions/action-list/sections/items","name":"accessibilityLabel","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Visually hidden text for screen readers","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/active","parentPath":"/components/actions/action-list/sections/items","name":"active","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether the action is active or not","types":[{"path":"/components/actions/action-list/sections/items/active/false","parentPath":"/components/actions/action-list/sections/items/active","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/active/true","parentPath":"/components/actions/action-list/sections/items/active","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/badge","parentPath":"/components/actions/action-list/sections/items","name":"badge","type":"{content: string, status: \"new\"}","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/content","parentPath":"/components/actions/action-list/sections/items","name":"content","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Content the action displays","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/destructive","parentPath":"/components/actions/action-list/sections/items","name":"destructive","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Destructive action","types":[{"path":"/components/actions/action-list/sections/items/destructive/false","parentPath":"/components/actions/action-list/sections/items/destructive","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/destructive/true","parentPath":"/components/actions/action-list/sections/items/destructive","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/disabled","parentPath":"/components/actions/action-list/sections/items","name":"disabled","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Whether or not the action is disabled","types":[{"path":"/components/actions/action-list/sections/items/disabled/false","parentPath":"/components/actions/action-list/sections/items/disabled","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/disabled/true","parentPath":"/components/actions/action-list/sections/items/disabled","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/ellipsis","parentPath":"/components/actions/action-list/sections/items","name":"ellipsis","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Add an ellipsis suffix to action content","types":[{"path":"/components/actions/action-list/sections/items/ellipsis/false","parentPath":"/components/actions/action-list/sections/items/ellipsis","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/ellipsis/true","parentPath":"/components/actions/action-list/sections/items/ellipsis","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/external","parentPath":"/components/actions/action-list/sections/items","name":"external","type":"boolean","kind":"boolean","mandatory":false,"tags":null,"description":"Forces url to open in a new tab","types":[{"path":"/components/actions/action-list/sections/items/external/false","parentPath":"/components/actions/action-list/sections/items/external","name":"false","type":"false","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/external/true","parentPath":"/components/actions/action-list/sections/items/external","name":"true","type":"true","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/helpText","parentPath":"/components/actions/action-list/sections/items","name":"helpText","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Additional hint text to display with item","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/icon","parentPath":"/components/actions/action-list/sections/items","name":"icon","type":"string | FunctionComponent","kind":"union","mandatory":false,"tags":null,"description":"Source of the icon","types":[{"path":"/components/actions/action-list/sections/items/icon/string","parentPath":"/components/actions/action-list/sections/items/icon","name":"string","type":"string","kind":"string","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/icon/FunctionComponent","parentPath":"/components/actions/action-list/sections/items/icon","name":"FunctionComponent","type":"FunctionComponent","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/id","parentPath":"/components/actions/action-list/sections/items","name":"id","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A unique identifier for the action","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/image","parentPath":"/components/actions/action-list/sections/items","name":"image","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Image source","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/role","parentPath":"/components/actions/action-list/sections/items","name":"role","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Defines a role for the action","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/target","parentPath":"/components/actions/action-list/sections/items","name":"target","type":"\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"","kind":"union","mandatory":false,"tags":[{"tag":"default","text":"'APP'","__typename":"Tag"},{"tag":"embeddedapponly","text":"\n","__typename":"Tag"}],"description":"Where to display the target link","types":[{"path":"/components/actions/action-list/sections/items/target/ADMIN_PATH","parentPath":"/components/actions/action-list/sections/items/target","name":"ADMIN_PATH","type":"\"ADMIN_PATH\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/target/REMOTE","parentPath":"/components/actions/action-list/sections/items/target","name":"REMOTE","type":"\"REMOTE\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/target/APP","parentPath":"/components/actions/action-list/sections/items/target","name":"APP","type":"\"APP\"","kind":"interface","mandatory":false,"tags":null,"description":"","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/url","parentPath":"/components/actions/action-list/sections/items","name":"url","type":"string","kind":"string","mandatory":false,"tags":null,"description":"A destination to link to, rendered in the action","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/onAction","parentPath":"/components/actions/action-list/sections/items","name":"onAction","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when an action takes place","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/onMouseEnter","parentPath":"/components/actions/action-list/sections/items","name":"onMouseEnter","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when mouse enter","types":null,"__typename":"Property"},{"path":"/components/actions/action-list/sections/items/onTouchStart","parentPath":"/components/actions/action-list/sections/items","name":"onTouchStart","type":"() => void","kind":"method","mandatory":false,"tags":null,"description":"Callback when element is touched","types":null,"__typename":"Property"}],"__typename":"Property"},{"path":"/components/actions/action-list/sections/title","parentPath":"/components/actions/action-list/sections","name":"title","type":"string","kind":"string","mandatory":false,"tags":null,"description":"Section title","returnType":null,"types":null,"__typename":"Property"}],"__typename":"Property"}]
+[
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Defines a specific role attribute for each action in the list",
+    "tags": null,
+    "mandatory": false,
+    "kind": "string",
+    "type": "string",
+    "name": "actionRole",
+    "parentPath": "/components/actions/action-list",
+    "path": "/components/actions/action-list/actionRole"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Visually hidden text for screen readers",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "accessibilityLabel",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/accessibilityLabel"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/action-list/items/active",
+            "path": "/components/actions/action-list/items/active/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/action-list/items/active",
+            "path": "/components/actions/action-list/items/active/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether the action is active or not",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "active",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/active"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "",
+        "tags": null,
+        "mandatory": false,
+        "kind": "interface",
+        "type": "{content: string, status: \"new\"}",
+        "name": "badge",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/badge"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Content the action displays",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "content",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/content"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/action-list/items/destructive",
+            "path": "/components/actions/action-list/items/destructive/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/action-list/items/destructive",
+            "path": "/components/actions/action-list/items/destructive/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Destructive action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "destructive",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/destructive"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/action-list/items/disabled",
+            "path": "/components/actions/action-list/items/disabled/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/action-list/items/disabled",
+            "path": "/components/actions/action-list/items/disabled/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Whether or not the action is disabled",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "disabled",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/disabled"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/action-list/items/ellipsis",
+            "path": "/components/actions/action-list/items/ellipsis/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/action-list/items/ellipsis",
+            "path": "/components/actions/action-list/items/ellipsis/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Add an ellipsis suffix to action content",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "ellipsis",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/ellipsis"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "false",
+            "name": "false",
+            "parentPath": "/components/actions/action-list/items/external",
+            "path": "/components/actions/action-list/items/external/false"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "true",
+            "name": "true",
+            "parentPath": "/components/actions/action-list/items/external",
+            "path": "/components/actions/action-list/items/external/true"
+          }
+        ],
+        "returnType": null,
+        "description": "Forces url to open in a new tab",
+        "tags": null,
+        "mandatory": false,
+        "kind": "boolean",
+        "type": "boolean",
+        "name": "external",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/external"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Additional hint text to display with item",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "helpText",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/helpText"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "string",
+            "parentPath": "/components/actions/action-list/items/icon",
+            "path": "/components/actions/action-list/items/icon/string"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "FunctionComponent",
+            "name": "FunctionComponent",
+            "parentPath": "/components/actions/action-list/items/icon",
+            "path": "/components/actions/action-list/items/icon/FunctionComponent"
+          }
+        ],
+        "returnType": null,
+        "description": "Source of the icon",
+        "tags": null,
+        "mandatory": false,
+        "kind": "union",
+        "type": "string | FunctionComponent",
+        "name": "icon",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/icon"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A unique identifier for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "id",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/id"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Image source",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "image",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/image"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Defines a role for the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "role",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/role"
+      },
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"ADMIN_PATH\"",
+            "name": "ADMIN_PATH",
+            "parentPath": "/components/actions/action-list/items/target",
+            "path": "/components/actions/action-list/items/target/ADMIN_PATH"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"REMOTE\"",
+            "name": "REMOTE",
+            "parentPath": "/components/actions/action-list/items/target",
+            "path": "/components/actions/action-list/items/target/REMOTE"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "\"APP\"",
+            "name": "APP",
+            "parentPath": "/components/actions/action-list/items/target",
+            "path": "/components/actions/action-list/items/target/APP"
+          }
+        ],
+        "returnType": null,
+        "description": "Where to display the target link",
+        "tags": [
+          {
+            "__typename": "Tag",
+            "text": "'APP'",
+            "tag": "default"
+          },
+          {
+            "__typename": "Tag",
+            "text": "\n",
+            "tag": "embeddedapponly"
+          }
+        ],
+        "mandatory": false,
+        "kind": "union",
+        "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+        "name": "target",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/target"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "A destination to link to, rendered in the action",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "url",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/url"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when an action takes place",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onAction",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/onAction"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when mouse enter",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onMouseEnter",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/onMouseEnter"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Callback when element is touched",
+        "tags": null,
+        "mandatory": false,
+        "kind": "method",
+        "type": "() => void",
+        "name": "onTouchStart",
+        "parentPath": "/components/actions/action-list/items",
+        "path": "/components/actions/action-list/items/onTouchStart"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Collection of actions for list",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "ActionListItemDescriptor[]",
+    "name": "items",
+    "parentPath": "/components/actions/action-list",
+    "path": "/components/actions/action-list/items"
+  },
+  {
+    "__typename": "Property",
+    "types": null,
+    "defaultValue": null,
+    "description": "Callback when any item is clicked or keypressed",
+    "tags": null,
+    "mandatory": false,
+    "kind": "interface",
+    "type": "onAction",
+    "name": "onActionAnyItem",
+    "parentPath": "/components/actions/action-list",
+    "path": "/components/actions/action-list/onActionAnyItem"
+  },
+  {
+    "__typename": "Property",
+    "types": [
+      {
+        "__typename": "Property",
+        "types": [
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Visually hidden text for screen readers",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "accessibilityLabel",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/accessibilityLabel"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/actions/action-list/sections/items/active",
+                "path": "/components/actions/action-list/sections/items/active/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/actions/action-list/sections/items/active",
+                "path": "/components/actions/action-list/sections/items/active/true"
+              }
+            ],
+            "description": "Whether the action is active or not",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "active",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/active"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "",
+            "tags": null,
+            "mandatory": false,
+            "kind": "interface",
+            "type": "{content: string, status: \"new\"}",
+            "name": "badge",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/badge"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Content the action displays",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "content",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/content"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/actions/action-list/sections/items/destructive",
+                "path": "/components/actions/action-list/sections/items/destructive/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/actions/action-list/sections/items/destructive",
+                "path": "/components/actions/action-list/sections/items/destructive/true"
+              }
+            ],
+            "description": "Destructive action",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "destructive",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/destructive"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/actions/action-list/sections/items/disabled",
+                "path": "/components/actions/action-list/sections/items/disabled/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/actions/action-list/sections/items/disabled",
+                "path": "/components/actions/action-list/sections/items/disabled/true"
+              }
+            ],
+            "description": "Whether or not the action is disabled",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "disabled",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/disabled"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/actions/action-list/sections/items/ellipsis",
+                "path": "/components/actions/action-list/sections/items/ellipsis/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/actions/action-list/sections/items/ellipsis",
+                "path": "/components/actions/action-list/sections/items/ellipsis/true"
+              }
+            ],
+            "description": "Add an ellipsis suffix to action content",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "ellipsis",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/ellipsis"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "false",
+                "name": "false",
+                "parentPath": "/components/actions/action-list/sections/items/external",
+                "path": "/components/actions/action-list/sections/items/external/false"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "true",
+                "name": "true",
+                "parentPath": "/components/actions/action-list/sections/items/external",
+                "path": "/components/actions/action-list/sections/items/external/true"
+              }
+            ],
+            "description": "Forces url to open in a new tab",
+            "tags": null,
+            "mandatory": false,
+            "kind": "boolean",
+            "type": "boolean",
+            "name": "external",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/external"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Additional hint text to display with item",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "helpText",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/helpText"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "string",
+                "type": "string",
+                "name": "string",
+                "parentPath": "/components/actions/action-list/sections/items/icon",
+                "path": "/components/actions/action-list/sections/items/icon/string"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "FunctionComponent",
+                "name": "FunctionComponent",
+                "parentPath": "/components/actions/action-list/sections/items/icon",
+                "path": "/components/actions/action-list/sections/items/icon/FunctionComponent"
+              }
+            ],
+            "description": "Source of the icon",
+            "tags": null,
+            "mandatory": false,
+            "kind": "union",
+            "type": "string | FunctionComponent",
+            "name": "icon",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/icon"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "A unique identifier for the action",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "id",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/id"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Image source",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "image",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/image"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Defines a role for the action",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "role",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/role"
+          },
+          {
+            "__typename": "Property",
+            "types": [
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "\"ADMIN_PATH\"",
+                "name": "ADMIN_PATH",
+                "parentPath": "/components/actions/action-list/sections/items/target",
+                "path": "/components/actions/action-list/sections/items/target/ADMIN_PATH"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "\"REMOTE\"",
+                "name": "REMOTE",
+                "parentPath": "/components/actions/action-list/sections/items/target",
+                "path": "/components/actions/action-list/sections/items/target/REMOTE"
+              },
+              {
+                "__typename": "Property",
+                "types": null,
+                "description": "",
+                "tags": null,
+                "mandatory": false,
+                "kind": "interface",
+                "type": "\"APP\"",
+                "name": "APP",
+                "parentPath": "/components/actions/action-list/sections/items/target",
+                "path": "/components/actions/action-list/sections/items/target/APP"
+              }
+            ],
+            "description": "Where to display the target link",
+            "tags": [
+              {
+                "__typename": "Tag",
+                "text": "'APP'",
+                "tag": "default"
+              },
+              {
+                "__typename": "Tag",
+                "text": "\n",
+                "tag": "embeddedapponly"
+              }
+            ],
+            "mandatory": false,
+            "kind": "union",
+            "type": "\"ADMIN_PATH\" | \"REMOTE\" | \"APP\"",
+            "name": "target",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/target"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "A destination to link to, rendered in the action",
+            "tags": null,
+            "mandatory": false,
+            "kind": "string",
+            "type": "string",
+            "name": "url",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/url"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Callback when an action takes place",
+            "tags": null,
+            "mandatory": false,
+            "kind": "method",
+            "type": "() => void",
+            "name": "onAction",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/onAction"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Callback when mouse enter",
+            "tags": null,
+            "mandatory": false,
+            "kind": "method",
+            "type": "() => void",
+            "name": "onMouseEnter",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/onMouseEnter"
+          },
+          {
+            "__typename": "Property",
+            "types": null,
+            "description": "Callback when element is touched",
+            "tags": null,
+            "mandatory": false,
+            "kind": "method",
+            "type": "() => void",
+            "name": "onTouchStart",
+            "parentPath": "/components/actions/action-list/sections/items",
+            "path": "/components/actions/action-list/sections/items/onTouchStart"
+          }
+        ],
+        "returnType": null,
+        "description": "Collection of action items for the list",
+        "tags": null,
+        "mandatory": true,
+        "kind": "array",
+        "type": "ActionListItemDescriptor[]",
+        "name": "items",
+        "parentPath": "/components/actions/action-list/sections",
+        "path": "/components/actions/action-list/sections/items"
+      },
+      {
+        "__typename": "Property",
+        "types": null,
+        "returnType": null,
+        "description": "Section title",
+        "tags": null,
+        "mandatory": false,
+        "kind": "string",
+        "type": "string",
+        "name": "title",
+        "parentPath": "/components/actions/action-list/sections",
+        "path": "/components/actions/action-list/sections/title"
+      }
+    ],
+    "defaultValue": null,
+    "description": "Collection of sectioned action items",
+    "tags": null,
+    "mandatory": false,
+    "kind": "array",
+    "type": "ActionListSection[]",
+    "name": "sections",
+    "parentPath": "/components/actions/action-list",
+    "path": "/components/actions/action-list/sections"
+  }
+]
