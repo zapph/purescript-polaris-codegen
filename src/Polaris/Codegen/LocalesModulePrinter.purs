@@ -22,7 +22,7 @@ printLocalesPSModule localeNames = lines
   , "  ( " <> exportNamesPart
   , "  ) where"
   , ""
-  , "import Polaris.Types (TranslationDictionary)"
+  , "import Polaris.Components.AppProvider (TranslationDictionary)"
   , ""
   , defParts
   , ""
