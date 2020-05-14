@@ -99,7 +99,7 @@ readModuleFilePaths { propsFilePath, extrasFilePath } = do
 
       os = extraPropsF os'
 
-  rawProps <- traverse readPropObject os'
+  rawProps <- traverse readPropObject os
 
   rightToF $ planModule {name, rawProps, rawSubComponents}
 
