@@ -34,7 +34,7 @@ type RawModule =
   }
 
 type ModuleExtras =
-  { props :: Maybe (Array (Object Foreign))
+  { rawProps :: Maybe (Array (Object Foreign))
   , rawSubComponents :: Maybe (Array RawComponent)
   }
 

@@ -94,7 +94,7 @@ readModuleFilePaths { propsFilePath, extrasFilePath } = do
   os' <- readPropObjects propsFilePath
 
   extra <- traverse readExtra extrasFilePath
-  let extraPropsF = foldMap applyExtras $ extra >>= _.props
+  let extraPropsF = foldMap applyExtras $ extra >>= _.rawProps
       rawSubComponents = fold $ extra >>= _.rawSubComponents
 
       os = extraPropsF os'
