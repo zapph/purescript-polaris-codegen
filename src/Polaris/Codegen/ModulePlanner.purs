@@ -5,7 +5,7 @@ module Polaris.Codegen.ModulePlanner
 import Prelude
 
 import Control.Monad.Except (lift)
-import Control.Monad.State (StateT, runStateT)
+import Control.Monad.State (StateT, get, put, runStateT, state)
 import Data.Array as Array
 import Data.Bifunctor (lmap)
 import Data.Either (Either)
@@ -60,20 +60,55 @@ type F a = StateT St (Either String) a
 
 readRawComponent :: RawComponent -> F { name :: String, props :: Array Prop }
 readRawComponent { name, rawProps } =
-  traverse readRawProp rawProps
-  <#> { name, props: _ }
+  (traverse readRawProp) rawProps <#> { name, props: _ }
 
 readRawProp :: RawProp -> F Prop
-readRawProp (RawProp r) = lift $ readTyp' r."type" <#> \typ ->
-  { name: r.name
-  , typ
-  , required: r.mandatory
-  , description: r.description
-  }
+readRawProp (RawProp r) = do
+  typ <- (lift $ readTyp' r."type") >>= fillInTypDef r.types
+  pure
+    { name: r.name
+    , typ
+    , required: r.mandatory
+    , description: r.description
+    }
 
   where
     readTyp' s = lmap (showParseError s) (runParser s (parseTyp <* eof))
     showParseError s e = "Given: " <> s <> ", Error: " <> show e
+
+fillInTypDef :: Maybe (Array RawProp) -> Typ -> F Typ
+fillInTypDef (Just rawProps) (TypRef name) =
+  (traverse readRawProp) rawProps >>= \props -> do
+    name' <- recordTypDef { name, typ: Just (toRecord props) }
+    pure $ TypRef name'
+  where
+    -- TODO add mandatory / required info
+    toRecord props =
+      TypRecord $ (\ { name: name', typ } ->
+                    { name: name', typ }) <$> props
+fillInTypDef Nothing (TypRef name) = do
+  name' <- recordTypDef { name, typ: Nothing }
+  pure $ TypRef name'
+fillInTypDef rp (TypArray tr@(TypRef _)) = do
+  -- for array types, the rawprops on the current node
+  tr' <- fillInTypDef rp tr
+  pure $ TypArray tr'
+fillInTypDef _ typ =
+  pure typ
+
+recordTypDef :: TypeDef -> F String
+recordTypDef { name, typ } = do
+  typDefMap <- get
+  case Map.lookup name typDefMap, typ of
+    Just { typ: Just t1 }, Just t2 ->
+      if t1 == t2
+      then pure name
+      else recordTypDef { name: name <> "'",  typ }
+    _, Just t2 -> do
+      put $ Map.insert name { name, typ } typDefMap
+      pure name
+    _, _ ->
+      pure name
 
 collectTypeDefs :: Array ComponentSpec -> Array TypeDef
 collectTypeDefs ms = toTypeDef <$> Set.toUnfoldable set

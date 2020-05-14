@@ -75,6 +75,8 @@ data Typ
   | TypRecord (Array { name :: String, typ :: Typ })
   | TypForeign -- for any type
 
+derive instance eqTyp :: Eq Typ
+
 derive instance typGeneric :: Generic Typ _
 instance typShow :: Show Typ where
   show x = genericShow x
