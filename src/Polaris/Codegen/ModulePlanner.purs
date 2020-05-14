@@ -5,7 +5,7 @@ module Polaris.Codegen.ModulePlanner
 import Prelude
 
 import Control.Monad.Except (lift)
-import Control.Monad.State (StateT, get, put, runStateT, state)
+import Control.Monad.State (StateT, get, put, runStateT)
 import Data.Array as Array
 import Data.Bifunctor (lmap)
 import Data.Either (Either)
@@ -77,18 +77,16 @@ readRawProp (RawProp r) = do
     showParseError s e = "Given: " <> s <> ", Error: " <> show e
 
 fillInTypDef :: Maybe (Array RawProp) -> Typ -> F Typ
-fillInTypDef (Just rawProps) (TypRef name) =
-  (traverse readRawProp) rawProps >>= \props -> do
-    name' <- recordTypDef { name, typ: Just (toRecord props) }
-    pure $ TypRef name'
+fillInTypDef rp (TypRef name) = do
+  props <- traverse (traverse readRawProp) rp
+  name' <- recordTypDef { name, typ: toRecord <$> props }
+  pure $ TypRef name'
+
   where
     -- TODO add mandatory / required info
     toRecord props =
       TypRecord $ (\ { name: name', typ } ->
                     { name: name', typ }) <$> props
-fillInTypDef Nothing (TypRef name) = do
-  name' <- recordTypDef { name, typ: Nothing }
-  pure $ TypRef name'
 fillInTypDef rp (TypArray tr) = do -- todo limit this only to @(TypRef _)?
   -- for array types, the rawprops on the current node
   tr' <- fillInTypDef rp tr
@@ -96,6 +94,10 @@ fillInTypDef rp (TypArray tr) = do -- todo limit this only to @(TypRef _)?
 fillInTypDef rp (TypUnion typs) =
   TypUnion <$> traverse fillInSubTypDef typs
   where
+
+    -- we don't yuse fillInTypDef here since
+    -- the typ is not always a record.
+    -- Ex: Spinner - NewDesignLanguageColor
     fillInSubTypDef typ@(TypRef name) = do
       typ' <- traverse (readRawProp) (findSubRp name) <#> map _.typ
       if typ' /= Just typ
@@ -105,6 +107,7 @@ fillInTypDef rp (TypUnion typs) =
 
     findSubRp name = rp
       >>= Array.find (\(RawProp p) -> p.name == name)
+
 fillInTypDef _ typ =
   pure typ
 
