@@ -104,10 +104,10 @@ recordTypDef { name, typ } = do
       if t1 == t2
       then pure name
       else recordTypDef { name: name <> "'",  typ }
-    _, Just t2 -> do
-      put $ Map.insert name { name, typ } typDefMap
+    Just { typ: Just t1 }, Nothing ->
       pure name
-    _, _ ->
+    _, _ -> do
+      put $ Map.insert name { name, typ } typDefMap
       pure name
 
 collectTypeDefs :: Array ComponentSpec -> Array TypeDef
