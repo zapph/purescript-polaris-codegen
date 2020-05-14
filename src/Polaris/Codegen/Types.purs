@@ -14,7 +14,7 @@ newtype RawProp =
   RawProp { name :: String
            , "type" :: String
            , mandatory :: Boolean
-           , description :: String
+           , description :: Maybe String
            , "types" :: Maybe (Array RawProp)
              --  , defaultValue :: Foreign
            }
@@ -57,7 +57,7 @@ type Prop =
   { name :: String
   , typ :: Typ
   , required :: Boolean
-  , description :: String
+  , description :: Maybe String
   }
 
 data Typ
@@ -72,7 +72,7 @@ data Typ
   | TypJSX
   | TypRef String
   | TypArray Typ
-  | TypRecord (Array { name :: String, typ :: Typ })
+  | TypRecord (Array Prop)
   | TypForeign -- for any type
 
 derive instance eqTyp :: Eq Typ

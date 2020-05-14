@@ -117,10 +117,9 @@ printTyp (TypBooleanLiteral b) = "BooleanLit \"" <> show b <> "\""
 printTyp (TypArray t) = "Array " <> printTypWrapped t
 printTyp (TypUnion ts) =
   Array.intercalate " |+| " $ printTypWrapped <$> (NonEmptyArray.toArray ts)
-printTyp (TypRecord rs) =
+printTyp (TypRecord props) =
   "{"
-  <> ( Array.intercalate ", "
-       $ (\ {name, typ} -> "\"" <> name <> "\" :: " <> printTyp typ <> "") <$> rs
+  <> ( Array.intercalate ", " $ printProp <$> props
      )
   <> "}"
 printTyp (TypRef ns) =

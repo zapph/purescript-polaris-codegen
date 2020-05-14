@@ -13,7 +13,7 @@ import Data.Char.Unicode (isAlpha, isAlphaNum, isLower)
 import Data.List as List
 import Data.Maybe (Maybe(..))
 import Data.String.CodeUnits as CodeUnits
-import Polaris.Codegen.Types (Typ(..))
+import Polaris.Codegen.Types (Typ(..), Prop)
 import Text.Parsing.Parser (Parser, fail)
 import Text.Parsing.Parser.Combinators (asErrorMessage, between, option, sepBy, sepBy1, try, (<?>))
 import Text.Parsing.Parser.String (noneOf, satisfy, string)
@@ -80,8 +80,17 @@ parseFnParamsPart :: P Typ -> P (Array Typ)
 parseFnParamsPart parseTyp' =
   map _.typ <$> (parseParamsPart "(" ")" parseTyp')
 
-parseRecordEntries :: P Typ -> P (Array { name :: String, typ :: Typ })
-parseRecordEntries = parseParamsPart "{" "}"
+parseRecordEntries :: P Typ -> P (Array Prop)
+parseRecordEntries parseTyp' =
+  map toProp <$> parseParamsPart "{" "}" parseTyp'
+
+  where
+    toProp { name, typ } =
+      { name
+      , typ
+      , required: false
+      , description: Nothing
+      }
 
 parseParamsPart
   :: String

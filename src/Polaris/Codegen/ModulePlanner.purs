@@ -79,14 +79,8 @@ readRawProp (RawProp r) = do
 fillInTypDef :: Maybe (Array RawProp) -> Typ -> F Typ
 fillInTypDef rp (TypRef name) = do
   props <- traverse (traverse readRawProp) rp
-  name' <- recordTypDef { name, typ: toRecord <$> props }
+  name' <- recordTypDef { name, typ: TypRecord <$> props }
   pure $ TypRef name'
-
-  where
-    -- TODO add mandatory / required info
-    toRecord props =
-      TypRecord $ (\ { name: name', typ } ->
-                    { name: name', typ }) <$> props
 fillInTypDef rp (TypArray tr) = do -- todo limit this only to @(TypRef _)?
   -- for array types, the rawprops on the current node
   tr' <- fillInTypDef rp tr
