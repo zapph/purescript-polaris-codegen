@@ -1,0 +1,54 @@
+{
+  "rawSubComponents": [
+    {
+      "name": "AnnotatedSection",
+      "rawProps": [
+        {
+          "name": "children",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        },
+        {
+          "name": "title",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        },
+        {
+          "name": "description",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        }
+      ]
+    },
+    {
+      "name": "Section",
+      "rawProps": [
+        {
+          "name": "children",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        },
+        {
+          "name": "secondary",
+          "mandatory": false,
+          "type": "boolean"
+        },
+        {
+          "name": "fullWidth",
+          "mandatory": false,
+          "type": "boolean"
+        },
+        {
+          "name": "oneHalf",
+          "mandatory": false,
+          "type": "boolean"
+        },
+        {
+          "name": "oneThird",
+          "mandatory": false,
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}
