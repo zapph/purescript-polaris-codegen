@@ -1,0 +1,39 @@
+{
+  "rawSubComponents": [
+    {
+      "name": "Group",
+      "rawProps": [
+        {
+          "name": "children",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        },
+        {
+          "name": "condensed",
+          "mandatory": false,
+          "type": "boolean"
+        },
+        {
+          "name": "title",
+          "mandatory": false,
+          "type": "string"
+        },
+        {
+          "name": "helpText",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "rawProps": [
+        {
+          "name": "children",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        }
+      ]
+    }
+  ]
+}
