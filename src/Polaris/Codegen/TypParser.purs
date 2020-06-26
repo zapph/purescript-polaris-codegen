@@ -37,6 +37,8 @@ parseTyp = fix \p -> do
       <|> (TypForeign <$ string "any")
       <|> (TypUnit <$ string "void")
       <|> (TypJSX <$ string "React.ReactNode")
+      <|> (TypJSX <$ string "React.ReactElement")
+      <|> (TypJSX <$ string "ReactElement")
       <|> (TypBooleanLiteral true <$ string "true")
       <|> (TypBooleanLiteral false <$ string "false")
       <|> (TypStringLiteral <$> parseStringLiteral)
