@@ -6,16 +6,18 @@ import Prelude
 
 import Data.Array as Array
 import Data.Array.NonEmpty as NonEmptyArray
-import Data.Foldable (foldMap)
-import Data.Maybe (Maybe(..))
+import Data.Char.Unicode (isLetter)
+import Data.Foldable (foldMap, intercalate)
+import Data.Maybe (Maybe(..), fromMaybe)
+import Data.String.CodeUnits (charAt)
 import Data.String.Extra (camelCase)
 import Data.Tuple (Tuple(..))
 import Polaris.Codegen.PrinterUtils (lines, printRefName, printRefNameConstructor)
-import Polaris.Codegen.Types (ComponentSpec, Module, PSJSContent, Prop, Typ(..), TypeDef)
+import Polaris.Codegen.Types (ComponentSpec, Module, PSImport(..), PSImportEntry(..), PSJSContent, Prop, Typ(..), TypeDef)
 
 printModule :: Module -> PSJSContent
-printModule { name, typeDefs, specs } =
-  { psContent: printPSContent { name, exports, psCodes }
+printModule { name, psImports, typeDefs, specs } =
+  { psContent: printPSContent { name, exports, imports, psCodes }
   , jsContent: printJSContent jsCodes
   }
 
@@ -26,31 +28,30 @@ printModule { name, typeDefs, specs } =
     (Tuple typeDefExports typeDefsCode) = foldMap printTypeDef' typeDefs
 
     exports = typeDefExports <> foldMap _.exports codes
+    imports = printImport <$> psImports
+
     psCodes = Array.cons typeDefsCode (_.psCode <$> codes)
     jsCodes = _.jsCode <$> codes
 
-printPSContent
-  :: { name :: String, exports :: Array String, psCodes :: Array String }
-     -> String
-printPSContent { name, exports, psCodes } = lines
+printPSContent ::
+  { name :: String
+  , imports :: Array String
+  , exports :: Array String
+  , psCodes :: Array String
+  } ->
+  String
+printPSContent { name, exports, imports, psCodes } = lines
   [ "module Polaris.Components." <> name
   , "  ( " <> exportsPart
   , "  ) where"
   , ""
-  , "import Prelude"
-  , ""
-  , "import Effect"
-  , "import Effect.Uncurried"
-  , "import Foreign"
-  , "import Literals"
-  , "import React.Basic.Hooks"
-  , "import Untagged.Coercible"
-  , "import Untagged.Union"
+  , importsPart
   , ""
   , psCodesPart
   ]
   where
     exportsPart = Array.intercalate "\n  , " exports
+    importsPart = lines imports
     psCodesPart = lines psCodes
 
 printJSContent :: Array String -> String
@@ -182,3 +183,25 @@ printTypeDefRecord { refName, consName } props =
   where
     propsContent =
       Array.intercalate "\n  , " $ printProp <$> props
+
+printImport ::
+  PSImport ->
+  String
+printImport PSIPrelude = "import Prelude"
+printImport (PSIModule name entries) =
+  "import " <> name <> " (" <> (intercalate ", " $ printImportEntry <$> entries) <> ")"
+
+printImportEntry :: PSImportEntry -> String
+printImportEntry (PSIEClass n) = "class " <> n
+printImportEntry (PSIEType n) =
+  if isSymbolicName n
+  then "type (" <> n <> ")"
+  else n
+printImportEntry (PSIEFn n) =
+  if isSymbolicName n
+  then "(" <> n <> ")"
+  else n
+
+isSymbolicName :: String -> Boolean
+isSymbolicName n =
+  fromMaybe false (not <<< isLetter <$> charAt 0 n)

@@ -5,20 +5,20 @@ module Polaris.Codegen.ModulePlanner
 import Prelude
 
 import Control.Monad.Except (lift)
-import Control.Monad.State (StateT, get, put, runStateT)
+import Control.Monad.State (StateT, get, modify_, runStateT)
 import Data.Array as Array
 import Data.Bifunctor (lmap)
 import Data.Either (Either)
-import Data.Foldable (foldr)
+import Data.Foldable (foldl, foldr)
 import Data.Map (Map)
 import Data.Map as Map
-import Data.Maybe (Maybe(..))
+import Data.Maybe (Maybe(..), fromMaybe)
 import Data.Set (Set)
 import Data.Set as Set
 import Data.Traversable (traverse)
 import Data.Tuple (uncurry)
 import Polaris.Codegen.TypParser (parseTyp)
-import Polaris.Codegen.Types (ComponentSpec, Module, Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
+import Polaris.Codegen.Types (ComponentSpec, Module, PSImport(..), PSImportEntry(..), Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
 
@@ -28,7 +28,7 @@ planModule
      , rawSubComponents :: Array RawComponent
      }
      -> Either String Module
-planModule { name, rawProps, rawSubComponents } = uncurry mkModule <$> runStateT plan Map.empty
+planModule { name, rawProps, rawSubComponents } = uncurry mkModule <$> runStateT plan { importPrelude: false, imports: Map.empty, typeDefMap: Map.empty }
   where
     plan = do
       mainSpec <- readRawComponent' mainToNamePath { name, rawProps }
@@ -49,21 +49,49 @@ planModule { name, rawProps, rawSubComponents } = uncurry mkModule <$> runStateT
     mainToNamePath = Array.singleton
     subToNamePath n = [ name, n ]
 
-    mkModule { name: n, specs } typeDefMap =
+    mkModule { name: n, specs } { typeDefMap, importPrelude, imports } =
       { name: n
+      , psImports:
+        (if importPrelude then [ PSIPrelude ] else [])
+        <> (uncurry toPSIModule <$> Map.toUnfoldable imports)
+
       , specs
       , typeDefs: Array.fromFoldable $ Map.values typeDefMap
       }
 
-type St = Map String TypeDef
+    toPSIModule n es = PSIModule n (Set.toUnfoldable es)
+
+type St =
+  { importPrelude :: Boolean
+  , imports :: Map String (Set PSImportEntry)
+  , typeDefMap :: Map String TypeDef
+  }
 type F a = StateT St (Either String) a
 
 readRawComponent :: RawComponent -> F { name :: String, props :: Array Prop }
-readRawComponent { name, rawProps } =
+readRawComponent { name, rawProps } = do
+  addComponentImports
   (traverse readRawProp) rawProps <#> { name, props: _ }
+
+  where
+    addComponentImports = do
+      addPreludeImport
+      addImport
+        "React.Basic.Hooks"
+        [ PSIEType "JSX"
+        , PSIEType "ReactComponent"
+        , PSIEFn "element"
+        ]
+      addImport
+        "Untagged.Coercible"
+        [ PSIEClass "Coercible"
+        , PSIEFn "coerce"
+        ]
+
 
 readRawProp :: RawProp -> F Prop
 readRawProp (RawProp r) = do
+  unless r.mandatory importUndefinedOr
   typ <- (lift $ readTyp' r."type") >>= fillInTypDef r.types
   pure
     { name: r.name
@@ -76,6 +104,9 @@ readRawProp (RawProp r) = do
     readTyp' s = lmap (showParseError s) (runParser s (parseTyp <* eof))
     showParseError s e = "Given: " <> s <> ", Error: " <> show e
 
+    importUndefinedOr =
+      addImport "Untagged.Union" [ PSIEType "UndefinedOr" ]
+
 fillInTypDef :: Maybe (Array RawProp) -> Typ -> F Typ
 fillInTypDef rp (TypRef name) = do
   props <- traverse (traverse readRawProp) rp
@@ -85,14 +116,29 @@ fillInTypDef rp (TypArray tr) = do -- todo limit this only to @(TypRef _)?
   -- for array types, the rawprops on the current node
   tr' <- fillInTypDef rp tr
   pure $ TypArray tr'
-fillInTypDef rp (TypUnion typs) =
+fillInTypDef rp (TypUnion typs) = do
+  addImport "Untagged.Union" [ PSIEType "|+|" ]
   TypUnion <$> traverse (fillInSubTypDef rp) typs
-fillInTypDef rp (TypFn { params, out } ) = do
+fillInTypDef rp (TypFn { params, out }) = do
+  addFnImport
   params' <- traverse (fillInSubTypDef rp) params
   out' <- fillInSubTypDef rp out
   pure $ TypFn { params, out }
+
+  where
+    addFnImport = case Array.length params of
+      0 -> addImport "Effect" [ PSIEType "Effect" ]
+      n -> addImport "Effect.Uncurried" [ PSIEType $ "EffectFn" <> show n ]
+fillInTypDef _ t@(TypStringLiteral _) = do
+  addImport "Literals" [ PSIEType "StringLit" ] $> t
+fillInTypDef _ t@(TypBooleanLiteral _) = do
+  addImport "Literals" [ PSIEType "BooleanLit" ] $> t
+fillInTypDef _ t@TypJSX = do
+  addImport "React.Basic.Hooks" [ PSIEType "JSX" ] $> t
+fillInTypDef _ t@TypForeign = do
+  addImport "Foreign" [ PSIEType "Foreign" ] $> t
 fillInTypDef _ typ =
-  pure typ
+  addPreludeImport $> typ
 
 fillInSubTypDef :: Maybe (Array RawProp) -> Typ -> F Typ
 fillInSubTypDef rp typ@(TypRef name) = do
@@ -107,10 +153,9 @@ fillInSubTypDef rp typ@(TypRef name) = do
 fillInSubTypDef _ t =
   fillInTypDef Nothing t
 
-
 recordTypDef :: TypeDef -> F String
 recordTypDef { name, typ } = do
-  typDefMap <- get
+  typDefMap <- _.typeDefMap <$> get
   case Map.lookup name typDefMap, typ of
     Just { typ: Just t1 }, Just t2 ->
       if t1 == t2
@@ -119,7 +164,7 @@ recordTypDef { name, typ } = do
     Just { typ: Just t1 }, Nothing ->
       pure name
     _, _ -> do
-      put $ Map.insert name { name, typ } typDefMap
+      modify_ (_ { typeDefMap = Map.insert name { name, typ } typDefMap })
       pure name
 
 collectTypeDefs :: Array ComponentSpec -> Array TypeDef
@@ -137,3 +182,15 @@ collectTypeDefs ms = toTypeDef <$> Set.toUnfoldable set
     collectFromTyp _ s = s
 
     toTypeDef name = { name, typ: Nothing }
+
+addImport :: String -> Array PSImportEntry -> F Unit
+addImport moduleName entries =
+  modify_ (\s -> s { imports = Map.alter alter moduleName s.imports })
+  where
+    alter = Just
+      <<< (\b -> foldl (\m a -> Set.insert a m) b entries)
+      <<< fromMaybe Set.empty
+
+addPreludeImport ::  F Unit
+addPreludeImport =
+  modify_ (_ { importPrelude = true })

@@ -40,8 +40,24 @@ type ModuleExtras =
 
 --  {"type":"string","kind":"string","mandatory":false,"tags":null,"description":"Space separated list of character encodings","defaultValue":null,"types":null,"__typename":"Property"}
 
+data PSImport =
+  PSIPrelude
+  | PSIModule String (Array PSImportEntry)
+
+derive instance psiEq :: Eq PSImport
+derive instance psiOrd :: Ord PSImport
+
+data PSImportEntry =
+  PSIEClass String
+  | PSIEType String
+  | PSIEFn String
+
+derive instance psieEq :: Eq PSImportEntry
+derive instance psieOrd :: Ord PSImportEntry
+
 type Module =
   { name :: String
+  , psImports :: Array PSImport
   , typeDefs :: Array TypeDef
   , specs :: Array ComponentSpec
   }
