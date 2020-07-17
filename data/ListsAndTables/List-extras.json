@@ -1,0 +1,14 @@
+{
+  "rawSubComponents": [
+    {
+      "name": "Item",
+      "rawProps": [
+        {
+          "name": "children",
+          "mandatory": false,
+          "type": "React.ReactNode"
+        }
+      ]
+    }
+  ]
+}
