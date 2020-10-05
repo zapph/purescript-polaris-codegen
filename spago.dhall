@@ -7,6 +7,7 @@
   , "generics-rep"
   , "node-fs-aff"
   , "parsing"
+  , "ps-cst"
   , "simple-json"
   , "string-extra"
   , "psci-support"
