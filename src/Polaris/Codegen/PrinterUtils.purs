@@ -2,6 +2,7 @@ module Polaris.Codegen.PrinterUtils
        ( printRefName
        , printRefNameConstructor
        , lines
+       , printCST
        ) where
 
 import Prelude
@@ -11,8 +12,11 @@ import Data.Maybe (fromMaybe)
 import Data.String (Pattern(..), Replacement(..))
 import Data.String as String
 import Data.String.Extra (camelCase, pascalCase)
+import Dodo as Dodo
 import Foreign.Object (Object)
 import Foreign.Object as Object
+import Language.PS.SmartCST (Module)
+import Language.PS.SmartCST as SmartCST
 
 printRefName :: String -> String
 printRefName rawName = fromMaybe name (Object.lookup rawName replacements)
@@ -32,3 +36,8 @@ replacements :: Object String
 replacements = Object.fromHomogeneous
   { "Array": "PArray"
   }
+
+printCST :: Module -> String
+printCST =
+  Dodo.print Dodo.plainText Dodo.twoSpaces
+  <<< SmartCST.printModule

@@ -5,9 +5,14 @@ module Polaris.Codegen.LocalesModulePrinter
 import Prelude
 
 import Data.Array as Array
+import Data.Array.NonEmpty (singleton, (:))
+import Data.Array.NonEmpty as NEArray
+import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), Replacement(..))
 import Data.String as String
-import Polaris.Codegen.PrinterUtils (lines)
+import Language.PS.CST (Export(..))
+import Language.PS.SmartCST (Declaration(..), Foreign(..), Ident(..), Module(..), ModuleName(..), ProperName(..), SmartQualifiedName(..), Type(..), mkModuleName)
+import Polaris.Codegen.PrinterUtils (lines, printCST)
 import Polaris.Codegen.Types (PSJSContent)
 
 printLocalesModule :: Array String -> PSJSContent
@@ -17,27 +22,27 @@ printLocalesModule localeNames =
   }
 
 printLocalesPSModule :: Array String -> String
-printLocalesPSModule localeNames = lines
-  [ "module Polaris.Locales"
-  , "  ( " <> exportNamesPart
-  , "  ) where"
-  , ""
-  , "import Polaris.Components.AppProvider (TranslationDictionary)"
-  , ""
-  , defParts
-  , ""
-  ]
-
+printLocalesPSModule localeNames = printCST $ Module
+  { moduleName: mkModuleName $ NEArray.cons' "Polaris" [ "Locales" ]
+  , exports: ExportValue <<< Ident <$> psLocaleNames
+  , declarations: foreignImportDict <$> psLocaleNames
+  }
   where
-    names = psLocaleName <$> localeNames
+    psLocaleNames = psLocaleName <$> localeNames
 
-    exportNamesPart = Array.intercalate "\n  , " names
-    defParts = Array.intercalate "\n" $ printForeignDef <$> names
-
-    printForeignDef :: String -> String
-    printForeignDef psLocaleName' = lines
-      [ "foreign import  " <> psLocaleName' <> " :: TranslationDictionary"
-      ]
+    foreignImportDict name = DeclForeign
+      { comments: Nothing
+      , foreign_: ForeignValue
+        { ident: Ident name
+        , type_: (TypeConstructor $ SmartQualifiedName__Simple
+                  (ModuleName $
+                   (ProperName "Polaris")
+                   : (ProperName "Components")
+                   : singleton (ProperName "AppProvider"))
+                  (ProperName "TranslationDictionary")
+                 )
+        }
+      }
 
 printLocalesJSModule :: Array String -> String
 printLocalesJSModule localeNames =
