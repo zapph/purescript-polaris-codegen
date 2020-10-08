@@ -17,6 +17,7 @@ import Data.Set (Set)
 import Data.Set as Set
 import Data.Traversable (traverse)
 import Data.Tuple (uncurry)
+import Polaris.Codegen.PrinterUtils (isCommonType)
 import Polaris.Codegen.TypParser (parseTyp)
 import Polaris.Codegen.Types (ComponentSpec, Module, PSImport(..), PSImportEntry(..), Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
 import Text.Parsing.Parser (runParser)
@@ -108,15 +109,14 @@ readRawProp (RawProp r) = do
       addImport "Untagged.Union" [ PSIEType "UndefinedOr" ]
 
 fillInTypDef :: Maybe (Array RawProp) -> Typ -> F Typ
+fillInTypDef _ (TypRef name) | isCommonType name = do
+  addImport "Polaris.Types" [ PSIEType name ]
+  pure $ TypRef name
 fillInTypDef (Just rp) (TypRef name) = do
   props <- traverse readRawProp rp
   TypRef <$> recordTypDef { name, typ: Just $ TypRecord props }
-fillInTypDef Nothing (TypRef name)
-  | isCommonType name = do
-    addImport "Polaris.Types" [ PSIEType name ]
-    pure $ TypRef name
-  | otherwise =
-    TypRef <$> recordTypDef { name, typ: Nothing }
+fillInTypDef Nothing (TypRef name) =
+  TypRef <$> recordTypDef { name, typ: Nothing }
 fillInTypDef rp (TypArray tr) = do -- todo limit this only to @(TypRef _)?
   -- for array types, the rawprops on the current node
   tr' <- fillInTypDef rp tr
@@ -199,7 +199,3 @@ addImport moduleName entries =
 addPreludeImport ::  F Unit
 addPreludeImport =
   modify_ (_ { importPrelude = true })
-
-isCommonType :: String -> Boolean
-isCommonType "Action" = true
-isCommonType _ = false

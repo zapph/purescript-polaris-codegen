@@ -12,7 +12,7 @@ import Data.String (Pattern(..), Replacement(..))
 import Data.String as String
 import Language.PS.CST (Export(..))
 import Language.PS.SmartCST (Declaration(..), Foreign(..), Ident(..), Module(..), ModuleName(..), ProperName(..), SmartQualifiedName(..), Type(..), mkModuleName)
-import Polaris.Codegen.PrinterUtils (lines, printCST)
+import Polaris.Codegen.PrinterUtils (printCST)
 import Polaris.Codegen.Types (PSJSContent)
 
 printLocalesModule :: Array String -> PSJSContent

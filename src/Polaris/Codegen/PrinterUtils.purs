@@ -2,6 +2,7 @@ module Polaris.Codegen.PrinterUtils
        ( printRefName
        , printRefNameConstructor
        , lines
+       , isCommonType
        , printCST
        ) where
 
@@ -36,6 +37,10 @@ replacements :: Object String
 replacements = Object.fromHomogeneous
   { "Array": "PArray"
   }
+
+isCommonType :: String -> Boolean
+isCommonType "Action" = true
+isCommonType _ = false
 
 printCST :: Module -> String
 printCST =
