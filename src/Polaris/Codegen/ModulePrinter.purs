@@ -8,47 +8,39 @@ import Data.Array (length)
 import Data.Array as Array
 import Data.Array.NonEmpty (singleton, (:))
 import Data.Array.NonEmpty as NEArray
-import Data.Foldable (fold, foldl)
+import Data.Either (Either)
+import Data.Foldable (foldl, traverse_)
 import Data.Maybe (Maybe(..))
 import Data.String.Extra (camelCase)
 import Data.Tuple.Nested ((/\))
-import Language.PS.CST (Export(..))
-import Language.PS.SmartCST (Constraint(..), DataHead(..), Declaration(..), Expr(..), Foreign(..), Guarded(..), Ident(..), Kind(..), ModuleName(..), OpName(..), ProperName(..), SmartQualifiedName(..), Type(..), TypeVarBinding(..), arrayType, booleanType, mkModuleName, mkRowLabels, numberType, stringType, (====>>))
-import Language.PS.SmartCST as SmartCST
+import Language.PS.CST (Export)
+import Language.PS.SmartCST (Constraint(..), Declaration, Expr(..), Ident(..), Kind(..), ModuleName(..), OpName(..), ProperName(..), SmartQualifiedName(..), Type(..), TypeVarBinding(..), arrayType, booleanType, mkModuleName, mkRowLabels, numberType, stringType, (====>>))
+import Polaris.Codegen.CSTSimple (CodegenError, ModuleBuilder, declareForeignData, declareForeignValue, declareType, declareValue, export_, mkModule)
 import Polaris.Codegen.PrinterUtils (isCommonType, lines, printCST, printRefName, printRefNameConstructor)
 import Polaris.Codegen.Types (ComponentSpec, Module, PSJSContent, Typ(..), TypeDef)
 
-printModule :: Module -> PSJSContent
-printModule { name, psImports, typeDefs, specs } =
-  { psContent: printPSContent { name, exports, psDecls }
-  , jsContent: printJSContent codeJsCodes
-  }
+printModule :: Module -> Either CodegenError PSJSContent
+printModule { name, psImports, typeDefs, specs } = do
+  psContent <- printPSContent name mb
+  pure
+    { psContent
+    , jsContent: printJSContent codeJsCodes
+    }
 
   where
-    codes = mkComponentCode <$> specs
-    codeExports = fold $ _.exports <$> codes
-    codePsDecls = fold $ _.psDecls <$> codes
-    codeJsCodes = _.jsCode <$> codes
+    mb = do
+      traverse_ mkComponentCode specs
+      traverse_ mkTypeDef typeDefs
 
-    defs = printTypeDef <$> typeDefs
-    defExports = fold $ _.exports <$> defs
-    defPsDecls = fold $ _.decls <$> defs
-
-    exports = codeExports <> defExports
-    psDecls = codePsDecls <> defPsDecls
+    -- TODO integreate this back to ModuleBuilder
+    codeJsCodes = mkJSCode <$> specs
 
 printPSContent ::
-  { name :: String
-  , exports :: Array Export
-  , psDecls :: Array Declaration
-  } ->
-  String
-printPSContent { name, exports, psDecls } =
-  printCST $ SmartCST.Module
-  { moduleName: mkModuleName $ "Polaris" : "Components" : singleton name
-  , exports
-  , declarations: psDecls
-  }
+  String ->
+  ModuleBuilder Unit ->
+  Either CodegenError String
+printPSContent name mb =
+  printCST <$> mkModule ("Polaris.Components." <> name) mb
 
 printJSContent :: Array String -> String
 printJSContent jsCodes =
@@ -57,29 +49,30 @@ printJSContent jsCodes =
 type ComponentCode =
   { exports :: Array Export
   , psDecls :: Array Declaration
-  , jsCode :: String
   }
 
-mkComponentCode :: ComponentSpec -> ComponentCode
-mkComponentCode { namePath, props } =
-  { exports:
-    [ propsExport
-    , elExport
-    , rcExport
-    ]
-  , psDecls:
-    [ propsDecl
-    , elDeclSignature
-    , elDeclValue
-    , rcDecl
-    ]
-  , jsCode:
-    "exports."
+mkJSCode :: ComponentSpec -> String
+mkJSCode { namePath, props } =
+  "exports."
     <> rcFnName
     <> " = require(\"@shopify/polaris\")."
     <> jsPath
     <> ";"
-  }
+
+  where
+    -- todo remove these duplicates
+    name = Array.fold namePath
+    elFnName = camelCase name
+    rcFnName = elFnName <> "RC"
+
+    jsPath = Array.intercalate "." namePath
+
+mkComponentCode :: ComponentSpec -> ModuleBuilder Unit
+mkComponentCode { namePath, props } = do
+  export_ =<< declareType propsName (toType (TypRecord props))
+  export_ =<< declareValue elFnName elDeclType elDeclExpr
+  export_ =<< declareForeignValue rcFnName rcType
+
   where
     name = Array.fold namePath
 
@@ -87,76 +80,42 @@ mkComponentCode { namePath, props } =
     elFnName = camelCase name
     rcFnName = elFnName <> "RC"
 
-    propsExport = ExportType (ProperName propsName) Nothing
-    elExport = ExportValue (Ident elFnName)
-    rcExport = ExportValue (Ident rcFnName)
-
-    propsDecl = DeclType
-      { comments: Nothing
-      , head: DataHead
-        { dataHdName: ProperName propsName
-        , dataHdVars: []
-        }
-      , type_: toType (TypRecord props)
-      }
-
-    -- <elFnName> :: forall r. Coercible r <propsName> => r -> JSX
-    elDeclSignature = DeclSignature
-      { comments: Nothing
-      , ident: Ident elFnName
-      , type_: TypeForall (singleton (TypeVarName (Ident "r")))
-        ( TypeConstrained
-          ( Constraint
-            { className: SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (ProperName "Coercible")
-            , args: [ TypeVar (Ident "r")
-                    , TypeConstructor (SmartQualifiedName__Ignore (ProperName propsName))
-                    ]
-            }
-          )
-          ((TypeVar (Ident "r")
-            ====>>
-            ( TypeConstructor (SmartQualifiedName__Simple (mkModuleName $ "React" : "Basic" : singleton "Hooks") (ProperName "JSX"))
-            )
-          ))
-        )
-      }
-
-    -- <elFnName> = element <rcFnName> <<< coerce
-    elDeclValue = DeclValue
-      { comments: Nothing
-      , valueBindingFields:
-        { name: Ident elFnName
-        , binders: []
-        , guarded: Unconditional
-          { whereBindings: []
-          , expr: ExprOp
-            (ExprApp
-             (ExprIdent
-              (SmartQualifiedName__Simple (mkModuleName $ "React" : "Basic" : singleton "Hooks") (Ident "element"))
-             )
-             (ExprIdent (SmartQualifiedName__Ignore (Ident rcFnName)))
-            )
-            (SmartQualifiedName__Simple (mkModuleName $ singleton "Prelude") (OpName "<<<"))
-            (ExprIdent (SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (Ident "coerce")))
+    elDeclType =
+      TypeForall (singleton (TypeVarName (Ident "r")))
+      ( TypeConstrained
+        ( Constraint
+          { className: SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (ProperName "Coercible")
+          , args: [ TypeVar (Ident "r")
+                  , TypeConstructor (SmartQualifiedName__Ignore (ProperName propsName))
+                  ]
           }
-        }
-      }
-
-    rcDecl = DeclForeign
-      { comments: Nothing
-      , foreign_: ForeignValue
-        { ident: Ident rcFnName
-        , type_: TypeApp
-          ( TypeConstructor
-            (SmartQualifiedName__Simple (mkModuleName $ "React" : "Basic" : singleton "Hooks") (ProperName "ReactComponent"))
+        )
+        ((TypeVar (Ident "r")
+          ====>>
+          ( TypeConstructor (SmartQualifiedName__Simple (mkModuleName $ "React" : "Basic" : singleton "Hooks") (ProperName "JSX"))
           )
-          ( TypeConstructor
-            (SmartQualifiedName__Ignore (ProperName propsName))
-          )
-        }
-      }
+         ))
+      )
 
-    jsPath = Array.intercalate "." namePath
+    elDeclExpr =
+      ExprOp
+      (ExprApp
+       (ExprIdent
+        (SmartQualifiedName__Simple (mkModuleName $ "React" : "Basic" : singleton "Hooks") (Ident "element"))
+       )
+       (ExprIdent (SmartQualifiedName__Ignore (Ident rcFnName)))
+      )
+      (SmartQualifiedName__Simple (mkModuleName $ singleton "Prelude") (OpName "<<<"))
+      (ExprIdent (SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (Ident "coerce")))
+
+    rcType =
+      TypeApp
+      ( TypeConstructor
+        (SmartQualifiedName__Simple (mkModuleName $ "React" : "Basic" : singleton "Hooks") (ProperName "ReactComponent"))
+      )
+      ( TypeConstructor
+        (SmartQualifiedName__Ignore (ProperName propsName))
+      )
 
 toType' :: Boolean -> Typ -> Type
 toType' false typ =
@@ -244,92 +203,38 @@ toType (TypFn { params, out }) =
 
     consParams = Array.snoc params out
 
-printTypeDef
-  :: TypeDef
-     -> { decls :: Array Declaration
-        , exports :: Array Export
-        }
-printTypeDef { name, typ } =
+mkTypeDef :: TypeDef -> ModuleBuilder Unit
+mkTypeDef { name, typ } =
   case typ of
-    Just t@(TypRecord props) ->
+    Just t@(TypRecord props) -> do
       -- type <refName> = { ... }
+      export_ =<< declareType refName (toType t)
+
       -- <consName> :: forall r. Coercible r <refName> => r -> <refName>
       -- <consName> = coerce
-      { decls:
-        [ typeDecl t
+      export_ =<< declareValue consName
+        (TypeForall (singleton (TypeVarName (Ident "r"))) $
+         TypeConstrained
+         ( Constraint
+           { className: SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (ProperName "Coercible")
+           , args: [ TypeVar (Ident "r")
+                   , TypeConstructor (SmartQualifiedName__Ignore (ProperName refName))
+                   ]
+           }
+         )
+         ((TypeVar (Ident "r"))
+          ====>> (TypeConstructor (SmartQualifiedName__Ignore (ProperName refName)))
+         )
+        )
+        ( ExprIdent (SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (Ident "coerce"))
+        )
 
-         -- <consName> :: forall r. Coercible r <refName> => r -> <refName>
+    Just t -> do
+      export_ =<< declareType refName (toType t)
+    Nothing -> do
+      export_ =<< declareForeignData refName (KindName (SmartQualifiedName__Ignore (ProperName "Type")))
+      pure unit
 
-        , DeclSignature
-          { comments: Nothing
-          , ident: Ident consName
-          , type_: TypeForall (singleton (TypeVarName (Ident "r"))) $
-            TypeConstrained
-            ( Constraint
-              { className: SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (ProperName "Coercible")
-              , args: [ TypeVar (Ident "r")
-                      , TypeConstructor (SmartQualifiedName__Ignore (ProperName refName))
-                      ]
-              }
-            )
-            ((TypeVar (Ident "r"))
-             ====>> (TypeConstructor (SmartQualifiedName__Ignore (ProperName refName)))
-            )
-          }
-
-        , DeclValue
-          { comments: Nothing
-          , valueBindingFields:
-            { name: Ident consName
-            , binders: []
-            , guarded: Unconditional
-              { whereBindings: []
-              , expr: ExprIdent (SmartQualifiedName__Simple (mkModuleName $ "Untagged" : singleton "Coercible") (Ident "coerce"))
-              }
-            }
-          }
-        ]
-      , exports: [ typeExport, consExport ]
-      }
-    Just t ->
-      -- type <refName> = <type>
-      { decls:
-        [ typeDecl t
-        ]
-      , exports: [ typeExport ]
-      }
-    Nothing ->
-      -- foreign import data <refName> " :: Type
-      { decls:
-        [ DeclForeign
-          { comments: Nothing
-          , foreign_: ForeignData
-            { name: ProperName refName
-            , kind_: KindName (SmartQualifiedName__Ignore (ProperName "Type"))
-            }
-          }
-        ]
-      , exports: [ typeExport ]
-      }
   where
     refName = printRefName name
     consName = printRefNameConstructor name
-
-    typeExport = ExportType (ProperName refName) Nothing
-    consExport = ExportValue (Ident consName)
-
-    typeDecl t =
-      DeclType
-      { comments: Nothing
-      , head: DataHead
-        { dataHdName: ProperName refName
-        , dataHdVars: []
-        }
-      , type_: toType t
-      }
-
-    exports = case typ of
-      Just (TypRecord props) ->
-        [ typeExport, consExport ]
-      _ ->
-        [ typeExport ]

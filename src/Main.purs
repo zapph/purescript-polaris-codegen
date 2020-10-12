@@ -158,9 +158,12 @@ generatedSrcDir = "../src/generated"
 
 writeModule :: Module -> F Unit
 writeModule m@{ name } =
-  writePSJSSrc
-    (generatedSrcDir <> "/Polaris.Components." <> name)
-    (printModule m)
+  case printModule m of
+    Left e -> throwError $ error (show e)
+    Right c ->
+      writePSJSSrc
+      (generatedSrcDir <> "/Polaris.Components." <> name)
+      c
 
 writeLocalesModule :: Array String -> F Unit
 writeLocalesModule ls =
