@@ -86,7 +86,7 @@ getModuleFilePaths allFilePaths = foldMap f allFilePaths
 
 listLocales :: F (Array FilePath)
 listLocales =
-  map (\p -> basenameWithoutExt p ".json") <$> readdir "../../../node_modules/@shopify/polaris/locales"
+  map (\p -> basenameWithoutExt p ".json") <$> readdir "./node_modules/@shopify/polaris/locales"
 
 readModuleFilePaths :: ModuleFilePaths -> F Module
 readModuleFilePaths { propsFilePath, extrasFilePath } = do
@@ -154,7 +154,7 @@ readContent path =
       pure a
 
 generatedSrcDir :: FilePath
-generatedSrcDir = "../src/generated"
+generatedSrcDir = "purescript-polaris/src/generated"
 
 writeModule :: Module -> F Unit
 writeModule m@{ name } =
