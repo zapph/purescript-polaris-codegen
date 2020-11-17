@@ -2,6 +2,7 @@
 , dependencies =
   [ "arrays"
   , "console"
+  , "cst-simple"
   , "effect"
   , "foreign-object"
   , "generics-rep"
