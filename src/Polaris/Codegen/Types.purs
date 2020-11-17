@@ -96,8 +96,3 @@ derive instance eqTyp :: Eq Typ
 derive instance typGeneric :: Generic Typ _
 instance typShow :: Show Typ where
   show x = genericShow x
-
-type PSJSContent =
-  { psContent :: String
-  , jsContent :: String
-  }

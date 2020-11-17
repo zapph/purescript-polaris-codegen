@@ -2,6 +2,8 @@ module Main where
 
 import Prelude
 
+import CST.Simple.Project (defaultProjectSettings, runProject)
+import CST.Simple.ProjectBuilder (addModule)
 import Control.Monad.Error.Class (throwError)
 import Control.Monad.ST (ST)
 import Data.Array as Array
@@ -23,26 +25,32 @@ import Foreign (Foreign, renderForeignError, unsafeToForeign)
 import Foreign.Object (Object)
 import Foreign.Object as Object
 import Node.Encoding (Encoding(..))
-import Node.FS.Aff (exists, mkdir, readTextFile, readdir, writeTextFile)
+import Node.FS.Aff (readTextFile, readdir)
 import Node.Path (FilePath, basenameWithoutExt)
-import Polaris.Codegen.LocalesModulePrinter (printLocalesModule)
+import Polaris.Codegen.LocalesModulePrinter (localesModuleBuilder)
 import Polaris.Codegen.ModulePlanner (planModule)
-import Polaris.Codegen.ModulePrinter (printModule)
-import Polaris.Codegen.Types (ModuleExtras, Module, PSJSContent, RawProp)
+import Polaris.Codegen.ModulePrinter (componentModuleBuilder)
+import Polaris.Codegen.Types (Module, ModuleExtras, RawProp)
 import Simple.JSON (class ReadForeign, read, readJSON, read_)
 
 main :: Effect Unit
 main = runAff_ logResult do
-  unlessM (exists generatedSrcDir) (mkdir generatedSrcDir)
-
   modules <- listDataFiles >>= traverse readModuleFilePaths
-  traverse_ writeModule modules
-
-  listLocales >>= writeLocalesModule
-
+  locales <- listLocales
+  runProject projectSettings do
+    addModule "Polaris.Components.Locales" $ localesModuleBuilder locales
+    traverse_ addComponentModule modules
   where
     logResult (Left e) = warn $ "ERROR: " <> (Exception.message e)
     logResult (Right a) = log "OK"
+
+    projectSettings =
+      defaultProjectSettings { outputDirectory = generatedSrcDir
+                             , rmDirectoryFilesPreRun = true
+                             }
+
+    addComponentModule m@{ name } =
+      addModule ("Polaris.Components." <> name) $ componentModuleBuilder m
 
 type F = Aff
 
@@ -155,31 +163,6 @@ readContent path =
 
 generatedSrcDir :: FilePath
 generatedSrcDir = "purescript-polaris/src/generated"
-
-writeModule :: Module -> F Unit
-writeModule m@{ name } =
-  case printModule m of
-    Left e -> throwError $ error (show e)
-    Right c ->
-      writePSJSSrc
-      (generatedSrcDir <> "/Polaris.Components." <> name)
-      c
-
-writeLocalesModule :: Array String -> F Unit
-writeLocalesModule ls =
-  writePSJSSrc
-    (generatedSrcDir <> "/Polaris.Components.Locales")
-    (printLocalesModule ls)
-
-writePSJSSrc :: String -> PSJSContent -> F Unit
-writePSJSSrc base { jsContent, psContent } = do
-  log $ "Writing " <> psPath
-  writeTextFile UTF8 psPath psContent
-  writeTextFile UTF8 jsPath jsContent
-
-  where
-    psPath = base <> ".purs"
-    jsPath = base <> ".js"
 
 errMessage :: forall a. String -> F a
 errMessage = throwError <<< error
