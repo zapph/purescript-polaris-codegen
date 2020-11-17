@@ -57,7 +57,6 @@ derive instance psieOrd :: Ord PSImportEntry
 
 type Module =
   { name :: String
-  , psImports :: Array PSImport
   , typeDefs :: Array TypeDef
   , specs :: Array ComponentSpec
   }
