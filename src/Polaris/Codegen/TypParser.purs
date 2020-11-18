@@ -14,7 +14,7 @@ import Data.Char.Unicode (isAlpha, isAlphaNum, isLower)
 import Data.List as List
 import Data.Maybe (Maybe(..))
 import Data.String.CodeUnits as CodeUnits
-import Polaris.Codegen.Types (Typ(..), Prop)
+import Polaris.Codegen.Types (Prop, Typ(..), stypeCons, typBooleanLiteral, typJSX, typStringLiteral)
 import Text.Parsing.Parser (Parser, fail)
 import Text.Parsing.Parser.Combinators (asErrorMessage, between, option, sepBy, sepBy1, try, (<?>))
 import Text.Parsing.Parser.String (noneOf, satisfy, string)
@@ -46,12 +46,6 @@ parseTyp = fix \p -> do
       <|> (TypRecord <$> parseRecordEntries p)
       <|> (TypRef <$> parseRefNames)
       <|> (TypFn <$> parseFnParts p)
-
-    stypeCons s = TypSType $ typCons s
-
-    typJSX = stypeCons "React.Basic.Hooks.JSX"
-    typBooleanLiteral b = TypSType $ typCons1 "Literals.BooleanLit" (typString $ show b)
-    typStringLiteral s = TypSType $ typCons1 "Literals.StringLit" (typString s)
 
     parseOneTyp p =
       (try (between (string "(") (string ")") p))

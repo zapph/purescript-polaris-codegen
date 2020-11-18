@@ -89,3 +89,17 @@ derive instance eqTyp :: Eq Typ
 derive instance typGeneric :: Generic Typ _
 instance typShow :: Show Typ where
   show x = genericShow x
+
+stypeCons :: String -> Typ
+stypeCons s = TypSType $ typCons s
+
+typJSX :: Typ
+typJSX = stypeCons "React.Basic.Hooks.JSX"
+
+typBooleanLiteral :: Boolean -> Typ
+typBooleanLiteral b =
+  TypSType $ typCons1 "Literals.BooleanLit" (typString $ show b)
+
+typStringLiteral :: String -> Typ
+typStringLiteral s =
+  TypSType $ typCons1 "Literals.StringLit" (typString s)
