@@ -4,7 +4,7 @@ module Polaris.Codegen.ModulePrinter
 
 import Prelude
 
-import CST.Simple (cnst, exprIdent, exprIdent1, knd, tvb, typApp, typCons, typForall, typOp, typRecord, typVar, (*->), (*=>))
+import CST.Simple (cnst, exprIdent, exprIdent1, knd, tvb, typApp, typCons, typCons1, typForall, typOp, typRecord, typRecord_, typRow_, typVar, (*->), (*=>))
 import CST.Simple as S
 import CST.Simple.ModuleBuilder (addForeignData, addForeignJsValue, addType, addValue)
 import Data.Array (length)
@@ -13,9 +13,18 @@ import Data.Array.NonEmpty as NEArray
 import Data.Foldable (traverse_)
 import Data.Maybe (Maybe(..))
 import Data.String.Extra (camelCase)
-import Data.Tuple.Nested ((/\))
+import Data.Tuple.Nested (type (/\), (/\))
 import Polaris.Codegen.PrinterUtils (isCommonType, printRefName, printRefNameConstructor)
-import Polaris.Codegen.Types (ComponentSpec, Module, Typ(..), TypeDef)
+import Polaris.Codegen.Types (ComponentSpec, Module, Typ(..), TypeDef, Prop)
+
+type Names =
+  { basePropsName' :: String
+  , basePropsName :: String
+  , propsName :: String
+  , elFnName :: String
+  , rcFnName :: String
+  , jsPath :: String
+  }
 
 componentModuleBuilder :: Module -> S.ModuleBuilder Unit
 componentModuleBuilder { typeDefs, specs } = do
@@ -23,39 +32,73 @@ componentModuleBuilder { typeDefs, specs } = do
   traverse_ addTypeDef typeDefs
 
 addComponent :: ComponentSpec -> S.ModuleBuilder Unit
-addComponent { namePath, props } = do
-  addType
-    { export: true
-    , name: propsName
-    , typeVarBindings: []
-    , type_: toType (TypRecord props)
-    }
-  addValue
-    { export: true
-    , name: elFnName
-    , type_: typForall [ tvb "r" ] $
-      cnst "Untagged.Coercible.Coercible" [ typVar "r", typCons propsName ] *=>
-      typVar "r" *->
-      typCons "React.Basic.Hooks.JSX"
-    , binders: []
-    , expr: exprIdent1 "Polaris.Internal.elem" (exprIdent rcFnName)
-    }
+addComponent { namePath, baseProps, hasJSXChildren } = do
+  if hasJSXChildren
+    then addChildrenCons n baseProps
+    else addNoChildrenCons n baseProps
   addForeignJsValue
     { export: true
-    , name: rcFnName
+    , name: n.rcFnName
     , type_:
-      typApp (typCons "React.Basic.Hooks.ReactComponent") [typCons propsName]
-    , jsExpr: "require(\"@shopify/polaris\")." <> jsPath
+      typApp (typCons "React.Basic.Hooks.ReactComponent") [typCons n.propsName]
+    , jsExpr: "require(\"@shopify/polaris\")." <> n.jsPath
     }
 
   where
-    name = Array.fold namePath
+    n = mkNames namePath
 
-    propsName = name <> "Props"
-    elFnName = camelCase name
-    rcFnName = elFnName <> "RC"
+addChildrenCons :: Names -> Array Prop -> S.ModuleBuilder Unit
+addChildrenCons n baseProps = do
+  addType
+    { export: true
+    , name: n.basePropsName'
+    , typeVarBindings: []
+    , type_: toTypeRow baseProps
+    }
+  addType
+    { export: true
+    , name: n.basePropsName
+    , typeVarBindings: []
+    , type_: typRecord [] (Just (typCons n.basePropsName'))
+    }
+  addType
+    { export: true
+    , name: n.propsName
+    , typeVarBindings: []
+    , type_: typCons1 "Polaris.Internal.PropsWithChildren" (typCons n.basePropsName')
+    }
 
-    jsPath = Array.intercalate "." namePath
+  addValue
+    { export: true
+    , name: n.elFnName
+    , type_: typForall [ tvb "r" ] $
+      cnst "Untagged.Coercible.Coercible" [ typVar "r", typCons n.basePropsName ] *=>
+      typVar "r" *->
+      typCons1 "Array" (typCons "React.Basic.Hooks.JSX") *->
+      typCons "React.Basic.Hooks.JSX"
+    , binders: []
+    , expr: exprIdent1 "Polaris.Internal.elemWithChildren" (exprIdent n.rcFnName)
+    }
+
+
+addNoChildrenCons :: Names -> Array Prop -> S.ModuleBuilder Unit
+addNoChildrenCons n baseProps = do
+  addType
+    { export: true
+    , name: n.propsName
+    , typeVarBindings: []
+    , type_: toType (TypRecord baseProps)
+    }
+  addValue
+    { export: true
+    , name: n.elFnName
+    , type_: typForall [ tvb "r" ] $
+      cnst "Untagged.Coercible.Coercible" [ typVar "r", typCons n.propsName ] *=>
+      typVar "r" *->
+      typCons "React.Basic.Hooks.JSX"
+    , binders: []
+    , expr: exprIdent1 "Polaris.Internal.elem" (exprIdent n.rcFnName)
+    }
 
 addTypeDef :: TypeDef -> S.ModuleBuilder Unit
 addTypeDef { name, typ } =
@@ -115,10 +158,7 @@ toType (TypUnion as) = case tail' of
 
     hdType = toType head
 toType (TypRecord props) =
-  typRecord (toRowLabel <$> props) Nothing
-  where
-    toRowLabel { name, required, typ } =
-      name /\ toType' required typ
+  typRecord_ (toRowLabel <$> props)
 toType (TypRef n) =
   if isCommonType nm
   then typCons $ "Polaris.Types." <> nm
@@ -136,3 +176,23 @@ toType (TypFn { params, out }) =
         typCons $ "Effect.Uncurried.EffectFn" <> show n
 
     consParams = Array.snoc params out
+
+toTypeRow :: Array Prop -> S.Type
+toTypeRow = typRow_ <<< map toRowLabel
+
+toRowLabel :: Prop -> String /\ S.Type
+toRowLabel { name, required, typ } =
+  name /\ toType' required typ
+
+mkNames :: Array String -> Names
+mkNames namePath =
+  { basePropsName': name <> "BaseProps'"
+  , basePropsName: name <> "BaseProps"
+  , propsName: name <> "Props"
+  , elFnName
+  , rcFnName: elFnName <> "RC"
+  , jsPath: Array.intercalate "." namePath
+  }
+  where
+    name = Array.fold namePath
+    elFnName = camelCase name

@@ -16,7 +16,7 @@ import Data.Traversable (traverse)
 import Data.Tuple (uncurry)
 import Polaris.Codegen.PrinterUtils (isCommonType)
 import Polaris.Codegen.TypParser (parseTyp)
-import Polaris.Codegen.Types (ComponentSpec, Module, Prop, RawComponent, RawProp(..), Typ(..), TypeDef)
+import Polaris.Codegen.Types (ComponentSpec, Module, Prop, RawComponent, RawProp(..), Typ(..), TypeDef, typJSX)
 import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (eof)
 
@@ -40,8 +40,14 @@ planModule { name, rawProps, rawSubComponents } = uncurry mkModule <$> runStateT
          -> ComponentSpec
     mkComponentSpec toNamePath { name: n, props } =
       { namePath: toNamePath n
-      , props
+      , baseProps
+      , hasJSXChildren: not $ Array.null childrenProps
       }
+
+      where
+        { yes: childrenProps, no: baseProps } = Array.partition isJSXChildrenProp props
+
+    isJSXChildrenProp p = p.name == "children" && p.typ == typJSX
 
     readRawComponent' toNamePath r = mkComponentSpec toNamePath <$> readRawComponent r
     mainToNamePath = Array.singleton

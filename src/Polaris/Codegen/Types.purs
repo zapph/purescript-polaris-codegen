@@ -2,7 +2,7 @@ module Polaris.Codegen.Types where
 
 import Prelude
 
-import CST.Simple (Type)
+import CST.Simple (Type, typCons, typCons1, typString)
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
@@ -66,7 +66,8 @@ type TypeDef = { name :: String, typ :: Maybe Typ }
 
 type ComponentSpec =
   { namePath :: Array String
-  , props :: Array Prop
+  , baseProps :: Array Prop
+  , hasJSXChildren :: Boolean
   }
 
 type Prop =
