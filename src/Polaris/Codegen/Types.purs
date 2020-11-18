@@ -2,6 +2,7 @@ module Polaris.Codegen.Types where
 
 import Prelude
 
+import CST.Simple (Type)
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
@@ -76,19 +77,12 @@ type Prop =
   }
 
 data Typ
-  = TypUnit
-  | TypString
-  | TypBoolean
-  | TypNumber
-  | TypStringLiteral String
-  | TypBooleanLiteral Boolean
+  = TypSType Type
   | TypUnion (NonEmptyArray Typ)
   | TypFn { params :: Array Typ, out :: Typ }
-  | TypJSX
   | TypRef String
   | TypArray Typ
   | TypRecord (Array Prop)
-  | TypForeign -- for any type
 
 derive instance eqTyp :: Eq Typ
 

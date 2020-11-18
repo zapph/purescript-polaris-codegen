@@ -4,7 +4,7 @@ module Polaris.Codegen.ModulePrinter
 
 import Prelude
 
-import CST.Simple (cnst, exprIdent, exprIdent1, exprOp, knd, tvb, typApp, typCons, typForall, typOp, typRecord, typString, typVar, (*->), (*=>))
+import CST.Simple (cnst, exprIdent, exprIdent1, exprOp, knd, tvb, typApp, typCons, typForall, typOp, typRecord, typVar, (*->), (*=>))
 import CST.Simple as S
 import CST.Simple.ModuleBuilder (addForeignData, addForeignJsValue, addType, addValue)
 import Data.Array (length)
@@ -102,15 +102,7 @@ toType' true typ =
   toType typ
 
 toType :: Typ -> S.Type
-toType TypUnit = typCons "Prelude.Unit"
-toType TypString = typCons "String"
-toType TypBoolean = typCons "Boolean"
-toType TypNumber = typCons "Number"
-toType TypJSX = typCons "React.Basic.Hooks.JSX"
-toType (TypStringLiteral s) =
-  typApp (typCons "Literals.StringLit") [ typString s ]
-toType (TypBooleanLiteral b) =
-  typApp (typCons "Literals.BooleanLit") [ typString (show b) ]
+toType (TypSType t) = t
 toType (TypArray a) =
   typApp (typCons "Array") [ toType a ]
 toType (TypUnion as) = case tail' of
@@ -131,8 +123,6 @@ toType (TypRecord props) =
   where
     toRowLabel { name, required, typ } =
       name /\ toType' required typ
-toType TypForeign =
-  typCons "Foreign.Foreign"
 toType (TypRef n) =
   if isCommonType nm
   then typCons $ "Polaris.Types." <> nm

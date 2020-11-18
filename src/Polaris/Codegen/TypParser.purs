@@ -4,6 +4,7 @@ module Polaris.Codegen.TypParser
 
 import Prelude hiding (between)
 
+import CST.Simple (typCons, typCons1, typString)
 import Control.Alt ((<|>))
 import Control.Lazy (fix)
 import Data.Array as Array
@@ -31,20 +32,26 @@ parseTyp = fix \p -> do
 
   where
     parseOneInnerTyp p = asErrorMessage "typ format"
-      $ (TypString <$ string "string")
-      <|> (TypBoolean <$ string "boolean")
-      <|> (TypNumber <$ string "number")
-      <|> (TypForeign <$ string "any")
-      <|> (TypUnit <$ string "void")
-      <|> (TypJSX <$ string "React.ReactNode")
-      <|> (TypJSX <$ string "React.ReactElement")
-      <|> (TypJSX <$ string "ReactElement")
-      <|> (TypBooleanLiteral true <$ string "true")
-      <|> (TypBooleanLiteral false <$ string "false")
-      <|> (TypStringLiteral <$> parseStringLiteral)
+      $ (stypeCons "String" <$ string "string")
+      <|> (stypeCons "Boolean" <$ string "boolean")
+      <|> (stypeCons "Number" <$ string "number")
+      <|> (stypeCons "Foreign.Foreign" <$ string "any")
+      <|> (stypeCons "Prelude.Unit" <$ string "void")
+      <|> (typJSX <$ string "React.ReactNode")
+      <|> (typJSX <$ string "React.ReactElement")
+      <|> (typJSX <$ string "ReactElement")
+      <|> (typBooleanLiteral true <$ string "true")
+      <|> (typBooleanLiteral false <$ string "false")
+      <|> (typStringLiteral <$> parseStringLiteral)
       <|> (TypRecord <$> parseRecordEntries p)
       <|> (TypRef <$> parseRefNames)
       <|> (TypFn <$> parseFnParts p)
+
+    stypeCons s = TypSType $ typCons s
+
+    typJSX = stypeCons "React.Basic.Hooks.JSX"
+    typBooleanLiteral b = TypSType $ typCons1 "Literals.BooleanLit" (typString $ show b)
+    typStringLiteral s = TypSType $ typCons1 "Literals.StringLit" (typString s)
 
     parseOneTyp p =
       (try (between (string "(") (string ")") p))
