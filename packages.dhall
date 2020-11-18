@@ -37,7 +37,7 @@ let additions =
           , "strings"
           ]
         , repo = "https://github.com/purescript-codegen/purescript-ps-cst.git"
-        , version = "5456a28"
+        , version = "5b0a078"
         }
       , cst-simple =
         { dependencies =
@@ -54,7 +54,7 @@ let additions =
           ]
         , repo =
             "https://github.com/purescript-codegen/purescript-cst-simple.git"
-        , version = "f90a91a"
+        , version = "1dcd0fd"
         }
       , string-extra =
         { dependencies =
