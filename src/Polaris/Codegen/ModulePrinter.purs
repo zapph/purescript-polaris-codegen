@@ -4,7 +4,7 @@ module Polaris.Codegen.ModulePrinter
 
 import Prelude
 
-import CST.Simple (cnst, exprIdent, exprIdent1, exprOp, knd, tvb, typApp, typCons, typForall, typOp, typRecord, typVar, (*->), (*=>))
+import CST.Simple (cnst, exprIdent, exprIdent1, knd, tvb, typApp, typCons, typForall, typOp, typRecord, typVar, (*->), (*=>))
 import CST.Simple as S
 import CST.Simple.ModuleBuilder (addForeignData, addForeignJsValue, addType, addValue)
 import Data.Array (length)
@@ -38,11 +38,7 @@ addComponent { namePath, props } = do
       typVar "r" *->
       typCons "React.Basic.Hooks.JSX"
     , binders: []
-    , expr:
-      exprOp
-      (exprIdent1 "React.Basic.Hooks.element" (exprIdent rcFnName))
-      "Prelude.(<<<)"
-      (exprIdent "Untagged.Coercible.coerce")
+    , expr: exprIdent1 "Polaris.Internal.elem" (exprIdent rcFnName)
     }
   addForeignJsValue
     { export: true
