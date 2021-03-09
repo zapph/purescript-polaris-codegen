@@ -2,13 +2,14 @@ module Polaris.Codegen.Types where
 
 import Prelude
 
-import CST.Simple (Type, typCons, typCons1, typString)
+import CST.Simple (Type)
 import Data.Array.NonEmpty (NonEmptyArray)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe)
 import Foreign (Foreign)
 import Foreign.Object (Object)
+import Polaris.Codegen.Defs (typ_BooleanLit, typ_JSX, typ_StringLit)
 import Simple.JSON (class ReadForeign, readImpl)
 
 newtype RawProp =
@@ -91,16 +92,13 @@ derive instance typGeneric :: Generic Typ _
 instance typShow :: Show Typ where
   show x = genericShow x
 
-stypeCons :: String -> Typ
-stypeCons s = TypSType $ typCons s
-
 typJSX :: Typ
-typJSX = stypeCons "React.Basic.Hooks.JSX"
+typJSX = TypSType typ_JSX
 
 typBooleanLiteral :: Boolean -> Typ
 typBooleanLiteral b =
-  TypSType $ typCons1 "Literals.BooleanLit" (typString $ show b)
+  TypSType $ typ_BooleanLit b
 
 typStringLiteral :: String -> Typ
 typStringLiteral s =
-  TypSType $ typCons1 "Literals.StringLit" (typString s)
+  TypSType $ typ_StringLit s

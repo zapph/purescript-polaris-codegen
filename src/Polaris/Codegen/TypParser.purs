@@ -4,7 +4,6 @@ module Polaris.Codegen.TypParser
 
 import Prelude hiding (between)
 
-import CST.Simple (typCons, typCons1, typString)
 import Control.Alt ((<|>))
 import Control.Lazy (fix)
 import Data.Array as Array
@@ -14,7 +13,8 @@ import Data.Char.Unicode (isAlpha, isAlphaNum, isLower)
 import Data.List as List
 import Data.Maybe (Maybe(..))
 import Data.String.CodeUnits as CodeUnits
-import Polaris.Codegen.Types (Prop, Typ(..), stypeCons, typBooleanLiteral, typJSX, typStringLiteral)
+import Polaris.Codegen.Defs (typ_Boolean, typ_Foreign, typ_Number, typ_String, typ_Unit)
+import Polaris.Codegen.Types (Prop, Typ(..), typBooleanLiteral, typJSX, typStringLiteral)
 import Text.Parsing.Parser (Parser, fail)
 import Text.Parsing.Parser.Combinators (asErrorMessage, between, option, sepBy, sepBy1, try, (<?>))
 import Text.Parsing.Parser.String (noneOf, satisfy, string)
@@ -32,11 +32,11 @@ parseTyp = fix \p -> do
 
   where
     parseOneInnerTyp p = asErrorMessage "typ format"
-      $ (stypeCons "String" <$ string "string")
-      <|> (stypeCons "Boolean" <$ string "boolean")
-      <|> (stypeCons "Number" <$ string "number")
-      <|> (stypeCons "Foreign.Foreign" <$ string "any")
-      <|> (stypeCons "Prelude.Unit" <$ string "void")
+      $ (TypSType typ_String <$ string "string")
+      <|> (TypSType typ_Boolean <$ string "boolean")
+      <|> (TypSType typ_Number <$ string "number")
+      <|> (TypSType typ_Foreign <$ string "any")
+      <|> (TypSType typ_Unit <$ string "void")
       <|> (typJSX <$ string "React.ReactNode")
       <|> (typJSX <$ string "React.ReactElement")
       <|> (typJSX <$ string "ReactElement")

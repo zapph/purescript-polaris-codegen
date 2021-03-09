@@ -4,7 +4,7 @@ module Polaris.Codegen.ModulePrinter
 
 import Prelude
 
-import CST.Simple (cnst, exprIdent, exprIdent1, knd, tvb, typApp, typCons, typCons1, typForall, typOp, typRecord, typRecord_, typRow_, typVar, (*->), (*=>))
+import CST.Simple (exprIdent, tvb, typCons, typConstrained, typForall, typRecord, typRecord_, typRow_, typVar, (*->), (*=>))
 import CST.Simple as S
 import CST.Simple.ModuleBuilder (addForeignData, addForeignJsValue, addType, addValue)
 import Data.Array (length)
@@ -14,6 +14,7 @@ import Data.Foldable (traverse_)
 import Data.Maybe (Maybe(..))
 import Data.String.Extra (camelCase)
 import Data.Tuple.Nested (type (/\), (/\))
+import Polaris.Codegen.Defs (cnst_Coercible, expr_coerce, expr_elem, expr_elemWithChildren, knd_Type, typOp_OneOf, typ_Array, typ_Effect, typ_EffectFn, typ_JSX, typ_PropsWithChildren, typ_ReactComponent, typ_UndefinedOr)
 import Polaris.Codegen.PrinterUtils (isCommonType, printRefName, printRefNameConstructor)
 import Polaris.Codegen.Types (ComponentSpec, Module, Typ(..), TypeDef, Prop)
 
@@ -39,8 +40,7 @@ addComponent { namePath, baseProps, hasJSXChildren } = do
   addForeignJsValue
     { export: true
     , name: n.rcFnName
-    , type_:
-      typApp (typCons "React.Basic.Hooks.ReactComponent") [typCons n.propsName]
+    , type_: typ_ReactComponent (typCons n.propsName)
     , jsExpr: "require(\"@shopify/polaris\")." <> n.jsPath
     }
 
@@ -65,19 +65,17 @@ addChildrenCons n baseProps = do
     { export: true
     , name: n.propsName
     , typeVarBindings: []
-    , type_: typCons1 "Polaris.Internal.PropsWithChildren" (typCons n.basePropsName')
+    , type_: typ_PropsWithChildren (typCons n.basePropsName')
     }
 
   addValue
     { export: true
     , name: n.elFnName
     , type_: typForall [ tvb "r" ] $
-      cnst "Untagged.Coercible.Coercible" [ typVar "r", typCons n.basePropsName ] *=>
-      typVar "r" *->
-      typCons1 "Array" (typCons "React.Basic.Hooks.JSX") *->
-      typCons "React.Basic.Hooks.JSX"
+      cnst_Coercible (typVar "r") (typCons n.basePropsName) *=>
+      (typVar "r" *-> typ_Array typ_JSX *-> typ_JSX)
     , binders: []
-    , expr: exprIdent1 "Polaris.Internal.elemWithChildren" (exprIdent n.rcFnName)
+    , expr: expr_elemWithChildren (exprIdent n.rcFnName)
     }
 
 
@@ -93,11 +91,11 @@ addNoChildrenCons n baseProps = do
     { export: true
     , name: n.elFnName
     , type_: typForall [ tvb "r" ] $
-      cnst "Untagged.Coercible.Coercible" [ typVar "r", typCons n.propsName ] *=>
-      typVar "r" *->
-      typCons "React.Basic.Hooks.JSX"
+      typConstrained
+      (cnst_Coercible (typVar "r") (typCons n.propsName))
+      (typVar "r" *-> typ_JSX)
     , binders: []
-    , expr: exprIdent1 "Polaris.Internal.elem" (exprIdent n.rcFnName)
+    , expr: expr_elem (exprIdent n.rcFnName)
     }
 
 addTypeDef :: TypeDef -> S.ModuleBuilder Unit
@@ -114,17 +112,17 @@ addTypeDef { name, typ } =
         { export: true
         , name: consName
         , type_: typForall [ tvb "r" ] $
-          cnst "Untagged.Coercible.Coercible" [ typVar "r", typCons refName ] *=>
+          cnst_Coercible (typVar "r") (typCons refName) *=>
           typVar "r" *->
           typCons refName
         , binders: []
-        , expr: exprIdent "Untagged.Coercible.coerce"
+        , expr: expr_coerce
         }
     Nothing -> do
       addForeignData
         { export: true
         , name: refName
-        , kind_: knd "Type"
+        , kind_: knd_Type
         }
   where
     refName = printRefName name
@@ -136,20 +134,19 @@ addTypeDef { name, typ } =
 
 toType' :: Boolean -> Typ -> S.Type
 toType' false typ =
-  typApp (typCons "Untagged.Union.UndefinedOr") [ toType typ ]
+  typ_UndefinedOr (toType typ)
 toType' true typ =
   toType typ
 
 toType :: Typ -> S.Type
 toType (TypSType t) = t
 toType (TypArray a) =
-  typApp (typCons "Array") [ toType a ]
+  typ_Array (toType a)
 toType (TypUnion as) = case tail' of
   Nothing -> hdType
   Just tl ->
-    typOp
+    typOp_OneOf
     hdType
-    "Untagged.Union.(|+|)"
     (toType (TypUnion tl))
 
   where
@@ -161,21 +158,16 @@ toType (TypRecord props) =
   typRecord_ (toRowLabel <$> props)
 toType (TypRef n) =
   if isCommonType nm
-  then typCons $ "Polaris.Types." <> nm
+  then typCons $ "Polaris.Types(" <> nm <> ")"
   else typCons nm
   where
     nm = printRefName n
 toType (TypFn { params, out }) =
-  typApp cons $ toType <$> consParams
-
-  where
-    cons = case length params of
-      0 ->
-        typCons "Effect.Effect"
-      n ->
-        typCons $ "Effect.Uncurried.EffectFn" <> show n
-
-    consParams = Array.snoc params out
+  case length params of
+    0 ->
+      typ_Effect (toType out)
+    n ->
+      typ_EffectFn n (toType <$> params) (toType out)
 
 toTypeRow :: Array Prop -> S.Type
 toTypeRow = typRow_ <<< map toRowLabel
